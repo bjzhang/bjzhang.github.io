@@ -11,13 +11,16 @@ tags:
  
     A container view controller contains content owned by other view controllers.
 
-也就是说一个View Controller的view上的某部分内容属于另一个View Controller，那么这个View Controller就是一个Container，比如UINavigationController，UITabBarController。在iOS 5之前苹果是不允许出现自定义的Container的 ，也就是说你创建的一个View Controller的view不能包含另一个View Controller的view，这样对于逻辑复杂的界面来说不易于功能拆分，也许曾经你为了某个显示逻辑的公用，直接将另一个View Controller的view添加为当前View Controller的view的subview，然后发现可以显示，但实际上这种行为是非常危险的。      
+也就是说一个View Controller显示的某部分内容属于另一个View Controller，那么这个View Controller就是一个Container，比如UIKit中的UINavigationController，UITabBarController。   
+在iOS 5之前苹果是不允许出现自定义的Container的 ，也就是说你创建的一个View Controller的view不能包含另一个View Controller的view，这对于逻辑复杂的界面来说，不易于功能拆分。也许曾经你为了某个公用的显示逻辑，直接将某个View Controller的view添加到另一个View Controller的view上，然后发现可以正常显示和使用，但实际上这种行为是非常危险的。      
 
-iOS 5.0 开始支持Custom Container View Controller，开放了一系列的用于构建自定义Container的接口。如果你想创建一个自己的Container，那么有一些概念你必须得清楚。Container的主要职责就是管理着一个或多个Child View Controller的展示的生命周期，需要传递显示相关以及旋转相关的回调。其实显示或者旋转的回调的触发的源头来自于window,一个app首先有一个主window，初始化的时候需要给这个主window指定一个rootViewController，window会将显示相关的回调(viewWillAppear:, viewWillDisappear:, viewDidAppear:, or viewDidDisappear: )以及旋转相关的回调(willRotateToInterfaceOrientation:duration:
+iOS 5.0 开始支持Custom Container View Controller，开放了用于构建自定义Container的接口。如果你想创建一个自己的Container，那么有一些概念还得弄清楚。Container的主要职责就是管理一个或多个Child View Controller的展示的生命周期，需要传递显示以及旋转相关的回调。其实显示或者旋转的回调的触发的源头来自于window,一个app首先有一个主window，初始化的时候需要给这个主window指定一个rootViewController，window会将显示相关的回调(viewWillAppear:, viewWillDisappear:, viewDidAppear:, or viewDidDisappear: )以及旋转相关的回调(willRotateToInterfaceOrientation:duration:
 ,willAnimateRotationToInterfaceOrientation:duration:,
 didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewController需要再将这些callbacks的调用传递给它的Child View Controllers。
 
 ### 一.父子关系范式
+实现一个Custom Container View Controller并不是一个简单的事情，主要分为两个阶段：父子关系的建立和解除。如果pVC将cVC的view添加为自己的subview，那么cVC必须为pVC的Child View Controller，反过来则不一定成立，比如UINavigationController，一个View Controller被push进来后便和navigationController建立父子关系了,但是只有最上面的View Controller 是显示着的，底下的View Controller的view则被移出了容器的view的层级，当一个View Controller被pop之后，便和navigationController 解除了父子关系了。
+
 展示一个名为content的child view controller：
 
      [self addChildViewController:content];  //1
