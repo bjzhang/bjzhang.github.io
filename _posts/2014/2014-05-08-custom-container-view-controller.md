@@ -19,9 +19,9 @@ iOS 5.0 开始支持Custom Container View Controller，开放了用于构建自�
 didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewController需要再将这些callbacks的调用传递给它的Child View Controllers。
 
 ### 一.父子关系范式
-实现一个Custom Container View Controller并不是一个简单的事情，主要分为两个阶段：父子关系的建立和解除。如果pVC将cVC的view添加为自己的subview，那么cVC必须为pVC的Child View Controller，反过来则不一定成立，比如UINavigationController，一个View Controller被push进来后便和navigationController建立父子关系了,但是只有最上面的View Controller 是显示着的，底下的View Controller的view则被移出了容器的view的层级，当一个View Controller被pop之后，便和navigationController 解除了父子关系了。
+实现一个Custom Container View Controller并不是一个简单的事情，主要分为两个阶段：父子关系的建立以及父子关系的解除。如果pVC将cVC的view添加为自己的subview，那么cVC必须为pVC的Child View Controller，而反过来则不一定成立，比如UINavigationController，一个View Controller被push进来后便和navigationController建立父子关系了,但是只有最上面的View Controller 是显示着的，底下的View Controller的view则被移出了容器的view的显示层级，当一个View Controller被pop之后，便和navigationController解除了父子关系了。
 
-展示一个名为content的child view controller：
+**展示一个名为content的child view controller**：
 
      [self addChildViewController:content];  //1
      content.view.frame = [self frameForContentController]; 
@@ -34,7 +34,7 @@ didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewControl
 
 
 
-移除一个child view controller：
+**移除一个child view controller**：
      
      [content willMoveToParentViewController:nil]; //1
      [content.view removeFromSuperview]; //2
@@ -64,7 +64,7 @@ didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewControl
 
 
 ### 四.创建自己的容器基类
-当你需要构建自己的container view controller的时候，每一个container都会有一些相同的逻辑，如果你每一个都写一遍会存在很多重复代码，所以最好你创建一个container基类，去实现容器都需要的逻辑。
+当你需要构建自己的Container View Controller的时候，每一个Container都会有一些相同的逻辑，如果你每一个都写一遍会存在很多重复代码，所以最好你创建一个Container基类，去实现容器都需要的逻辑。那到底有哪些逻辑是每一个Container都需要做的呢？关闭Appearance和Rotation相关方法的自动传递；当Container的Appearance和Rotation相关方法被调用时，需要将方法传递给相关的Child View Controller；以及当前Container是否支持旋转的决策逻辑等。下面为一个容器基类的示范:
 
     #import "ContainerBaseController.h"
 
@@ -199,7 +199,7 @@ didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewControl
     }
 
     #pragma mark -
-    #pragma mark Should be overridden by subclass
+    #pragma mark 下面两个方法是在需要的情况下给基类覆盖用的，毕竟不是所有的容器都需要将相关方法传递给所有的childViewControllers
     - (NSArray *)childViewControllersWithAppearanceCallbackAutoForward{
         return self.childViewControllers;
     }
@@ -213,6 +213,25 @@ didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewControl
 
 
 ### 五.创建自己的Container
-...未完待续
+创建一个Container，首先你得设计好Container View Controller的行为和公开的API，比如UINaivgationController就是管理着一组Content View Controller的堆栈的Container,且正在显示的是栈顶的View Controller。   
 
-  
+主要接口有新内容的推入，此过程中viewController会和navigationController建立父子关系，并将viewController显示出来，如果animated是YES的话，则会有过场动画：
+    
+    - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+
+pop操作，移除栈顶的内容，会解除和navigationController的父子关系：
+
+    - (UIViewController *)popViewControllerAnimated:(BOOL)animated;
+    
+当谈关于pop还有一些其他的便捷接口，这里就不赘述了。
+
+另外需要提供一些快捷的接口方便获取特定的Child ViewController，比如`topViewController`可以获取栈顶的View Controller。
+
+还有一个需要考虑的问题就是直接或者间接的Child View Controller如何快速的检索到相应的Container呢？一般Container在实现的时候就需要考虑此问题并提供相应的接口，实现的方法一般就是实现一个UIViewController的Category，比如UINavigationController，在某个View Controller中访问其navigationController属性，会向上遍历，直到找到最近的类型为UINavigationController的祖先，如果找不到则为nil：
+
+
+    @interface UIViewController (UINavigationControllerItem)
+    ...
+    @property(nonatomic,readonly,retain) UINavigationController *navigationController;
+
+    @end
