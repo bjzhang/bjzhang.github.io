@@ -213,9 +213,10 @@ didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewControl
 
 
 ### 五.创建自己的Container
-创建一个Container，首先你得设计好Container View Controller的行为和公开的API，比如UINaivgationController就是管理着一组Content View Controller的堆栈的Container,且正在显示的是栈顶的View Controller。   
+####设计要点
+创建一个Container，首先你得设计好Container View Controller的行为和公开的API，你可以好好参考UIKit中自带的一些Container的设计风格，比如UINaivgationController就是管理着一组Content View Controller的堆栈的Container,且正在显示的是栈顶的View Controller。   
 
-主要接口有新内容的推入，此过程中viewController会和navigationController建立父子关系，并将viewController显示出来，如果animated是YES的话，则会有过场动画：
+主要接口有View Controller的推入，此过程中viewController会和navigationController建立父子关系，并将viewController显示出来，如果animated是YES的话，则会有过场动画：
     
     - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 
@@ -223,11 +224,13 @@ pop操作，移除栈顶的内容，会解除和navigationController的父子关
 
     - (UIViewController *)popViewControllerAnimated:(BOOL)animated;
     
-当谈关于pop还有一些其他的便捷接口，这里就不赘述了。
+当然关于pop还有一些其他的便捷接口，这里就不赘述了。
 
-另外需要提供一些快捷的接口方便获取特定的Child ViewController，比如`topViewController`可以获取栈顶的View Controller。
+另外需要提供一些快捷的接口方便**获取特定的Child View Controller**，比如`topViewController`可以获取栈顶的View Controller。
 
-还有一个需要考虑的问题就是直接或者间接的Child View Controller如何快速的检索到相应的Container呢？一般Container在实现的时候就需要考虑此问题并提供相应的接口，实现的方法一般就是实现一个UIViewController的Category，比如UINavigationController，在某个View Controller中访问其navigationController属性，会向上遍历，直到找到最近的类型为UINavigationController的祖先，如果找不到则为nil：
+另外如有必要，Container还需要留有**delegate接口**，便于通知外面Container的相关行为阶段，便于外部做出相关操作，比如UINaivgationController就会在即将要push一个新的View Controller，已经push了一个新的View Controller等时机留有delegate方法。
+
+还有一个需要考虑的问题就是直接或者间接的Child View Controller如何快速的**检索**到相应的Container呢？一般Container在实现的时候就需要考虑此问题并提供相应的接口，实现的方法一般就是实现一个UIViewController的Category，比如UINavigationController，在某个View Controller中访问其navigationController属性，会向上遍历，直到找到最近的类型为UINavigationController的祖先，如果找不到则为nil：
 
 
     @interface UIViewController (UINavigationControllerItem)
@@ -235,3 +238,5 @@ pop操作，移除栈顶的内容，会解除和navigationController的父子关
     @property(nonatomic,readonly,retain) UINavigationController *navigationController;
 
     @end
+
+####实现一个简单的模态窗口Container
