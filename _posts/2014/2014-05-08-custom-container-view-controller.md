@@ -51,7 +51,7 @@ didRotateFromInterfaceOrientation:)传递给rootViewController。rootViewControl
 所以如果你要自己写一个界面容器往往用不了appearence callbacks自动调用的特性，需要将此特性关闭，然后自己去精确控制appearance callbacks的调用时机。   
 那如何关闭appearance callbacks的自动传递的特性呢？在iOS 5.x中你需要覆盖`automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers`,然后返回NO,iOS6+中你需要覆盖 `shouldAutomaticallyForwardAppearanceMethods`方法并返回NO.   
 手动传递的时候你并不能直接去调用child 的viewWillAppear或者viewDidAppear这些方法，而是需要使用 `beginAppearanceTransition:animated:`和`endAppearanceTransition`接口来间接触发那些appearance callbacks，且begin和end必须成对出现。   
-`[content beginAppearanceTransition:YES animated:animated]`触发content的viewWillAppear，`[content beginAppearanceTransition:NO animated:animated]`触发content的viewWillDisappear，和他们配套的[content endAppearanceTransition]分别触发viewDidAppear和viewDidDisappear。   
+`[content beginAppearanceTransition:YES animated:animated]`触发content的viewWillAppear，`[content beginAppearanceTransition:NO animated:animated]`触发content的viewWillDisappear，和他们配套的[content endAppearanceTransition]分别触发viewDidAppear和viewDidDisappear。  (AppearanceTransition的这两个接口之前在苹果描述的文档中一开始还存在问题，因为文档中一开始说是iOS5不支持这两个接口，其实是支持的，后来苹果纠正了文档中的这个错误)。 
 
 ### 三.rotation callbacks的传递
 也许在iPhone上很少要关心的屏幕旋转问题的，但是大屏幕的iPad上就不同了，很多时候你需要关心横竖屏。rotation callbacks 一般情况下只需要关心三个方法
@@ -239,4 +239,135 @@ pop操作，移除栈顶的内容，会解除和navigationController的父子关
 
     @end
 
-####实现一个简单的模态窗口Container
+####实现一个简单的模态窗口Container   
+模态展示 则至少存在present，dismiss的接口，以及获取模态View Controller的属性
+
+    #import <UIKit/UIKit.h>
+    #import "ContainerBaseController.h"
+
+    @interface SimpleModalContainerController : ContainerBaseController
+
+    @property (nonatomic, readonly) UIViewController *simpleModalViewController;
+
+    - (void)presentSimpleModalViewController:(UIViewController *)viewControllerToPresent
+                                animated:(BOOL)animated;
+
+    - (void)dismissSimpleModalViewControllerAnimated:(BOOL)animated;
+
+    @end
+    
+    //实现如下
+    #import "SimpleModalContainerController.h"
+
+    @interface SimpleModalContainerController ()
+    @property (nonatomic, readwrite) UIViewController *simpleModalViewController;
+    @property (nonatomic, strong) UIButton *backgroundButton;
+    @end
+
+    @implementation SimpleModalContainerController
+
+    - (void)buttonTapped:(id)sender{
+        [self dismissSimpleModalViewControllerAnimated:YES];
+    }
+
+    - (UIButton *)backgroundButton{
+        if (!_backgroundButton) {
+            _backgroundButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            _backgroundButton.backgroundColor = [UIColor blackColor];
+            _backgroundButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            _backgroundButton.alpha = 0.3;
+            [_backgroundButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+
+        }
+        _backgroundButton.frame = self.view.bounds;
+        return _backgroundButton;
+    }
+
+    - (void)presentSimpleModalViewController:(UIViewController *)viewControllerToPresent
+                                animated:(BOOL)animated{
+        if (!self.simpleModalViewController && viewControllerToPresent) {
+            self.simpleModalViewController = viewControllerToPresent;
+        
+            [self addChildViewController:viewControllerToPresent];
+        
+            [viewControllerToPresent beginAppearanceTransition:YES animated:animated];
+        
+            [self.view addSubview:self.backgroundButton];
+        
+            viewControllerToPresent.view.center = CGPointMake(CGRectGetWidth(self.view.bounds) / 2.0, CGRectGetHeight(self.view.bounds) / 2.0);
+            [self.view addSubview:viewControllerToPresent.view];
+        
+            if (animated) {
+                viewControllerToPresent.view.alpha = 0;
+                self.backgroundButton.alpha = 0;
+            
+                [UIView animateWithDuration:0.3 animations:^{
+                    viewControllerToPresent.view.alpha = 1;
+                    self.backgroundButton.alpha = 0.3;
+                } completion:^(BOOL finished) {
+                    [viewControllerToPresent endAppearanceTransition];
+                    [viewControllerToPresent didMoveToParentViewController:self];
+                }];
+            } else {
+                self.backgroundButton.alpha = 0.3;
+                [viewControllerToPresent endAppearanceTransition];
+                [viewControllerToPresent didMoveToParentViewController:self];
+            }
+        
+        }
+    }
+
+    - (void)dismissSimpleModalViewControllerAnimated:(BOOL)animated{
+        if (self.simpleModalViewController) {
+            [self.simpleModalViewController willMoveToParentViewController:nil];
+            [self.simpleModalViewController beginAppearanceTransition:NO animated:animated];
+        
+            if (animated) {
+                [UIView animateWithDuration:0.3 animations:^{
+                    self.backgroundButton.alpha = 0;
+                    self.simpleModalViewController.view.alpha = 0 ;
+                } completion:^(BOOL finished) {
+                    [self.backgroundButton removeFromSuperview];
+                
+                    [self.simpleModalViewController.view removeFromSuperview];
+                    self.simpleModalViewController.view.alpha = 1.0;
+                    [self.simpleModalViewController endAppearanceTransition];
+                    [self.simpleModalViewController removeFromParentViewController];
+                    self.simpleModalViewController = nil;
+                }];
+            } else {
+                [self.backgroundButton removeFromSuperview];
+
+                [self.simpleModalViewController.view removeFromSuperview];
+                self.simpleModalViewController.view.alpha = 1.0;
+                [self.simpleModalViewController endAppearanceTransition];
+                [self.simpleModalViewController removeFromParentViewController];
+                self.simpleModalViewController = nil;
+            }
+        }
+    }
+
+    @end
+    
+    
+UIViewController的Category用于Child View Controller 获取上层的SimpleModalContainerController
+
+    @interface UIViewController (SimpleModalContainerController)
+
+    @property (nonatomic, readonly) SimpleModalContainerController *simpleModalContainerController;
+
+    @end
+
+    @implementation UIViewController (SimpleModalContainerController)
+
+    - (SimpleModalContainerController *)simpleModalContainerController{
+        for (UIViewController *viewController = self.parentViewController; viewController != nil; viewController = viewController.parentViewController) {
+            if ([viewController isKindOfClass:[SimpleModalContainerController class]]) {
+                return (SimpleModalContainerController *)viewController;
+            }
+        }
+        return nil;
+    }
+
+    @end
+    
