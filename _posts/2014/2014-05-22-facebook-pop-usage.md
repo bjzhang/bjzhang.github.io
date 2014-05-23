@@ -8,7 +8,7 @@ tags:
 - pop
 ---
 
-当听闻Facebook要开源自己的Animation框架的时候，我还以为是基于Core Animation进行的封装，包含了一些动画效果库。等源码真正出来后，才发现完全想错了，Facebook Pop其实是基于CVDisplayLink实现的独立于Core Animation之外的动画实现方案。这里就不细说其实现原理了，主要讲讲Facebook Pop如何使用。
+当听闻Facebook要开源自己的Animation框架的时候，我还以为是基于Core Animation进行的封装，包含了一些动画效果库。等源码真正出来后，才发现完全想错了，Facebook Pop其实是基于CADisplayLink(Mac平台上使用的CVDisplayLink)实现的独立于Core Animation之外的动画实现方案。这里就不细说其实现原理了，主要讲讲Facebook Pop如何使用。
 
 ### 一.基本概念
 在计算机的世界里面，其实并不存在绝对的连续的动画，你所看到的屏幕上的动画本质上都是离散的，只是在一秒的时间里面离散的帧多到一定的数量人眼就觉得是连续的了，在iOS中，最大的帧率是60帧每秒。
