@@ -42,6 +42,7 @@ Pop Animation在使用上和Core Animation很相似，都涉及Animation对象�
     }];
 
 统计的数据来自上面属性变化时的Log数据，制图的时候将时间中除了秒之外的时间部分删除了，所有数据都来自真实测试的数据，并使用Number进行了曲线的绘制。图中的每个点代表一个离散的节点，为了方便观看，使用直线将这些离散的点连接起来了。
+
 <img src="http://ww4.sinaimg.cn/mw1024/65cc0af7gw1ego7boez1uj20oc0icju4.jpg" style="width: 50%; height: 50%"/>​
 
 ### PopBasicAniamtion With EaseOut TimingFunction
@@ -76,8 +77,8 @@ Pop Animation在使用上和Core Animation很相似，都涉及Animation对象�
 一开始快速向终点方向靠近，然后会在终点附近来回摆动，摆动幅度逐渐变弱，最后在终点停止。
 
 通过上面的两个属性值变化的曲线你可以很好的理解动画的类型和属性的变化曲线之前的关联了。
-## 二.属性动画的使用
-这里就讲讲Pop Aniamtion自带的几种动画的使用。 PopAnimation自带的动画都是基于POPPropertyAnimation的，POPPropertyAnimation有个很重要的部分就是 POPAnimatableProperty，用来描述animatable的属性。上一节中就看到了如何来创建一个POPAnimatableProperty对象，在初始化的时候，需要在初始化的block中设置writeBlock和readBlock
+## 二.Pop Animation的使用
+这里就讲讲Pop Aniamtion自带的几种动画的使用。 Pop Animation自带的动画都是基于POPPropertyAnimation的，POPPropertyAnimation有个很重要的部分就是 POPAnimatableProperty，用来描述animatable的属性。上一节中就看到了如何来创建一个POPAnimatableProperty对象，在初始化的时候，需要在初始化的block中设置writeBlock和readBlock
 
     void (^readBlock)(id obj, CGFloat values[])
     void (^writeBlock)(id obj, const CGFloat values[])
@@ -114,12 +115,45 @@ Pop Animation在使用上和Core Animation很相似，都涉及Animation对象�
 这里self.view上放了一个用于动画的testView，然后取一个随机坐标，进行动画。
 
 ### 2.PopSpringAnimation
+弹簧动画是Bezier曲线无法表述的，所以无法使用PopBasicAniamtion来实现。PopSpringAnimation便是专门用来实现弹簧动画的。
+
+    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
+
+    NSInteger height = CGRectGetHeight(self.view.bounds);
+    NSInteger width = CGRectGetWidth(self.view.bounds);
+
+    CGFloat centerX = arc4random() % width;
+    CGFloat centerY = arc4random() % height;
+
+    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerY)];
+    anim.springBounciness = 16;
+    anim.springSpeed = 6;
+    [self.testView pop_addAnimation:anim forKey:@"center"];
+
+<img src="http://ww1.sinaimg.cn/mw1024/65cc0af7gw1egqpgva69rg208u0fpjtx.gif" style="width: 25%; height: 25%";/>​
+
+这个例子的动画和上面的基本动画很相似，都是一个view的移动，但是这里有弹簧效果。POPSpringAnimation主要就是需要注意下几个参数的含义：
+
+* springBounciness 弹簧弹力 取值范围为[0, 20]，默认值为4
+* springSpeed 弹簧速度，速度越快，动画时间越短 [0, 20]，默认为12，和springBounciness一起决定着弹簧动画的效果
+* dynamicsTension  弹簧的张力
+* dynamicsFriction 弹簧摩擦
+* dynamicsMass 质量  。张力，摩擦，质量这三者可以从更细的粒度上替代springBounciness和springSpeed控制弹簧动画的效果
 
 
 
 ### 3.PopDecayAnimation
-基于Bezier曲线的timingFuntion是无法表述Decay Aniamtion的，所以Pop就单独实现了一个 PopDecayAnimation，用于衰减动画。
+基于Bezier曲线的timingFuntion同样无法表述Decay Aniamtion，所以Pop就单独实现了一个 PopDecayAnimation，用于衰减动画。衰减动画一个很常见的地方就是 UIScrollView 滑动松开后的减速，这里就基于UIView实现一个自己的ScrollView，然后使用PopDecayAnimation实现
+此代码可以详细参见 [KKScrollView](https://github.com/kejinlu/facebook-pop-sample/blob/master/facebook-pop-sample/KKScrollView.m) 的实现，当滑动手势结束时，根据结束的加速度，给衰减动画一个初始的velocity，用来决定衰减的时长。
+
+<img src="http://ww3.sinaimg.cn/mw1024/65cc0af7gw1egmzoapnqwg206i0bm7nn.gif" style="width: 25%; height: 25%";/>​
+
+### 4.POPCustomAnimation
+POPCustomAnimation 并不是基于POPPropertyAnimation的，是用于创建自定义动画用的，通过POPCustomAnimationBlock类型的block进行初始化，
+
+    typedef BOOL (^POPCustomAnimationBlock)(id target, POPCustomAnimation *animation);
+
+此block会在界面的每一帧更新的时候被调用，这个时候，创建者需要在block中根据当前currentTime和elapsedTime来决定如何更新target的相关属性，以实现特定的动画。
 
 
-
-## 四.交互式动画
+## 四.Pop Animation相比于Core Animation的优点
