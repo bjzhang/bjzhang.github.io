@@ -143,6 +143,7 @@ cat json.txt | openssl smime -sign -inkey privateKey.pem -signer lukesmac.cer -n
 
 
 最后就是客户端添加处理逻辑了，可以在Appdelegate中添加如下方法，就可以对传递过来的userActivity进行处理
+
 ```
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray *restorableObjects))restorationHandler NS_AVAILABLE_IOS(8_0);
 ```
