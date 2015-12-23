@@ -7,6 +7,8 @@ tags: [jekyll, github, git, markdown]
 使用github/gitcafe和jekyll搭建自己的博客
 =======================================
 
+![Github](../_posts/2015/github-octocat.png "Github")
+
 参考资料
 --------
 [扫盲帖](https://pages.github.com/)
@@ -29,10 +31,14 @@ google analysis说明和注册链接:
 
 <https://developer.chrome.com/extensions/tut_analytics>
 
-如何转发到朋友圈
----------------
-参考: <http://jingyan.baidu.com/article/0eb457e5017fda03f1a90539.html>
+微信
+----
+### 如何转发到朋友圈
+用微信发布包含网址的文字信息，然后用微信自带的浏览器打开这个网址，选择分享到朋友圈。
+[参考](http://jingyan.baidu.com/article/0eb457e5017fda03f1a90539.html)
 
-简单说是用微信发布包含网址的文字信息，然后用微信自带的浏览器打开这个网址，选择分享到朋友圈。
+### 朋友圈缩略图
+缩略图会使用第一章尺寸大约300x300的图片.
+[参考](http://www.zhihu.com/question/21668601)
 
 
