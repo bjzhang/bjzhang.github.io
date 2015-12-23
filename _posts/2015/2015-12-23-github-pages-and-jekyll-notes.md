@@ -7,7 +7,7 @@ tags: [jekyll, github, git, markdown]
 使用github/gitcafe和jekyll搭建自己的博客
 =======================================
 
-![Github](../_posts/2015/github-octocat.png "Github")
+<img alt="Github" src="{{site.url}}/public/images/github-octocat.png" width="100%" align="center" style="margin: 0px 15px">
 
 参考资料
 --------
@@ -16,6 +16,8 @@ tags: [jekyll, github, git, markdown]
 [github官方使用jekyll文档](https://help.github.com/articles/using-jekyll-with-pages/)，虽然我没有看懂:p
 
 [主要参考了God-Mode的写作环境搭建](http://site.douban.com/196781/widget/notes/12161495/note/264946576/)
+
+[Jekyll tempelate](https://github.com/jekyll/jekyll/wiki/sites)
 
 ###其他参考资料###
 
@@ -40,5 +42,7 @@ google analysis说明和注册链接:
 ### 朋友圈缩略图
 缩略图会使用第一章尺寸大约300x300的图片.
 [参考](http://www.zhihu.com/question/21668601)
+
+从[这里](http://vrepin.org/vr/CopyrightedMonumentsFinland/), [源码](https://raw.githubusercontent.com/vitalyrepin/vrepinblog/master/_posts/2015-09-18-CopyrightedMonumentsFinland.md)找到了设置图片的方法.
 
 
