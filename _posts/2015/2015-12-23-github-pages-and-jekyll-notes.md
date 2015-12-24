@@ -83,8 +83,8 @@ google analysis说明和注册链接:
 
 ### 朋友圈缩略图
 缩略图会使用第一张尺寸大约300x300的图片.
-[参考](http://www.zhihu.com/question/21668601), 通过`{{site.url}}`（原文是`{{site.baseurl}}`不知道为什么我的baseurl不行）得到路径：
-<img alt="Github" src="{{site.url}}/public/images/github-octocat.png" width="100%" align="center" style="margin: 0px 15px">
+[参考](http://www.zhihu.com/question/21668601), 通过`site.url`（原文是`site.baseurl`不知道为什么我的baseurl不行）得到路径：
+`<img alt="Github" src="{{site.url}}/public/images/github-octocat.png" width="100%" align="center" style="margin: 0px 15px">`
 
 从[这里](http://vrepin.org/vr/CopyrightedMonumentsFinland/), [源码](https://raw.githubusercontent.com/vitalyrepin/vrepinblog/master/_posts/2015-09-18-CopyrightedMonumentsFinland.md)找到了设置图片的方法.
 
