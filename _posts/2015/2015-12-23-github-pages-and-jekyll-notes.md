@@ -71,9 +71,8 @@ test-unit (2.1.7.0)
 
 补充2: 注册google analysis帐号
 ------------------------------
-google analysis说明和注册链接:
-
-<https://developer.chrome.com/extensions/tut_analytics>
+<kejinlu.github.io>的README.md提到要修改`_layouts / default.html`中 google analytics的标识`_gaq.push(['_setAccount', 'UA-xxxxxxxx-x']);`。反复尝试搜索内容，搜索"_setAccount ua"可以搜索到:
+[google analysis说明和注册链接](https://developer.chrome.com/extensions/tut_analytics)
 
 补充3: 微信
 -----------
@@ -84,7 +83,7 @@ google analysis说明和注册链接:
 ### 朋友圈缩略图
 缩略图会使用第一张尺寸大约300x300的图片.
 [参考](http://www.zhihu.com/question/21668601), 通过`site.url`（原文是`site.baseurl`不知道为什么我的baseurl不行）得到路径：
-`<img alt="Github" src="{{site.url}}/public/images/github-octocat.png" width="100%" align="center" style="margin: 0px 15px">`
+`<img alt="Github" src="\{\{site.url\}\}/public/images/github-octocat.png" width="100%" align="center" style="margin: 0px 15px">`
 
 从[这里](http://vrepin.org/vr/CopyrightedMonumentsFinland/), [源码](https://raw.githubusercontent.com/vitalyrepin/vrepinblog/master/_posts/2015-09-18-CopyrightedMonumentsFinland.md)找到了设置图片的方法.
 
