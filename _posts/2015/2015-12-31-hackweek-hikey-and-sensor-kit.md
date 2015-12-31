@@ -1,11 +1,10 @@
 ---
 layout: post
+title: [Hackweek: Hikey with sensor kit]
 categories: [Linux]
 tags: [hikey, sensor, suse, hackweek]
 ---
 
-Hackweek: Hikey with sensor kit
-===============================
 
 拍hackweek日历。
 

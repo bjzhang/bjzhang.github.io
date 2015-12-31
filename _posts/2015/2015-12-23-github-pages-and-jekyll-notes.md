@@ -1,11 +1,9 @@
 ---
 layout: post
+title: 使用github/gitcafe和jekyll搭建自己的博客
 categories: [Tools]
 tags: [jekyll, github, git, markdown]
 ---
-
-使用github/gitcafe和jekyll搭建自己的博客
-=======================================
 
 <img alt="Github" src="{{site.url}}/public/images/github-octocat.png" width="100%" align="center" style="margin: 0px 15px">
 
