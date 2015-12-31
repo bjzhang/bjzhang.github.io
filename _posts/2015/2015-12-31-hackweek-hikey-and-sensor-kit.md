@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Hackweek: Hikey with sensor kit]
+title: "Hackweek: Hikey with sensor kit"
 categories: [Linux]
 tags: [hikey, sensor, suse, hackweek]
 ---

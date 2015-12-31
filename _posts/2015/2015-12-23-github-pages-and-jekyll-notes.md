@@ -85,3 +85,7 @@ test-unit (2.1.7.0)
 
 从[这里](http://vrepin.org/vr/CopyrightedMonumentsFinland/), [源码](https://raw.githubusercontent.com/vitalyrepin/vrepinblog/master/_posts/2015-09-18-CopyrightedMonumentsFinland.md)找到了设置图片的方法.
 
+补充4: 评论
+-----------
+我的评论使用disqus.
+
