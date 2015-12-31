@@ -87,5 +87,7 @@ test-unit (2.1.7.0)
 
 补充4: 评论
 -----------
-我的评论使用disqus.
+我的评论使用disqus，参考：
+<https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions>
+<http://hobodave.com/2010/01/08/moving-to-jekyll-disqus/>
 
