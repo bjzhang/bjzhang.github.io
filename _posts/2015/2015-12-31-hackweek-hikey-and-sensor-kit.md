@@ -10,6 +10,7 @@ tags: [hikey, sensor, suse, hackweek]
 
 什么是hackweek？
 ----------------
+<img alt="Calendar for Hackweek13" src="{{site.url}}/public/images/hackweek13/Hackweek_calendar.jpg" width="50%" align="left" style="margin: 0px 15px">
 [hackweek](https://hackweek.suse.com/)是suse的传统，一年一到两次。至今已举办13界。hackweek的时候大家都可以放下手中的工作，做一些自己想做的事情。如果有临时紧急工作影响了hackweek，可以后面单独做自己的hackweek。hackweek是即是hacking for fun，也是suse产品创意的来源之一。
 停下来想一想，有什么小改进能提高自己的工作效率，或者学些什么东西开阔自己的视野，哪怕就是读一本书，都可以作为hackweek的项目。
 
@@ -17,14 +18,17 @@ tags: [hikey, sensor, suse, hackweek]
 
 本次hackweek项目
 ----------------
-本次有来自suse和社区的十几个项目(?)。其中既有能解决工作中实际问题的小hacking。也有个人一直持续开发的开源项目。 社区主要来源是blug(Beijing Linux User Group)和高校学生。
+本次北京共有来自suse和社区的28个项目。其中既有能解决工作中实际问题的小hacking。也有个人一直持续开发的开源项目。 社区主要来源是blug(Beijing Linux User Group)和高校学生。
 
+![Project: suse game]({{site.url}}/public/images/hackweek13/Project_suse_game.jpg)
 suse游戏：是suse三国杀之后又一个suse游戏项目，使用teambuild技能后全员满血。
 迷你hypervvisor：基于x86平台的虚拟化项目。
 porting CDE to modern Linux distribution: Linux老兵怀念CED的一周。
 
 我的项目
 --------
+![Hikey with relay]({{site.url}}/public/images/hackweek13/Hikey_with_relay.jpg)
+
 这次是我离开suse后第一次参加hackweek，带来的是提高自己工作效率的小工程。
 最近一直使用hikey开发，由于hikey otg和usb host不能同时使用，烧写内核时需要插拔otg和usb host线，很是影响效率和心情，想一想如果将来合入补丁除了问题需要git bisect，那不是要死人么:p
 
