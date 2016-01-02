@@ -91,3 +91,23 @@ test-unit (2.1.7.0)
 <https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions>
 <http://hobodave.com/2010/01/08/moving-to-jekyll-disqus/>
 
+补充5：搜索引擎
+----------------
+ 参考[zhenyu的博客](http://zyzhang.github.io/blog/2012/09/03/blog-with-github-pages-and-jekyll-seo/)在google和baidu注册。
+
+baidu站长验证有三种方式：网站根目录文件验证，主页html标签验证和cname验证。根目录文件不知道怎么加，cname验证貌似需要dns解析服务器帮忙解析域名。看到自己代码里面有index.html，想先试下这个，但是index.html明显不是html格式文档啊啊啊，咋办？
+
+回忆下之前看jekyll的资料，jekyll使用[YAML Front Matter](http://jekyllrb.com/docs/frontmatter/)作为文件头。其中网页的模板由layout指定。例如我的index.html里面"layout: page"，会去找_layouts/page.html,  _layout/page.html又指定layout是default，这个default.html是html文档。所以我的html标签验证内容应该插入到default.html里面。
+
+```
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{ site.author }}" />
+    <!-- for Baidu: http://zhanzhang.baidu.com -->
+    <meta name="baidu-site-verification" content="XXXXXXXXXX" />
+    <!-- ... -->
+  </head>
+  ```
+
+推送方式比较简答的是sitemap，需要手动推送。我用的是js的自动提交，在_layout/post.html插入即可。
+
