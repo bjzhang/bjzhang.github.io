@@ -109,5 +109,59 @@ baidu站长验证有三种方式：网站根目录文件验证，主页html标�
   </head>
   ```
 
-推送方式比较简答的是sitemap，需要手动推送。我用的是js的自动提交，在_layout/post.html插入即可。
+我用的是js的自动提交，在_layout/post.html插入即可。
+
+折腾之后发现原来作者定义了sitemap，也上传了bjzhang.github.io/sitemap.xml。sitemap.xml原始文件如下
+
+```
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {% if post.lastmod == null %}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% endfor %}
+  {% for page in site.pages %}
+  {% if page.sitemap != null and page.sitemap != empty %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+    <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+    <priority>{{ page.sitemap.priority }}</priority>
+  </url>
+  {% endif %}
+  {% endfor %}
+</urlset>
+```
+
+生成的结果文件如下：
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://bjzhang.github.io/2015/12/hackweek-hikey-and-sensor-kit/</loc>
+    <lastmod>2015-12-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://bjzhang.github.io/2015/12/github-pages-and-jekyll-notes/</loc>
+    <lastmod>2015-12-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
 
