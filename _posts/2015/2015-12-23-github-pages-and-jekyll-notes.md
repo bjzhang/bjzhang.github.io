@@ -164,4 +164,12 @@ layout: nil
 </urlset>
 ```
 
+2016年1月4日更新
+---------------
+
+补充6：dns解析
+--------------
+之前有很多[博客](http://beiyuu.com/github-pages/)说github dns解析需要添加一条A(ALIAS)记录，但是这个方法已经是[github禁止的方法](https://github.com/blog/1917-github-pages-legacy-ip-deprecation)。正确的方法是添加一条CNAME记录，指向自己的域名。貌似对于dnspod.cn来说需要加"xxx.github.io."。完整方法在[这里](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/)。
+gitcafe绑定自定义域名可以在”自定义域名“里面设置，同样需要在dns服务商添加CNAME，详见<https://gitcafe.com/GitCafe/Help/wiki/Pages-%E7%9B%B8%E5%85%B3%E5%B8%AE%E5%8A%A9#wiki>
+
 

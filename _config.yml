@@ -1,6 +1,6 @@
 markdown: rdiscount
 permalink: /:year/:month/:title/
-url: http://bjzhang.github.io
+url: http://aarch64.me
 author: Bamvor
 pygments: true
 paginate: 24
