@@ -5,9 +5,6 @@ categories: [Linux]
 tags: [hikey, sensor, suse, hackweek]
 ---
 
-
-拍hackweek日历。
-
 什么是hackweek？
 ----------------
 <img alt="Calendar for Hackweek13" src="{{site.url}}/public/images/hackweek13/Hackweek_calendar.jpg" width="50%" align="left" style="margin: 0px 15px">
@@ -22,15 +19,17 @@ tags: [hikey, sensor, suse, hackweek]
 
 ![Project: suse game]({{site.url}}/public/images/hackweek13/Project_suse_game.jpg)
 suse游戏：是suse三国杀之后又一个suse游戏项目，使用teambuild技能后全员满血。
+
 迷你hypervvisor：基于x86平台的虚拟化项目。
-porting CDE to modern Linux distribution: Linux老兵怀念CED的一周。
+
+porting CDE to modern Linux distribution: Linux老兵怀念CDE，尝试移植CDE到ubuntu和opensuse.
 
 我的项目
 --------
 ![Hikey with relay]({{site.url}}/public/images/hackweek13/Hikey_with_relay.jpg)
 
 这次是我离开suse后第一次参加hackweek，带来的是提高自己工作效率的小工程。
-最近一直使用hikey开发，由于hikey otg和usb host不能同时使用，烧写内核时需要插拔otg和usb host线，很是影响效率和心情，想一想如果将来合入补丁除了问题需要git bisect，那不是要死人么:p
+最近一直使用hikey开发，烧写内核时需要插拔跳线和usb otg host线(otg和uhost不能同时使用)，很是影响效率和心情，想一想如果将来合入补丁除了问题需要git bisect，那不是要死人么:p
 
 hikey介绍参见lemaker hikey开箱。
 我这次是通过hikey的（usb转）串口控制继电器，通过继电器控制otg和usb host线的插拔。同时通过继电器控制板子的跳线（通过fastboot命令烧写系统，需要一个跳线短接，烧写后需要断开）。
@@ -38,4 +37,5 @@ hikey介绍参见lemaker hikey开箱。
 交流
 ----
 blug社区的负责人之一对于hikey应用与嵌入式很感兴趣。并欢迎我司捐赠给blug社区。
+
 suse北京的研发老大sunny一直在思考开源中的女性能做些什么，看到hikey，希望能通过hikey把开源操作系统和传感器连接起来。
