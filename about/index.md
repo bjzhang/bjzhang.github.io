@@ -4,7 +4,8 @@ layout: page
 comments: yes
 ---
 
-张健并没有写自我介绍:p
+An Linux kernel developer in linaro kernel working group. I am very intetested in the ARM architecture relative things. You could find my full resume in [linkedin](http://www.linkedin.com/in/bamvor).
 
-个人邮箱: bamv2005@gmail.com
-github : [https://github.com/bjzhang](https://github.com/bjzhang)
+Email: bamv2005@gmail.com
+
+github: [https://github.com/bjzhang](https://github.com/bjzhang)
