@@ -20,7 +20,12 @@ tags: [hikey, sensor, suse, hackweek]
 ![Project: suse game]({{site.url}}/public/images/hackweek13/Project_suse_game.jpg)
 suse游戏：是suse三国杀之后又一个suse游戏项目，使用teambuild技能后全员满血。
 
-迷你hypervvisor：基于x86平台的虚拟化项目。
+虚拟化是suse北京的重要方向，这次hackweek相关项目有:
+*   [X86_64 platform system program](https://hackweek.suse.com/13/projects/1104): 目标是做为x86平台的hypervisor, 可以在[这里](https://github.com/wjn740/hypervisor_last)找到代码。
+*   [Research on COLO - the HA solution for virtualization](https://hackweek.suse.com/13/projects/1118)
+[kindle highlights management tool](https://hackweek.suse.com/13/projects/1138): Kindle笔记管理软件。
+*   Deploy HA stack with docker
+*   Docker, Kubernetes research.
 
 porting CDE to modern Linux distribution: Linux老兵怀念CDE，尝试移植CDE到ubuntu和opensuse.
 
