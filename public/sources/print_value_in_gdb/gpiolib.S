@@ -1,0 +1,10874 @@
+
+drivers/gpio/gpiolib.o:     file format elf64-littleaarch64
+drivers/gpio/gpiolib.o
+architecture: aarch64, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x0000000000000000
+private flags = 0:
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00003b14  0000000000000000  0000000000000000  00000040  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .data         000000e0  0000000000000000  0000000000000000  00003b58  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+  2 .bss          00000040  0000000000000000  0000000000000000  00003c38  2**3
+                  ALLOC
+  3 __bug_table   00000048  0000000000000000  0000000000000000  00003c38  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  4 .rodata.str   0000008a  0000000000000000  0000000000000000  00003c80  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .init.text    000000bc  0000000000000000  0000000000000000  00003d0c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .rodata       00000500  0000000000000000  0000000000000000  00003dc8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  7 ___ksymtab_gpl+gpiod_get_value 00000010  0000000000000000  0000000000000000  000042c8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  8 ___ksymtab_gpl+gpiochip_remove 00000010  0000000000000000  0000000000000000  000042d8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  9 ___ksymtab_gpl+gpiod_to_irq 00000010  0000000000000000  0000000000000000  000042e8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 10 ___ksymtab_gpl+gpiod_cansleep 00000010  0000000000000000  0000000000000000  000042f8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 11 ___ksymtab_gpl+gpiod_count 00000010  0000000000000000  0000000000000000  00004308  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 12 ___ksymtab_gpl+gpiod_set_array_value 00000010  0000000000000000  0000000000000000  00004318  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 13 ___ksymtab_gpl+gpiod_set_debounce 00000010  0000000000000000  0000000000000000  00004328  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 14 ___ksymtab_gpl+gpiod_direction_output_raw 00000010  0000000000000000  0000000000000000  00004338  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 15 ___ksymtab_gpl+gpiod_set_value_cansleep 00000010  0000000000000000  0000000000000000  00004348  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 16 ___ksymtab_gpl+gpiochip_is_requested 00000010  0000000000000000  0000000000000000  00004358  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 17 ___ksymtab_gpl+gpiod_get_array 00000010  0000000000000000  0000000000000000  00004368  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 18 ___ksymtab_gpl+gpiochip_unlock_as_irq 00000010  0000000000000000  0000000000000000  00004378  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 19 ___ksymtab_gpl+fwnode_get_named_gpiod 00000010  0000000000000000  0000000000000000  00004388  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 20 .rodata.str1.8 00000968  0000000000000000  0000000000000000  00004398  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 21 ___ksymtab_gpl+gpiochip_line_is_open_drain 00000010  0000000000000000  0000000000000000  00004d00  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 22 ___ksymtab_gpl+gpiochip_get_data 00000010  0000000000000000  0000000000000000  00004d10  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 23 ___ksymtab_gpl+gpiod_get_direction 00000010  0000000000000000  0000000000000000  00004d20  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 24 ___ksymtab_gpl+gpiod_is_active_low 00000010  0000000000000000  0000000000000000  00004d30  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 25 ___ksymtab_gpl+gpiochip_set_chained_irqchip 00000010  0000000000000000  0000000000000000  00004d40  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 26 ___ksymtab_gpl+gpiochip_free_own_desc 00000010  0000000000000000  0000000000000000  00004d50  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 27 ___ksymtab_gpl+gpiochip_remove_pin_ranges 00000010  0000000000000000  0000000000000000  00004d60  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 28 ___ksymtab_gpl+_gpiochip_irqchip_add 00000010  0000000000000000  0000000000000000  00004d70  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 29 ___ksymtab_gpl+gpiod_put 00000010  0000000000000000  0000000000000000  00004d80  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 30 ___ksymtab_gpl+gpiochip_lock_as_irq 00000010  0000000000000000  0000000000000000  00004d90  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 31 ___ksymtab_gpl+gpiod_set_raw_array_value 00000010  0000000000000000  0000000000000000  00004da0  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 32 ___ksymtab_gpl+gpio_to_desc 00000010  0000000000000000  0000000000000000  00004db0  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 33 __verbose     00000208  0000000000000000  0000000000000000  00004dc0  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 34 ___ksymtab_gpl+gpiod_get_index_optional 00000010  0000000000000000  0000000000000000  00004fc8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 35 ___ksymtab_gpl+gpiochip_add_data 00000010  0000000000000000  0000000000000000  00004fd8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 36 ___ksymtab_gpl+gpiod_get_raw_value_cansleep 00000010  0000000000000000  0000000000000000  00004fe8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 37 ___ksymtab_gpl+gpiod_get_array_optional 00000010  0000000000000000  0000000000000000  00004ff8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 38 ___ksymtab_gpl+gpiochip_request_own_desc 00000010  0000000000000000  0000000000000000  00005008  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 39 ___ksymtab_gpl+gpiod_to_chip 00000010  0000000000000000  0000000000000000  00005018  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 40 ___ksymtab_gpl+gpiod_get_index 00000010  0000000000000000  0000000000000000  00005028  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 41 ___ksymtab_gpl+gpiod_get_raw_value 00000010  0000000000000000  0000000000000000  00005038  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 42 ___ksymtab_gpl+gpiochip_generic_request 00000010  0000000000000000  0000000000000000  00005048  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 43 ___ksymtab_gpl+gpiod_set_raw_value 00000010  0000000000000000  0000000000000000  00005058  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 44 ___ksymtab_gpl+gpiod_direction_input 00000010  0000000000000000  0000000000000000  00005068  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 45 ___ksymtab_gpl+gpiod_put_array 00000010  0000000000000000  0000000000000000  00005078  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 46 ___ksymtab_gpl+gpiod_set_value 00000010  0000000000000000  0000000000000000  00005088  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 47 ___ksymtab_gpl+gpiochip_line_is_open_source 00000010  0000000000000000  0000000000000000  00005098  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 48 ___ksymtab_gpl+desc_to_gpio 00000010  0000000000000000  0000000000000000  000050a8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 49 ___ksymtab_gpl+gpiod_get_optional 00000010  0000000000000000  0000000000000000  000050b8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 50 ___ksymtab_gpl+gpiochip_find 00000010  0000000000000000  0000000000000000  000050c8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 51 ___ksymtab_gpl+gpiochip_line_is_irq 00000010  0000000000000000  0000000000000000  000050d8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 52 ___ksymtab_gpl+gpiod_direction_output 00000010  0000000000000000  0000000000000000  000050e8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 53 ___ksymtab_gpl+gpiochip_generic_free 00000010  0000000000000000  0000000000000000  000050f8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 54 .initcall4.init 00000008  0000000000000000  0000000000000000  00005108  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 55 ___ksymtab_gpl+gpiod_get_value_cansleep 00000010  0000000000000000  0000000000000000  00005110  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 56 ___ksymtab_gpl+gpiod_set_raw_value_cansleep 00000010  0000000000000000  0000000000000000  00005120  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 57 ___ksymtab_gpl+gpiod_get 00000010  0000000000000000  0000000000000000  00005130  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 58 ___ksymtab_gpl+gpiod_set_array_value_cansleep 00000010  0000000000000000  0000000000000000  00005140  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 59 .initcall1.init 00000008  0000000000000000  0000000000000000  00005150  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, DATA
+ 60 ___ksymtab_gpl+gpiod_set_raw_array_value_cansleep 00000010  0000000000000000  0000000000000000  00005158  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 61 __ksymtab_strings 0000044c  0000000000000000  0000000000000000  00005168  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 62 ___ksymtab_gpl+gpiochip_add_pin_range 00000010  0000000000000000  0000000000000000  000055b8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 63 ___ksymtab_gpl+gpiochip_add_pingroup_range 00000010  0000000000000000  0000000000000000  000055c8  2**3
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+ 64 .debug_info   00012c16  0000000000000000  0000000000000000  000055d8  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 65 .debug_abbrev 00000740  0000000000000000  0000000000000000  000181ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 66 .debug_loc    00004ddf  0000000000000000  0000000000000000  0001892e  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 67 .debug_aranges 00000050  0000000000000000  0000000000000000  0001d70d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 68 .debug_ranges 00001930  0000000000000000  0000000000000000  0001d75d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 69 .debug_line   00001d20  0000000000000000  0000000000000000  0001f08d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 70 .debug_str    0000897c  0000000000000000  0000000000000000  00020dad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 71 .comment      00000037  0000000000000000  0000000000000000  00029729  2**0
+                  CONTENTS, READONLY
+ 72 .note.GNU-stack 00000000  0000000000000000  0000000000000000  00029760  2**0
+                  CONTENTS, READONLY
+ 73 .debug_frame  000012b8  0000000000000000  0000000000000000  00029760  2**3
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 gpiolib.c
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l       *ABS*	0000000000000000 __reg_num_x0
+0000000000000001 l       *ABS*	0000000000000000 __reg_num_x1
+0000000000000002 l       *ABS*	0000000000000000 __reg_num_x2
+0000000000000003 l       *ABS*	0000000000000000 __reg_num_x3
+0000000000000004 l       *ABS*	0000000000000000 __reg_num_x4
+0000000000000005 l       *ABS*	0000000000000000 __reg_num_x5
+0000000000000006 l       *ABS*	0000000000000000 __reg_num_x6
+0000000000000007 l       *ABS*	0000000000000000 __reg_num_x7
+0000000000000008 l       *ABS*	0000000000000000 __reg_num_x8
+0000000000000009 l       *ABS*	0000000000000000 __reg_num_x9
+000000000000000a l       *ABS*	0000000000000000 __reg_num_x10
+000000000000000b l       *ABS*	0000000000000000 __reg_num_x11
+000000000000000c l       *ABS*	0000000000000000 __reg_num_x12
+000000000000000d l       *ABS*	0000000000000000 __reg_num_x13
+000000000000000e l       *ABS*	0000000000000000 __reg_num_x14
+000000000000000f l       *ABS*	0000000000000000 __reg_num_x15
+0000000000000010 l       *ABS*	0000000000000000 __reg_num_x16
+0000000000000011 l       *ABS*	0000000000000000 __reg_num_x17
+0000000000000012 l       *ABS*	0000000000000000 __reg_num_x18
+0000000000000013 l       *ABS*	0000000000000000 __reg_num_x19
+0000000000000014 l       *ABS*	0000000000000000 __reg_num_x20
+0000000000000015 l       *ABS*	0000000000000000 __reg_num_x21
+0000000000000016 l       *ABS*	0000000000000000 __reg_num_x22
+0000000000000017 l       *ABS*	0000000000000000 __reg_num_x23
+0000000000000018 l       *ABS*	0000000000000000 __reg_num_x24
+0000000000000019 l       *ABS*	0000000000000000 __reg_num_x25
+000000000000001a l       *ABS*	0000000000000000 __reg_num_x26
+000000000000001b l       *ABS*	0000000000000000 __reg_num_x27
+000000000000001c l       *ABS*	0000000000000000 __reg_num_x28
+000000000000001d l       *ABS*	0000000000000000 __reg_num_x29
+000000000000001e l       *ABS*	0000000000000000 __reg_num_x30
+000000000000001f l       *ABS*	0000000000000000 __reg_num_xzr
+0000000000000078 l     F .text	000000000000004c _gpiod_get_raw_value
+00000000000000c4 l     F .text	0000000000000004 gpiolib_seq_stop
+0000000000000160 l     F .text	0000000000000080 gpiolib_seq_next
+00000000000001e0 l     F .text	00000000000000a8 gpiolib_seq_start
+0000000000000324 l     F .text	00000000000000d0 _gpio_set_open_drain_value
+00000000000003f4 l     F .text	00000000000000d4 _gpio_set_open_source_value
+00000000000004c8 l     F .text	0000000000000068 _gpiod_set_raw_value
+0000000000000530 l     F .text	000000000000005c gpiod_parse_flags
+0000000000000714 l     F .text	0000000000000138 _gpiod_direction_output_raw
+0000000000000000 l    d  __bug_table	0000000000000000 __bug_table
+0000000000000000 l    d  .rodata.str	0000000000000000 .rodata.str
+00000000000009dc l     F .text	0000000000000060 gpiodevice_release
+0000000000000a3c l     F .text	0000000000000030 gpio_chrdev_release
+0000000000000a6c l     F .text	0000000000000048 gpio_chrdev_open
+0000000000000ab4 l     F .text	0000000000000220 gpio_ioctl
+0000000000000cd4 l     F .text	0000000000000020 gpiochip_match_name
+0000000000000cf4 l     F .text	000000000000001c gpiochip_to_irq
+0000000000000e18 l     F .text	000000000000007c gpiochip_irq_reqres
+0000000000001e20 l     F .text	0000000000000054 gpiochip_irq_relres
+0000000000000e94 l     F .text	0000000000000058 gpiochip_irq_unmap
+0000000000000eec l     F .text	0000000000000090 gpiochip_irq_map
+000000000000131c l     F .text	0000000000000144 __gpiod_request
+00000000000014e4 l     F .text	00000000000000f8 __gpiod_free
+00000000000015f4 l     F .text	0000000000000274 gpiod_set_array_value_priv
+0000000000001918 l     F .text	00000000000000c0 gpiod_find_lookup_table
+0000000000000000 l    d  .init.text	0000000000000000 .init.text
+0000000000000000 l     F .init.text	0000000000000084 gpiolib_dev_init
+0000000000000084 l     F .init.text	0000000000000038 gpiolib_debugfs_init
+00000000000019d8 l     F .text	0000000000000024 gpiolib_open
+00000000000019fc l     F .text	00000000000002bc gpiolib_seq_show
+000000000000244c l     F .text	0000000000000088 gpiod_configure_flags
+00000000000025a4 l     F .text	0000000000000068 gpiochip_free_hogs.isra.36
+0000000000000000 l    d  .rodata	0000000000000000 .rodata
+0000000000000000 l     O .rodata	000000000000001b __func__.29872
+0000000000000020 l     O .rodata	000000000000001c __func__.29880
+0000000000000040 l     O .rodata	0000000000000015 __func__.29992
+0000000000000058 l     O .rodata	0000000000000016 __func__.29779
+0000000000000070 l     O .rodata	000000000000001c __func__.29791
+0000000000000090 l     O .rodata	0000000000000010 __func__.29857
+00000000000000a0 l     O .rodata	0000000000000013 __func__.29819
+00000000000000b8 l     O .rodata	0000000000000048 gpiochip_domain_ops
+0000000000000100 l     O .rodata	00000000000000f0 gpiolib_operations
+00000000000001f0 l     O .rodata	0000000000000020 gpiolib_seq_ops
+0000000000000210 l     O .rodata	000000000000001b __func__.29796
+0000000000000230 l     O .rodata	0000000000000017 __func__.29807
+0000000000000248 l     O .rodata	0000000000000014 __func__.29830
+0000000000000260 l     O .rodata	0000000000000014 __func__.29845
+0000000000000278 l     O .rodata	0000000000000014 __func__.29922
+0000000000000290 l     O .rodata	0000000000000010 __func__.29935
+00000000000002a0 l     O .rodata	000000000000000f __func__.29971
+00000000000002b0 l     O .rodata	000000000000000d __func__.29982
+00000000000002c0 l     O .rodata	000000000000001d __func__.30042
+00000000000002e0 l     O .rodata	0000000000000019 __func__.30052
+0000000000000300 l     O .rodata	000000000000001d __func__.30062
+0000000000000320 l     O .rodata	0000000000000019 __func__.30073
+0000000000000340 l     O .rodata	000000000000001d __func__.29552
+0000000000000360 l     O .rodata	0000000000000013 __func__.29359
+0000000000000378 l     O .rodata	00000000000000f0 gpio_fileops
+0000000000000468 l     O .rodata	0000000000000012 __func__.29472
+0000000000000480 l     O .rodata	0000000000000010 gpio_suffixes
+0000000000000490 l     O .rodata	000000000000000e __func__.29722
+00000000000004a0 l     O .rodata	0000000000000016 __func__.30239
+00000000000004b8 l     O .rodata	0000000000000010 __func__.30250
+00000000000004c8 l     O .rodata	0000000000000017 __func__.29669
+00000000000004e0 l     O .rodata	000000000000001c __func__.29649
+0000000000000010 l     O .data	0000000000000028 gpio_lookup_lock
+0000000000000038 l     O .data	0000000000000010 gpio_lookup_list
+0000000000000048 l     O .data	0000000000000098 gpio_bus_type
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_value	0000000000000000 ___ksymtab_gpl+gpiod_get_value
+0000000000000244 l     O __ksymtab_strings	0000000000000010 __kstrtab_gpiod_get_value
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_remove	0000000000000000 ___ksymtab_gpl+gpiochip_remove
+00000000000003dc l     O __ksymtab_strings	0000000000000010 __kstrtab_gpiochip_remove
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_to_irq	0000000000000000 ___ksymtab_gpl+gpiod_to_irq
+00000000000001d4 l     O __ksymtab_strings	000000000000000d __kstrtab_gpiod_to_irq
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_cansleep
+00000000000001e1 l     O __ksymtab_strings	000000000000000f __kstrtab_gpiod_cansleep
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_count	0000000000000000 ___ksymtab_gpl+gpiod_count
+00000000000000a0 l     O __ksymtab_strings	000000000000000c __kstrtab_gpiod_count
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_array_value	0000000000000000 ___ksymtab_gpl+gpiod_set_array_value
+00000000000001f0 l     O __ksymtab_strings	0000000000000016 __kstrtab_gpiod_set_array_value
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_debounce	0000000000000000 ___ksymtab_gpl+gpiod_set_debounce
+000000000000027c l     O __ksymtab_strings	0000000000000013 __kstrtab_gpiod_set_debounce
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_direction_output_raw	0000000000000000 ___ksymtab_gpl+gpiod_direction_output_raw
+00000000000002a6 l     O __ksymtab_strings	000000000000001b __kstrtab_gpiod_direction_output_raw
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_value_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_set_value_cansleep
+00000000000000ee l     O __ksymtab_strings	0000000000000019 __kstrtab_gpiod_set_value_cansleep
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_is_requested	0000000000000000 ___ksymtab_gpl+gpiochip_is_requested
+0000000000000308 l     O __ksymtab_strings	0000000000000016 __kstrtab_gpiochip_is_requested
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_array	0000000000000000 ___ksymtab_gpl+gpiod_get_array
+0000000000000033 l     O __ksymtab_strings	0000000000000010 __kstrtab_gpiod_get_array
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_unlock_as_irq	0000000000000000 ___ksymtab_gpl+gpiochip_unlock_as_irq
+00000000000001a8 l     O __ksymtab_strings	0000000000000017 __kstrtab_gpiochip_unlock_as_irq
+0000000000000000 l    d  ___ksymtab_gpl+fwnode_get_named_gpiod	0000000000000000 ___ksymtab_gpl+fwnode_get_named_gpiod
+000000000000005c l     O __ksymtab_strings	0000000000000017 __kstrtab_fwnode_get_named_gpiod
+0000000000000000 l    d  .rodata.str1.8	0000000000000000 .rodata.str1.8
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_line_is_open_drain	0000000000000000 ___ksymtab_gpl+gpiochip_line_is_open_drain
+0000000000000177 l     O __ksymtab_strings	000000000000001c __kstrtab_gpiochip_line_is_open_drain
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_get_data	0000000000000000 ___ksymtab_gpl+gpiochip_get_data
+00000000000003ec l     O __ksymtab_strings	0000000000000012 __kstrtab_gpiochip_get_data
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_direction	0000000000000000 ___ksymtab_gpl+gpiod_get_direction
+0000000000000410 l     O __ksymtab_strings	0000000000000014 __kstrtab_gpiod_get_direction
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_is_active_low	0000000000000000 ___ksymtab_gpl+gpiod_is_active_low
+0000000000000268 l     O __ksymtab_strings	0000000000000014 __kstrtab_gpiod_is_active_low
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_set_chained_irqchip	0000000000000000 ___ksymtab_gpl+gpiochip_set_chained_irqchip
+00000000000003b1 l     O __ksymtab_strings	000000000000001d __kstrtab_gpiochip_set_chained_irqchip
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_free_own_desc	0000000000000000 ___ksymtab_gpl+gpiochip_free_own_desc
+00000000000002d7 l     O __ksymtab_strings	0000000000000017 __kstrtab_gpiochip_free_own_desc
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_remove_pin_ranges	0000000000000000 ___ksymtab_gpl+gpiochip_remove_pin_ranges
+000000000000031e l     O __ksymtab_strings	000000000000001b __kstrtab_gpiochip_remove_pin_ranges
+0000000000000000 l    d  ___ksymtab_gpl+_gpiochip_irqchip_add	0000000000000000 ___ksymtab_gpl+_gpiochip_irqchip_add
+000000000000039b l     O __ksymtab_strings	0000000000000016 __kstrtab__gpiochip_irqchip_add
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_put	0000000000000000 ___ksymtab_gpl+gpiod_put
+0000000000000010 l     O __ksymtab_strings	000000000000000a __kstrtab_gpiod_put
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_lock_as_irq	0000000000000000 ___ksymtab_gpl+gpiochip_lock_as_irq
+00000000000001bf l     O __ksymtab_strings	0000000000000015 __kstrtab_gpiochip_lock_as_irq
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_raw_array_value	0000000000000000 ___ksymtab_gpl+gpiod_set_raw_array_value
+0000000000000206 l     O __ksymtab_strings	000000000000001a __kstrtab_gpiod_set_raw_array_value
+0000000000000000 l    d  ___ksymtab_gpl+gpio_to_desc	0000000000000000 ___ksymtab_gpl+gpio_to_desc
+000000000000043f l     O __ksymtab_strings	000000000000000d __kstrtab_gpio_to_desc
+0000000000000000 l    d  __verbose	0000000000000000 __verbose
+0000000000000000 l     O __verbose	0000000000000028 descriptor.29820
+0000000000000028 l     O __verbose	0000000000000028 descriptor.29648
+0000000000000050 l     O __verbose	0000000000000028 descriptor.29668
+0000000000000078 l     O __verbose	0000000000000028 descriptor.30238
+00000000000000a0 l     O __verbose	0000000000000028 descriptor.29358
+00000000000000c8 l     O __verbose	0000000000000028 descriptor.29471
+00000000000000f0 l     O __verbose	0000000000000028 descriptor.29475
+0000000000000118 l     O __verbose	0000000000000028 descriptor.29723
+0000000000000140 l     O __verbose	0000000000000028 descriptor.30249
+0000000000000168 l     O __verbose	0000000000000028 descriptor.30253
+0000000000000190 l     O __verbose	0000000000000028 descriptor.30251
+00000000000001b8 l     O __verbose	0000000000000028 descriptor.30254
+00000000000001e0 l     O __verbose	0000000000000028 descriptor.30255
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_index_optional	0000000000000000 ___ksymtab_gpl+gpiod_get_index_optional
+0000000000000043 l     O __ksymtab_strings	0000000000000019 __kstrtab_gpiod_get_index_optional
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_add_data	0000000000000000 ___ksymtab_gpl+gpiochip_add_data
+00000000000003fe l     O __ksymtab_strings	0000000000000012 __kstrtab_gpiochip_add_data
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_raw_value_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_get_raw_value_cansleep
+000000000000013d l     O __ksymtab_strings	000000000000001d __kstrtab_gpiod_get_raw_value_cansleep
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_array_optional	0000000000000000 ___ksymtab_gpl+gpiod_get_array_optional
+000000000000001a l     O __ksymtab_strings	0000000000000019 __kstrtab_gpiod_get_array_optional
+0000000000000008 l     O .bss	0000000000000030 gpio_ida
+0000000000000038 l     O .bss	0000000000000004 gpio_devt
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_request_own_desc	0000000000000000 ___ksymtab_gpl+gpiochip_request_own_desc
+00000000000002ee l     O __ksymtab_strings	000000000000001a __kstrtab_gpiochip_request_own_desc
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_to_chip	0000000000000000 ___ksymtab_gpl+gpiod_to_chip
+0000000000000424 l     O __ksymtab_strings	000000000000000e __kstrtab_gpiod_to_chip
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_index	0000000000000000 ___ksymtab_gpl+gpiod_get_index
+0000000000000073 l     O __ksymtab_strings	0000000000000010 __kstrtab_gpiod_get_index
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_raw_value	0000000000000000 ___ksymtab_gpl+gpiod_get_raw_value
+0000000000000254 l     O __ksymtab_strings	0000000000000014 __kstrtab_gpiod_get_raw_value
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_generic_request	0000000000000000 ___ksymtab_gpl+gpiochip_generic_request
+0000000000000382 l     O __ksymtab_strings	0000000000000019 __kstrtab_gpiochip_generic_request
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_raw_value	0000000000000000 ___ksymtab_gpl+gpiod_set_raw_value
+0000000000000230 l     O __ksymtab_strings	0000000000000014 __kstrtab_gpiod_set_raw_value
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_direction_input	0000000000000000 ___ksymtab_gpl+gpiod_direction_input
+00000000000002c1 l     O __ksymtab_strings	0000000000000016 __kstrtab_gpiod_direction_input
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_put_array	0000000000000000 ___ksymtab_gpl+gpiod_put_array
+0000000000000000 l     O __ksymtab_strings	0000000000000010 __kstrtab_gpiod_put_array
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_value	0000000000000000 ___ksymtab_gpl+gpiod_set_value
+0000000000000220 l     O __ksymtab_strings	0000000000000010 __kstrtab_gpiod_set_value
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_line_is_open_source	0000000000000000 ___ksymtab_gpl+gpiochip_line_is_open_source
+000000000000015a l     O __ksymtab_strings	000000000000001d __kstrtab_gpiochip_line_is_open_source
+0000000000000000 l    d  ___ksymtab_gpl+desc_to_gpio	0000000000000000 ___ksymtab_gpl+desc_to_gpio
+0000000000000432 l     O __ksymtab_strings	000000000000000d __kstrtab_desc_to_gpio
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_optional	0000000000000000 ___ksymtab_gpl+gpiod_get_optional
+0000000000000083 l     O __ksymtab_strings	0000000000000013 __kstrtab_gpiod_get_optional
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_find	0000000000000000 ___ksymtab_gpl+gpiochip_find
+00000000000003ce l     O __ksymtab_strings	000000000000000e __kstrtab_gpiochip_find
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_line_is_irq	0000000000000000 ___ksymtab_gpl+gpiochip_line_is_irq
+0000000000000193 l     O __ksymtab_strings	0000000000000015 __kstrtab_gpiochip_line_is_irq
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_direction_output	0000000000000000 ___ksymtab_gpl+gpiod_direction_output
+000000000000028f l     O __ksymtab_strings	0000000000000017 __kstrtab_gpiod_direction_output
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_generic_free	0000000000000000 ___ksymtab_gpl+gpiochip_generic_free
+000000000000036c l     O __ksymtab_strings	0000000000000016 __kstrtab_gpiochip_generic_free
+0000000000000000 l    d  .initcall4.init	0000000000000000 .initcall4.init
+0000000000000000 l     O .initcall4.init	0000000000000008 __initcall_gpiolib_debugfs_init4
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get_value_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_get_value_cansleep
+0000000000000124 l     O __ksymtab_strings	0000000000000019 __kstrtab_gpiod_get_value_cansleep
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_raw_value_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_set_raw_value_cansleep
+0000000000000107 l     O __ksymtab_strings	000000000000001d __kstrtab_gpiod_set_raw_value_cansleep
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_get	0000000000000000 ___ksymtab_gpl+gpiod_get
+0000000000000096 l     O __ksymtab_strings	000000000000000a __kstrtab_gpiod_get
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_array_value_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_set_array_value_cansleep
+00000000000000ac l     O __ksymtab_strings	000000000000001f __kstrtab_gpiod_set_array_value_cansleep
+0000000000000000 l    d  .initcall1.init	0000000000000000 .initcall1.init
+0000000000000000 l     O .initcall1.init	0000000000000008 __initcall_gpiolib_dev_init1
+0000000000000000 l    d  ___ksymtab_gpl+gpiod_set_raw_array_value_cansleep	0000000000000000 ___ksymtab_gpl+gpiod_set_raw_array_value_cansleep
+00000000000000cb l     O __ksymtab_strings	0000000000000023 __kstrtab_gpiod_set_raw_array_value_cansleep
+0000000000000000 l    d  __ksymtab_strings	0000000000000000 __ksymtab_strings
+0000000000000339 l     O __ksymtab_strings	0000000000000017 __kstrtab_gpiochip_add_pin_range
+0000000000000350 l     O __ksymtab_strings	000000000000001c __kstrtab_gpiochip_add_pingroup_range
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_add_pin_range	0000000000000000 ___ksymtab_gpl+gpiochip_add_pin_range
+0000000000000000 l    d  ___ksymtab_gpl+gpiochip_add_pingroup_range	0000000000000000 ___ksymtab_gpl+gpiochip_add_pingroup_range
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_loc	0000000000000000 .debug_loc
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_ranges	0000000000000000 .debug_ranges
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l       .rodata.str	0000000000000000 .L21
+0000000000000017 l       .rodata.str	0000000000000000 .L22
+000000000000002e l       .rodata.str	0000000000000000 .L23
+0000000000000045 l       .rodata.str	0000000000000000 .L24
+000000000000005c l       .rodata.str	0000000000000000 .L25
+0000000000000073 l       .rodata.str	0000000000000000 .L26
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 g     F .text	000000000000001c desc_to_gpio
+000000000000001c g     F .text	000000000000001c gpiod_to_chip
+0000000000000038 g     F .text	000000000000000c gpiochip_get_data
+0000000000000044 g     F .text	0000000000000034 gpiochip_is_requested
+00000000000000c8 g     F .text	0000000000000098 gpiochip_find
+0000000000000000         *UND*	0000000000000000 _raw_spin_lock_irqsave
+0000000000000000         *UND*	0000000000000000 _raw_spin_unlock_irqrestore
+0000000000000288 g     F .text	000000000000009c gpiod_get_direction
+0000000000000000         *UND*	0000000000000000 clear_bit
+0000000000000000         *UND*	0000000000000000 set_bit
+0000000000000000         *UND*	0000000000000000 printk
+000000000000058c g     F .text	0000000000000080 gpiochip_lock_as_irq
+0000000000000000         *UND*	0000000000000000 dev_err
+000000000000060c g     F .text	0000000000000108 gpiod_direction_input
+0000000000000000         *UND*	0000000000000000 dev_warn
+000000000000084c g     F .text	00000000000000a0 gpiod_get_value
+00000000000008ec g     F .text	00000000000000f0 gpiod_set_debounce
+0000000000000000         *UND*	0000000000000000 __dynamic_pr_debug
+0000000000000000         *UND*	0000000000000000 ida_simple_remove
+0000000000000000         *UND*	0000000000000000 kfree
+0000000000000000         *UND*	0000000000000000 put_device
+0000000000000000         *UND*	0000000000000000 get_device
+0000000000000000         *UND*	0000000000000000 __copy_from_user
+0000000000000000         *UND*	0000000000000000 strncpy
+0000000000000000         *UND*	0000000000000000 __copy_to_user
+0000000000000000         *UND*	0000000000000000 strcmp
+0000000000000000         *UND*	0000000000000000 irq_find_mapping
+0000000000000d10 g     F .text	0000000000000108 _gpiochip_irqchip_add
+0000000000000000         *UND*	0000000000000000 irq_domain_add_simple
+0000000000000000         *UND*	0000000000000000 irq_create_mapping
+0000000000000000         *UND*	0000000000000000 try_module_get
+0000000000000000         *UND*	0000000000000000 module_put
+0000000000000000         *UND*	0000000000000000 irq_modify_status
+0000000000000000         *UND*	0000000000000000 irq_set_chip_and_handler_name
+0000000000000000         *UND*	0000000000000000 irq_set_chip_data
+0000000000000000         *UND*	0000000000000000 irq_to_desc
+0000000000000000         *UND*	0000000000000000 irq_set_irq_type
+0000000000000f7c g     F .text	0000000000000020 gpiochip_generic_request
+0000000000000000         *UND*	0000000000000000 pinctrl_request_gpio
+0000000000000f9c g     F .text	0000000000000020 gpiochip_generic_free
+0000000000000000         *UND*	0000000000000000 pinctrl_free_gpio
+0000000000000fbc g     F .text	0000000000000178 gpiochip_add_pingroup_range
+0000000000000000         *UND*	0000000000000000 kmalloc_caches
+0000000000000000         *UND*	0000000000000000 kmem_cache_alloc
+0000000000000000         *UND*	0000000000000000 pinctrl_get_group_pins
+0000000000000000         *UND*	0000000000000000 pinctrl_add_gpio_range
+0000000000000000         *UND*	0000000000000000 pinctrl_dev_get_devname
+0000000000000000         *UND*	0000000000000000 __dynamic_dev_dbg
+0000000000001134 g     F .text	0000000000000164 gpiochip_add_pin_range
+0000000000000000         *UND*	0000000000000000 pinctrl_find_and_add_gpio_range
+0000000000001298 g     F .text	0000000000000084 gpiochip_remove_pin_ranges
+0000000000000000         *UND*	0000000000000000 pinctrl_remove_gpio_range
+0000000000000000         *UND*	0000000000000000 test_and_set_bit
+0000000000001460 g     F .text	0000000000000084 gpiochip_request_own_desc
+0000000000000000         *UND*	0000000000000000 gpiod_unexport
+00000000000015dc g     F .text	0000000000000018 gpiochip_free_own_desc
+0000000000000000         *UND*	0000000000000000 memset
+0000000000001868 g     F .text	000000000000002c gpiod_set_raw_array_value
+0000000000001894 g     F .text	000000000000002c gpiod_set_array_value
+00000000000018c0 g     F .text	000000000000002c gpiod_set_raw_array_value_cansleep
+00000000000018ec g     F .text	000000000000002c gpiod_set_array_value_cansleep
+0000000000000000         *UND*	0000000000000000 mutex_lock
+0000000000000000         *UND*	0000000000000000 mutex_unlock
+0000000000000000         *UND*	0000000000000000 bus_register
+0000000000000000         *UND*	0000000000000000 alloc_chrdev_region
+0000000000000000         *UND*	0000000000000000 bus_unregister
+0000000000000000         *UND*	0000000000000000 debugfs_create_file
+0000000000000000         *UND*	0000000000000000 seq_open
+0000000000000000         *UND*	0000000000000000 seq_printf
+0000000000001cb8 g     F .text	0000000000000030 gpiochip_line_is_irq
+0000000000001ce8 g     F .text	0000000000000030 gpiochip_line_is_open_drain
+0000000000001d18 g     F .text	0000000000000030 gpiochip_line_is_open_source
+0000000000001d48 g     F .text	00000000000000d8 gpio_to_desc
+0000000000001e74 g     F .text	0000000000000070 gpiod_direction_output_raw
+0000000000001ee4 g     F .text	0000000000000080 gpiod_direction_output
+0000000000001f64 g     F .text	0000000000000070 gpiod_is_active_low
+0000000000001fd4 g     F .text	000000000000007c gpiod_get_raw_value
+0000000000002050 g     F .text	000000000000007c gpiod_set_raw_value
+00000000000020cc g     F .text	0000000000000090 gpiod_set_value
+000000000000215c g     F .text	000000000000006c gpiod_cansleep
+00000000000021c8 g     F .text	0000000000000090 gpiod_to_irq
+0000000000002258 g     F .text	0000000000000070 gpiod_get_raw_value_cansleep
+00000000000022c8 g     F .text	0000000000000094 gpiod_get_value_cansleep
+000000000000235c g     F .text	0000000000000070 gpiod_set_raw_value_cansleep
+00000000000023cc g     F .text	0000000000000080 gpiod_set_value_cansleep
+00000000000024d4 g     F .text	00000000000000d0 gpiochip_set_chained_irqchip
+0000000000000000         *UND*	0000000000000000 irq_set_chained_handler_and_data
+0000000000000000         *UND*	0000000000000000 irq_set_parent
+000000000000260c g     F .text	0000000000000824 gpiochip_add_data
+0000000000000000         *UND*	0000000000000000 ida_simple_get
+0000000000000000         *UND*	0000000000000000 dev_set_name
+0000000000000000         *UND*	0000000000000000 device_initialize
+0000000000000000         *UND*	0000000000000000 devm_kmalloc
+0000000000000000         *UND*	0000000000000000 devm_kstrdup
+0000000000000000         *UND*	0000000000000000 of_gpiochip_add
+0000000000000000         *UND*	0000000000000000 cdev_init
+0000000000000000         *UND*	0000000000000000 cdev_add
+0000000000000000         *UND*	0000000000000000 device_add
+0000000000000000         *UND*	0000000000000000 gpiochip_sysfs_register
+0000000000000000         *UND*	0000000000000000 device_del
+0000000000000000         *UND*	0000000000000000 cdev_del
+0000000000000000         *UND*	0000000000000000 of_gpiochip_remove
+0000000000002e30 g     F .text	000000000000016c gpiochip_remove
+0000000000000000         *UND*	0000000000000000 gpiochip_sysfs_unregister
+0000000000000000         *UND*	0000000000000000 irq_dispose_mapping
+0000000000000000         *UND*	0000000000000000 irq_domain_remove
+0000000000000000         *UND*	0000000000000000 dev_crit
+0000000000000000         *UND*	0000000000000000 __irq_set_handler
+0000000000000000         *UND*	0000000000000000 irq_set_handler_data
+0000000000002f9c g     F .text	000000000000012c gpiod_count
+0000000000000000         *UND*	0000000000000000 snprintf
+0000000000000000         *UND*	0000000000000000 of_count_phandle_with_args
+00000000000030c8 g     F .text	0000000000000038 gpiochip_unlock_as_irq
+0000000000003100 g     F .text	0000000000000028 gpiochip_get_desc
+0000000000003128 g     F .text	000000000000014c gpiod_request
+0000000000003274 g     F .text	00000000000000cc fwnode_get_named_gpiod
+0000000000000000         *UND*	0000000000000000 of_get_named_gpiod_flags
+0000000000003340 g     F .text	0000000000000058 gpiod_free
+0000000000003398 g     F .text	0000000000000014 gpiod_put
+00000000000033ac g     F .text	0000000000000340 gpiod_get_index
+00000000000036ec g     F .text	000000000000001c gpiod_get
+0000000000003708 g     F .text	000000000000002c gpiod_get_index_optional
+0000000000003734 g     F .text	0000000000000034 gpiod_get_optional
+0000000000003768 g     F .text	000000000000004c gpiod_put_array
+00000000000037b4 g     F .text	00000000000000fc gpiod_get_array
+0000000000000000         *UND*	0000000000000000 __kmalloc
+00000000000038b0 g     F .text	000000000000002c gpiod_get_array_optional
+00000000000038dc g     F .text	0000000000000058 gpiod_add_lookup_table
+0000000000003934 g     F .text	0000000000000060 gpiod_remove_lookup_table
+0000000000003994 g     F .text	0000000000000180 gpiod_hog
+0000000000000000 g     O ___ksymtab_gpl+gpiod_put_array	0000000000000010 __ksymtab_gpiod_put_array
+0000000000000000 g     O ___ksymtab_gpl+gpiod_put	0000000000000010 __ksymtab_gpiod_put
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_array_optional	0000000000000010 __ksymtab_gpiod_get_array_optional
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_array	0000000000000010 __ksymtab_gpiod_get_array
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_index_optional	0000000000000010 __ksymtab_gpiod_get_index_optional
+0000000000000000 g     O ___ksymtab_gpl+fwnode_get_named_gpiod	0000000000000010 __ksymtab_fwnode_get_named_gpiod
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_index	0000000000000010 __ksymtab_gpiod_get_index
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_optional	0000000000000010 __ksymtab_gpiod_get_optional
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get	0000000000000010 __ksymtab_gpiod_get
+0000000000000000 g     O ___ksymtab_gpl+gpiod_count	0000000000000010 __ksymtab_gpiod_count
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_array_value_cansleep	0000000000000010 __ksymtab_gpiod_set_array_value_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_raw_array_value_cansleep	0000000000000010 __ksymtab_gpiod_set_raw_array_value_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_value_cansleep	0000000000000010 __ksymtab_gpiod_set_value_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_raw_value_cansleep	0000000000000010 __ksymtab_gpiod_set_raw_value_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_value_cansleep	0000000000000010 __ksymtab_gpiod_get_value_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_raw_value_cansleep	0000000000000010 __ksymtab_gpiod_get_raw_value_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_line_is_open_source	0000000000000010 __ksymtab_gpiochip_line_is_open_source
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_line_is_open_drain	0000000000000010 __ksymtab_gpiochip_line_is_open_drain
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_line_is_irq	0000000000000010 __ksymtab_gpiochip_line_is_irq
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_unlock_as_irq	0000000000000010 __ksymtab_gpiochip_unlock_as_irq
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_lock_as_irq	0000000000000010 __ksymtab_gpiochip_lock_as_irq
+0000000000000000 g     O ___ksymtab_gpl+gpiod_to_irq	0000000000000010 __ksymtab_gpiod_to_irq
+0000000000000000 g     O ___ksymtab_gpl+gpiod_cansleep	0000000000000010 __ksymtab_gpiod_cansleep
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_array_value	0000000000000010 __ksymtab_gpiod_set_array_value
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_raw_array_value	0000000000000010 __ksymtab_gpiod_set_raw_array_value
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_value	0000000000000010 __ksymtab_gpiod_set_value
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_raw_value	0000000000000010 __ksymtab_gpiod_set_raw_value
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_value	0000000000000010 __ksymtab_gpiod_get_value
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_raw_value	0000000000000010 __ksymtab_gpiod_get_raw_value
+0000000000000000 g     O ___ksymtab_gpl+gpiod_is_active_low	0000000000000010 __ksymtab_gpiod_is_active_low
+0000000000000000 g     O ___ksymtab_gpl+gpiod_set_debounce	0000000000000010 __ksymtab_gpiod_set_debounce
+0000000000000000 g     O ___ksymtab_gpl+gpiod_direction_output	0000000000000010 __ksymtab_gpiod_direction_output
+0000000000000000 g     O ___ksymtab_gpl+gpiod_direction_output_raw	0000000000000010 __ksymtab_gpiod_direction_output_raw
+0000000000000000 g     O ___ksymtab_gpl+gpiod_direction_input	0000000000000010 __ksymtab_gpiod_direction_input
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_free_own_desc	0000000000000010 __ksymtab_gpiochip_free_own_desc
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_request_own_desc	0000000000000010 __ksymtab_gpiochip_request_own_desc
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_is_requested	0000000000000010 __ksymtab_gpiochip_is_requested
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_remove_pin_ranges	0000000000000010 __ksymtab_gpiochip_remove_pin_ranges
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_add_pin_range	0000000000000010 __ksymtab_gpiochip_add_pin_range
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_add_pingroup_range	0000000000000010 __ksymtab_gpiochip_add_pingroup_range
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_generic_free	0000000000000010 __ksymtab_gpiochip_generic_free
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_generic_request	0000000000000010 __ksymtab_gpiochip_generic_request
+0000000000000000 g     O ___ksymtab_gpl+_gpiochip_irqchip_add	0000000000000010 __ksymtab__gpiochip_irqchip_add
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_set_chained_irqchip	0000000000000010 __ksymtab_gpiochip_set_chained_irqchip
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_find	0000000000000010 __ksymtab_gpiochip_find
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_remove	0000000000000010 __ksymtab_gpiochip_remove
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_get_data	0000000000000010 __ksymtab_gpiochip_get_data
+0000000000000000 g     O ___ksymtab_gpl+gpiochip_add_data	0000000000000010 __ksymtab_gpiochip_add_data
+0000000000000000 g     O ___ksymtab_gpl+gpiod_get_direction	0000000000000010 __ksymtab_gpiod_get_direction
+0000000000000000 g     O ___ksymtab_gpl+gpiod_to_chip	0000000000000010 __ksymtab_gpiod_to_chip
+0000000000000000 g     O ___ksymtab_gpl+desc_to_gpio	0000000000000010 __ksymtab_desc_to_gpio
+0000000000000000 g     O ___ksymtab_gpl+gpio_to_desc	0000000000000010 __ksymtab_gpio_to_desc
+0000000000000000 g     O .data	0000000000000010 gpio_devices
+0000000000000000 g     O .bss	0000000000000004 gpio_lock
+0000000000000000         *UND*	0000000000000000 irq_domain_xlate_twocell
+0000000000000000         *UND*	0000000000000000 seq_lseek
+0000000000000000         *UND*	0000000000000000 seq_read
+0000000000000000         *UND*	0000000000000000 seq_release
+0000000000000000         *UND*	0000000000000000 noop_llseek
+
+
+
+Disassembly of section .text:
+
+0000000000000000 <desc_to_gpio>:
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+       0:	f9400001 	ldr	x1, [x0]
+       4:	f941a422 	ldr	x2, [x1,#840]
+       8:	b9435021 	ldr	w1, [x1,#848]
+       c:	cb020000 	sub	x0, x0, x2
+      10:	9345fc00 	asr	x0, x0, #5
+}
+      14:	0b000020 	add	w0, w1, w0
+      18:	d65f03c0 	ret
+
+000000000000001c <gpiod_to_chip>:
+ * gpiod_to_chip - Return the GPIO chip to which a GPIO descriptor belongs
+ * @desc:	descriptor to return the chip of
+ */
+struct gpio_chip *gpiod_to_chip(const struct gpio_desc *desc)
+{
+	if (!desc || !desc->gdev || !desc->gdev->chip)
+      1c:	b40000a0 	cbz	x0, 30 <gpiod_to_chip+0x14>
+      20:	f9400000 	ldr	x0, [x0]
+      24:	b4000060 	cbz	x0, 30 <gpiod_to_chip+0x14>
+      28:	f941a000 	ldr	x0, [x0,#832]
+		return NULL;
+	return desc->gdev->chip;
+}
+      2c:	d65f03c0 	ret
+ * @desc:	descriptor to return the chip of
+ */
+struct gpio_chip *gpiod_to_chip(const struct gpio_desc *desc)
+{
+	if (!desc || !desc->gdev || !desc->gdev->chip)
+		return NULL;
+      30:	d2800000 	mov	x0, #0x0                   	// #0
+	return desc->gdev->chip;
+}
+      34:	d65f03c0 	ret
+
+0000000000000038 <gpiochip_get_data>:
+/**
+ * gpiochip_get_data() - get per-subdriver data for the chip
+ */
+void *gpiochip_get_data(struct gpio_chip *chip)
+{
+	return chip->gpiodev->data;
+      38:	f9400400 	ldr	x0, [x0,#8]
+}
+      3c:	f941b000 	ldr	x0, [x0,#864]
+      40:	d65f03c0 	ret
+
+0000000000000044 <gpiochip_is_requested>:
+ */
+const char *gpiochip_is_requested(struct gpio_chip *chip, unsigned offset)
+{
+	struct gpio_desc *desc;
+
+	if (offset >= chip->ngpio)
+      44:	7940f802 	ldrh	w2, [x0,#124]
+      48:	6b01005f 	cmp	w2, w1
+      4c:	54000129 	b.ls	70 <gpiochip_is_requested+0x2c>
+		return NULL;
+
+	desc = &chip->gpiodev->descs[offset];
+      50:	f9400400 	ldr	x0, [x0,#8]
+      54:	d37b7c21 	ubfiz	x1, x1, #5, #32
+      58:	f941a400 	ldr	x0, [x0,#840]
+      5c:	8b010001 	add	x1, x0, x1
+ * @nr: bit number to test
+ * @addr: Address to start counting from
+ */
+static inline int test_bit(int nr, const volatile unsigned long *addr)
+{
+	return 1UL & (addr[BIT_WORD(nr)] >> (nr & (BITS_PER_LONG-1)));
+      60:	f9400420 	ldr	x0, [x1,#8]
+
+	if (test_bit(FLAG_REQUESTED, &desc->flags) == 0)
+      64:	36000060 	tbz	w0, #0, 70 <gpiochip_is_requested+0x2c>
+		return NULL;
+	return desc->label;
+      68:	f9400820 	ldr	x0, [x1,#16]
+}
+      6c:	d65f03c0 	ret
+const char *gpiochip_is_requested(struct gpio_chip *chip, unsigned offset)
+{
+	struct gpio_desc *desc;
+
+	if (offset >= chip->ngpio)
+		return NULL;
+      70:	d2800000 	mov	x0, #0x0                   	// #0
+	desc = &chip->gpiodev->descs[offset];
+
+	if (test_bit(FLAG_REQUESTED, &desc->flags) == 0)
+		return NULL;
+	return desc->label;
+}
+      74:	d65f03c0 	ret
+
+0000000000000078 <_gpiod_get_raw_value>:
+ * REVISIT when debugging, consider adding some instrumentation to ensure
+ * that the GPIO was actually requested.
+ */
+
+static int _gpiod_get_raw_value(const struct gpio_desc *desc)
+{
+      78:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+      7c:	910003fd 	mov	x29, sp
+	struct gpio_chip	*chip;
+	int offset;
+	int value;
+
+	chip = desc->gdev->chip;
+      80:	f9400001 	ldr	x1, [x0]
+      84:	f941a023 	ldr	x3, [x1,#832]
+/*
+ * Return the GPIO number of the passed descriptor relative to its chip
+ */
+static int __maybe_unused gpio_chip_hwgpio(const struct gpio_desc *desc)
+{
+	return desc - &desc->gdev->descs[0];
+      88:	f941a424 	ldr	x4, [x1,#840]
+	offset = gpio_chip_hwgpio(desc);
+	value = chip->get ? chip->get(chip, offset) : -EIO;
+      8c:	f9402462 	ldr	x2, [x3,#72]
+      90:	b4000142 	cbz	x2, b8 <_gpiod_get_raw_value+0x40>
+      94:	cb040001 	sub	x1, x0, x4
+      98:	aa0303e0 	mov	x0, x3
+      9c:	d345fc21 	lsr	x1, x1, #5
+      a0:	d63f0040 	blr	x2
+	value = value < 0 ? value : !!value;
+      a4:	6b1f001f 	cmp	w0, wzr
+      a8:	1a9f07e1 	cset	w1, ne
+      ac:	1a80a020 	csel	w0, w1, w0, ge
+	trace_gpio_value(desc_to_gpio(desc), 1, value);
+	return value;
+}
+      b0:	a8c17bfd 	ldp	x29, x30, [sp],#16
+      b4:	d65f03c0 	ret
+	int offset;
+	int value;
+
+	chip = desc->gdev->chip;
+	offset = gpio_chip_hwgpio(desc);
+	value = chip->get ? chip->get(chip, offset) : -EIO;
+      b8:	12800080 	mov	w0, #0xfffffffb            	// #-5
+	value = value < 0 ? value : !!value;
+	trace_gpio_value(desc_to_gpio(desc), 1, value);
+	return value;
+}
+      bc:	a8c17bfd 	ldp	x29, x30, [sp],#16
+      c0:	d65f03c0 	ret
+
+00000000000000c4 <gpiolib_seq_stop>:
+	return ret;
+}
+
+static void gpiolib_seq_stop(struct seq_file *s, void *v)
+{
+}
+      c4:	d65f03c0 	ret
+
+00000000000000c8 <gpiochip_find>:
+ * more gpio_chips.
+ */
+struct gpio_chip *gpiochip_find(void *data,
+				int (*match)(struct gpio_chip *chip,
+					     void *data))
+{
+      c8:	a9bc7bfd 	stp	x29, x30, [sp,#-64]!
+      cc:	910003fd 	mov	x29, sp
+      d0:	a90363f7 	stp	x23, x24, [sp,#48]
+	struct gpio_device *gdev;
+	struct gpio_chip *chip;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+      d4:	90000017 	adrp	x23, 0 <desc_to_gpio>
+			d4: R_AARCH64_ADR_PREL_PG_HI21	.bss
+ * more gpio_chips.
+ */
+struct gpio_chip *gpiochip_find(void *data,
+				int (*match)(struct gpio_chip *chip,
+					     void *data))
+{
+      d8:	a9025bf5 	stp	x21, x22, [sp,#32]
+      dc:	aa0003f6 	mov	x22, x0
+	struct gpio_device *gdev;
+	struct gpio_chip *chip;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+      e0:	910002e0 	add	x0, x23, #0x0
+			e0: R_AARCH64_ADD_ABS_LO12_NC	.bss
+ * more gpio_chips.
+ */
+struct gpio_chip *gpiochip_find(void *data,
+				int (*match)(struct gpio_chip *chip,
+					     void *data))
+{
+      e4:	a90153f3 	stp	x19, x20, [sp,#16]
+      e8:	aa0103f5 	mov	x21, x1
+	struct gpio_device *gdev;
+	struct gpio_chip *chip;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+      ec:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			ec: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+	list_for_each_entry(gdev, &gpio_devices, list)
+      f0:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			f0: R_AARCH64_ADR_PREL_PG_HI21	.data
+{
+	struct gpio_device *gdev;
+	struct gpio_chip *chip;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+      f4:	aa0003f8 	mov	x24, x0
+	list_for_each_entry(gdev, &gpio_devices, list)
+      f8:	91000054 	add	x20, x2, #0x0
+			f8: R_AARCH64_ADD_ABS_LO12_NC	.data
+      fc:	f9400053 	ldr	x19, [x2]
+			fc: R_AARCH64_LDST64_ABS_LO12_NC	.data
+     100:	eb13029f 	cmp	x20, x19
+     104:	d10da273 	sub	x19, x19, #0x368
+     108:	540000c1 	b.ne	120 <gpiochip_find+0x58>
+     10c:	1400000b 	b	138 <gpiochip_find+0x70>
+     110:	f941b673 	ldr	x19, [x19,#872]
+     114:	eb13029f 	cmp	x20, x19
+     118:	d10da273 	sub	x19, x19, #0x368
+     11c:	540000e0 	b.eq	138 <gpiochip_find+0x70>
+		if (match(gdev->chip, data))
+     120:	f941a260 	ldr	x0, [x19,#832]
+     124:	aa1603e1 	mov	x1, x22
+     128:	d63f02a0 	blr	x21
+     12c:	34ffff20 	cbz	w0, 110 <gpiochip_find+0x48>
+
+	/* No match? */
+	if (&gdev->list == &gpio_devices)
+		chip = NULL;
+	else
+		chip = gdev->chip;
+     130:	f941a273 	ldr	x19, [x19,#832]
+     134:	14000002 	b	13c <gpiochip_find+0x74>
+		if (match(gdev->chip, data))
+			break;
+
+	/* No match? */
+	if (&gdev->list == &gpio_devices)
+		chip = NULL;
+     138:	d2800013 	mov	x19, #0x0                   	// #0
+	raw_spin_unlock_irq(&lock->rlock);
+}
+
+static __always_inline void spin_unlock_irqrestore(spinlock_t *lock, unsigned long flags)
+{
+	raw_spin_unlock_irqrestore(&lock->rlock, flags);
+     13c:	aa1803e1 	mov	x1, x24
+     140:	910002e0 	add	x0, x23, #0x0
+			140: R_AARCH64_ADD_ABS_LO12_NC	.bss
+     144:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			144: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		chip = gdev->chip;
+
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	return chip;
+}
+     148:	aa1303e0 	mov	x0, x19
+     14c:	a94153f3 	ldp	x19, x20, [sp,#16]
+     150:	a9425bf5 	ldp	x21, x22, [sp,#32]
+     154:	a94363f7 	ldp	x23, x24, [sp,#48]
+     158:	a8c47bfd 	ldp	x29, x30, [sp],#64
+     15c:	d65f03c0 	ret
+
+0000000000000160 <gpiolib_seq_next>:
+
+	return NULL;
+}
+
+static void *gpiolib_seq_next(struct seq_file *s, void *v, loff_t *pos)
+{
+     160:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+     164:	910003fd 	mov	x29, sp
+     168:	a9025bf5 	stp	x21, x22, [sp,#32]
+	unsigned long flags;
+	struct gpio_device *gdev = v;
+	void *ret = NULL;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+     16c:	90000015 	adrp	x21, 0 <desc_to_gpio>
+			16c: R_AARCH64_ADR_PREL_PG_HI21	.bss
+
+	return NULL;
+}
+
+static void *gpiolib_seq_next(struct seq_file *s, void *v, loff_t *pos)
+{
+     170:	aa0003f6 	mov	x22, x0
+     174:	a90153f3 	stp	x19, x20, [sp,#16]
+	unsigned long flags;
+	struct gpio_device *gdev = v;
+	void *ret = NULL;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+     178:	910002a0 	add	x0, x21, #0x0
+			178: R_AARCH64_ADD_ABS_LO12_NC	.bss
+
+	return NULL;
+}
+
+static void *gpiolib_seq_next(struct seq_file *s, void *v, loff_t *pos)
+{
+     17c:	aa0103f3 	mov	x19, x1
+     180:	aa0203f4 	mov	x20, x2
+	unsigned long flags;
+	struct gpio_device *gdev = v;
+	void *ret = NULL;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+     184:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			184: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+     188:	aa0003e1 	mov	x1, x0
+     18c:	f941b663 	ldr	x3, [x19,#872]
+	if (list_is_last(&gdev->list, &gpio_devices))
+     190:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			190: R_AARCH64_ADR_PREL_PG_HI21	.data
+     194:	91000084 	add	x4, x4, #0x0
+			194: R_AARCH64_ADD_ABS_LO12_NC	.data
+     198:	eb04007f 	cmp	x3, x4
+     19c:	540001e0 	b.eq	1d8 <gpiolib_seq_next+0x78>
+		ret = NULL;
+	else
+		ret = list_entry(gdev->list.next, struct gpio_device, list);
+     1a0:	d10da073 	sub	x19, x3, #0x368
+     1a4:	910002a0 	add	x0, x21, #0x0
+			1a4: R_AARCH64_ADD_ABS_LO12_NC	.bss
+     1a8:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			1a8: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	s->private = "\n";
+     1ac:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1ac: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8
+	++*pos;
+
+	return ret;
+}
+     1b0:	aa1303e0 	mov	x0, x19
+		ret = NULL;
+	else
+		ret = list_entry(gdev->list.next, struct gpio_device, list);
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	s->private = "\n";
+     1b4:	91000021 	add	x1, x1, #0x0
+			1b4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8
+     1b8:	f9003ec1 	str	x1, [x22,#120]
+	++*pos;
+     1bc:	f9400281 	ldr	x1, [x20]
+     1c0:	91000421 	add	x1, x1, #0x1
+     1c4:	f9000281 	str	x1, [x20]
+
+	return ret;
+}
+     1c8:	a94153f3 	ldp	x19, x20, [sp,#16]
+     1cc:	a9425bf5 	ldp	x21, x22, [sp,#32]
+     1d0:	a8c37bfd 	ldp	x29, x30, [sp],#48
+     1d4:	d65f03c0 	ret
+	struct gpio_device *gdev = v;
+	void *ret = NULL;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+	if (list_is_last(&gdev->list, &gpio_devices))
+		ret = NULL;
+     1d8:	d2800013 	mov	x19, #0x0                   	// #0
+     1dc:	17fffff2 	b	1a4 <gpiolib_seq_next+0x44>
+
+00000000000001e0 <gpiolib_seq_start>:
+		seq_printf(s, "\n");
+	}
+}
+
+static void *gpiolib_seq_start(struct seq_file *s, loff_t *pos)
+{
+     1e0:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+     1e4:	910003fd 	mov	x29, sp
+     1e8:	a90153f3 	stp	x19, x20, [sp,#16]
+     1ec:	f90013f5 	str	x21, [sp,#32]
+	struct gpio_device *gdev = NULL;
+	loff_t index = *pos;
+
+	s->private = "";
+
+	spin_lock_irqsave(&gpio_lock, flags);
+     1f0:	90000014 	adrp	x20, 0 <desc_to_gpio>
+			1f0: R_AARCH64_ADR_PREL_PG_HI21	.bss
+
+static void *gpiolib_seq_start(struct seq_file *s, loff_t *pos)
+{
+	unsigned long flags;
+	struct gpio_device *gdev = NULL;
+	loff_t index = *pos;
+     1f4:	f9400033 	ldr	x19, [x1]
+
+	s->private = "";
+     1f8:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1f8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x8
+     1fc:	91000021 	add	x1, x1, #0x0
+			1fc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x8
+     200:	f9003c01 	str	x1, [x0,#120]
+
+	spin_lock_irqsave(&gpio_lock, flags);
+     204:	91000280 	add	x0, x20, #0x0
+			204: R_AARCH64_ADD_ABS_LO12_NC	.bss
+     208:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			208: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+	list_for_each_entry(gdev, &gpio_devices, list)
+     20c:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			20c: R_AARCH64_ADR_PREL_PG_HI21	.data
+     210:	91000044 	add	x4, x2, #0x0
+			210: R_AARCH64_ADD_ABS_LO12_NC	.data
+     214:	f9400042 	ldr	x2, [x2]
+			214: R_AARCH64_LDST64_ABS_LO12_NC	.data
+     218:	eb02009f 	cmp	x4, x2
+     21c:	d10da055 	sub	x21, x2, #0x368
+     220:	54000140 	b.eq	248 <gpiolib_seq_start+0x68>
+     224:	aa1303e3 	mov	x3, x19
+		if (index-- == 0) {
+     228:	b5000093 	cbnz	x19, 238 <gpiolib_seq_start+0x58>
+     22c:	1400000f 	b	268 <gpiolib_seq_start+0x88>
+     230:	f1000463 	subs	x3, x3, #0x1
+     234:	540001a0 	b.eq	268 <gpiolib_seq_start+0x88>
+	loff_t index = *pos;
+
+	s->private = "";
+
+	spin_lock_irqsave(&gpio_lock, flags);
+	list_for_each_entry(gdev, &gpio_devices, list)
+     238:	f941b6a2 	ldr	x2, [x21,#872]
+     23c:	eb02009f 	cmp	x4, x2
+     240:	d10da055 	sub	x21, x2, #0x368
+     244:	54ffff61 	b.ne	230 <gpiolib_seq_start+0x50>
+     248:	aa0003e1 	mov	x1, x0
+     24c:	91000280 	add	x0, x20, #0x0
+			24c: R_AARCH64_ADD_ABS_LO12_NC	.bss
+     250:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			250: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+			return gdev;
+		}
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	return NULL;
+}
+     254:	f94013f5 	ldr	x21, [sp,#32]
+			spin_unlock_irqrestore(&gpio_lock, flags);
+			return gdev;
+		}
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	return NULL;
+     258:	d2800000 	mov	x0, #0x0                   	// #0
+}
+     25c:	a94153f3 	ldp	x19, x20, [sp,#16]
+     260:	a8c37bfd 	ldp	x29, x30, [sp],#48
+     264:	d65f03c0 	ret
+     268:	aa0003e1 	mov	x1, x0
+     26c:	91000280 	add	x0, x20, #0x0
+			26c: R_AARCH64_ADD_ABS_LO12_NC	.bss
+     270:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			270: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+
+	spin_lock_irqsave(&gpio_lock, flags);
+	list_for_each_entry(gdev, &gpio_devices, list)
+		if (index-- == 0) {
+			spin_unlock_irqrestore(&gpio_lock, flags);
+			return gdev;
+     274:	aa1503e0 	mov	x0, x21
+		}
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	return NULL;
+}
+     278:	f94013f5 	ldr	x21, [sp,#32]
+     27c:	a94153f3 	ldp	x19, x20, [sp,#16]
+     280:	a8c37bfd 	ldp	x29, x30, [sp],#48
+     284:	d65f03c0 	ret
+
+0000000000000288 <gpiod_get_direction>:
+ * Return GPIOF_DIR_IN or GPIOF_DIR_OUT, or an error code in case of error.
+ *
+ * This function may sleep if gpiod_cansleep() is true.
+ */
+int gpiod_get_direction(struct gpio_desc *desc)
+{
+     288:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     28c:	910003fd 	mov	x29, sp
+     290:	a90153f3 	stp	x19, x20, [sp,#16]
+     294:	f9400001 	ldr	x1, [x0]
+ * gpiod_to_chip - Return the GPIO chip to which a GPIO descriptor belongs
+ * @desc:	descriptor to return the chip of
+ */
+struct gpio_chip *gpiod_to_chip(const struct gpio_desc *desc)
+{
+	if (!desc || !desc->gdev || !desc->gdev->chip)
+     298:	b40003e0 	cbz	x0, 314 <gpiod_get_direction+0x8c>
+     29c:	b40003a1 	cbz	x1, 310 <gpiod_get_direction+0x88>
+     2a0:	f941a023 	ldr	x3, [x1,#832]
+     2a4:	f941a421 	ldr	x1, [x1,#840]
+	int			status = -EINVAL;
+
+	chip = gpiod_to_chip(desc);
+	offset = gpio_chip_hwgpio(desc);
+
+	if (!chip->get_direction)
+     2a8:	f9401862 	ldr	x2, [x3,#48]
+     2ac:	cb010001 	sub	x1, x0, x1
+     2b0:	9345fc21 	asr	x1, x1, #5
+     2b4:	b4000342 	cbz	x2, 31c <gpiod_get_direction+0x94>
+     2b8:	aa0003f3 	mov	x19, x0
+		return status;
+
+	status = chip->get_direction(chip, offset);
+     2bc:	aa0303e0 	mov	x0, x3
+     2c0:	d63f0040 	blr	x2
+	if (status > 0) {
+     2c4:	6b1f001f 	cmp	w0, wzr
+     2c8:	5400012d 	b.le	2ec <gpiod_get_direction+0x64>
+		/* GPIOF_DIR_IN, or other positive */
+		status = 1;
+		clear_bit(FLAG_IS_OUT, &desc->flags);
+     2cc:	52800020 	mov	w0, #0x1                   	// #1
+     2d0:	91002261 	add	x1, x19, #0x8
+		return status;
+
+	status = chip->get_direction(chip, offset);
+	if (status > 0) {
+		/* GPIOF_DIR_IN, or other positive */
+		status = 1;
+     2d4:	2a0003f4 	mov	w20, w0
+		clear_bit(FLAG_IS_OUT, &desc->flags);
+     2d8:	94000000 	bl	0 <clear_bit>
+			2d8: R_AARCH64_CALL26	clear_bit
+	if (status == 0) {
+		/* GPIOF_DIR_OUT */
+		set_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	return status;
+}
+     2dc:	2a1403e0 	mov	w0, w20
+     2e0:	a94153f3 	ldp	x19, x20, [sp,#16]
+     2e4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     2e8:	d65f03c0 	ret
+     2ec:	2a0003f4 	mov	w20, w0
+	if (status > 0) {
+		/* GPIOF_DIR_IN, or other positive */
+		status = 1;
+		clear_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	if (status == 0) {
+     2f0:	35ffff60 	cbnz	w0, 2dc <gpiod_get_direction+0x54>
+		/* GPIOF_DIR_OUT */
+		set_bit(FLAG_IS_OUT, &desc->flags);
+     2f4:	91002261 	add	x1, x19, #0x8
+     2f8:	52800020 	mov	w0, #0x1                   	// #1
+     2fc:	94000000 	bl	0 <set_bit>
+			2fc: R_AARCH64_CALL26	set_bit
+	}
+	return status;
+}
+     300:	2a1403e0 	mov	w0, w20
+     304:	a94153f3 	ldp	x19, x20, [sp,#16]
+     308:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     30c:	d65f03c0 	ret
+ * gpiod_to_chip - Return the GPIO chip to which a GPIO descriptor belongs
+ * @desc:	descriptor to return the chip of
+ */
+struct gpio_chip *gpiod_to_chip(const struct gpio_desc *desc)
+{
+	if (!desc || !desc->gdev || !desc->gdev->chip)
+     310:	d2800001 	mov	x1, #0x0                   	// #0
+		return NULL;
+     314:	d2800003 	mov	x3, #0x0                   	// #0
+     318:	17ffffe3 	b	2a4 <gpiod_get_direction+0x1c>
+
+	chip = gpiod_to_chip(desc);
+	offset = gpio_chip_hwgpio(desc);
+
+	if (!chip->get_direction)
+		return status;
+     31c:	128002b4 	mov	w20, #0xffffffea            	// #-22
+     320:	17ffffef 	b	2dc <gpiod_get_direction+0x54>
+
+0000000000000324 <_gpio_set_open_drain_value>:
+ *  _gpio_set_open_drain_value() - Set the open drain gpio's value.
+ * @desc: gpio descriptor whose state need to be set.
+ * @value: Non-zero for setting it HIGH otherwise it will set to LOW.
+ */
+static void _gpio_set_open_drain_value(struct gpio_desc *desc, bool value)
+{
+     324:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     328:	53001c23 	uxtb	w3, w1
+     32c:	910003fd 	mov	x29, sp
+     330:	f9000bf3 	str	x19, [sp,#16]
+     334:	aa0003f3 	mov	x19, x0
+	int err = 0;
+	struct gpio_chip *chip = desc->gdev->chip;
+     338:	f9400000 	ldr	x0, [x0]
+     33c:	f941a402 	ldr	x2, [x0,#840]
+     340:	f941a000 	ldr	x0, [x0,#832]
+     344:	cb020262 	sub	x2, x19, x2
+     348:	9345fc41 	asr	x1, x2, #5
+	int offset = gpio_chip_hwgpio(desc);
+
+	if (value) {
+     34c:	34000103 	cbz	w3, 36c <_gpio_set_open_drain_value+0x48>
+		err = chip->direction_input(chip, offset);
+     350:	f9401c02 	ldr	x2, [x0,#56]
+     354:	d63f0040 	blr	x2
+		if (!err)
+     358:	340001e0 	cbz	w0, 394 <_gpio_set_open_drain_value+0x70>
+		err = chip->direction_output(chip, offset, 0);
+		if (!err)
+			set_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	trace_gpio_direction(desc_to_gpio(desc), value, err);
+	if (err < 0)
+     35c:	37f80280 	tbnz	w0, #31, 3ac <_gpio_set_open_drain_value+0x88>
+		gpiod_err(desc,
+			  "%s: Error in set_value for open drain err %d\n",
+			  __func__, err);
+}
+     360:	f9400bf3 	ldr	x19, [sp,#16]
+     364:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     368:	d65f03c0 	ret
+	if (value) {
+		err = chip->direction_input(chip, offset);
+		if (!err)
+			clear_bit(FLAG_IS_OUT, &desc->flags);
+	} else {
+		err = chip->direction_output(chip, offset, 0);
+     36c:	f9402003 	ldr	x3, [x0,#64]
+     370:	52800002 	mov	w2, #0x0                   	// #0
+     374:	d63f0060 	blr	x3
+		if (!err)
+     378:	35ffff20 	cbnz	w0, 35c <_gpio_set_open_drain_value+0x38>
+			set_bit(FLAG_IS_OUT, &desc->flags);
+     37c:	91002261 	add	x1, x19, #0x8
+     380:	52800020 	mov	w0, #0x1                   	// #1
+     384:	94000000 	bl	0 <set_bit>
+			384: R_AARCH64_CALL26	set_bit
+	trace_gpio_direction(desc_to_gpio(desc), value, err);
+	if (err < 0)
+		gpiod_err(desc,
+			  "%s: Error in set_value for open drain err %d\n",
+			  __func__, err);
+}
+     388:	f9400bf3 	ldr	x19, [sp,#16]
+     38c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     390:	d65f03c0 	ret
+	int offset = gpio_chip_hwgpio(desc);
+
+	if (value) {
+		err = chip->direction_input(chip, offset);
+		if (!err)
+			clear_bit(FLAG_IS_OUT, &desc->flags);
+     394:	91002261 	add	x1, x19, #0x8
+     398:	52800020 	mov	w0, #0x1                   	// #1
+     39c:	94000000 	bl	0 <clear_bit>
+			39c: R_AARCH64_CALL26	clear_bit
+	trace_gpio_direction(desc_to_gpio(desc), value, err);
+	if (err < 0)
+		gpiod_err(desc,
+			  "%s: Error in set_value for open drain err %d\n",
+			  __func__, err);
+}
+     3a0:	f9400bf3 	ldr	x19, [sp,#16]
+     3a4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     3a8:	d65f03c0 	ret
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     3ac:	f9400263 	ldr	x3, [x19]
+		if (!err)
+			set_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	trace_gpio_direction(desc_to_gpio(desc), value, err);
+	if (err < 0)
+		gpiod_err(desc,
+     3b0:	f9400a62 	ldr	x2, [x19,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     3b4:	f941a464 	ldr	x4, [x3,#840]
+     3b8:	b9435061 	ldr	w1, [x3,#848]
+     3bc:	cb040273 	sub	x19, x19, x4
+     3c0:	9345fe73 	asr	x19, x19, #5
+     3c4:	0b130021 	add	w1, w1, w19
+		if (!err)
+			set_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	trace_gpio_direction(desc_to_gpio(desc), value, err);
+	if (err < 0)
+		gpiod_err(desc,
+     3c8:	b4000102 	cbz	x2, 3e8 <_gpio_set_open_drain_value+0xc4>
+     3cc:	2a0003e4 	mov	w4, w0
+     3d0:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			3d0: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     3d4:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			3d4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x18
+     3d8:	91000063 	add	x3, x3, #0x0
+			3d8: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     3dc:	91000000 	add	x0, x0, #0x0
+			3dc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x18
+     3e0:	94000000 	bl	0 <printk>
+			3e0: R_AARCH64_CALL26	printk
+     3e4:	17ffffdf 	b	360 <_gpio_set_open_drain_value+0x3c>
+     3e8:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			3e8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+     3ec:	91000042 	add	x2, x2, #0x0
+			3ec: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+     3f0:	17fffff7 	b	3cc <_gpio_set_open_drain_value+0xa8>
+
+00000000000003f4 <_gpio_set_open_source_value>:
+ *  _gpio_set_open_source_value() - Set the open source gpio's value.
+ * @desc: gpio descriptor whose state need to be set.
+ * @value: Non-zero for setting it HIGH otherwise it will set to LOW.
+ */
+static void _gpio_set_open_source_value(struct gpio_desc *desc, bool value)
+{
+     3f4:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     3f8:	53001c23 	uxtb	w3, w1
+     3fc:	910003fd 	mov	x29, sp
+     400:	f9000bf3 	str	x19, [sp,#16]
+     404:	aa0003f3 	mov	x19, x0
+	int err = 0;
+	struct gpio_chip *chip = desc->gdev->chip;
+     408:	f9400000 	ldr	x0, [x0]
+     40c:	f941a402 	ldr	x2, [x0,#840]
+     410:	f941a000 	ldr	x0, [x0,#832]
+     414:	cb020262 	sub	x2, x19, x2
+     418:	9345fc41 	asr	x1, x2, #5
+	int offset = gpio_chip_hwgpio(desc);
+
+	if (value) {
+     41c:	34000123 	cbz	w3, 440 <_gpio_set_open_source_value+0x4c>
+		err = chip->direction_output(chip, offset, 1);
+     420:	f9402003 	ldr	x3, [x0,#64]
+     424:	52800022 	mov	w2, #0x1                   	// #1
+     428:	d63f0060 	blr	x3
+		if (!err)
+     42c:	340001c0 	cbz	w0, 464 <_gpio_set_open_source_value+0x70>
+		err = chip->direction_input(chip, offset);
+		if (!err)
+			clear_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	trace_gpio_direction(desc_to_gpio(desc), !value, err);
+	if (err < 0)
+     430:	37f80260 	tbnz	w0, #31, 47c <_gpio_set_open_source_value+0x88>
+		gpiod_err(desc,
+			  "%s: Error in set_value for open source err %d\n",
+			  __func__, err);
+}
+     434:	f9400bf3 	ldr	x19, [sp,#16]
+     438:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     43c:	d65f03c0 	ret
+	if (value) {
+		err = chip->direction_output(chip, offset, 1);
+		if (!err)
+			set_bit(FLAG_IS_OUT, &desc->flags);
+	} else {
+		err = chip->direction_input(chip, offset);
+     440:	f9401c02 	ldr	x2, [x0,#56]
+     444:	d63f0040 	blr	x2
+		if (!err)
+     448:	35ffff40 	cbnz	w0, 430 <_gpio_set_open_source_value+0x3c>
+			clear_bit(FLAG_IS_OUT, &desc->flags);
+     44c:	91002261 	add	x1, x19, #0x8
+     450:	52800020 	mov	w0, #0x1                   	// #1
+     454:	94000000 	bl	0 <clear_bit>
+			454: R_AARCH64_CALL26	clear_bit
+	trace_gpio_direction(desc_to_gpio(desc), !value, err);
+	if (err < 0)
+		gpiod_err(desc,
+			  "%s: Error in set_value for open source err %d\n",
+			  __func__, err);
+}
+     458:	f9400bf3 	ldr	x19, [sp,#16]
+     45c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     460:	d65f03c0 	ret
+	int offset = gpio_chip_hwgpio(desc);
+
+	if (value) {
+		err = chip->direction_output(chip, offset, 1);
+		if (!err)
+			set_bit(FLAG_IS_OUT, &desc->flags);
+     464:	91002261 	add	x1, x19, #0x8
+     468:	52800020 	mov	w0, #0x1                   	// #1
+     46c:	94000000 	bl	0 <set_bit>
+			46c: R_AARCH64_CALL26	set_bit
+	trace_gpio_direction(desc_to_gpio(desc), !value, err);
+	if (err < 0)
+		gpiod_err(desc,
+			  "%s: Error in set_value for open source err %d\n",
+			  __func__, err);
+}
+     470:	f9400bf3 	ldr	x19, [sp,#16]
+     474:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     478:	d65f03c0 	ret
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     47c:	f9400263 	ldr	x3, [x19]
+		if (!err)
+			clear_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	trace_gpio_direction(desc_to_gpio(desc), !value, err);
+	if (err < 0)
+		gpiod_err(desc,
+     480:	f9400a62 	ldr	x2, [x19,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     484:	f941a464 	ldr	x4, [x3,#840]
+     488:	b9435061 	ldr	w1, [x3,#848]
+     48c:	cb040273 	sub	x19, x19, x4
+     490:	9345fe73 	asr	x19, x19, #5
+     494:	0b130021 	add	w1, w1, w19
+		if (!err)
+			clear_bit(FLAG_IS_OUT, &desc->flags);
+	}
+	trace_gpio_direction(desc_to_gpio(desc), !value, err);
+	if (err < 0)
+		gpiod_err(desc,
+     498:	b4000122 	cbz	x2, 4bc <_gpio_set_open_source_value+0xc8>
+     49c:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			49c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     4a0:	2a0003e4 	mov	w4, w0
+     4a4:	91000063 	add	x3, x3, #0x0
+			4a4: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     4a8:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			4a8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x58
+     4ac:	91008063 	add	x3, x3, #0x20
+     4b0:	91000000 	add	x0, x0, #0x0
+			4b0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x58
+     4b4:	94000000 	bl	0 <printk>
+			4b4: R_AARCH64_CALL26	printk
+     4b8:	17ffffdf 	b	434 <_gpio_set_open_source_value+0x40>
+     4bc:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			4bc: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+     4c0:	91000042 	add	x2, x2, #0x0
+			4c0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+     4c4:	17fffff6 	b	49c <_gpio_set_open_source_value+0xa8>
+
+00000000000004c8 <_gpiod_set_raw_value>:
+			  "%s: Error in set_value for open source err %d\n",
+			  __func__, err);
+}
+
+static void _gpiod_set_raw_value(struct gpio_desc *desc, bool value)
+{
+     4c8:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+     4cc:	aa0003e3 	mov	x3, x0
+     4d0:	53001c22 	uxtb	w2, w1
+     4d4:	910003fd 	mov	x29, sp
+	struct gpio_chip	*chip;
+
+	chip = desc->gdev->chip;
+     4d8:	f9400004 	ldr	x4, [x0]
+     4dc:	f9400405 	ldr	x5, [x0,#8]
+     4e0:	f941a086 	ldr	x6, [x4,#832]
+	trace_gpio_value(desc_to_gpio(desc), 0, value);
+	if (test_bit(FLAG_OPEN_DRAIN, &desc->flags))
+     4e4:	373801e5 	tbnz	w5, #7, 520 <_gpiod_set_raw_value+0x58>
+     4e8:	f9400401 	ldr	x1, [x0,#8]
+		_gpio_set_open_drain_value(desc, value);
+	else if (test_bit(FLAG_OPEN_SOURCE, &desc->flags))
+     4ec:	37400121 	tbnz	w1, #8, 510 <_gpiod_set_raw_value+0x48>
+     4f0:	f941a481 	ldr	x1, [x4,#840]
+		_gpio_set_open_source_value(desc, value);
+	else
+		chip->set(chip, gpio_chip_hwgpio(desc), value);
+     4f4:	aa0603e0 	mov	x0, x6
+     4f8:	f94028c4 	ldr	x4, [x6,#80]
+     4fc:	cb010061 	sub	x1, x3, x1
+     500:	d345fc21 	lsr	x1, x1, #5
+     504:	d63f0080 	blr	x4
+}
+     508:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     50c:	d65f03c0 	ret
+	chip = desc->gdev->chip;
+	trace_gpio_value(desc_to_gpio(desc), 0, value);
+	if (test_bit(FLAG_OPEN_DRAIN, &desc->flags))
+		_gpio_set_open_drain_value(desc, value);
+	else if (test_bit(FLAG_OPEN_SOURCE, &desc->flags))
+		_gpio_set_open_source_value(desc, value);
+     510:	2a0203e1 	mov	w1, w2
+     514:	97ffffb8 	bl	3f4 <_gpio_set_open_source_value>
+	else
+		chip->set(chip, gpio_chip_hwgpio(desc), value);
+}
+     518:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     51c:	d65f03c0 	ret
+	struct gpio_chip	*chip;
+
+	chip = desc->gdev->chip;
+	trace_gpio_value(desc_to_gpio(desc), 0, value);
+	if (test_bit(FLAG_OPEN_DRAIN, &desc->flags))
+		_gpio_set_open_drain_value(desc, value);
+     520:	2a0203e1 	mov	w1, w2
+     524:	97ffff80 	bl	324 <_gpio_set_open_drain_value>
+	else if (test_bit(FLAG_OPEN_SOURCE, &desc->flags))
+		_gpio_set_open_source_value(desc, value);
+	else
+		chip->set(chip, gpio_chip_hwgpio(desc), value);
+}
+     528:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     52c:	d65f03c0 	ret
+
+0000000000000530 <gpiod_parse_flags>:
+ *		of_get_gpio_hog()
+ *
+ * Set the GPIO descriptor flags based on the given GPIO lookup flags.
+ */
+static void gpiod_parse_flags(struct gpio_desc *desc, unsigned long lflags)
+{
+     530:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     534:	910003fd 	mov	x29, sp
+     538:	a90153f3 	stp	x19, x20, [sp,#16]
+     53c:	aa0103f3 	mov	x19, x1
+     540:	aa0003f4 	mov	x20, x0
+	if (lflags & GPIO_ACTIVE_LOW)
+     544:	370001a1 	tbnz	w1, #0, 578 <gpiod_parse_flags+0x48>
+		set_bit(FLAG_ACTIVE_LOW, &desc->flags);
+	if (lflags & GPIO_OPEN_DRAIN)
+     548:	37080113 	tbnz	w19, #1, 568 <gpiod_parse_flags+0x38>
+		set_bit(FLAG_OPEN_DRAIN, &desc->flags);
+	if (lflags & GPIO_OPEN_SOURCE)
+     54c:	36100093 	tbz	w19, #2, 55c <gpiod_parse_flags+0x2c>
+		set_bit(FLAG_OPEN_SOURCE, &desc->flags);
+     550:	91002281 	add	x1, x20, #0x8
+     554:	52800100 	mov	w0, #0x8                   	// #8
+     558:	94000000 	bl	0 <set_bit>
+			558: R_AARCH64_CALL26	set_bit
+}
+     55c:	a94153f3 	ldp	x19, x20, [sp,#16]
+     560:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     564:	d65f03c0 	ret
+static void gpiod_parse_flags(struct gpio_desc *desc, unsigned long lflags)
+{
+	if (lflags & GPIO_ACTIVE_LOW)
+		set_bit(FLAG_ACTIVE_LOW, &desc->flags);
+	if (lflags & GPIO_OPEN_DRAIN)
+		set_bit(FLAG_OPEN_DRAIN, &desc->flags);
+     568:	91002281 	add	x1, x20, #0x8
+     56c:	528000e0 	mov	w0, #0x7                   	// #7
+     570:	94000000 	bl	0 <set_bit>
+			570: R_AARCH64_CALL26	set_bit
+     574:	17fffff6 	b	54c <gpiod_parse_flags+0x1c>
+ * Set the GPIO descriptor flags based on the given GPIO lookup flags.
+ */
+static void gpiod_parse_flags(struct gpio_desc *desc, unsigned long lflags)
+{
+	if (lflags & GPIO_ACTIVE_LOW)
+		set_bit(FLAG_ACTIVE_LOW, &desc->flags);
+     578:	528000c0 	mov	w0, #0x6                   	// #6
+     57c:	91002281 	add	x1, x20, #0x8
+     580:	94000000 	bl	0 <set_bit>
+			580: R_AARCH64_CALL26	set_bit
+	if (lflags & GPIO_OPEN_DRAIN)
+     584:	360ffe53 	tbz	w19, #1, 54c <gpiod_parse_flags+0x1c>
+     588:	17fffff8 	b	568 <gpiod_parse_flags+0x38>
+
+000000000000058c <gpiochip_lock_as_irq>:
+ *
+ * This is used directly by GPIO drivers that want to lock down
+ * a certain GPIO line to be used for IRQs.
+ */
+int gpiochip_lock_as_irq(struct gpio_chip *chip, unsigned int offset)
+{
+     58c:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     590:	910003fd 	mov	x29, sp
+     594:	f9000bf3 	str	x19, [sp,#16]
+	if (offset >= chip->ngpio)
+     598:	7940f802 	ldrh	w2, [x0,#124]
+     59c:	6b01005f 	cmp	w2, w1
+     5a0:	540001e9 	b.ls	5dc <gpiochip_lock_as_irq+0x50>
+		return -EINVAL;
+
+	if (test_bit(FLAG_IS_OUT, &chip->gpiodev->descs[offset].flags)) {
+     5a4:	f9400404 	ldr	x4, [x0,#8]
+     5a8:	d37b7c21 	ubfiz	x1, x1, #5, #32
+     5ac:	f941a482 	ldr	x2, [x4,#840]
+     5b0:	8b010041 	add	x1, x2, x1
+     5b4:	f9400433 	ldr	x19, [x1,#8]
+     5b8:	d3410673 	ubfx	x19, x19, #1, #1
+     5bc:	35000153 	cbnz	w19, 5e4 <gpiochip_lock_as_irq+0x58>
+			  "%s: tried to flag a GPIO set as output for IRQ\n",
+			  __func__);
+		return -EIO;
+	}
+
+	set_bit(FLAG_USED_AS_IRQ, &chip->gpiodev->descs[offset].flags);
+     5c0:	91002021 	add	x1, x1, #0x8
+     5c4:	52800120 	mov	w0, #0x9                   	// #9
+     5c8:	94000000 	bl	0 <set_bit>
+			5c8: R_AARCH64_CALL26	set_bit
+	return 0;
+}
+     5cc:	2a1303e0 	mov	w0, w19
+     5d0:	f9400bf3 	ldr	x19, [sp,#16]
+     5d4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     5d8:	d65f03c0 	ret
+ * a certain GPIO line to be used for IRQs.
+ */
+int gpiochip_lock_as_irq(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+		return -EINVAL;
+     5dc:	128002b3 	mov	w19, #0xffffffea            	// #-22
+     5e0:	17fffffb 	b	5cc <gpiochip_lock_as_irq+0x40>
+
+	if (test_bit(FLAG_IS_OUT, &chip->gpiodev->descs[offset].flags)) {
+		chip_err(chip,
+     5e4:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			5e4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     5e8:	f9400002 	ldr	x2, [x0]
+     5ec:	91000063 	add	x3, x3, #0x0
+			5ec: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     5f0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			5f0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x98
+     5f4:	91010063 	add	x3, x3, #0x40
+     5f8:	91000021 	add	x1, x1, #0x0
+			5f8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x98
+     5fc:	91002080 	add	x0, x4, #0x8
+			  "%s: tried to flag a GPIO set as output for IRQ\n",
+			  __func__);
+		return -EIO;
+     600:	12800093 	mov	w19, #0xfffffffb            	// #-5
+{
+	if (offset >= chip->ngpio)
+		return -EINVAL;
+
+	if (test_bit(FLAG_IS_OUT, &chip->gpiodev->descs[offset].flags)) {
+		chip_err(chip,
+     604:	94000000 	bl	0 <dev_err>
+			604: R_AARCH64_CALL26	dev_err
+			  "%s: tried to flag a GPIO set as output for IRQ\n",
+			  __func__);
+		return -EIO;
+     608:	17fffff1 	b	5cc <gpiochip_lock_as_irq+0x40>
+
+000000000000060c <gpiod_direction_input>:
+ * be called safely on it.
+ *
+ * Return 0 in case of success, else an error code.
+ */
+int gpiod_direction_input(struct gpio_desc *desc)
+{
+     60c:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     610:	910003fd 	mov	x29, sp
+     614:	a90153f3 	stp	x19, x20, [sp,#16]
+     618:	aa0003f3 	mov	x19, x0
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	VALIDATE_DESC(desc);
+     61c:	b4000660 	cbz	x0, 6e8 <gpiod_direction_input+0xdc>
+     620:	f9400000 	ldr	x0, [x0]
+     624:	b4000620 	cbz	x0, 6e8 <gpiod_direction_input+0xdc>
+     628:	f941a002 	ldr	x2, [x0,#832]
+     62c:	b40002e2 	cbz	x2, 688 <gpiod_direction_input+0x7c>
+	chip = desc->gdev->chip;
+
+	if (!chip->get || !chip->direction_input) {
+     630:	f9402441 	ldr	x1, [x2,#72]
+     634:	b40003c1 	cbz	x1, 6ac <gpiod_direction_input+0xa0>
+     638:	f9401c43 	ldr	x3, [x2,#56]
+     63c:	b4000383 	cbz	x3, 6ac <gpiod_direction_input+0xa0>
+     640:	f941a401 	ldr	x1, [x0,#840]
+			"%s: missing get() or direction_input() operations\n",
+			__func__);
+		return -EIO;
+	}
+
+	status = chip->direction_input(chip, gpio_chip_hwgpio(desc));
+     644:	aa0203e0 	mov	x0, x2
+     648:	cb010261 	sub	x1, x19, x1
+     64c:	d345fc21 	lsr	x1, x1, #5
+     650:	d63f0060 	blr	x3
+     654:	2a0003f4 	mov	w20, w0
+	if (status == 0)
+     658:	340000a0 	cbz	w0, 66c <gpiod_direction_input+0x60>
+		clear_bit(FLAG_IS_OUT, &desc->flags);
+
+	trace_gpio_direction(desc_to_gpio(desc), 1, status);
+
+	return status;
+}
+     65c:	2a1403e0 	mov	w0, w20
+     660:	a94153f3 	ldp	x19, x20, [sp,#16]
+     664:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     668:	d65f03c0 	ret
+		return -EIO;
+	}
+
+	status = chip->direction_input(chip, gpio_chip_hwgpio(desc));
+	if (status == 0)
+		clear_bit(FLAG_IS_OUT, &desc->flags);
+     66c:	91002261 	add	x1, x19, #0x8
+     670:	52800020 	mov	w0, #0x1                   	// #1
+     674:	94000000 	bl	0 <clear_bit>
+			674: R_AARCH64_CALL26	clear_bit
+
+	trace_gpio_direction(desc_to_gpio(desc), 1, status);
+
+	return status;
+}
+     678:	2a1403e0 	mov	w0, w20
+     67c:	a94153f3 	ldp	x19, x20, [sp,#16]
+     680:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     684:	d65f03c0 	ret
+int gpiod_direction_input(struct gpio_desc *desc)
+{
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	VALIDATE_DESC(desc);
+     688:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			688: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     68c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			68c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+     690:	91000042 	add	x2, x2, #0x0
+			690: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     694:	91000021 	add	x1, x1, #0x0
+			694: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+     698:	91016042 	add	x2, x2, #0x58
+     69c:	91002000 	add	x0, x0, #0x8
+     6a0:	52800014 	mov	w20, #0x0                   	// #0
+     6a4:	94000000 	bl	0 <dev_warn>
+			6a4: R_AARCH64_CALL26	dev_warn
+     6a8:	17ffffed 	b	65c <gpiod_direction_input+0x50>
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     6ac:	f941a401 	ldr	x1, [x0,#840]
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+
+	if (!chip->get || !chip->direction_input) {
+		gpiod_warn(desc,
+     6b0:	f9400a62 	ldr	x2, [x19,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     6b4:	cb010273 	sub	x19, x19, x1
+     6b8:	b9435001 	ldr	w1, [x0,#848]
+     6bc:	9345fe73 	asr	x19, x19, #5
+     6c0:	0b130021 	add	w1, w1, w19
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+
+	if (!chip->get || !chip->direction_input) {
+		gpiod_warn(desc,
+     6c4:	b4000222 	cbz	x2, 708 <gpiod_direction_input+0xfc>
+     6c8:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			6c8: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     6cc:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			6cc: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x108
+     6d0:	91000063 	add	x3, x3, #0x0
+			6d0: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     6d4:	91000000 	add	x0, x0, #0x0
+			6d4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x108
+     6d8:	91016063 	add	x3, x3, #0x58
+			"%s: missing get() or direction_input() operations\n",
+			__func__);
+		return -EIO;
+     6dc:	12800094 	mov	w20, #0xfffffffb            	// #-5
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+
+	if (!chip->get || !chip->direction_input) {
+		gpiod_warn(desc,
+     6e0:	94000000 	bl	0 <printk>
+			6e0: R_AARCH64_CALL26	printk
+			"%s: missing get() or direction_input() operations\n",
+			__func__);
+		return -EIO;
+     6e4:	17ffffde 	b	65c <gpiod_direction_input+0x50>
+int gpiod_direction_input(struct gpio_desc *desc)
+{
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	VALIDATE_DESC(desc);
+     6e8:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			6e8: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     6ec:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			6ec: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+     6f0:	91000021 	add	x1, x1, #0x0
+			6f0: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     6f4:	91000000 	add	x0, x0, #0x0
+			6f4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+     6f8:	91016021 	add	x1, x1, #0x58
+     6fc:	128002b4 	mov	w20, #0xffffffea            	// #-22
+     700:	94000000 	bl	0 <printk>
+			700: R_AARCH64_CALL26	printk
+     704:	17ffffd6 	b	65c <gpiod_direction_input+0x50>
+	chip = desc->gdev->chip;
+
+	if (!chip->get || !chip->direction_input) {
+		gpiod_warn(desc,
+     708:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			708: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+     70c:	91000042 	add	x2, x2, #0x0
+			70c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+     710:	17ffffee 	b	6c8 <gpiod_direction_input+0xbc>
+
+0000000000000714 <_gpiod_direction_output_raw>:
+	return status;
+}
+EXPORT_SYMBOL_GPL(gpiod_direction_input);
+
+static int _gpiod_direction_output_raw(struct gpio_desc *desc, int value)
+{
+     714:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     718:	910003fd 	mov	x29, sp
+     71c:	a90153f3 	stp	x19, x20, [sp,#16]
+     720:	aa0003f3 	mov	x19, x0
+     724:	f9400400 	ldr	x0, [x0,#8]
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	/* GPIOs used for IRQs shall not be set as output */
+	if (test_bit(FLAG_USED_AS_IRQ, &desc->flags)) {
+     728:	37480660 	tbnz	w0, #9, 7f4 <_gpiod_direction_output_raw+0xe0>
+     72c:	f9400660 	ldr	x0, [x19,#8]
+			  __func__);
+		return -EIO;
+	}
+
+	/* Open drain pin should not be driven to 1 */
+	if (value && test_bit(FLAG_OPEN_DRAIN,  &desc->flags))
+     730:	34000261 	cbz	w1, 77c <_gpiod_direction_output_raw+0x68>
+     734:	37380260 	tbnz	w0, #7, 780 <_gpiod_direction_output_raw+0x6c>
+
+	/* Open source pin should not be driven to 0 */
+	if (!value && test_bit(FLAG_OPEN_SOURCE,  &desc->flags))
+		return gpiod_direction_input(desc);
+
+	chip = desc->gdev->chip;
+     738:	f9400263 	ldr	x3, [x19]
+     73c:	f941a060 	ldr	x0, [x3,#832]
+	if (!chip->set || !chip->direction_output) {
+     740:	f9402802 	ldr	x2, [x0,#80]
+     744:	b40003a2 	cbz	x2, 7b8 <_gpiod_direction_output_raw+0xa4>
+     748:	f9402004 	ldr	x4, [x0,#64]
+     74c:	b4000364 	cbz	x4, 7b8 <_gpiod_direction_output_raw+0xa4>
+     750:	f941a463 	ldr	x3, [x3,#840]
+		       "%s: missing set() or direction_output() operations\n",
+		       __func__);
+		return -EIO;
+	}
+
+	status = chip->direction_output(chip, gpio_chip_hwgpio(desc), value);
+     754:	2a0103e2 	mov	w2, w1
+     758:	cb030261 	sub	x1, x19, x3
+     75c:	d345fc21 	lsr	x1, x1, #5
+     760:	d63f0080 	blr	x4
+     764:	2a0003f4 	mov	w20, w0
+	if (status == 0)
+     768:	340001a0 	cbz	w0, 79c <_gpiod_direction_output_raw+0x88>
+		set_bit(FLAG_IS_OUT, &desc->flags);
+	trace_gpio_value(desc_to_gpio(desc), 0, value);
+	trace_gpio_direction(desc_to_gpio(desc), 0, status);
+	return status;
+}
+     76c:	2a1403e0 	mov	w0, w20
+     770:	a94153f3 	ldp	x19, x20, [sp,#16]
+     774:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     778:	d65f03c0 	ret
+	/* Open drain pin should not be driven to 1 */
+	if (value && test_bit(FLAG_OPEN_DRAIN,  &desc->flags))
+		return gpiod_direction_input(desc);
+
+	/* Open source pin should not be driven to 0 */
+	if (!value && test_bit(FLAG_OPEN_SOURCE,  &desc->flags))
+     77c:	3647fde0 	tbz	w0, #8, 738 <_gpiod_direction_output_raw+0x24>
+		return -EIO;
+	}
+
+	/* Open drain pin should not be driven to 1 */
+	if (value && test_bit(FLAG_OPEN_DRAIN,  &desc->flags))
+		return gpiod_direction_input(desc);
+     780:	aa1303e0 	mov	x0, x19
+     784:	94000000 	bl	60c <gpiod_direction_input>
+			784: R_AARCH64_CALL26	gpiod_direction_input
+     788:	2a0003f4 	mov	w20, w0
+	if (status == 0)
+		set_bit(FLAG_IS_OUT, &desc->flags);
+	trace_gpio_value(desc_to_gpio(desc), 0, value);
+	trace_gpio_direction(desc_to_gpio(desc), 0, status);
+	return status;
+}
+     78c:	2a1403e0 	mov	w0, w20
+     790:	a94153f3 	ldp	x19, x20, [sp,#16]
+     794:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     798:	d65f03c0 	ret
+		return -EIO;
+	}
+
+	status = chip->direction_output(chip, gpio_chip_hwgpio(desc), value);
+	if (status == 0)
+		set_bit(FLAG_IS_OUT, &desc->flags);
+     79c:	91002261 	add	x1, x19, #0x8
+     7a0:	52800020 	mov	w0, #0x1                   	// #1
+     7a4:	94000000 	bl	0 <set_bit>
+			7a4: R_AARCH64_CALL26	set_bit
+	trace_gpio_value(desc_to_gpio(desc), 0, value);
+	trace_gpio_direction(desc_to_gpio(desc), 0, status);
+	return status;
+}
+     7a8:	2a1403e0 	mov	w0, w20
+     7ac:	a94153f3 	ldp	x19, x20, [sp,#16]
+     7b0:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     7b4:	d65f03c0 	ret
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     7b8:	f941a461 	ldr	x1, [x3,#840]
+	if (!value && test_bit(FLAG_OPEN_SOURCE,  &desc->flags))
+		return gpiod_direction_input(desc);
+
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->direction_output) {
+		gpiod_warn(desc,
+     7bc:	f9400a62 	ldr	x2, [x19,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     7c0:	cb010273 	sub	x19, x19, x1
+     7c4:	b9435061 	ldr	w1, [x3,#848]
+     7c8:	9345fe73 	asr	x19, x19, #5
+     7cc:	0b130021 	add	w1, w1, w19
+	if (!value && test_bit(FLAG_OPEN_SOURCE,  &desc->flags))
+		return gpiod_direction_input(desc);
+
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->direction_output) {
+		gpiod_warn(desc,
+     7d0:	b4000322 	cbz	x2, 834 <_gpiod_direction_output_raw+0x120>
+     7d4:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			7d4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     7d8:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			7d8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x198
+     7dc:	91000063 	add	x3, x3, #0x0
+			7dc: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     7e0:	91000000 	add	x0, x0, #0x0
+			7e0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x198
+     7e4:	9101c063 	add	x3, x3, #0x70
+		       "%s: missing set() or direction_output() operations\n",
+		       __func__);
+		return -EIO;
+     7e8:	12800094 	mov	w20, #0xfffffffb            	// #-5
+	if (!value && test_bit(FLAG_OPEN_SOURCE,  &desc->flags))
+		return gpiod_direction_input(desc);
+
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->direction_output) {
+		gpiod_warn(desc,
+     7ec:	94000000 	bl	0 <printk>
+			7ec: R_AARCH64_CALL26	printk
+		       "%s: missing set() or direction_output() operations\n",
+		       __func__);
+		return -EIO;
+     7f0:	17ffffdf 	b	76c <_gpiod_direction_output_raw+0x58>
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     7f4:	f9400260 	ldr	x0, [x19]
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	/* GPIOs used for IRQs shall not be set as output */
+	if (test_bit(FLAG_USED_AS_IRQ, &desc->flags)) {
+		gpiod_err(desc,
+     7f8:	f9400a62 	ldr	x2, [x19,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     7fc:	f941a403 	ldr	x3, [x0,#840]
+     800:	b9435001 	ldr	w1, [x0,#848]
+     804:	cb030273 	sub	x19, x19, x3
+     808:	9345fe73 	asr	x19, x19, #5
+     80c:	0b130021 	add	w1, w1, w19
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	/* GPIOs used for IRQs shall not be set as output */
+	if (test_bit(FLAG_USED_AS_IRQ, &desc->flags)) {
+		gpiod_err(desc,
+     810:	b4000182 	cbz	x2, 840 <_gpiod_direction_output_raw+0x12c>
+     814:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			814: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     818:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			818: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x150
+     81c:	91000063 	add	x3, x3, #0x0
+			81c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     820:	91000000 	add	x0, x0, #0x0
+			820: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x150
+     824:	9101c063 	add	x3, x3, #0x70
+			  "%s: tried to set a GPIO tied to an IRQ as output\n",
+			  __func__);
+		return -EIO;
+     828:	12800094 	mov	w20, #0xfffffffb            	// #-5
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	/* GPIOs used for IRQs shall not be set as output */
+	if (test_bit(FLAG_USED_AS_IRQ, &desc->flags)) {
+		gpiod_err(desc,
+     82c:	94000000 	bl	0 <printk>
+			82c: R_AARCH64_CALL26	printk
+			  "%s: tried to set a GPIO tied to an IRQ as output\n",
+			  __func__);
+		return -EIO;
+     830:	17ffffcf 	b	76c <_gpiod_direction_output_raw+0x58>
+	if (!value && test_bit(FLAG_OPEN_SOURCE,  &desc->flags))
+		return gpiod_direction_input(desc);
+
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->direction_output) {
+		gpiod_warn(desc,
+     834:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			834: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+     838:	91000042 	add	x2, x2, #0x0
+			838: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+     83c:	17ffffe6 	b	7d4 <_gpiod_direction_output_raw+0xc0>
+	struct gpio_chip	*chip;
+	int			status = -EINVAL;
+
+	/* GPIOs used for IRQs shall not be set as output */
+	if (test_bit(FLAG_USED_AS_IRQ, &desc->flags)) {
+		gpiod_err(desc,
+     840:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			840: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+     844:	91000042 	add	x2, x2, #0x0
+			844: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+     848:	17fffff3 	b	814 <_gpiod_direction_output_raw+0x100>
+
+000000000000084c <gpiod_get_value>:
+ *
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+int gpiod_get_value(const struct gpio_desc *desc)
+{
+     84c:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     850:	910003fd 	mov	x29, sp
+     854:	f9000bf3 	str	x19, [sp,#16]
+     858:	aa0003f3 	mov	x19, x0
+	int value;
+
+	VALIDATE_DESC(desc);
+     85c:	b4000380 	cbz	x0, 8cc <gpiod_get_value+0x80>
+     860:	f9400000 	ldr	x0, [x0]
+     864:	b4000340 	cbz	x0, 8cc <gpiod_get_value+0x80>
+     868:	f941a001 	ldr	x1, [x0,#832]
+     86c:	b40001e1 	cbz	x1, 8a8 <gpiod_get_value+0x5c>
+	/* Should be using gpio_get_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+     870:	39422020 	ldrb	w0, [x1,#136]
+     874:	35000160 	cbnz	w0, 8a0 <gpiod_get_value+0x54>
+
+	value = _gpiod_get_raw_value(desc);
+     878:	aa1303e0 	mov	x0, x19
+     87c:	97fffdff 	bl	78 <_gpiod_get_raw_value>
+	if (value < 0)
+     880:	37f800a0 	tbnz	w0, #31, 894 <gpiod_get_value+0x48>
+     884:	f9400662 	ldr	x2, [x19,#8]
+		return value;
+
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+     888:	36300062 	tbz	w2, #6, 894 <gpiod_get_value+0x48>
+		value = !value;
+     88c:	6b1f001f 	cmp	w0, wzr
+     890:	1a9f17e0 	cset	w0, eq
+
+	return value;
+}
+     894:	f9400bf3 	ldr	x19, [sp,#16]
+     898:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     89c:	d65f03c0 	ret
+{
+	int value;
+
+	VALIDATE_DESC(desc);
+	/* Should be using gpio_get_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+     8a0:	d4210000 	brk	#0x800
+     8a4:	17fffff5 	b	878 <gpiod_get_value+0x2c>
+ */
+int gpiod_get_value(const struct gpio_desc *desc)
+{
+	int value;
+
+	VALIDATE_DESC(desc);
+     8a8:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			8a8: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     8ac:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			8ac: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+     8b0:	91000042 	add	x2, x2, #0x0
+			8b0: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     8b4:	91002000 	add	x0, x0, #0x8
+     8b8:	91000021 	add	x1, x1, #0x0
+			8b8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+     8bc:	91024042 	add	x2, x2, #0x90
+     8c0:	94000000 	bl	0 <dev_warn>
+			8c0: R_AARCH64_CALL26	dev_warn
+     8c4:	52800000 	mov	w0, #0x0                   	// #0
+     8c8:	17fffff3 	b	894 <gpiod_get_value+0x48>
+     8cc:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			8cc: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     8d0:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			8d0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+     8d4:	91000021 	add	x1, x1, #0x0
+			8d4: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     8d8:	91000000 	add	x0, x0, #0x0
+			8d8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+     8dc:	91024021 	add	x1, x1, #0x90
+     8e0:	94000000 	bl	0 <printk>
+			8e0: R_AARCH64_CALL26	printk
+     8e4:	128002a0 	mov	w0, #0xffffffea            	// #-22
+     8e8:	17ffffeb 	b	894 <gpiod_get_value+0x48>
+
+00000000000008ec <gpiod_set_debounce>:
+ *
+ * returns -ENOTSUPP if the controller does not support setting
+ * debounce.
+ */
+int gpiod_set_debounce(struct gpio_desc *desc, unsigned debounce)
+{
+     8ec:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+     8f0:	aa0003e4 	mov	x4, x0
+     8f4:	910003fd 	mov	x29, sp
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+     8f8:	b4000620 	cbz	x0, 9bc <gpiod_set_debounce+0xd0>
+     8fc:	f9400005 	ldr	x5, [x0]
+     900:	b40005e5 	cbz	x5, 9bc <gpiod_set_debounce+0xd0>
+     904:	f941a0a0 	ldr	x0, [x5,#832]
+     908:	b4000420 	cbz	x0, 98c <gpiod_set_debounce+0xa0>
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->set_debounce) {
+     90c:	f9402803 	ldr	x3, [x0,#80]
+     910:	b4000143 	cbz	x3, 938 <gpiod_set_debounce+0x4c>
+     914:	f9403003 	ldr	x3, [x0,#96]
+     918:	b4000103 	cbz	x3, 938 <gpiod_set_debounce+0x4c>
+     91c:	f941a4a5 	ldr	x5, [x5,#840]
+			  "%s: missing set() or set_debounce() operations\n",
+			  __func__);
+		return -ENOTSUPP;
+	}
+
+	return chip->set_debounce(chip, gpio_chip_hwgpio(desc), debounce);
+     920:	2a0103e2 	mov	w2, w1
+     924:	cb050081 	sub	x1, x4, x5
+     928:	d345fc21 	lsr	x1, x1, #5
+     92c:	d63f0060 	blr	x3
+}
+     930:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     934:	d65f03c0 	ret
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->set_debounce) {
+		gpiod_dbg(desc,
+     938:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			938: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+			  "%s: missing set() or set_debounce() operations\n",
+			  __func__);
+		return -ENOTSUPP;
+     93c:	12804160 	mov	w0, #0xfffffdf4            	// #-524
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->set_debounce) {
+		gpiod_dbg(desc,
+     940:	910000c1 	add	x1, x6, #0x0
+			940: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+     944:	79404421 	ldrh	w1, [x1,#34]
+     948:	3617ff41 	tbz	w1, #2, 930 <gpiod_set_debounce+0x44>
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     94c:	f941a4a2 	ldr	x2, [x5,#840]
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->set_debounce) {
+		gpiod_dbg(desc,
+     950:	f9400883 	ldr	x3, [x4,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+     954:	cb020084 	sub	x4, x4, x2
+     958:	b94350a2 	ldr	w2, [x5,#848]
+     95c:	9345fc84 	asr	x4, x4, #5
+     960:	0b040042 	add	w2, w2, w4
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->set_debounce) {
+		gpiod_dbg(desc,
+     964:	b4000263 	cbz	x3, 9b0 <gpiod_set_debounce+0xc4>
+     968:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			968: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     96c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			96c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x1e0
+     970:	91000084 	add	x4, x4, #0x0
+			970: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     974:	910000c0 	add	x0, x6, #0x0
+			974: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+     978:	91028084 	add	x4, x4, #0xa0
+     97c:	91000021 	add	x1, x1, #0x0
+			97c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x1e0
+     980:	94000000 	bl	0 <__dynamic_pr_debug>
+			980: R_AARCH64_CALL26	__dynamic_pr_debug
+			  "%s: missing set() or set_debounce() operations\n",
+			  __func__);
+		return -ENOTSUPP;
+     984:	12804160 	mov	w0, #0xfffffdf4            	// #-524
+     988:	17ffffea 	b	930 <gpiod_set_debounce+0x44>
+ */
+int gpiod_set_debounce(struct gpio_desc *desc, unsigned debounce)
+{
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+     98c:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			98c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     990:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			990: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+     994:	91000042 	add	x2, x2, #0x0
+			994: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     998:	910020a0 	add	x0, x5, #0x8
+     99c:	91000021 	add	x1, x1, #0x0
+			99c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+     9a0:	91028042 	add	x2, x2, #0xa0
+     9a4:	94000000 	bl	0 <dev_warn>
+			9a4: R_AARCH64_CALL26	dev_warn
+     9a8:	52800000 	mov	w0, #0x0                   	// #0
+     9ac:	17ffffe1 	b	930 <gpiod_set_debounce+0x44>
+	chip = desc->gdev->chip;
+	if (!chip->set || !chip->set_debounce) {
+		gpiod_dbg(desc,
+     9b0:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			9b0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+     9b4:	91000063 	add	x3, x3, #0x0
+			9b4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+     9b8:	17ffffec 	b	968 <gpiod_set_debounce+0x7c>
+ */
+int gpiod_set_debounce(struct gpio_desc *desc, unsigned debounce)
+{
+	struct gpio_chip	*chip;
+
+	VALIDATE_DESC(desc);
+     9bc:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			9bc: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+     9c0:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			9c0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+     9c4:	91000021 	add	x1, x1, #0x0
+			9c4: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+     9c8:	91000000 	add	x0, x0, #0x0
+			9c8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+     9cc:	91028021 	add	x1, x1, #0xa0
+     9d0:	94000000 	bl	0 <printk>
+			9d0: R_AARCH64_CALL26	printk
+     9d4:	128002a0 	mov	w0, #0xffffffea            	// #-22
+     9d8:	17ffffd6 	b	930 <gpiod_set_debounce+0x44>
+
+00000000000009dc <gpiodevice_release>:
+	.unlocked_ioctl = gpio_ioctl,
+	.compat_ioctl = gpio_ioctl,
+};
+
+static void gpiodevice_release(struct device *dev)
+{
+     9dc:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+     9e0:	d2802003 	mov	x3, #0x100                 	// #256
+	entry->prev = LIST_POISON2;
+     9e4:	d2804002 	mov	x2, #0x200                 	// #512
+     9e8:	910003fd 	mov	x29, sp
+     9ec:	f9000bf3 	str	x19, [sp,#16]
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+     9f0:	f2fbd5a3 	movk	x3, #0xdead, lsl #48
+	entry->prev = LIST_POISON2;
+     9f4:	f2fbd5a2 	movk	x2, #0xdead, lsl #48
+     9f8:	f9405013 	ldr	x19, [x0,#160]
+	struct gpio_device *gdev = dev_get_drvdata(dev);
+
+	list_del(&gdev->list);
+	ida_simple_remove(&gpio_ida, gdev->id);
+     9fc:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			9fc: R_AARCH64_ADR_PREL_PG_HI21	.bss
+     a00:	91000000 	add	x0, x0, #0x0
+			a00: R_AARCH64_ADD_ABS_LO12_NC	.bss
+     a04:	91002000 	add	x0, x0, #0x8
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+     a08:	f941b665 	ldr	x5, [x19,#872]
+     a0c:	f941ba64 	ldr	x4, [x19,#880]
+ * This is only for internal list manipulation where we know
+ * the prev/next entries already!
+ */
+static inline void __list_del(struct list_head * prev, struct list_head * next)
+{
+	next->prev = prev;
+     a10:	f90004a4 	str	x4, [x5,#8]
+{
+	switch (size) {
+	case 1: *(volatile __u8 *)p = *(__u8 *)res; break;
+	case 2: *(volatile __u16 *)p = *(__u16 *)res; break;
+	case 4: *(volatile __u32 *)p = *(__u32 *)res; break;
+	case 8: *(volatile __u64 *)p = *(__u64 *)res; break;
+     a14:	f9000085 	str	x5, [x4]
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+     a18:	f901b663 	str	x3, [x19,#872]
+     a1c:	b9400261 	ldr	w1, [x19]
+	entry->prev = LIST_POISON2;
+     a20:	f901ba62 	str	x2, [x19,#880]
+     a24:	94000000 	bl	0 <ida_simple_remove>
+			a24: R_AARCH64_CALL26	ida_simple_remove
+	kfree(gdev);
+     a28:	aa1303e0 	mov	x0, x19
+     a2c:	94000000 	bl	0 <kfree>
+			a2c: R_AARCH64_CALL26	kfree
+}
+     a30:	f9400bf3 	ldr	x19, [sp,#16]
+     a34:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     a38:	d65f03c0 	ret
+
+0000000000000a3c <gpio_chrdev_release>:
+ * @inode: inode for this chardev
+ * @filp: file struct for storing private data
+ * Returns 0 on success
+ */
+static int gpio_chrdev_release(struct inode *inode, struct file *filp)
+{
+     a3c:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+     a40:	910003fd 	mov	x29, sp
+	struct gpio_device *gdev = container_of(inode->i_cdev,
+     a44:	f940f800 	ldr	x0, [x0,#496]
+					      struct gpio_device, chrdev);
+
+	if (!gdev)
+     a48:	f10b2000 	subs	x0, x0, #0x2c8
+     a4c:	540000c0 	b.eq	a64 <gpio_chrdev_release+0x28>
+		return -ENODEV;
+	put_device(&gdev->dev);
+     a50:	91002000 	add	x0, x0, #0x8
+     a54:	94000000 	bl	0 <put_device>
+			a54: R_AARCH64_CALL26	put_device
+	return 0;
+     a58:	52800000 	mov	w0, #0x0                   	// #0
+}
+     a5c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     a60:	d65f03c0 	ret
+{
+	struct gpio_device *gdev = container_of(inode->i_cdev,
+					      struct gpio_device, chrdev);
+
+	if (!gdev)
+		return -ENODEV;
+     a64:	12800240 	mov	w0, #0xffffffed            	// #-19
+     a68:	17fffffd 	b	a5c <gpio_chrdev_release+0x20>
+
+0000000000000a6c <gpio_chrdev_open>:
+ * @inode: inode for this chardev
+ * @filp: file struct for storing private data
+ * Returns 0 on success
+ */
+static int gpio_chrdev_open(struct inode *inode, struct file *filp)
+{
+     a6c:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     a70:	910003fd 	mov	x29, sp
+     a74:	a90153f3 	stp	x19, x20, [sp,#16]
+	struct gpio_device *gdev = container_of(inode->i_cdev,
+     a78:	f940f813 	ldr	x19, [x0,#496]
+					      struct gpio_device, chrdev);
+
+	/* Fail on open if the backing gpiochip is gone */
+	if (!gdev || !gdev->chip)
+     a7c:	f10b2273 	subs	x19, x19, #0x2c8
+     a80:	54000160 	b.eq	aac <gpio_chrdev_open+0x40>
+     a84:	f941a260 	ldr	x0, [x19,#832]
+     a88:	b4000120 	cbz	x0, aac <gpio_chrdev_open+0x40>
+     a8c:	aa0103f4 	mov	x20, x1
+		return -ENODEV;
+	get_device(&gdev->dev);
+     a90:	91002260 	add	x0, x19, #0x8
+     a94:	94000000 	bl	0 <get_device>
+			a94: R_AARCH64_CALL26	get_device
+	filp->private_data = gdev;
+	return 0;
+     a98:	52800000 	mov	w0, #0x0                   	// #0
+
+	/* Fail on open if the backing gpiochip is gone */
+	if (!gdev || !gdev->chip)
+		return -ENODEV;
+	get_device(&gdev->dev);
+	filp->private_data = gdev;
+     a9c:	f9006a93 	str	x19, [x20,#208]
+	return 0;
+}
+     aa0:	a94153f3 	ldp	x19, x20, [sp,#16]
+     aa4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     aa8:	d65f03c0 	ret
+	struct gpio_device *gdev = container_of(inode->i_cdev,
+					      struct gpio_device, chrdev);
+
+	/* Fail on open if the backing gpiochip is gone */
+	if (!gdev || !gdev->chip)
+		return -ENODEV;
+     aac:	12800240 	mov	w0, #0xffffffed            	// #-19
+     ab0:	17fffffc 	b	aa0 <gpio_chrdev_open+0x34>
+
+0000000000000ab4 <gpio_ioctl>:
+
+/**
+ * gpio_ioctl() - ioctl handler for the GPIO chardev
+ */
+static long gpio_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
+{
+     ab4:	a9b97bfd 	stp	x29, x30, [sp,#-112]!
+     ab8:	910003fd 	mov	x29, sp
+     abc:	a90153f3 	stp	x19, x20, [sp,#16]
+	struct gpio_device *gdev = filp->private_data;
+     ac0:	f9406814 	ldr	x20, [x0,#208]
+	struct gpio_chip *chip = gdev->chip;
+	int __user *ip = (int __user *)arg;
+
+	/* We fail any subsequent ioctl():s when the chip is gone */
+	if (!chip)
+     ac4:	f941a280 	ldr	x0, [x20,#832]
+     ac8:	b4001020 	cbz	x0, ccc <gpio_ioctl+0x218>
+		return -ENODEV;
+
+	/* Fill in the struct and pass to userspace */
+	if (cmd == GPIO_GET_CHIPINFO_IOCTL) {
+     acc:	528de020 	mov	w0, #0x6f01                	// #28417
+     ad0:	aa0203f3 	mov	x19, x2
+     ad4:	72b00880 	movk	w0, #0x8044, lsl #16
+     ad8:	6b00003f 	cmp	w1, w0
+     adc:	54000980 	b.eq	c0c <gpio_ioctl+0x158>
+		chipinfo.label[sizeof(chipinfo.label)-1] = '\0';
+		chipinfo.lines = gdev->ngpio;
+		if (copy_to_user(ip, &chipinfo, sizeof(chipinfo)))
+			return -EFAULT;
+		return 0;
+	} else if (cmd == GPIO_GET_LINEINFO_IOCTL) {
+     ae0:	528de040 	mov	w0, #0x6f02                	// #28418
+     ae4:	72b80900 	movk	w0, #0xc048, lsl #16
+     ae8:	6b00003f 	cmp	w1, w0
+     aec:	54000c61 	b.ne	c78 <gpio_ioctl+0x1c4>
+ */
+static inline struct thread_info *current_thread_info(void)
+{
+	unsigned long sp_el0;
+
+	asm ("mrs %0, sp_el0" : "=r" (sp_el0));
+     af0:	d5384100 	mrs	x0, sp_el0
+extern unsigned long __must_check __copy_in_user(void __user *to, const void __user *from, unsigned long n);
+extern unsigned long __must_check __clear_user(void __user *addr, unsigned long n);
+
+static inline unsigned long __must_check copy_from_user(void *to, const void __user *from, unsigned long n)
+{
+	if (access_ok(VERIFY_READ, from, n))
+     af4:	aa0203e1 	mov	x1, x2
+     af8:	f9400402 	ldr	x2, [x0,#8]
+		struct gpioline_info lineinfo;
+		struct gpio_desc *desc;
+
+		if (copy_from_user(&lineinfo, ip, sizeof(lineinfo)))
+			return -EFAULT;
+     afc:	928001a0 	mov	x0, #0xfffffffffffffff2    	// #-14
+     b00:	b1012021 	adds	x1, x1, #0x48
+     b04:	fa423022 	ccmp	x1, x2, #0x2, cc
+     b08:	9a9f87e3 	cset	x3, ls
+     b0c:	b40007a3 	cbz	x3, c00 <gpio_ioctl+0x14c>
+		n = __copy_from_user(to, from, n);
+     b10:	d2800902 	mov	x2, #0x48                  	// #72
+     b14:	aa1303e1 	mov	x1, x19
+     b18:	9100a3a0 	add	x0, x29, #0x28
+     b1c:	94000000 	bl	0 <__copy_from_user>
+			b1c: R_AARCH64_CALL26	__copy_from_user
+		return 0;
+	} else if (cmd == GPIO_GET_LINEINFO_IOCTL) {
+		struct gpioline_info lineinfo;
+		struct gpio_desc *desc;
+
+		if (copy_from_user(&lineinfo, ip, sizeof(lineinfo)))
+     b20:	b50006e0 	cbnz	x0, bfc <gpio_ioctl+0x148>
+			return -EFAULT;
+		if (lineinfo.line_offset > gdev->ngpio)
+     b24:	b9402ba1 	ldr	w1, [x29,#40]
+			return -EINVAL;
+     b28:	928002a0 	mov	x0, #0xffffffffffffffea    	// #-22
+		struct gpioline_info lineinfo;
+		struct gpio_desc *desc;
+
+		if (copy_from_user(&lineinfo, ip, sizeof(lineinfo)))
+			return -EFAULT;
+		if (lineinfo.line_offset > gdev->ngpio)
+     b2c:	7946aa82 	ldrh	w2, [x20,#852]
+     b30:	6b02003f 	cmp	w1, w2
+     b34:	54000668 	b.hi	c00 <gpio_ioctl+0x14c>
+			return -EINVAL;
+
+		desc = &gdev->descs[lineinfo.line_offset];
+     b38:	f941a694 	ldr	x20, [x20,#840]
+     b3c:	d37b7c21 	ubfiz	x1, x1, #5, #32
+     b40:	8b010294 	add	x20, x20, x1
+		if (desc->name) {
+     b44:	f9400e81 	ldr	x1, [x20,#24]
+     b48:	b4000ba1 	cbz	x1, cbc <gpio_ioctl+0x208>
+			strncpy(lineinfo.name, desc->name,
+     b4c:	d2800402 	mov	x2, #0x20                  	// #32
+     b50:	9100c3a0 	add	x0, x29, #0x30
+     b54:	94000000 	bl	0 <strncpy>
+			b54: R_AARCH64_CALL26	strncpy
+				sizeof(lineinfo.name));
+			lineinfo.name[sizeof(lineinfo.name)-1] = '\0';
+     b58:	39013fbf 	strb	wzr, [x29,#79]
+		} else {
+			lineinfo.name[0] = '\0';
+		}
+		if (desc->label) {
+     b5c:	f9400a81 	ldr	x1, [x20,#16]
+     b60:	b4000aa1 	cbz	x1, cb4 <gpio_ioctl+0x200>
+			strncpy(lineinfo.consumer, desc->label,
+     b64:	d2800402 	mov	x2, #0x20                  	// #32
+     b68:	910143a0 	add	x0, x29, #0x50
+     b6c:	94000000 	bl	0 <strncpy>
+			b6c: R_AARCH64_CALL26	strncpy
+				sizeof(lineinfo.consumer));
+			lineinfo.consumer[sizeof(lineinfo.consumer)-1] = '\0';
+     b70:	3901bfbf 	strb	wzr, [x29,#111]
+
+		/*
+		 * Userspace only need to know that the kernel is using
+		 * this GPIO so it can't use it.
+		 */
+		lineinfo.flags = 0;
+     b74:	b9002fbf 	str	wzr, [x29,#44]
+     b78:	f9400680 	ldr	x0, [x20,#8]
+		if (test_bit(FLAG_REQUESTED, &desc->flags) ||
+     b7c:	37000060 	tbnz	w0, #0, b88 <gpio_ioctl+0xd4>
+     b80:	f9400680 	ldr	x0, [x20,#8]
+     b84:	365808a0 	tbz	w0, #11, c98 <gpio_ioctl+0x1e4>
+		    test_bit(FLAG_IS_HOGGED, &desc->flags) ||
+		    test_bit(FLAG_USED_AS_IRQ, &desc->flags) ||
+		    test_bit(FLAG_EXPORT, &desc->flags) ||
+		    test_bit(FLAG_SYSFS, &desc->flags))
+			lineinfo.flags |= GPIOLINE_FLAG_KERNEL;
+     b88:	52800020 	mov	w0, #0x1                   	// #1
+     b8c:	b9002fa0 	str	w0, [x29,#44]
+     b90:	f9400680 	ldr	x0, [x20,#8]
+		if (test_bit(FLAG_IS_OUT, &desc->flags))
+     b94:	36080080 	tbz	w0, #1, ba4 <gpio_ioctl+0xf0>
+			lineinfo.flags |= GPIOLINE_FLAG_IS_OUT;
+     b98:	b9402fa0 	ldr	w0, [x29,#44]
+     b9c:	321f0000 	orr	w0, w0, #0x2
+     ba0:	b9002fa0 	str	w0, [x29,#44]
+     ba4:	f9400680 	ldr	x0, [x20,#8]
+		if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+     ba8:	36300080 	tbz	w0, #6, bb8 <gpio_ioctl+0x104>
+			lineinfo.flags |= GPIOLINE_FLAG_ACTIVE_LOW;
+     bac:	b9402fa0 	ldr	w0, [x29,#44]
+     bb0:	321e0000 	orr	w0, w0, #0x4
+     bb4:	b9002fa0 	str	w0, [x29,#44]
+     bb8:	f9400680 	ldr	x0, [x20,#8]
+		if (test_bit(FLAG_OPEN_DRAIN, &desc->flags))
+     bbc:	36380080 	tbz	w0, #7, bcc <gpio_ioctl+0x118>
+			lineinfo.flags |= GPIOLINE_FLAG_OPEN_DRAIN;
+     bc0:	b9402fa0 	ldr	w0, [x29,#44]
+     bc4:	321d0000 	orr	w0, w0, #0x8
+     bc8:	b9002fa0 	str	w0, [x29,#44]
+     bcc:	f9400680 	ldr	x0, [x20,#8]
+		if (test_bit(FLAG_OPEN_SOURCE, &desc->flags))
+     bd0:	36400080 	tbz	w0, #8, be0 <gpio_ioctl+0x12c>
+			lineinfo.flags |= GPIOLINE_FLAG_OPEN_SOURCE;
+     bd4:	b9402fa0 	ldr	w0, [x29,#44]
+     bd8:	321c0000 	orr	w0, w0, #0x10
+     bdc:	b9002fa0 	str	w0, [x29,#44]
+     be0:	d5384101 	mrs	x1, sp_el0
+	return n;
+}
+
+static inline unsigned long __must_check copy_to_user(void __user *to, const void *from, unsigned long n)
+{
+	if (access_ok(VERIFY_WRITE, to, n))
+     be4:	aa1303e0 	mov	x0, x19
+     be8:	f9400421 	ldr	x1, [x1,#8]
+     bec:	b1012000 	adds	x0, x0, #0x48
+     bf0:	fa413002 	ccmp	x0, x1, #0x2, cc
+     bf4:	9a9f87e2 	cset	x2, ls
+     bf8:	b5000442 	cbnz	x2, c80 <gpio_ioctl+0x1cc>
+	} else if (cmd == GPIO_GET_LINEINFO_IOCTL) {
+		struct gpioline_info lineinfo;
+		struct gpio_desc *desc;
+
+		if (copy_from_user(&lineinfo, ip, sizeof(lineinfo)))
+			return -EFAULT;
+     bfc:	928001a0 	mov	x0, #0xfffffffffffffff2    	// #-14
+		if (copy_to_user(ip, &lineinfo, sizeof(lineinfo)))
+			return -EFAULT;
+		return 0;
+	}
+	return -EINVAL;
+}
+     c00:	a94153f3 	ldp	x19, x20, [sp,#16]
+     c04:	a8c77bfd 	ldp	x29, x30, [sp],#112
+     c08:	d65f03c0 	ret
+#include <linux/pm_wakeup.h>
+
+static inline const char *dev_name(const struct device *dev)
+{
+	/* Use the init name until the kobject becomes available */
+	if (dev->init_name)
+     c0c:	f9402e81 	ldr	x1, [x20,#88]
+     c10:	b40005a1 	cbz	x1, cc4 <gpio_ioctl+0x210>
+
+	/* Fill in the struct and pass to userspace */
+	if (cmd == GPIO_GET_CHIPINFO_IOCTL) {
+		struct gpiochip_info chipinfo;
+
+		strncpy(chipinfo.name, dev_name(&gdev->dev),
+     c14:	d2800402 	mov	x2, #0x20                  	// #32
+     c18:	9100a3a0 	add	x0, x29, #0x28
+     c1c:	94000000 	bl	0 <strncpy>
+			c1c: R_AARCH64_CALL26	strncpy
+			sizeof(chipinfo.name));
+		chipinfo.name[sizeof(chipinfo.name)-1] = '\0';
+     c20:	39011fbf 	strb	wzr, [x29,#71]
+		strncpy(chipinfo.label, gdev->label,
+     c24:	d2800402 	mov	x2, #0x20                  	// #32
+     c28:	9100a3a0 	add	x0, x29, #0x28
+     c2c:	f941ae81 	ldr	x1, [x20,#856]
+     c30:	8b020000 	add	x0, x0, x2
+     c34:	94000000 	bl	0 <strncpy>
+			c34: R_AARCH64_CALL26	strncpy
+			sizeof(chipinfo.label));
+		chipinfo.label[sizeof(chipinfo.label)-1] = '\0';
+     c38:	39019fbf 	strb	wzr, [x29,#103]
+     c3c:	d5384101 	mrs	x1, sp_el0
+		chipinfo.lines = gdev->ngpio;
+     c40:	7946aa82 	ldrh	w2, [x20,#852]
+     c44:	aa1303e0 	mov	x0, x19
+     c48:	b9006ba2 	str	w2, [x29,#104]
+     c4c:	f9400421 	ldr	x1, [x1,#8]
+     c50:	b1011000 	adds	x0, x0, #0x44
+     c54:	fa413002 	ccmp	x0, x1, #0x2, cc
+     c58:	9a9f87e2 	cset	x2, ls
+     c5c:	b4fffd02 	cbz	x2, bfc <gpio_ioctl+0x148>
+		n = __copy_to_user(to, from, n);
+     c60:	d2800882 	mov	x2, #0x44                  	// #68
+     c64:	9100a3a1 	add	x1, x29, #0x28
+     c68:	aa1303e0 	mov	x0, x19
+     c6c:	94000000 	bl	0 <__copy_to_user>
+			c6c: R_AARCH64_CALL26	__copy_to_user
+		if (copy_to_user(ip, &chipinfo, sizeof(chipinfo)))
+     c70:	b4fffc80 	cbz	x0, c00 <gpio_ioctl+0x14c>
+     c74:	17ffffe2 	b	bfc <gpio_ioctl+0x148>
+
+		if (copy_to_user(ip, &lineinfo, sizeof(lineinfo)))
+			return -EFAULT;
+		return 0;
+	}
+	return -EINVAL;
+     c78:	928002a0 	mov	x0, #0xffffffffffffffea    	// #-22
+     c7c:	17ffffe1 	b	c00 <gpio_ioctl+0x14c>
+     c80:	d2800902 	mov	x2, #0x48                  	// #72
+     c84:	9100a3a1 	add	x1, x29, #0x28
+     c88:	aa1303e0 	mov	x0, x19
+     c8c:	94000000 	bl	0 <__copy_to_user>
+			c8c: R_AARCH64_CALL26	__copy_to_user
+		if (test_bit(FLAG_OPEN_DRAIN, &desc->flags))
+			lineinfo.flags |= GPIOLINE_FLAG_OPEN_DRAIN;
+		if (test_bit(FLAG_OPEN_SOURCE, &desc->flags))
+			lineinfo.flags |= GPIOLINE_FLAG_OPEN_SOURCE;
+
+		if (copy_to_user(ip, &lineinfo, sizeof(lineinfo)))
+     c90:	b4fffb80 	cbz	x0, c00 <gpio_ioctl+0x14c>
+     c94:	17ffffda 	b	bfc <gpio_ioctl+0x148>
+     c98:	f9400680 	ldr	x0, [x20,#8]
+		 * Userspace only need to know that the kernel is using
+		 * this GPIO so it can't use it.
+		 */
+		lineinfo.flags = 0;
+		if (test_bit(FLAG_REQUESTED, &desc->flags) ||
+		    test_bit(FLAG_IS_HOGGED, &desc->flags) ||
+     c9c:	374ff760 	tbnz	w0, #9, b88 <gpio_ioctl+0xd4>
+     ca0:	f9400680 	ldr	x0, [x20,#8]
+		    test_bit(FLAG_USED_AS_IRQ, &desc->flags) ||
+     ca4:	3717f720 	tbnz	w0, #2, b88 <gpio_ioctl+0xd4>
+     ca8:	f9400680 	ldr	x0, [x20,#8]
+		    test_bit(FLAG_EXPORT, &desc->flags) ||
+     cac:	361ff720 	tbz	w0, #3, b90 <gpio_ioctl+0xdc>
+     cb0:	17ffffb6 	b	b88 <gpio_ioctl+0xd4>
+		if (desc->label) {
+			strncpy(lineinfo.consumer, desc->label,
+				sizeof(lineinfo.consumer));
+			lineinfo.consumer[sizeof(lineinfo.consumer)-1] = '\0';
+		} else {
+			lineinfo.consumer[0] = '\0';
+     cb4:	390143bf 	strb	wzr, [x29,#80]
+     cb8:	17ffffaf 	b	b74 <gpio_ioctl+0xc0>
+		if (desc->name) {
+			strncpy(lineinfo.name, desc->name,
+				sizeof(lineinfo.name));
+			lineinfo.name[sizeof(lineinfo.name)-1] = '\0';
+		} else {
+			lineinfo.name[0] = '\0';
+     cbc:	3900c3bf 	strb	wzr, [x29,#48]
+     cc0:	17ffffa7 	b	b5c <gpio_ioctl+0xa8>
+     cc4:	f9400e81 	ldr	x1, [x20,#24]
+     cc8:	17ffffd3 	b	c14 <gpio_ioctl+0x160>
+	struct gpio_chip *chip = gdev->chip;
+	int __user *ip = (int __user *)arg;
+
+	/* We fail any subsequent ioctl():s when the chip is gone */
+	if (!chip)
+		return -ENODEV;
+     ccc:	92800240 	mov	x0, #0xffffffffffffffed    	// #-19
+     cd0:	17ffffcc 	b	c00 <gpio_ioctl+0x14c>
+
+0000000000000cd4 <gpiochip_match_name>:
+	return chip;
+}
+EXPORT_SYMBOL_GPL(gpiochip_find);
+
+static int gpiochip_match_name(struct gpio_chip *chip, void *data)
+{
+     cd4:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+     cd8:	910003fd 	mov	x29, sp
+	const char *name = data;
+
+	return !strcmp(chip->label, name);
+     cdc:	f9400000 	ldr	x0, [x0]
+     ce0:	94000000 	bl	0 <strcmp>
+			ce0: R_AARCH64_CALL26	strcmp
+     ce4:	6b1f001f 	cmp	w0, wzr
+}
+     ce8:	1a9f17e0 	cset	w0, eq
+     cec:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     cf0:	d65f03c0 	ret
+
+0000000000000cf4 <gpiochip_to_irq>:
+	gpiochip_unlock_as_irq(chip, d->hwirq);
+	module_put(chip->gpiodev->owner);
+}
+
+static int gpiochip_to_irq(struct gpio_chip *chip, unsigned offset)
+{
+     cf4:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+	return irq_find_mapping(chip->irqdomain, offset);
+     cf8:	2a0103e1 	mov	w1, w1
+	gpiochip_unlock_as_irq(chip, d->hwirq);
+	module_put(chip->gpiodev->owner);
+}
+
+static int gpiochip_to_irq(struct gpio_chip *chip, unsigned offset)
+{
+     cfc:	910003fd 	mov	x29, sp
+	return irq_find_mapping(chip->irqdomain, offset);
+     d00:	f9407400 	ldr	x0, [x0,#232]
+     d04:	94000000 	bl	0 <irq_find_mapping>
+			d04: R_AARCH64_CALL26	irq_find_mapping
+}
+     d08:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     d0c:	d65f03c0 	ret
+
+0000000000000d10 <_gpiochip_irqchip_add>:
+			  struct irq_chip *irqchip,
+			  unsigned int first_irq,
+			  irq_flow_handler_t handler,
+			  unsigned int type,
+			  struct lock_class_key *lock_key)
+{
+     d10:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     d14:	910003fd 	mov	x29, sp
+     d18:	a90153f3 	stp	x19, x20, [sp,#16]
+	struct device_node *of_node;
+	unsigned int offset;
+	unsigned irq_base = 0;
+
+	if (!gpiochip || !irqchip)
+     d1c:	b40006a0 	cbz	x0, df0 <_gpiochip_irqchip_add+0xe0>
+     d20:	b4000681 	cbz	x1, df0 <_gpiochip_irqchip_add+0xe0>
+     d24:	aa0103f3 	mov	x19, x1
+		return -EINVAL;
+
+	if (!gpiochip->parent) {
+     d28:	f9400801 	ldr	x1, [x0,#16]
+     d2c:	2a0403e6 	mov	w6, w4
+     d30:	aa0003f4 	mov	x20, x0
+     d34:	b4000681 	cbz	x1, e04 <_gpiochip_irqchip_add+0xf4>
+	/*
+	 * If the gpiochip has an assigned OF node this takes precedence
+	 * FIXME: get rid of this and use gpiochip->parent->of_node
+	 * everywhere
+	 */
+	if (gpiochip->of_node)
+     d38:	f9408800 	ldr	x0, [x0,#272]
+	gpiochip->irqchip = irqchip;
+	gpiochip->irq_handler = handler;
+	gpiochip->irq_default_type = type;
+	gpiochip->to_irq = gpiochip_to_irq;
+	gpiochip->lock_key = lock_key;
+	gpiochip->irqdomain = irq_domain_add_simple(of_node,
+     d3c:	aa1403e4 	mov	x4, x20
+
+	if (!gpiochip->parent) {
+		pr_err("missing gpiochip .dev parent pointer\n");
+		return -EINVAL;
+	}
+	of_node = gpiochip->parent->of_node;
+     d40:	f9412427 	ldr	x7, [x1,#584]
+	 */
+	if (gpiochip->of_node)
+		of_node = gpiochip->of_node;
+#endif
+	gpiochip->irqchip = irqchip;
+	gpiochip->irq_handler = handler;
+     d44:	f9007e83 	str	x3, [x20,#248]
+	gpiochip->irq_default_type = type;
+	gpiochip->to_irq = gpiochip_to_irq;
+	gpiochip->lock_key = lock_key;
+	gpiochip->irqdomain = irq_domain_add_simple(of_node,
+     d48:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			d48: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+
+	if (!gpiochip->parent) {
+		pr_err("missing gpiochip .dev parent pointer\n");
+		return -EINVAL;
+	}
+	of_node = gpiochip->parent->of_node;
+     d4c:	eb1f001f 	cmp	x0, xzr
+	if (gpiochip->of_node)
+		of_node = gpiochip->of_node;
+#endif
+	gpiochip->irqchip = irqchip;
+	gpiochip->irq_handler = handler;
+	gpiochip->irq_default_type = type;
+     d50:	b9010286 	str	w6, [x20,#256]
+	gpiochip->to_irq = gpiochip_to_irq;
+	gpiochip->lock_key = lock_key;
+	gpiochip->irqdomain = irq_domain_add_simple(of_node,
+     d54:	7940fa81 	ldrh	w1, [x20,#124]
+     d58:	91000063 	add	x3, x3, #0x0
+			d58: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+		of_node = gpiochip->of_node;
+#endif
+	gpiochip->irqchip = irqchip;
+	gpiochip->irq_handler = handler;
+	gpiochip->irq_default_type = type;
+	gpiochip->to_irq = gpiochip_to_irq;
+     d5c:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			d5c: R_AARCH64_ADR_PREL_PG_HI21	.text+0xcf4
+	 * everywhere
+	 */
+	if (gpiochip->of_node)
+		of_node = gpiochip->of_node;
+#endif
+	gpiochip->irqchip = irqchip;
+     d60:	f9007293 	str	x19, [x20,#224]
+	gpiochip->irq_handler = handler;
+	gpiochip->irq_default_type = type;
+	gpiochip->to_irq = gpiochip_to_irq;
+     d64:	910000c6 	add	x6, x6, #0x0
+			d64: R_AARCH64_ADD_ABS_LO12_NC	.text+0xcf4
+	gpiochip->lock_key = lock_key;
+	gpiochip->irqdomain = irq_domain_add_simple(of_node,
+     d68:	9102e063 	add	x3, x3, #0xb8
+     d6c:	9a871000 	csel	x0, x0, x7, ne
+		of_node = gpiochip->of_node;
+#endif
+	gpiochip->irqchip = irqchip;
+	gpiochip->irq_handler = handler;
+	gpiochip->irq_default_type = type;
+	gpiochip->to_irq = gpiochip_to_irq;
+     d70:	f9003686 	str	x6, [x20,#104]
+	gpiochip->lock_key = lock_key;
+     d74:	f9008685 	str	x5, [x20,#264]
+	gpiochip->irqdomain = irq_domain_add_simple(of_node,
+     d78:	94000000 	bl	0 <irq_domain_add_simple>
+			d78: R_AARCH64_CALL26	irq_domain_add_simple
+     d7c:	f9007680 	str	x0, [x20,#232]
+					gpiochip->ngpio, first_irq,
+					&gpiochip_domain_ops, gpiochip);
+	if (!gpiochip->irqdomain) {
+     d80:	b40003c0 	cbz	x0, df8 <_gpiochip_irqchip_add+0xe8>
+
+	/*
+	 * It is possible for a driver to override this, but only if the
+	 * alternative functions are both implemented.
+	 */
+	if (!irqchip->irq_request_resources &&
+     d84:	f9405e60 	ldr	x0, [x19,#184]
+     d88:	b4000220 	cbz	x0, dcc <_gpiochip_irqchip_add+0xbc>
+	/*
+	 * Prepare the mapping since the irqchip shall be orthogonal to
+	 * any gpiochip calls. If the first_irq was zero, this is
+	 * necessary to allocate descriptors for all IRQs.
+	 */
+	for (offset = 0; offset < gpiochip->ngpio; offset++) {
+     d8c:	7940fa80 	ldrh	w0, [x20,#124]
+     d90:	52800013 	mov	w19, #0x0                   	// #0
+     d94:	34000140 	cbz	w0, dbc <_gpiochip_irqchip_add+0xac>
+		irq_base = irq_create_mapping(gpiochip->irqdomain, offset);
+     d98:	f9407680 	ldr	x0, [x20,#232]
+     d9c:	2a1303e1 	mov	w1, w19
+     da0:	94000000 	bl	0 <irq_create_mapping>
+			da0: R_AARCH64_CALL26	irq_create_mapping
+		if (offset == 0)
+     da4:	35000053 	cbnz	w19, dac <_gpiochip_irqchip_add+0x9c>
+			/*
+			 * Store the base into the gpiochip to be used when
+			 * unmapping the irqs.
+			 */
+			gpiochip->irq_base = irq_base;
+     da8:	b900f280 	str	w0, [x20,#240]
+	/*
+	 * Prepare the mapping since the irqchip shall be orthogonal to
+	 * any gpiochip calls. If the first_irq was zero, this is
+	 * necessary to allocate descriptors for all IRQs.
+	 */
+	for (offset = 0; offset < gpiochip->ngpio; offset++) {
+     dac:	7940fa80 	ldrh	w0, [x20,#124]
+     db0:	11000673 	add	w19, w19, #0x1
+     db4:	6b13001f 	cmp	w0, w19
+     db8:	54ffff08 	b.hi	d98 <_gpiochip_irqchip_add+0x88>
+			gpiochip->irq_base = irq_base;
+	}
+
+	acpi_gpiochip_request_interrupts(gpiochip);
+
+	return 0;
+     dbc:	52800000 	mov	w0, #0x0                   	// #0
+}
+     dc0:	a94153f3 	ldp	x19, x20, [sp,#16]
+     dc4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     dc8:	d65f03c0 	ret
+
+	/*
+	 * It is possible for a driver to override this, but only if the
+	 * alternative functions are both implemented.
+	 */
+	if (!irqchip->irq_request_resources &&
+     dcc:	f9406260 	ldr	x0, [x19,#192]
+     dd0:	b5fffde0 	cbnz	x0, d8c <_gpiochip_irqchip_add+0x7c>
+	    !irqchip->irq_release_resources) {
+		irqchip->irq_request_resources = gpiochip_irq_reqres;
+     dd4:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			dd4: R_AARCH64_ADR_PREL_PG_HI21	.text+0xe18
+     dd8:	91000000 	add	x0, x0, #0x0
+			dd8: R_AARCH64_ADD_ABS_LO12_NC	.text+0xe18
+     ddc:	f9005e60 	str	x0, [x19,#184]
+		irqchip->irq_release_resources = gpiochip_irq_relres;
+     de0:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			de0: R_AARCH64_ADR_PREL_PG_HI21	.text+0x1e20
+     de4:	91000000 	add	x0, x0, #0x0
+			de4: R_AARCH64_ADD_ABS_LO12_NC	.text+0x1e20
+     de8:	f9006260 	str	x0, [x19,#192]
+     dec:	17ffffe8 	b	d8c <_gpiochip_irqchip_add+0x7c>
+	struct device_node *of_node;
+	unsigned int offset;
+	unsigned irq_base = 0;
+
+	if (!gpiochip || !irqchip)
+		return -EINVAL;
+     df0:	128002a0 	mov	w0, #0xffffffea            	// #-22
+     df4:	17fffff3 	b	dc0 <_gpiochip_irqchip_add+0xb0>
+	gpiochip->lock_key = lock_key;
+	gpiochip->irqdomain = irq_domain_add_simple(of_node,
+					gpiochip->ngpio, first_irq,
+					&gpiochip_domain_ops, gpiochip);
+	if (!gpiochip->irqdomain) {
+		gpiochip->irqchip = NULL;
+     df8:	f900729f 	str	xzr, [x20,#224]
+		return -EINVAL;
+     dfc:	128002a0 	mov	w0, #0xffffffea            	// #-22
+     e00:	17fffff0 	b	dc0 <_gpiochip_irqchip_add+0xb0>
+
+	if (!gpiochip || !irqchip)
+		return -EINVAL;
+
+	if (!gpiochip->parent) {
+		pr_err("missing gpiochip .dev parent pointer\n");
+     e04:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			e04: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x220
+     e08:	91000000 	add	x0, x0, #0x0
+			e08: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x220
+     e0c:	94000000 	bl	0 <printk>
+			e0c: R_AARCH64_CALL26	printk
+		return -EINVAL;
+     e10:	128002a0 	mov	w0, #0xffffffea            	// #-22
+     e14:	17ffffeb 	b	dc0 <_gpiochip_irqchip_add+0xb0>
+
+0000000000000e18 <gpiochip_irq_reqres>:
+	/* Virtually all GPIO irqchips are twocell:ed */
+	.xlate	= irq_domain_xlate_twocell,
+};
+
+static int gpiochip_irq_reqres(struct irq_data *d)
+{
+     e18:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     e1c:	910003fd 	mov	x29, sp
+     e20:	a90153f3 	stp	x19, x20, [sp,#16]
+     e24:	aa0003f4 	mov	x20, x0
+     e28:	f9401813 	ldr	x19, [x0,#48]
+	struct gpio_chip *chip = irq_data_get_irq_chip_data(d);
+
+	if (!try_module_get(chip->gpiodev->owner))
+     e2c:	f9400660 	ldr	x0, [x19,#8]
+     e30:	f9419c00 	ldr	x0, [x0,#824]
+     e34:	94000000 	bl	0 <try_module_get>
+			e34: R_AARCH64_CALL26	try_module_get
+     e38:	53001c00 	uxtb	w0, w0
+     e3c:	34000100 	cbz	w0, e5c <gpiochip_irq_reqres+0x44>
+		return -ENODEV;
+
+	if (gpiochip_lock_as_irq(chip, d->hwirq)) {
+     e40:	b9400a81 	ldr	w1, [x20,#8]
+     e44:	aa1303e0 	mov	x0, x19
+     e48:	94000000 	bl	58c <gpiochip_lock_as_irq>
+			e48: R_AARCH64_CALL26	gpiochip_lock_as_irq
+     e4c:	350000c0 	cbnz	w0, e64 <gpiochip_irq_reqres+0x4c>
+			d->hwirq);
+		module_put(chip->gpiodev->owner);
+		return -EINVAL;
+	}
+	return 0;
+}
+     e50:	a94153f3 	ldp	x19, x20, [sp,#16]
+     e54:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     e58:	d65f03c0 	ret
+static int gpiochip_irq_reqres(struct irq_data *d)
+{
+	struct gpio_chip *chip = irq_data_get_irq_chip_data(d);
+
+	if (!try_module_get(chip->gpiodev->owner))
+		return -ENODEV;
+     e5c:	12800240 	mov	w0, #0xffffffed            	// #-19
+     e60:	17fffffc 	b	e50 <gpiochip_irq_reqres+0x38>
+
+	if (gpiochip_lock_as_irq(chip, d->hwirq)) {
+		chip_err(chip,
+     e64:	f9400660 	ldr	x0, [x19,#8]
+     e68:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			e68: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x248
+     e6c:	f9400683 	ldr	x3, [x20,#8]
+     e70:	91000021 	add	x1, x1, #0x0
+			e70: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x248
+     e74:	f9400262 	ldr	x2, [x19]
+     e78:	91002000 	add	x0, x0, #0x8
+     e7c:	94000000 	bl	0 <dev_err>
+			e7c: R_AARCH64_CALL26	dev_err
+			"unable to lock HW IRQ %lu for IRQ\n",
+			d->hwirq);
+		module_put(chip->gpiodev->owner);
+     e80:	f9400660 	ldr	x0, [x19,#8]
+     e84:	f9419c00 	ldr	x0, [x0,#824]
+     e88:	94000000 	bl	0 <module_put>
+			e88: R_AARCH64_CALL26	module_put
+		return -EINVAL;
+     e8c:	128002a0 	mov	w0, #0xffffffea            	// #-22
+     e90:	17fffff0 	b	e50 <gpiochip_irq_reqres+0x38>
+
+0000000000000e94 <gpiochip_irq_unmap>:
+
+	return 0;
+}
+
+static void gpiochip_irq_unmap(struct irq_domain *d, unsigned int irq)
+{
+     e94:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     e98:	910003fd 	mov	x29, sp
+     e9c:	f9000bf3 	str	x19, [sp,#16]
+     ea0:	2a0103f3 	mov	w19, w1
+	struct gpio_chip *chip = d->host_data;
+
+	if (chip->can_sleep)
+     ea4:	f9401000 	ldr	x0, [x0,#32]
+     ea8:	39422000 	ldrb	w0, [x0,#136]
+     eac:	340000a0 	cbz	w0, ec0 <gpiochip_irq_unmap+0x2c>
+	irq_modify_status(irq, 0, set);
+}
+
+static inline void irq_clear_status_flags(unsigned int irq, unsigned long clr)
+{
+	irq_modify_status(irq, clr, 0);
+     eb0:	d2800002 	mov	x2, #0x0                   	// #0
+     eb4:	d2900001 	mov	x1, #0x8000                	// #32768
+     eb8:	2a1303e0 	mov	w0, w19
+     ebc:	94000000 	bl	0 <irq_modify_status>
+			ebc: R_AARCH64_CALL26	irq_modify_status
+			      irq_flow_handler_t handle, const char *name);
+
+static inline void irq_set_chip_and_handler(unsigned int irq, struct irq_chip *chip,
+					    irq_flow_handler_t handle)
+{
+	irq_set_chip_and_handler_name(irq, chip, handle, NULL);
+     ec0:	2a1303e0 	mov	w0, w19
+     ec4:	d2800003 	mov	x3, #0x0                   	// #0
+     ec8:	d2800002 	mov	x2, #0x0                   	// #0
+     ecc:	d2800001 	mov	x1, #0x0                   	// #0
+     ed0:	94000000 	bl	0 <irq_set_chip_and_handler_name>
+			ed0: R_AARCH64_CALL26	irq_set_chip_and_handler_name
+		irq_set_nested_thread(irq, 0);
+	irq_set_chip_and_handler(irq, NULL, NULL);
+	irq_set_chip_data(irq, NULL);
+     ed4:	d2800001 	mov	x1, #0x0                   	// #0
+     ed8:	2a1303e0 	mov	w0, w19
+     edc:	94000000 	bl	0 <irq_set_chip_data>
+			edc: R_AARCH64_CALL26	irq_set_chip_data
+}
+     ee0:	f9400bf3 	ldr	x19, [sp,#16]
+     ee4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     ee8:	d65f03c0 	ret
+
+0000000000000eec <gpiochip_irq_map>:
+ * gpiochip by assigning the gpiochip as chip data, and using the irqchip
+ * stored inside the gpiochip.
+ */
+static int gpiochip_irq_map(struct irq_domain *d, unsigned int irq,
+			    irq_hw_number_t hwirq)
+{
+     eec:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+     ef0:	910003fd 	mov	x29, sp
+     ef4:	a90153f3 	stp	x19, x20, [sp,#16]
+     ef8:	2a0103f4 	mov	w20, w1
+	struct gpio_chip *chip = d->host_data;
+     efc:	f9401013 	ldr	x19, [x0,#32]
+
+	irq_set_chip_data(irq, chip);
+     f00:	2a0103e0 	mov	w0, w1
+     f04:	aa1303e1 	mov	x1, x19
+     f08:	94000000 	bl	0 <irq_set_chip_data>
+			f08: R_AARCH64_CALL26	irq_set_chip_data
+}
+
+static inline void
+irq_set_lockdep_class(unsigned int irq, struct lock_class_key *class)
+{
+	struct irq_desc *desc = irq_to_desc(irq);
+     f0c:	2a1403e0 	mov	w0, w20
+     f10:	94000000 	bl	0 <irq_to_desc>
+			f10: R_AARCH64_CALL26	irq_to_desc
+     f14:	f9407e62 	ldr	x2, [x19,#248]
+     f18:	2a1403e0 	mov	w0, w20
+     f1c:	f9407261 	ldr	x1, [x19,#224]
+     f20:	d2800003 	mov	x3, #0x0                   	// #0
+     f24:	94000000 	bl	0 <irq_set_chip_and_handler_name>
+			f24: R_AARCH64_CALL26	irq_set_chip_and_handler_name
+	 * category than their parents, so it won't report false recursion.
+	 */
+	irq_set_lockdep_class(irq, chip->lock_key);
+	irq_set_chip_and_handler(irq, chip->irqchip, chip->irq_handler);
+	/* Chips that can sleep need nested thread handlers */
+	if (chip->can_sleep && !chip->irq_not_threaded)
+     f28:	39422260 	ldrb	w0, [x19,#136]
+     f2c:	34000060 	cbz	w0, f38 <gpiochip_irq_map+0x4c>
+     f30:	39422660 	ldrb	w0, [x19,#137]
+     f34:	340001a0 	cbz	w0, f68 <gpiochip_irq_map+0x7c>
+	irq_modify_status(irq, clr, 0);
+}
+
+static inline void irq_set_noprobe(unsigned int irq)
+{
+	irq_modify_status(irq, 0, IRQ_NOPROBE);
+     f38:	d2800001 	mov	x1, #0x0                   	// #0
+     f3c:	d2808002 	mov	x2, #0x400                 	// #1024
+     f40:	2a1403e0 	mov	w0, w20
+     f44:	94000000 	bl	0 <irq_modify_status>
+			f44: R_AARCH64_CALL26	irq_modify_status
+
+	/*
+	 * No set-up of the hardware will happen if IRQ_TYPE_NONE
+	 * is passed as default type.
+	 */
+	if (chip->irq_default_type != IRQ_TYPE_NONE)
+     f48:	b9410261 	ldr	w1, [x19,#256]
+     f4c:	34000061 	cbz	w1, f58 <gpiochip_irq_map+0x6c>
+		irq_set_irq_type(irq, chip->irq_default_type);
+     f50:	2a1403e0 	mov	w0, w20
+     f54:	94000000 	bl	0 <irq_set_irq_type>
+			f54: R_AARCH64_CALL26	irq_set_irq_type
+
+	return 0;
+}
+     f58:	52800000 	mov	w0, #0x0                   	// #0
+     f5c:	a94153f3 	ldp	x19, x20, [sp,#16]
+     f60:	a8c27bfd 	ldp	x29, x30, [sp],#32
+     f64:	d65f03c0 	ret
+
+void irq_modify_status(unsigned int irq, unsigned long clr, unsigned long set);
+
+static inline void irq_set_status_flags(unsigned int irq, unsigned long set)
+{
+	irq_modify_status(irq, 0, set);
+     f68:	d2900002 	mov	x2, #0x8000                	// #32768
+     f6c:	d2800001 	mov	x1, #0x0                   	// #0
+     f70:	2a1403e0 	mov	w0, w20
+     f74:	94000000 	bl	0 <irq_modify_status>
+			f74: R_AARCH64_CALL26	irq_modify_status
+     f78:	17fffff0 	b	f38 <gpiochip_irq_map+0x4c>
+
+0000000000000f7c <gpiochip_generic_request>:
+ * gpiochip_generic_request() - request the gpio function for a pin
+ * @chip: the gpiochip owning the GPIO
+ * @offset: the offset of the GPIO to request for GPIO function
+ */
+int gpiochip_generic_request(struct gpio_chip *chip, unsigned offset)
+{
+     f7c:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+     f80:	910003fd 	mov	x29, sp
+	return pinctrl_request_gpio(chip->gpiodev->base + offset);
+     f84:	f9400400 	ldr	x0, [x0,#8]
+     f88:	b9435000 	ldr	w0, [x0,#848]
+     f8c:	0b000020 	add	w0, w1, w0
+     f90:	94000000 	bl	0 <pinctrl_request_gpio>
+			f90: R_AARCH64_CALL26	pinctrl_request_gpio
+}
+     f94:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     f98:	d65f03c0 	ret
+
+0000000000000f9c <gpiochip_generic_free>:
+ * gpiochip_generic_free() - free the gpio function from a pin
+ * @chip: the gpiochip to request the gpio function for
+ * @offset: the offset of the GPIO to free from GPIO function
+ */
+void gpiochip_generic_free(struct gpio_chip *chip, unsigned offset)
+{
+     f9c:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+     fa0:	910003fd 	mov	x29, sp
+	pinctrl_free_gpio(chip->gpiodev->base + offset);
+     fa4:	f9400400 	ldr	x0, [x0,#8]
+     fa8:	b9435000 	ldr	w0, [x0,#848]
+     fac:	0b000020 	add	w0, w1, w0
+     fb0:	94000000 	bl	0 <pinctrl_free_gpio>
+			fb0: R_AARCH64_CALL26	pinctrl_free_gpio
+}
+     fb4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+     fb8:	d65f03c0 	ret
+
+0000000000000fbc <gpiochip_add_pingroup_range>:
+ * @pin_group: name of the pin group inside the pin controller
+ */
+int gpiochip_add_pingroup_range(struct gpio_chip *chip,
+			struct pinctrl_dev *pctldev,
+			unsigned int gpio_offset, const char *pin_group)
+{
+     fbc:	a9b97bfd 	stp	x29, x30, [sp,#-112]!
+
+#else /* CONFIG_TRACING */
+static __always_inline void *kmem_cache_alloc_trace(struct kmem_cache *s,
+		gfp_t flags, size_t size)
+{
+	void *ret = kmem_cache_alloc(s, flags);
+     fc0:	52901804 	mov	w4, #0x80c0                	// #32960
+     fc4:	910003fd 	mov	x29, sp
+     fc8:	a9025bf5 	stp	x21, x22, [sp,#32]
+     fcc:	aa0003f6 	mov	x22, x0
+     fd0:	90000000 	adrp	x0, 0 <kmalloc_caches>
+			fd0: R_AARCH64_ADR_PREL_PG_HI21	kmalloc_caches+0x38
+     fd4:	72a04804 	movk	w4, #0x240, lsl #16
+     fd8:	f90023f9 	str	x25, [sp,#64]
+     fdc:	a90363f7 	stp	x23, x24, [sp,#48]
+     fe0:	f9400000 	ldr	x0, [x0]
+			fe0: R_AARCH64_LDST64_ABS_LO12_NC	kmalloc_caches+0x38
+     fe4:	aa0103f7 	mov	x23, x1
+     fe8:	a90153f3 	stp	x19, x20, [sp,#16]
+     fec:	2a0403e1 	mov	w1, w4
+     ff0:	2a0203f8 	mov	w24, w2
+     ff4:	aa0303f9 	mov	x25, x3
+	struct gpio_pin_range *pin_range;
+	struct gpio_device *gdev = chip->gpiodev;
+     ff8:	f94006d4 	ldr	x20, [x22,#8]
+     ffc:	94000000 	bl	0 <kmem_cache_alloc>
+			ffc: R_AARCH64_CALL26	kmem_cache_alloc
+    1000:	aa0003f3 	mov	x19, x0
+	int ret;
+
+	pin_range = kzalloc(sizeof(*pin_range), GFP_KERNEL);
+	if (!pin_range) {
+    1004:	b4000880 	cbz	x0, 1114 <gpiochip_add_pingroup_range+0x158>
+		chip_err(chip, "failed to allocate pin ranges\n");
+		return -ENOMEM;
+	}
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+    1008:	b9003018 	str	w24, [x0,#48]
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+	pin_range->pctldev = pctldev;
+
+	ret = pinctrl_get_group_pins(pctldev, pin_group,
+    100c:	91012003 	add	x3, x0, #0x48
+		return -ENOMEM;
+	}
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+    1010:	f9002816 	str	x22, [x0,#80]
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+	pin_range->pctldev = pctldev;
+
+	ret = pinctrl_get_group_pins(pctldev, pin_group,
+    1014:	91010002 	add	x2, x0, #0x40
+    1018:	aa1903e1 	mov	x1, x25
+    101c:	aa1703e0 	mov	x0, x23
+	}
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+    1020:	f94002c4 	ldr	x4, [x22]
+    1024:	f9001664 	str	x4, [x19,#40]
+	pin_range->range.base = gdev->base + gpio_offset;
+    1028:	b9435284 	ldr	w4, [x20,#848]
+	pin_range->pctldev = pctldev;
+    102c:	f9000a77 	str	x23, [x19,#16]
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+    1030:	0b040304 	add	w4, w24, w4
+    1034:	b9003664 	str	w4, [x19,#52]
+	pin_range->pctldev = pctldev;
+
+	ret = pinctrl_get_group_pins(pctldev, pin_group,
+    1038:	94000000 	bl	0 <pinctrl_get_group_pins>
+			1038: R_AARCH64_CALL26	pinctrl_get_group_pins
+    103c:	2a0003f5 	mov	w21, w0
+					&pin_range->range.pins,
+					&pin_range->range.npins);
+	if (ret < 0) {
+    1040:	37f802d5 	tbnz	w21, #31, 1098 <gpiochip_add_pingroup_range+0xdc>
+		return ret;
+	}
+
+	pinctrl_add_gpio_range(pctldev, &pin_range->range);
+
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PINGRP %s\n",
+    1044:	90000015 	adrp	x21, 0 <desc_to_gpio>
+			1044: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+	if (ret < 0) {
+		kfree(pin_range);
+		return ret;
+	}
+
+	pinctrl_add_gpio_range(pctldev, &pin_range->range);
+    1048:	aa1703e0 	mov	x0, x23
+
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PINGRP %s\n",
+    104c:	910002b5 	add	x21, x21, #0x0
+			104c: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+	if (ret < 0) {
+		kfree(pin_range);
+		return ret;
+	}
+
+	pinctrl_add_gpio_range(pctldev, &pin_range->range);
+    1050:	91006261 	add	x1, x19, #0x18
+
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PINGRP %s\n",
+    1054:	9100a2b5 	add	x21, x21, #0x28
+	if (ret < 0) {
+		kfree(pin_range);
+		return ret;
+	}
+
+	pinctrl_add_gpio_range(pctldev, &pin_range->range);
+    1058:	94000000 	bl	0 <pinctrl_add_gpio_range>
+			1058: R_AARCH64_CALL26	pinctrl_add_gpio_range
+
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PINGRP %s\n",
+    105c:	794046a0 	ldrh	w0, [x21,#34]
+    1060:	371002e0 	tbnz	w0, #2, 10bc <gpiochip_add_pingroup_range+0x100>
+ * Insert a new entry before the specified head.
+ * This is useful for implementing queues.
+ */
+static inline void list_add_tail(struct list_head *new, struct list_head *head)
+{
+	__list_add(new, head->prev, head);
+    1064:	f941c282 	ldr	x2, [x20,#896]
+    1068:	910de281 	add	x1, x20, #0x378
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    106c:	f901c293 	str	x19, [x20,#896]
+		 gpio_offset, gpio_offset + pin_range->range.npins - 1,
+		 pinctrl_dev_get_devname(pctldev), pin_group);
+
+	list_add_tail(&pin_range->node, &gdev->pin_ranges);
+
+	return 0;
+    1070:	52800000 	mov	w0, #0x0                   	// #0
+	new->next = next;
+    1074:	f9000261 	str	x1, [x19]
+	new->prev = prev;
+    1078:	f9000662 	str	x2, [x19,#8]
+    107c:	f9000053 	str	x19, [x2]
+}
+    1080:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1084:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1088:	a94363f7 	ldp	x23, x24, [sp,#48]
+    108c:	f94023f9 	ldr	x25, [sp,#64]
+    1090:	a8c77bfd 	ldp	x29, x30, [sp],#112
+    1094:	d65f03c0 	ret
+
+	ret = pinctrl_get_group_pins(pctldev, pin_group,
+					&pin_range->range.pins,
+					&pin_range->range.npins);
+	if (ret < 0) {
+		kfree(pin_range);
+    1098:	aa1303e0 	mov	x0, x19
+    109c:	94000000 	bl	0 <kfree>
+			109c: R_AARCH64_CALL26	kfree
+		 pinctrl_dev_get_devname(pctldev), pin_group);
+
+	list_add_tail(&pin_range->node, &gdev->pin_ranges);
+
+	return 0;
+}
+    10a0:	f94023f9 	ldr	x25, [sp,#64]
+	ret = pinctrl_get_group_pins(pctldev, pin_group,
+					&pin_range->range.pins,
+					&pin_range->range.npins);
+	if (ret < 0) {
+		kfree(pin_range);
+		return ret;
+    10a4:	2a1503e0 	mov	w0, w21
+		 pinctrl_dev_get_devname(pctldev), pin_group);
+
+	list_add_tail(&pin_range->node, &gdev->pin_ranges);
+
+	return 0;
+}
+    10a8:	a94153f3 	ldp	x19, x20, [sp,#16]
+    10ac:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    10b0:	a94363f7 	ldp	x23, x24, [sp,#48]
+    10b4:	a8c77bfd 	ldp	x29, x30, [sp],#112
+    10b8:	d65f03c0 	ret
+    10bc:	b9404a65 	ldr	w5, [x19,#72]
+		return ret;
+	}
+
+	pinctrl_add_gpio_range(pctldev, &pin_range->range);
+
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PINGRP %s\n",
+    10c0:	aa1703e0 	mov	x0, x23
+    10c4:	f94006c1 	ldr	x1, [x22,#8]
+    10c8:	f94002c3 	ldr	x3, [x22]
+    10cc:	510004a5 	sub	w5, w5, #0x1
+    10d0:	0b1800a5 	add	w5, w5, w24
+    10d4:	91002021 	add	x1, x1, #0x8
+    10d8:	f9002fa3 	str	x3, [x29,#88]
+    10dc:	f90033a1 	str	x1, [x29,#96]
+    10e0:	b9006fa5 	str	w5, [x29,#108]
+    10e4:	94000000 	bl	0 <pinctrl_dev_get_devname>
+			10e4: R_AARCH64_CALL26	pinctrl_dev_get_devname
+    10e8:	b9406fa5 	ldr	w5, [x29,#108]
+    10ec:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			10ec: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x2a0
+    10f0:	f9402fa3 	ldr	x3, [x29,#88]
+    10f4:	aa0003e6 	mov	x6, x0
+    10f8:	f94033a1 	ldr	x1, [x29,#96]
+    10fc:	aa1903e7 	mov	x7, x25
+    1100:	2a1803e4 	mov	w4, w24
+    1104:	91000042 	add	x2, x2, #0x0
+			1104: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x2a0
+    1108:	aa1503e0 	mov	x0, x21
+    110c:	94000000 	bl	0 <__dynamic_dev_dbg>
+			110c: R_AARCH64_CALL26	__dynamic_dev_dbg
+    1110:	17ffffd5 	b	1064 <gpiochip_add_pingroup_range+0xa8>
+	struct gpio_device *gdev = chip->gpiodev;
+	int ret;
+
+	pin_range = kzalloc(sizeof(*pin_range), GFP_KERNEL);
+	if (!pin_range) {
+		chip_err(chip, "failed to allocate pin ranges\n");
+    1114:	f94006c0 	ldr	x0, [x22,#8]
+    1118:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1118: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x278
+    111c:	f94002c2 	ldr	x2, [x22]
+    1120:	91000021 	add	x1, x1, #0x0
+			1120: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x278
+    1124:	91002000 	add	x0, x0, #0x8
+    1128:	94000000 	bl	0 <dev_err>
+			1128: R_AARCH64_CALL26	dev_err
+		return -ENOMEM;
+    112c:	12800160 	mov	w0, #0xfffffff4            	// #-12
+    1130:	17ffffd4 	b	1080 <gpiochip_add_pingroup_range+0xc4>
+
+0000000000001134 <gpiochip_add_pin_range>:
+ *	pin controller) to accumulate in this range
+ */
+int gpiochip_add_pin_range(struct gpio_chip *chip, const char *pinctl_name,
+			   unsigned int gpio_offset, unsigned int pin_offset,
+			   unsigned int npins)
+{
+    1134:	d10183ff 	sub	sp, sp, #0x60
+    1138:	52901805 	mov	w5, #0x80c0                	// #32960
+    113c:	72a04805 	movk	w5, #0x240, lsl #16
+    1140:	a9017bfd 	stp	x29, x30, [sp,#16]
+    1144:	910043fd 	add	x29, sp, #0x10
+    1148:	a9035bf5 	stp	x21, x22, [sp,#48]
+    114c:	aa0003f6 	mov	x22, x0
+    1150:	90000000 	adrp	x0, 0 <kmalloc_caches>
+			1150: R_AARCH64_ADR_PREL_PG_HI21	kmalloc_caches+0x38
+    1154:	a90463f7 	stp	x23, x24, [sp,#64]
+    1158:	a9056bf9 	stp	x25, x26, [sp,#80]
+    115c:	f9400000 	ldr	x0, [x0]
+			115c: R_AARCH64_LDST64_ABS_LO12_NC	kmalloc_caches+0x38
+    1160:	aa0103f9 	mov	x25, x1
+    1164:	a90253f3 	stp	x19, x20, [sp,#32]
+    1168:	2a0503e1 	mov	w1, w5
+    116c:	2a0203f7 	mov	w23, w2
+    1170:	2a0303fa 	mov	w26, w3
+    1174:	2a0403f8 	mov	w24, w4
+	struct gpio_pin_range *pin_range;
+	struct gpio_device *gdev = chip->gpiodev;
+    1178:	f94006d4 	ldr	x20, [x22,#8]
+    117c:	94000000 	bl	0 <kmem_cache_alloc>
+			117c: R_AARCH64_CALL26	kmem_cache_alloc
+    1180:	aa0003f3 	mov	x19, x0
+	int ret;
+
+	pin_range = kzalloc(sizeof(*pin_range), GFP_KERNEL);
+	if (!pin_range) {
+    1184:	b40007a0 	cbz	x0, 1278 <gpiochip_add_pin_range+0x144>
+		chip_err(chip, "failed to allocate pin ranges\n");
+		return -ENOMEM;
+	}
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+    1188:	b9003017 	str	w23, [x0,#48]
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+	pin_range->range.pin_base = pin_offset;
+	pin_range->range.npins = npins;
+	pin_range->pctldev = pinctrl_find_and_add_gpio_range(pinctl_name,
+    118c:	91006001 	add	x1, x0, #0x18
+		return -ENOMEM;
+	}
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+    1190:	f9002816 	str	x22, [x0,#80]
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+	pin_range->range.pin_base = pin_offset;
+	pin_range->range.npins = npins;
+	pin_range->pctldev = pinctrl_find_and_add_gpio_range(pinctl_name,
+    1194:	aa1903e0 	mov	x0, x25
+	}
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+    1198:	f94002c2 	ldr	x2, [x22]
+    119c:	f9001662 	str	x2, [x19,#40]
+	pin_range->range.base = gdev->base + gpio_offset;
+    11a0:	b9435282 	ldr	w2, [x20,#848]
+	pin_range->range.pin_base = pin_offset;
+    11a4:	b9003a7a 	str	w26, [x19,#56]
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+    11a8:	0b0202e2 	add	w2, w23, w2
+	pin_range->range.pin_base = pin_offset;
+	pin_range->range.npins = npins;
+    11ac:	b9004a78 	str	w24, [x19,#72]
+
+	/* Use local offset as range ID */
+	pin_range->range.id = gpio_offset;
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+    11b0:	b9003662 	str	w2, [x19,#52]
+	pin_range->range.pin_base = pin_offset;
+	pin_range->range.npins = npins;
+	pin_range->pctldev = pinctrl_find_and_add_gpio_range(pinctl_name,
+    11b4:	94000000 	bl	0 <pinctrl_find_and_add_gpio_range>
+			11b4: R_AARCH64_CALL26	pinctrl_find_and_add_gpio_range
+			&pin_range->range);
+	if (IS_ERR(pin_range->pctldev)) {
+    11b8:	b140041f 	cmn	x0, #0x1, lsl #12
+	pin_range->range.gc = chip;
+	pin_range->range.name = chip->label;
+	pin_range->range.base = gdev->base + gpio_offset;
+	pin_range->range.pin_base = pin_offset;
+	pin_range->range.npins = npins;
+	pin_range->pctldev = pinctrl_find_and_add_gpio_range(pinctl_name,
+    11bc:	f9000a60 	str	x0, [x19,#16]
+    11c0:	aa0003f5 	mov	x21, x0
+			&pin_range->range);
+	if (IS_ERR(pin_range->pctldev)) {
+    11c4:	54000288 	b.hi	1214 <gpiochip_add_pin_range+0xe0>
+		ret = PTR_ERR(pin_range->pctldev);
+		chip_err(chip, "could not create pin range\n");
+		kfree(pin_range);
+		return ret;
+	}
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PIN %d->%d\n",
+    11c8:	90000008 	adrp	x8, 0 <desc_to_gpio>
+			11c8: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+    11cc:	91000108 	add	x8, x8, #0x0
+			11cc: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    11d0:	91014108 	add	x8, x8, #0x50
+    11d4:	79404500 	ldrh	w0, [x8,#34]
+    11d8:	37100320 	tbnz	w0, #2, 123c <gpiochip_add_pin_range+0x108>
+ * Insert a new entry before the specified head.
+ * This is useful for implementing queues.
+ */
+static inline void list_add_tail(struct list_head *new, struct list_head *head)
+{
+	__list_add(new, head->prev, head);
+    11dc:	f941c282 	ldr	x2, [x20,#896]
+    11e0:	910de281 	add	x1, x20, #0x378
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    11e4:	f901c293 	str	x19, [x20,#896]
+		 pinctl_name,
+		 pin_offset, pin_offset + npins - 1);
+
+	list_add_tail(&pin_range->node, &gdev->pin_ranges);
+
+	return 0;
+    11e8:	52800000 	mov	w0, #0x0                   	// #0
+	new->next = next;
+    11ec:	f9000261 	str	x1, [x19]
+	new->prev = prev;
+    11f0:	f9000662 	str	x2, [x19,#8]
+    11f4:	f9000053 	str	x19, [x2]
+}
+    11f8:	910003bf 	mov	sp, x29
+    11fc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1200:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1204:	a94363f7 	ldp	x23, x24, [sp,#48]
+    1208:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    120c:	a8c57bfd 	ldp	x29, x30, [sp],#80
+    1210:	d65f03c0 	ret
+	pin_range->range.npins = npins;
+	pin_range->pctldev = pinctrl_find_and_add_gpio_range(pinctl_name,
+			&pin_range->range);
+	if (IS_ERR(pin_range->pctldev)) {
+		ret = PTR_ERR(pin_range->pctldev);
+		chip_err(chip, "could not create pin range\n");
+    1214:	f94006c0 	ldr	x0, [x22,#8]
+    1218:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1218: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x2d8
+    121c:	f94002c2 	ldr	x2, [x22]
+    1220:	91000021 	add	x1, x1, #0x0
+			1220: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x2d8
+    1224:	91002000 	add	x0, x0, #0x8
+    1228:	94000000 	bl	0 <dev_err>
+			1228: R_AARCH64_CALL26	dev_err
+		kfree(pin_range);
+    122c:	aa1303e0 	mov	x0, x19
+    1230:	94000000 	bl	0 <kfree>
+			1230: R_AARCH64_CALL26	kfree
+		return ret;
+    1234:	2a1503e0 	mov	w0, w21
+    1238:	17fffff0 	b	11f8 <gpiochip_add_pin_range+0xc4>
+    123c:	51000705 	sub	w5, w24, #0x1
+	}
+	chip_dbg(chip, "created GPIO range %d->%d ==> %s PIN %d->%d\n",
+    1240:	f94006c1 	ldr	x1, [x22,#8]
+    1244:	0b1a00a0 	add	w0, w5, w26
+    1248:	f94002c3 	ldr	x3, [x22]
+    124c:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			124c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x300
+    1250:	2a1a03e7 	mov	w7, w26
+    1254:	b90003e0 	str	w0, [sp]
+    1258:	aa1903e6 	mov	x6, x25
+    125c:	0b0502e5 	add	w5, w23, w5
+    1260:	2a1703e4 	mov	w4, w23
+    1264:	91000042 	add	x2, x2, #0x0
+			1264: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x300
+    1268:	91002021 	add	x1, x1, #0x8
+    126c:	aa0803e0 	mov	x0, x8
+    1270:	94000000 	bl	0 <__dynamic_dev_dbg>
+			1270: R_AARCH64_CALL26	__dynamic_dev_dbg
+    1274:	17ffffda 	b	11dc <gpiochip_add_pin_range+0xa8>
+	struct gpio_device *gdev = chip->gpiodev;
+	int ret;
+
+	pin_range = kzalloc(sizeof(*pin_range), GFP_KERNEL);
+	if (!pin_range) {
+		chip_err(chip, "failed to allocate pin ranges\n");
+    1278:	f94006c0 	ldr	x0, [x22,#8]
+    127c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			127c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x278
+    1280:	f94002c2 	ldr	x2, [x22]
+    1284:	91000021 	add	x1, x1, #0x0
+			1284: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x278
+    1288:	91002000 	add	x0, x0, #0x8
+    128c:	94000000 	bl	0 <dev_err>
+			128c: R_AARCH64_CALL26	dev_err
+		return -ENOMEM;
+    1290:	12800160 	mov	w0, #0xfffffff4            	// #-12
+    1294:	17ffffd9 	b	11f8 <gpiochip_add_pin_range+0xc4>
+
+0000000000001298 <gpiochip_remove_pin_ranges>:
+/**
+ * gpiochip_remove_pin_ranges() - remove all the GPIO <-> pin mappings
+ * @chip: the chip to remove all the mappings for
+ */
+void gpiochip_remove_pin_ranges(struct gpio_chip *chip)
+{
+    1298:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+    129c:	910003fd 	mov	x29, sp
+    12a0:	a9025bf5 	stp	x21, x22, [sp,#32]
+    12a4:	a90153f3 	stp	x19, x20, [sp,#16]
+	struct gpio_pin_range *pin_range, *tmp;
+	struct gpio_device *gdev = chip->gpiodev;
+    12a8:	f9400400 	ldr	x0, [x0,#8]
+
+	list_for_each_entry_safe(pin_range, tmp, &gdev->pin_ranges, node) {
+    12ac:	910de016 	add	x22, x0, #0x378
+    12b0:	f941bc13 	ldr	x19, [x0,#888]
+    12b4:	eb16027f 	cmp	x19, x22
+    12b8:	f9400274 	ldr	x20, [x19]
+    12bc:	54000280 	b.eq	130c <gpiochip_remove_pin_ranges+0x74>
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+    12c0:	f9400663 	ldr	x3, [x19,#8]
+	entry->next = LIST_POISON1;
+    12c4:	d2802000 	mov	x0, #0x100                 	// #256
+ * This is only for internal list manipulation where we know
+ * the prev/next entries already!
+ */
+static inline void __list_del(struct list_head * prev, struct list_head * next)
+{
+	next->prev = prev;
+    12c8:	f9000683 	str	x3, [x20,#8]
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+    12cc:	f2fbd5a0 	movk	x0, #0xdead, lsl #48
+	entry->prev = LIST_POISON2;
+    12d0:	d2804002 	mov	x2, #0x200                 	// #512
+		list_del(&pin_range->node);
+		pinctrl_remove_gpio_range(pin_range->pctldev,
+    12d4:	91006261 	add	x1, x19, #0x18
+    12d8:	f9000074 	str	x20, [x3]
+    12dc:	f2fbd5a2 	movk	x2, #0xdead, lsl #48
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+    12e0:	f9000260 	str	x0, [x19]
+ * the prev/next entries already!
+ */
+static inline void __list_del(struct list_head * prev, struct list_head * next)
+{
+	next->prev = prev;
+	WRITE_ONCE(prev->next, next);
+    12e4:	aa1403f5 	mov	x21, x20
+    12e8:	f9400a60 	ldr	x0, [x19,#16]
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+	entry->prev = LIST_POISON2;
+    12ec:	f9000662 	str	x2, [x19,#8]
+    12f0:	94000000 	bl	0 <pinctrl_remove_gpio_range>
+			12f0: R_AARCH64_CALL26	pinctrl_remove_gpio_range
+				&pin_range->range);
+		kfree(pin_range);
+    12f4:	aa1303e0 	mov	x0, x19
+    12f8:	aa1403f3 	mov	x19, x20
+    12fc:	94000000 	bl	0 <kfree>
+			12fc: R_AARCH64_CALL26	kfree
+void gpiochip_remove_pin_ranges(struct gpio_chip *chip)
+{
+	struct gpio_pin_range *pin_range, *tmp;
+	struct gpio_device *gdev = chip->gpiodev;
+
+	list_for_each_entry_safe(pin_range, tmp, &gdev->pin_ranges, node) {
+    1300:	f9400294 	ldr	x20, [x20]
+    1304:	eb1602bf 	cmp	x21, x22
+    1308:	54fffdc1 	b.ne	12c0 <gpiochip_remove_pin_ranges+0x28>
+		list_del(&pin_range->node);
+		pinctrl_remove_gpio_range(pin_range->pctldev,
+				&pin_range->range);
+		kfree(pin_range);
+	}
+}
+    130c:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1310:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1314:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    1318:	d65f03c0 	ret
+
+000000000000131c <__gpiod_request>:
+/* These "optional" allocation calls help prevent drivers from stomping
+ * on each other, and help provide better diagnostics in debugfs.
+ * They're called even less than the "set direction" calls.
+ */
+static int __gpiod_request(struct gpio_desc *desc, const char *label)
+{
+    131c:	a9bb7bfd 	stp	x29, x30, [sp,#-80]!
+    1320:	910003fd 	mov	x29, sp
+    1324:	a9025bf5 	stp	x21, x22, [sp,#32]
+	struct gpio_chip	*chip = desc->gdev->chip;
+    1328:	aa0003f6 	mov	x22, x0
+/* These "optional" allocation calls help prevent drivers from stomping
+ * on each other, and help provide better diagnostics in debugfs.
+ * They're called even less than the "set direction" calls.
+ */
+static int __gpiod_request(struct gpio_desc *desc, const char *label)
+{
+    132c:	f90023f9 	str	x25, [sp,#64]
+    1330:	a90153f3 	stp	x19, x20, [sp,#16]
+    1334:	a90363f7 	stp	x23, x24, [sp,#48]
+    1338:	aa0103f4 	mov	x20, x1
+	struct gpio_chip	*chip = desc->gdev->chip;
+	int			status;
+	unsigned long		flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    133c:	90000017 	adrp	x23, 0 <desc_to_gpio>
+			133c: R_AARCH64_ADR_PREL_PG_HI21	.bss
+ * on each other, and help provide better diagnostics in debugfs.
+ * They're called even less than the "set direction" calls.
+ */
+static int __gpiod_request(struct gpio_desc *desc, const char *label)
+{
+	struct gpio_chip	*chip = desc->gdev->chip;
+    1340:	f84086c1 	ldr	x1, [x22],#8
+/* These "optional" allocation calls help prevent drivers from stomping
+ * on each other, and help provide better diagnostics in debugfs.
+ * They're called even less than the "set direction" calls.
+ */
+static int __gpiod_request(struct gpio_desc *desc, const char *label)
+{
+    1344:	aa0003f3 	mov	x19, x0
+	struct gpio_chip	*chip = desc->gdev->chip;
+	int			status;
+	unsigned long		flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1348:	910002e0 	add	x0, x23, #0x0
+			1348: R_AARCH64_ADD_ABS_LO12_NC	.bss
+ * on each other, and help provide better diagnostics in debugfs.
+ * They're called even less than the "set direction" calls.
+ */
+static int __gpiod_request(struct gpio_desc *desc, const char *label)
+{
+	struct gpio_chip	*chip = desc->gdev->chip;
+    134c:	f941a038 	ldr	x24, [x1,#832]
+	int			status;
+	unsigned long		flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1350:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			1350: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+
+	/* NOTE:  gpio_request() can be called in early boot,
+	 * before IRQs are enabled, for non-sleeping (SOC) GPIOs.
+	 */
+
+	if (test_and_set_bit(FLAG_REQUESTED, &desc->flags) == 0) {
+    1354:	aa1603e1 	mov	x1, x22
+{
+	struct gpio_chip	*chip = desc->gdev->chip;
+	int			status;
+	unsigned long		flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1358:	aa0003f5 	mov	x21, x0
+
+	/* NOTE:  gpio_request() can be called in early boot,
+	 * before IRQs are enabled, for non-sleeping (SOC) GPIOs.
+	 */
+
+	if (test_and_set_bit(FLAG_REQUESTED, &desc->flags) == 0) {
+    135c:	52800000 	mov	w0, #0x0                   	// #0
+    1360:	94000000 	bl	0 <test_and_set_bit>
+			1360: R_AARCH64_CALL26	test_and_set_bit
+    1364:	350007a0 	cbnz	w0, 1458 <__gpiod_request+0x13c>
+		desc_set_label(desc, label ? : "?");
+    1368:	b4000574 	cbz	x20, 1414 <__gpiod_request+0xf8>
+static void gpiochip_irqchip_remove(struct gpio_chip *gpiochip);
+
+
+static inline void desc_set_label(struct gpio_desc *d, const char *label)
+{
+	d->label = label;
+    136c:	f9000a74 	str	x20, [x19,#16]
+	} else {
+		status = -EBUSY;
+		goto done;
+	}
+
+	if (chip->request) {
+    1370:	f9401300 	ldr	x0, [x24,#32]
+    1374:	b40004c0 	cbz	x0, 140c <__gpiod_request+0xf0>
+    1378:	910002f4 	add	x20, x23, #0x0
+			1378: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    137c:	aa1503e1 	mov	x1, x21
+    1380:	aa1403e0 	mov	x0, x20
+    1384:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			1384: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+    1388:	f9400261 	ldr	x1, [x19]
+		/* chip->request may sleep */
+		spin_unlock_irqrestore(&gpio_lock, flags);
+		status = chip->request(chip, gpio_chip_hwgpio(desc));
+    138c:	aa1803e0 	mov	x0, x24
+    1390:	f9401302 	ldr	x2, [x24,#32]
+    1394:	f941a421 	ldr	x1, [x1,#840]
+    1398:	cb010261 	sub	x1, x19, x1
+    139c:	d345fc21 	lsr	x1, x1, #5
+    13a0:	d63f0040 	blr	x2
+    13a4:	2a0003f9 	mov	w25, w0
+		spin_lock_irqsave(&gpio_lock, flags);
+    13a8:	aa1403e0 	mov	x0, x20
+    13ac:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			13ac: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+    13b0:	aa0003f5 	mov	x21, x0
+
+		if (status < 0) {
+    13b4:	37f80379 	tbnz	w25, #31, 1420 <__gpiod_request+0x104>
+			desc_set_label(desc, NULL);
+			clear_bit(FLAG_REQUESTED, &desc->flags);
+			goto done;
+		}
+	}
+	if (chip->get_direction) {
+    13b8:	f9401b00 	ldr	x0, [x24,#48]
+    13bc:	b4000140 	cbz	x0, 13e4 <__gpiod_request+0xc8>
+    13c0:	910002f4 	add	x20, x23, #0x0
+			13c0: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    13c4:	aa1503e1 	mov	x1, x21
+    13c8:	aa1403e0 	mov	x0, x20
+    13cc:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			13cc: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		/* chip->get_direction may sleep */
+		spin_unlock_irqrestore(&gpio_lock, flags);
+		gpiod_get_direction(desc);
+    13d0:	aa1303e0 	mov	x0, x19
+    13d4:	94000000 	bl	288 <gpiod_get_direction>
+			13d4: R_AARCH64_CALL26	gpiod_get_direction
+		spin_lock_irqsave(&gpio_lock, flags);
+    13d8:	aa1403e0 	mov	x0, x20
+    13dc:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			13dc: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+    13e0:	aa0003f5 	mov	x21, x0
+    13e4:	aa1503e1 	mov	x1, x21
+    13e8:	910002e0 	add	x0, x23, #0x0
+			13e8: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    13ec:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			13ec: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		clear_bit(FLAG_OPEN_DRAIN, &desc->flags);
+		clear_bit(FLAG_OPEN_SOURCE, &desc->flags);
+	}
+	spin_unlock_irqrestore(&gpio_lock, flags);
+	return status;
+}
+    13f0:	2a1903e0 	mov	w0, w25
+    13f4:	f94023f9 	ldr	x25, [sp,#64]
+    13f8:	a94153f3 	ldp	x19, x20, [sp,#16]
+    13fc:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1400:	a94363f7 	ldp	x23, x24, [sp,#48]
+    1404:	a8c57bfd 	ldp	x29, x30, [sp],#80
+    1408:	d65f03c0 	ret
+	 * before IRQs are enabled, for non-sleeping (SOC) GPIOs.
+	 */
+
+	if (test_and_set_bit(FLAG_REQUESTED, &desc->flags) == 0) {
+		desc_set_label(desc, label ? : "?");
+		status = 0;
+    140c:	52800019 	mov	w25, #0x0                   	// #0
+    1410:	17ffffea 	b	13b8 <__gpiod_request+0x9c>
+	/* NOTE:  gpio_request() can be called in early boot,
+	 * before IRQs are enabled, for non-sleeping (SOC) GPIOs.
+	 */
+
+	if (test_and_set_bit(FLAG_REQUESTED, &desc->flags) == 0) {
+		desc_set_label(desc, label ? : "?");
+    1414:	90000014 	adrp	x20, 0 <desc_to_gpio>
+			1414: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+    1418:	91000294 	add	x20, x20, #0x0
+			1418: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+    141c:	17ffffd4 	b	136c <__gpiod_request+0x50>
+static void gpiochip_irqchip_remove(struct gpio_chip *gpiochip);
+
+
+static inline void desc_set_label(struct gpio_desc *d, const char *label)
+{
+	d->label = label;
+    1420:	f9000a7f 	str	xzr, [x19,#16]
+		status = chip->request(chip, gpio_chip_hwgpio(desc));
+		spin_lock_irqsave(&gpio_lock, flags);
+
+		if (status < 0) {
+			desc_set_label(desc, NULL);
+			clear_bit(FLAG_REQUESTED, &desc->flags);
+    1424:	aa1603e1 	mov	x1, x22
+    1428:	52800000 	mov	w0, #0x0                   	// #0
+    142c:	94000000 	bl	0 <clear_bit>
+			142c: R_AARCH64_CALL26	clear_bit
+done:
+	if (status < 0) {
+		/* Clear flags that might have been set by the caller before
+		 * requesting the GPIO.
+		 */
+		clear_bit(FLAG_ACTIVE_LOW, &desc->flags);
+    1430:	aa1603e1 	mov	x1, x22
+    1434:	528000c0 	mov	w0, #0x6                   	// #6
+    1438:	94000000 	bl	0 <clear_bit>
+			1438: R_AARCH64_CALL26	clear_bit
+		clear_bit(FLAG_OPEN_DRAIN, &desc->flags);
+    143c:	aa1603e1 	mov	x1, x22
+    1440:	528000e0 	mov	w0, #0x7                   	// #7
+    1444:	94000000 	bl	0 <clear_bit>
+			1444: R_AARCH64_CALL26	clear_bit
+		clear_bit(FLAG_OPEN_SOURCE, &desc->flags);
+    1448:	aa1603e1 	mov	x1, x22
+    144c:	52800100 	mov	w0, #0x8                   	// #8
+    1450:	94000000 	bl	0 <clear_bit>
+			1450: R_AARCH64_CALL26	clear_bit
+    1454:	17ffffe4 	b	13e4 <__gpiod_request+0xc8>
+
+	if (test_and_set_bit(FLAG_REQUESTED, &desc->flags) == 0) {
+		desc_set_label(desc, label ? : "?");
+		status = 0;
+	} else {
+		status = -EBUSY;
+    1458:	128001f9 	mov	w25, #0xfffffff0            	// #-16
+    145c:	17fffff5 	b	1430 <__gpiod_request+0x114>
+
+0000000000001460 <gpiochip_request_own_desc>:
+ * allows the GPIO chip module to be unloaded as needed (we assume that the
+ * GPIO chip driver handles freeing the GPIOs it has requested).
+ */
+struct gpio_desc *gpiochip_request_own_desc(struct gpio_chip *chip, u16 hwnum,
+					    const char *label)
+{
+    1460:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    1464:	53003c21 	uxth	w1, w1
+    1468:	910003fd 	mov	x29, sp
+    146c:	f9000bf3 	str	x19, [sp,#16]
+ * Get the GPIO descriptor corresponding to the given hw number for this chip.
+ */
+struct gpio_desc *gpiochip_get_desc(struct gpio_chip *chip,
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+    1470:	f9400404 	ldr	x4, [x0,#8]
+
+	if (hwnum >= gdev->ngpio)
+    1474:	7946a885 	ldrh	w5, [x4,#852]
+    1478:	6b0100bf 	cmp	w5, w1
+    147c:	54000209 	b.ls	14bc <gpiochip_request_own_desc+0x5c>
+		return ERR_PTR(-EINVAL);
+
+	return &gdev->descs[hwnum];
+    1480:	f941a493 	ldr	x19, [x4,#840]
+    1484:	d37b3c23 	ubfiz	x3, x1, #5, #16
+    1488:	8b030273 	add	x19, x19, x3
+					    const char *label)
+{
+	struct gpio_desc *desc = gpiochip_get_desc(chip, hwnum);
+	int err;
+
+	if (IS_ERR(desc)) {
+    148c:	b140067f 	cmn	x19, #0x1, lsl #12
+    1490:	54000188 	b.hi	14c0 <gpiochip_request_own_desc+0x60>
+		chip_err(chip, "failed to get GPIO descriptor\n");
+		return desc;
+	}
+
+	err = __gpiod_request(desc, label);
+    1494:	aa1303e0 	mov	x0, x19
+    1498:	aa0203e1 	mov	x1, x2
+    149c:	97ffffa0 	bl	131c <__gpiod_request>
+	if (err < 0)
+		return ERR_PTR(err);
+    14a0:	6b1f001f 	cmp	w0, wzr
+    14a4:	93407c00 	sxtw	x0, w0
+    14a8:	9a80a273 	csel	x19, x19, x0, ge
+
+	return desc;
+}
+    14ac:	aa1303e0 	mov	x0, x19
+    14b0:	f9400bf3 	ldr	x19, [sp,#16]
+    14b4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    14b8:	d65f03c0 	ret
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+
+	if (hwnum >= gdev->ngpio)
+		return ERR_PTR(-EINVAL);
+    14bc:	928002b3 	mov	x19, #0xffffffffffffffea    	// #-22
+{
+	struct gpio_desc *desc = gpiochip_get_desc(chip, hwnum);
+	int err;
+
+	if (IS_ERR(desc)) {
+		chip_err(chip, "failed to get GPIO descriptor\n");
+    14c0:	f9400002 	ldr	x2, [x0]
+    14c4:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			14c4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x338
+    14c8:	91002080 	add	x0, x4, #0x8
+    14cc:	91000021 	add	x1, x1, #0x0
+			14cc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x338
+    14d0:	94000000 	bl	0 <dev_err>
+			14d0: R_AARCH64_CALL26	dev_err
+	err = __gpiod_request(desc, label);
+	if (err < 0)
+		return ERR_PTR(err);
+
+	return desc;
+}
+    14d4:	aa1303e0 	mov	x0, x19
+    14d8:	f9400bf3 	ldr	x19, [sp,#16]
+    14dc:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    14e0:	d65f03c0 	ret
+
+00000000000014e4 <__gpiod_free>:
+
+	return status;
+}
+
+static bool __gpiod_free(struct gpio_desc *desc)
+{
+    14e4:	a9bc7bfd 	stp	x29, x30, [sp,#-64]!
+    14e8:	910003fd 	mov	x29, sp
+    14ec:	a9025bf5 	stp	x21, x22, [sp,#32]
+
+	might_sleep();
+
+	gpiod_unexport(desc);
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    14f0:	90000015 	adrp	x21, 0 <desc_to_gpio>
+			14f0: R_AARCH64_ADR_PREL_PG_HI21	.bss
+
+	return status;
+}
+
+static bool __gpiod_free(struct gpio_desc *desc)
+{
+    14f4:	a90153f3 	stp	x19, x20, [sp,#16]
+    14f8:	a90363f7 	stp	x23, x24, [sp,#48]
+    14fc:	aa0003f3 	mov	x19, x0
+
+	might_sleep();
+
+	gpiod_unexport(desc);
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1500:	910002b7 	add	x23, x21, #0x0
+			1500: R_AARCH64_ADD_ABS_LO12_NC	.bss
+	unsigned long		flags;
+	struct gpio_chip	*chip;
+
+	might_sleep();
+
+	gpiod_unexport(desc);
+    1504:	94000000 	bl	0 <gpiod_unexport>
+			1504: R_AARCH64_CALL26	gpiod_unexport
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1508:	aa1703e0 	mov	x0, x23
+    150c:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			150c: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+    1510:	aa0003f6 	mov	x22, x0
+
+	chip = desc->gdev->chip;
+    1514:	f9400260 	ldr	x0, [x19]
+    1518:	f941a014 	ldr	x20, [x0,#832]
+	if (chip && test_bit(FLAG_REQUESTED, &desc->flags)) {
+    151c:	b40005d4 	cbz	x20, 15d4 <__gpiod_free+0xf0>
+    1520:	f9400660 	ldr	x0, [x19,#8]
+	return status;
+}
+
+static bool __gpiod_free(struct gpio_desc *desc)
+{
+	bool			ret = false;
+    1524:	52800018 	mov	w24, #0x0                   	// #0
+	gpiod_unexport(desc);
+
+	spin_lock_irqsave(&gpio_lock, flags);
+
+	chip = desc->gdev->chip;
+	if (chip && test_bit(FLAG_REQUESTED, &desc->flags)) {
+    1528:	36000440 	tbz	w0, #0, 15b0 <__gpiod_free+0xcc>
+		if (chip->free) {
+    152c:	f9401680 	ldr	x0, [x20,#40]
+    1530:	b40001c0 	cbz	x0, 1568 <__gpiod_free+0x84>
+    1534:	aa1603e1 	mov	x1, x22
+    1538:	aa1703e0 	mov	x0, x23
+    153c:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			153c: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+    1540:	f9400261 	ldr	x1, [x19]
+			spin_unlock_irqrestore(&gpio_lock, flags);
+			might_sleep_if(chip->can_sleep);
+			chip->free(chip, gpio_chip_hwgpio(desc));
+    1544:	aa1403e0 	mov	x0, x20
+    1548:	f9401682 	ldr	x2, [x20,#40]
+    154c:	f941a421 	ldr	x1, [x1,#840]
+    1550:	cb010261 	sub	x1, x19, x1
+    1554:	d345fc21 	lsr	x1, x1, #5
+    1558:	d63f0040 	blr	x2
+			spin_lock_irqsave(&gpio_lock, flags);
+    155c:	aa1703e0 	mov	x0, x23
+    1560:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			1560: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+    1564:	aa0003f6 	mov	x22, x0
+		}
+		desc_set_label(desc, NULL);
+		clear_bit(FLAG_ACTIVE_LOW, &desc->flags);
+    1568:	91002274 	add	x20, x19, #0x8
+    156c:	528000c0 	mov	w0, #0x6                   	// #6
+    1570:	aa1403e1 	mov	x1, x20
+static void gpiochip_irqchip_remove(struct gpio_chip *gpiochip);
+
+
+static inline void desc_set_label(struct gpio_desc *d, const char *label)
+{
+	d->label = label;
+    1574:	f9000a7f 	str	xzr, [x19,#16]
+		clear_bit(FLAG_ACTIVE_LOW, &desc->flags);
+		clear_bit(FLAG_REQUESTED, &desc->flags);
+		clear_bit(FLAG_OPEN_DRAIN, &desc->flags);
+		clear_bit(FLAG_OPEN_SOURCE, &desc->flags);
+		clear_bit(FLAG_IS_HOGGED, &desc->flags);
+		ret = true;
+    1578:	52800038 	mov	w24, #0x1                   	// #1
+			might_sleep_if(chip->can_sleep);
+			chip->free(chip, gpio_chip_hwgpio(desc));
+			spin_lock_irqsave(&gpio_lock, flags);
+		}
+		desc_set_label(desc, NULL);
+		clear_bit(FLAG_ACTIVE_LOW, &desc->flags);
+    157c:	94000000 	bl	0 <clear_bit>
+			157c: R_AARCH64_CALL26	clear_bit
+		clear_bit(FLAG_REQUESTED, &desc->flags);
+    1580:	aa1403e1 	mov	x1, x20
+    1584:	52800000 	mov	w0, #0x0                   	// #0
+    1588:	94000000 	bl	0 <clear_bit>
+			1588: R_AARCH64_CALL26	clear_bit
+		clear_bit(FLAG_OPEN_DRAIN, &desc->flags);
+    158c:	aa1403e1 	mov	x1, x20
+    1590:	528000e0 	mov	w0, #0x7                   	// #7
+    1594:	94000000 	bl	0 <clear_bit>
+			1594: R_AARCH64_CALL26	clear_bit
+		clear_bit(FLAG_OPEN_SOURCE, &desc->flags);
+    1598:	aa1403e1 	mov	x1, x20
+    159c:	52800100 	mov	w0, #0x8                   	// #8
+    15a0:	94000000 	bl	0 <clear_bit>
+			15a0: R_AARCH64_CALL26	clear_bit
+		clear_bit(FLAG_IS_HOGGED, &desc->flags);
+    15a4:	aa1403e1 	mov	x1, x20
+    15a8:	52800160 	mov	w0, #0xb                   	// #11
+    15ac:	94000000 	bl	0 <clear_bit>
+			15ac: R_AARCH64_CALL26	clear_bit
+    15b0:	aa1603e1 	mov	x1, x22
+    15b4:	910002a0 	add	x0, x21, #0x0
+			15b4: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    15b8:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			15b8: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		ret = true;
+	}
+
+	spin_unlock_irqrestore(&gpio_lock, flags);
+	return ret;
+}
+    15bc:	2a1803e0 	mov	w0, w24
+    15c0:	a94153f3 	ldp	x19, x20, [sp,#16]
+    15c4:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    15c8:	a94363f7 	ldp	x23, x24, [sp,#48]
+    15cc:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    15d0:	d65f03c0 	ret
+	return status;
+}
+
+static bool __gpiod_free(struct gpio_desc *desc)
+{
+	bool			ret = false;
+    15d4:	52800018 	mov	w24, #0x0                   	// #0
+    15d8:	17fffff6 	b	15b0 <__gpiod_free+0xcc>
+
+00000000000015dc <gpiochip_free_own_desc>:
+ *
+ * Function frees the given GPIO requested previously with
+ * gpiochip_request_own_desc().
+ */
+void gpiochip_free_own_desc(struct gpio_desc *desc)
+{
+    15dc:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    15e0:	910003fd 	mov	x29, sp
+	if (desc)
+    15e4:	b4000040 	cbz	x0, 15ec <gpiochip_free_own_desc+0x10>
+		__gpiod_free(desc);
+    15e8:	97ffffbf 	bl	14e4 <__gpiod_free>
+}
+    15ec:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    15f0:	d65f03c0 	ret
+
+00000000000015f4 <gpiod_set_array_value_priv>:
+
+static void gpiod_set_array_value_priv(bool raw, bool can_sleep,
+				       unsigned int array_size,
+				       struct gpio_desc **desc_array,
+				       int *value_array)
+{
+    15f4:	a9b87bfd 	stp	x29, x30, [sp,#-128]!
+    15f8:	910003fd 	mov	x29, sp
+    15fc:	a90153f3 	stp	x19, x20, [sp,#16]
+    1600:	a90363f7 	stp	x23, x24, [sp,#48]
+    1604:	a9025bf5 	stp	x21, x22, [sp,#32]
+    1608:	a9046bf9 	stp	x25, x26, [sp,#64]
+    160c:	a90573fb 	stp	x27, x28, [sp,#80]
+    1610:	53001c15 	uxtb	w21, w0
+    1614:	53001c20 	uxtb	w0, w1
+    1618:	b9006fa0 	str	w0, [x29,#108]
+    161c:	2a0203f3 	mov	w19, w2
+    1620:	aa0303f7 	mov	x23, x3
+    1624:	aa0403f4 	mov	x20, x4
+	int i = 0;
+
+	while (i < array_size) {
+    1628:	52800019 	mov	w25, #0x0                   	// #0
+    162c:	d2800018 	mov	x24, #0x0                   	// #0
+    1630:	34000a62 	cbz	w2, 177c <gpiod_set_array_value_priv+0x188>
+		struct gpio_chip *chip = desc_array[i]->gdev->chip;
+    1634:	f8787ae0 	ldr	x0, [x23,x24,lsl #3]
+    1638:	910003e1 	mov	x1, sp
+    163c:	f9003fa1 	str	x1, [x29,#120]
+    1640:	d37df304 	lsl	x4, x24, #3
+    1644:	f9400000 	ldr	x0, [x0]
+    1648:	f941a01b 	ldr	x27, [x0,#832]
+		unsigned long mask[BITS_TO_LONGS(chip->ngpio)];
+    164c:	7940fb62 	ldrh	w2, [x27,#124]
+    1650:	9100fc42 	add	x2, x2, #0x3f
+    1654:	d346fc42 	lsr	x2, x2, #6
+    1658:	d37df042 	lsl	x2, x2, #3
+    165c:	91005840 	add	x0, x2, #0x16
+    1660:	927c2800 	and	x0, x0, #0x7ff0
+    1664:	cb20603f 	sub	sp, x1, x0
+    1668:	910003fa 	mov	x26, sp
+		unsigned long bits[BITS_TO_LONGS(chip->ngpio)];
+    166c:	cb20635f 	sub	sp, x26, x0
+		int count = 0;
+
+		if (!can_sleep)
+    1670:	b9406fa0 	ldr	w0, [x29,#108]
+	int i = 0;
+
+	while (i < array_size) {
+		struct gpio_chip *chip = desc_array[i]->gdev->chip;
+		unsigned long mask[BITS_TO_LONGS(chip->ngpio)];
+		unsigned long bits[BITS_TO_LONGS(chip->ngpio)];
+    1674:	910003f6 	mov	x22, sp
+		int count = 0;
+
+		if (!can_sleep)
+    1678:	35000060 	cbnz	w0, 1684 <gpiod_set_array_value_priv+0x90>
+			WARN_ON(chip->can_sleep);
+    167c:	39422360 	ldrb	w0, [x27,#136]
+    1680:	35000f00 	cbnz	w0, 1860 <gpiod_set_array_value_priv+0x26c>
+
+		memset(mask, 0, sizeof(mask));
+    1684:	52800001 	mov	w1, #0x0                   	// #0
+    1688:	aa1a03e0 	mov	x0, x26
+    168c:	f9003ba4 	str	x4, [x29,#112]
+
+	while (i < array_size) {
+		struct gpio_chip *chip = desc_array[i]->gdev->chip;
+		unsigned long mask[BITS_TO_LONGS(chip->ngpio)];
+		unsigned long bits[BITS_TO_LONGS(chip->ngpio)];
+		int count = 0;
+    1690:	5280001c 	mov	w28, #0x0                   	// #0
+
+		if (!can_sleep)
+			WARN_ON(chip->can_sleep);
+
+		memset(mask, 0, sizeof(mask));
+    1694:	94000000 	bl	0 <memset>
+			1694: R_AARCH64_CALL26	memset
+    1698:	f9403ba4 	ldr	x4, [x29,#112]
+    169c:	f8646ae0 	ldr	x0, [x23,x4]
+    16a0:	f9400004 	ldr	x4, [x0]
+    16a4:	f941a485 	ldr	x5, [x4,#840]
+		do {
+			struct gpio_desc *desc = desc_array[i];
+			int hwgpio = gpio_chip_hwgpio(desc);
+			int value = value_array[i];
+    16a8:	b8787a81 	ldr	w1, [x20,x24,lsl #2]
+
+			if (!raw && test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+    16ac:	350000b5 	cbnz	w21, 16c0 <gpiod_set_array_value_priv+0xcc>
+    16b0:	f9400402 	ldr	x2, [x0,#8]
+    16b4:	36300062 	tbz	w2, #6, 16c0 <gpiod_set_array_value_priv+0xcc>
+				value = !value;
+    16b8:	6b1f003f 	cmp	w1, wzr
+    16bc:	1a9f17e1 	cset	w1, eq
+    16c0:	f9400402 	ldr	x2, [x0,#8]
+			trace_gpio_value(desc_to_gpio(desc), 0, value);
+			/*
+			 * collect all normal outputs belonging to the same chip
+			 * open drain and open source outputs are set individually
+			 */
+			if (test_bit(FLAG_OPEN_DRAIN, &desc->flags)) {
+    16c4:	373804a2 	tbnz	w2, #7, 1758 <gpiod_set_array_value_priv+0x164>
+    16c8:	f9400402 	ldr	x2, [x0,#8]
+				_gpio_set_open_drain_value(desc, value);
+			} else if (test_bit(FLAG_OPEN_SOURCE, &desc->flags)) {
+    16cc:	374006e2 	tbnz	w2, #8, 17a8 <gpiod_set_array_value_priv+0x1b4>
+    16d0:	cb050005 	sub	x5, x0, x5
+    16d4:	9345fca5 	asr	x5, x5, #5
+ * may be that only one operation succeeds.
+ */
+static inline void __set_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+    16d8:	1100fca4 	add	w4, w5, #0x3f
+    16dc:	6b1f00bf 	cmp	w5, wzr
+ * If it's called on the same region of memory simultaneously, the effect
+ * may be that only one operation succeeds.
+ */
+static inline void __set_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+    16e0:	131f7ca0 	asr	w0, w5, #31
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+    16e4:	1a85b084 	csel	w4, w4, w5, lt
+ * If it's called on the same region of memory simultaneously, the effect
+ * may be that only one operation succeeds.
+ */
+static inline void __set_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+    16e8:	531a7c00 	lsr	w0, w0, #26
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+    16ec:	13067c84 	asr	w4, w4, #6
+ * If it's called on the same region of memory simultaneously, the effect
+ * may be that only one operation succeeds.
+ */
+static inline void __set_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+    16f0:	0b050005 	add	w5, w0, w5
+    16f4:	120014a5 	and	w5, w5, #0x3f
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+
+	*p  |= mask;
+    16f8:	f864db42 	ldr	x2, [x26,w4,sxtw #3]
+ * If it's called on the same region of memory simultaneously, the effect
+ * may be that only one operation succeeds.
+ */
+static inline void __set_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+    16fc:	4b0000a5 	sub	w5, w5, w0
+    1700:	d2800020 	mov	x0, #0x1                   	// #1
+    1704:	9ac52005 	lsl	x5, x0, x5
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+
+	*p  |= mask;
+    1708:	aa050040 	orr	x0, x2, x5
+    170c:	f824db40 	str	x0, [x26,w4,sxtw #3]
+    1710:	f864dac0 	ldr	x0, [x22,w4,sxtw #3]
+				_gpio_set_open_source_value(desc, value);
+			} else {
+				__set_bit(hwgpio, mask);
+				if (value)
+    1714:	34000441 	cbz	w1, 179c <gpiod_set_array_value_priv+0x1a8>
+    1718:	aa050005 	orr	x5, x0, x5
+    171c:	f824dac5 	str	x5, [x22,w4,sxtw #3]
+					__set_bit(hwgpio, bits);
+				else
+					__clear_bit(hwgpio, bits);
+				count++;
+    1720:	1100079c 	add	w28, w28, #0x1
+			}
+			i++;
+    1724:	11000739 	add	w25, w25, #0x1
+		} while ((i < array_size) &&
+			 (desc_array[i]->gdev->chip == chip));
+    1728:	6b19027f 	cmp	w19, w25
+    172c:	54000229 	b.ls	1770 <gpiod_set_array_value_priv+0x17c>
+    1730:	f879dae0 	ldr	x0, [x23,w25,sxtw #3]
+    1734:	93407f38 	sxtw	x24, w25
+    1738:	f9400004 	ldr	x4, [x0]
+				else
+					__clear_bit(hwgpio, bits);
+				count++;
+			}
+			i++;
+		} while ((i < array_size) &&
+    173c:	f941a081 	ldr	x1, [x4,#832]
+    1740:	eb1b003f 	cmp	x1, x27
+    1744:	54fffb00 	b.eq	16a4 <gpiod_set_array_value_priv+0xb0>
+			 (desc_array[i]->gdev->chip == chip));
+		/* push collected bits to outputs */
+		if (count != 0)
+    1748:	3500039c 	cbnz	w28, 17b8 <gpiod_set_array_value_priv+0x1c4>
+    174c:	f9403fa0 	ldr	x0, [x29,#120]
+    1750:	9100001f 	mov	sp, x0
+    1754:	17ffffb8 	b	1634 <gpiod_set_array_value_priv+0x40>
+			/*
+			 * collect all normal outputs belonging to the same chip
+			 * open drain and open source outputs are set individually
+			 */
+			if (test_bit(FLAG_OPEN_DRAIN, &desc->flags)) {
+				_gpio_set_open_drain_value(desc, value);
+    1758:	6b1f003f 	cmp	w1, wzr
+					__set_bit(hwgpio, bits);
+				else
+					__clear_bit(hwgpio, bits);
+				count++;
+			}
+			i++;
+    175c:	11000739 	add	w25, w25, #0x1
+			/*
+			 * collect all normal outputs belonging to the same chip
+			 * open drain and open source outputs are set individually
+			 */
+			if (test_bit(FLAG_OPEN_DRAIN, &desc->flags)) {
+				_gpio_set_open_drain_value(desc, value);
+    1760:	1a9f07e1 	cset	w1, ne
+    1764:	97fffaf0 	bl	324 <_gpio_set_open_drain_value>
+					__clear_bit(hwgpio, bits);
+				count++;
+			}
+			i++;
+		} while ((i < array_size) &&
+			 (desc_array[i]->gdev->chip == chip));
+    1768:	6b19027f 	cmp	w19, w25
+    176c:	54fffe28 	b.hi	1730 <gpiod_set_array_value_priv+0x13c>
+		/* push collected bits to outputs */
+		if (count != 0)
+    1770:	3500025c 	cbnz	w28, 17b8 <gpiod_set_array_value_priv+0x1c4>
+    1774:	f9403fa0 	ldr	x0, [x29,#120]
+    1778:	9100001f 	mov	sp, x0
+			gpio_chip_set_multiple(chip, mask, bits);
+	}
+}
+    177c:	910003bf 	mov	sp, x29
+    1780:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1784:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1788:	a94363f7 	ldp	x23, x24, [sp,#48]
+    178c:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    1790:	a94573fb 	ldp	x27, x28, [sp,#80]
+    1794:	a8c87bfd 	ldp	x29, x30, [sp],#128
+    1798:	d65f03c0 	ret
+static inline void __clear_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+
+	*p &= ~mask;
+    179c:	8a250005 	bic	x5, x0, x5
+    17a0:	f824dac5 	str	x5, [x22,w4,sxtw #3]
+    17a4:	17ffffdf 	b	1720 <gpiod_set_array_value_priv+0x12c>
+			 * open drain and open source outputs are set individually
+			 */
+			if (test_bit(FLAG_OPEN_DRAIN, &desc->flags)) {
+				_gpio_set_open_drain_value(desc, value);
+			} else if (test_bit(FLAG_OPEN_SOURCE, &desc->flags)) {
+				_gpio_set_open_source_value(desc, value);
+    17a8:	6b1f003f 	cmp	w1, wzr
+    17ac:	1a9f07e1 	cset	w1, ne
+    17b0:	97fffb11 	bl	3f4 <_gpio_set_open_source_value>
+    17b4:	17ffffdc 	b	1724 <gpiod_set_array_value_priv+0x130>
+ *        defines the values the outputs specified by mask are to be set to
+ */
+static void gpio_chip_set_multiple(struct gpio_chip *chip,
+				   unsigned long *mask, unsigned long *bits)
+{
+	if (chip->set_multiple) {
+    17b8:	f9402f64 	ldr	x4, [x27,#88]
+    17bc:	b4000164 	cbz	x4, 17e8 <gpiod_set_array_value_priv+0x1f4>
+		chip->set_multiple(chip, mask, bits);
+    17c0:	aa1603e2 	mov	x2, x22
+    17c4:	aa1a03e1 	mov	x1, x26
+    17c8:	aa1b03e0 	mov	x0, x27
+    17cc:	d63f0080 	blr	x4
+				       struct gpio_desc **desc_array,
+				       int *value_array)
+{
+	int i = 0;
+
+	while (i < array_size) {
+    17d0:	6b19027f 	cmp	w19, w25
+    17d4:	f9403fa0 	ldr	x0, [x29,#120]
+    17d8:	9100001f 	mov	sp, x0
+    17dc:	54fffd09 	b.ls	177c <gpiod_set_array_value_priv+0x188>
+    17e0:	93407f38 	sxtw	x24, w25
+    17e4:	17ffff94 	b	1634 <gpiod_set_array_value_priv+0x40>
+{
+	if (chip->set_multiple) {
+		chip->set_multiple(chip, mask, bits);
+	} else {
+		int i;
+		for (i = 0; i < chip->ngpio; i++) {
+    17e8:	7940fb65 	ldrh	w5, [x27,#124]
+    17ec:	5280001c 	mov	w28, #0x0                   	// #0
+    17f0:	350000c5 	cbnz	w5, 1808 <gpiod_set_array_value_priv+0x214>
+    17f4:	17fffff7 	b	17d0 <gpiod_set_array_value_priv+0x1dc>
+			if (mask[BIT_WORD(i)] == 0) {
+				/* no more set bits in this mask word;
+				 * skip ahead to the next word */
+				i = (BIT_WORD(i) + 1) * BITS_PER_LONG - 1;
+    17f8:	1100fd1c 	add	w28, w8, #0x3f
+{
+	if (chip->set_multiple) {
+		chip->set_multiple(chip, mask, bits);
+	} else {
+		int i;
+		for (i = 0; i < chip->ngpio; i++) {
+    17fc:	1100079c 	add	w28, w28, #0x1
+    1800:	6b05039f 	cmp	w28, w5
+    1804:	54fffe6a 	b.ge	17d0 <gpiod_set_array_value_priv+0x1dc>
+			if (mask[BIT_WORD(i)] == 0) {
+    1808:	13067f81 	asr	w1, w28, #6
+ * If two examples of this operation race, one can appear to succeed
+ * but actually fail.  You must protect multiple accesses with a lock.
+ */
+static inline int __test_and_clear_bit(int nr, volatile unsigned long *addr)
+{
+	unsigned long mask = BIT_MASK(nr);
+    180c:	d2800020 	mov	x0, #0x1                   	// #1
+    1810:	12001782 	and	w2, w28, #0x3f
+				/* no more set bits in this mask word;
+				 * skip ahead to the next word */
+				i = (BIT_WORD(i) + 1) * BITS_PER_LONG - 1;
+    1814:	531a6428 	lsl	w8, w1, #6
+    1818:	9ac22004 	lsl	x4, x0, x2
+	if (chip->set_multiple) {
+		chip->set_multiple(chip, mask, bits);
+	} else {
+		int i;
+		for (i = 0; i < chip->ngpio; i++) {
+			if (mask[BIT_WORD(i)] == 0) {
+    181c:	f861db40 	ldr	x0, [x26,w1,sxtw #3]
+	unsigned long *p = ((unsigned long *)addr) + BIT_WORD(nr);
+	unsigned long old = *p;
+
+	*p = old & ~mask;
+    1820:	8a240007 	bic	x7, x0, x4
+				 * skip ahead to the next word */
+				i = (BIT_WORD(i) + 1) * BITS_PER_LONG - 1;
+				continue;
+			}
+			/* set outputs if the corresponding mask bit is set */
+			if (__test_and_clear_bit(i, mask))
+    1824:	ea04001f 	tst	x0, x4
+	if (chip->set_multiple) {
+		chip->set_multiple(chip, mask, bits);
+	} else {
+		int i;
+		for (i = 0; i < chip->ngpio; i++) {
+			if (mask[BIT_WORD(i)] == 0) {
+    1828:	b4fffe80 	cbz	x0, 17f8 <gpiod_set_array_value_priv+0x204>
+    182c:	f821db47 	str	x7, [x26,w1,sxtw #3]
+				 * skip ahead to the next word */
+				i = (BIT_WORD(i) + 1) * BITS_PER_LONG - 1;
+				continue;
+			}
+			/* set outputs if the corresponding mask bit is set */
+			if (__test_and_clear_bit(i, mask))
+    1830:	54000061 	b.ne	183c <gpiod_set_array_value_priv+0x248>
+    1834:	7940fb65 	ldrh	w5, [x27,#124]
+    1838:	17fffff1 	b	17fc <gpiod_set_array_value_priv+0x208>
+ * @nr: bit number to test
+ * @addr: Address to start counting from
+ */
+static inline int test_bit(int nr, const volatile unsigned long *addr)
+{
+	return 1UL & (addr[BIT_WORD(nr)] >> (nr & (BITS_PER_LONG-1)));
+    183c:	f861dac4 	ldr	x4, [x22,w1,sxtw #3]
+				chip->set(chip, i, test_bit(i, bits));
+    1840:	aa1b03e0 	mov	x0, x27
+    1844:	f9402b65 	ldr	x5, [x27,#80]
+    1848:	2a1c03e1 	mov	w1, w28
+    184c:	9ac22482 	lsr	x2, x4, x2
+    1850:	12000042 	and	w2, w2, #0x1
+    1854:	d63f00a0 	blr	x5
+    1858:	7940fb65 	ldrh	w5, [x27,#124]
+    185c:	17ffffe8 	b	17fc <gpiod_set_array_value_priv+0x208>
+		unsigned long mask[BITS_TO_LONGS(chip->ngpio)];
+		unsigned long bits[BITS_TO_LONGS(chip->ngpio)];
+		int count = 0;
+
+		if (!can_sleep)
+			WARN_ON(chip->can_sleep);
+    1860:	d4210000 	brk	#0x800
+    1864:	17ffff88 	b	1684 <gpiod_set_array_value_priv+0x90>
+
+0000000000001868 <gpiod_set_raw_array_value>:
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+void gpiod_set_raw_array_value(unsigned int array_size,
+			 struct gpio_desc **desc_array, int *value_array)
+{
+    1868:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    186c:	910003fd 	mov	x29, sp
+	if (!desc_array)
+    1870:	b40000e1 	cbz	x1, 188c <gpiod_set_raw_array_value+0x24>
+    1874:	aa0203e4 	mov	x4, x2
+    1878:	aa0103e3 	mov	x3, x1
+    187c:	2a0003e2 	mov	w2, w0
+		return;
+	gpiod_set_array_value_priv(true, false, array_size, desc_array,
+    1880:	52800001 	mov	w1, #0x0                   	// #0
+    1884:	52800020 	mov	w0, #0x1                   	// #1
+    1888:	97ffff5b 	bl	15f4 <gpiod_set_array_value_priv>
+				   value_array);
+}
+    188c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    1890:	d65f03c0 	ret
+
+0000000000001894 <gpiod_set_array_value>:
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+void gpiod_set_array_value(unsigned int array_size,
+			   struct gpio_desc **desc_array, int *value_array)
+{
+    1894:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    1898:	910003fd 	mov	x29, sp
+	if (!desc_array)
+    189c:	b40000e1 	cbz	x1, 18b8 <gpiod_set_array_value+0x24>
+    18a0:	aa0203e4 	mov	x4, x2
+    18a4:	aa0103e3 	mov	x3, x1
+    18a8:	2a0003e2 	mov	w2, w0
+		return;
+	gpiod_set_array_value_priv(false, false, array_size, desc_array,
+    18ac:	52800001 	mov	w1, #0x0                   	// #0
+    18b0:	52800000 	mov	w0, #0x0                   	// #0
+    18b4:	97ffff50 	bl	15f4 <gpiod_set_array_value_priv>
+				   value_array);
+}
+    18b8:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    18bc:	d65f03c0 	ret
+
+00000000000018c0 <gpiod_set_raw_array_value_cansleep>:
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_raw_array_value_cansleep(unsigned int array_size,
+					struct gpio_desc **desc_array,
+					int *value_array)
+{
+    18c0:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    18c4:	910003fd 	mov	x29, sp
+	might_sleep_if(extra_checks);
+	if (!desc_array)
+    18c8:	b40000e1 	cbz	x1, 18e4 <gpiod_set_raw_array_value_cansleep+0x24>
+    18cc:	aa0103e3 	mov	x3, x1
+		return;
+	gpiod_set_array_value_priv(true, true, array_size, desc_array,
+    18d0:	52800021 	mov	w1, #0x1                   	// #1
+    18d4:	aa0203e4 	mov	x4, x2
+    18d8:	2a0003e2 	mov	w2, w0
+    18dc:	2a0103e0 	mov	w0, w1
+    18e0:	97ffff45 	bl	15f4 <gpiod_set_array_value_priv>
+				   value_array);
+}
+    18e4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    18e8:	d65f03c0 	ret
+
+00000000000018ec <gpiod_set_array_value_cansleep>:
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_array_value_cansleep(unsigned int array_size,
+				    struct gpio_desc **desc_array,
+				    int *value_array)
+{
+    18ec:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    18f0:	910003fd 	mov	x29, sp
+	might_sleep_if(extra_checks);
+	if (!desc_array)
+    18f4:	b40000e1 	cbz	x1, 1910 <gpiod_set_array_value_cansleep+0x24>
+    18f8:	aa0203e4 	mov	x4, x2
+    18fc:	aa0103e3 	mov	x3, x1
+    1900:	2a0003e2 	mov	w2, w0
+		return;
+	gpiod_set_array_value_priv(false, true, array_size, desc_array,
+    1904:	52800021 	mov	w1, #0x1                   	// #1
+    1908:	52800000 	mov	w0, #0x0                   	// #0
+    190c:	97ffff3a 	bl	15f4 <gpiod_set_array_value_priv>
+				   value_array);
+}
+    1910:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    1914:	d65f03c0 	ret
+
+0000000000001918 <gpiod_find_lookup_table>:
+
+	return desc;
+}
+
+static struct gpiod_lookup_table *gpiod_find_lookup_table(struct device *dev)
+{
+    1918:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+    191c:	910003fd 	mov	x29, sp
+    1920:	a90153f3 	stp	x19, x20, [sp,#16]
+    1924:	a9025bf5 	stp	x21, x22, [sp,#32]
+	const char *dev_id = dev ? dev_name(dev) : NULL;
+    1928:	b4000500 	cbz	x0, 19c8 <gpiod_find_lookup_table+0xb0>
+    192c:	f9402814 	ldr	x20, [x0,#80]
+    1930:	b4000514 	cbz	x20, 19d0 <gpiod_find_lookup_table+0xb8>
+	struct gpiod_lookup_table *table;
+
+	mutex_lock(&gpio_lookup_lock);
+    1934:	90000016 	adrp	x22, 0 <desc_to_gpio>
+			1934: R_AARCH64_ADR_PREL_PG_HI21	.data
+    1938:	910002d5 	add	x21, x22, #0x0
+			1938: R_AARCH64_ADD_ABS_LO12_NC	.data
+    193c:	910042a0 	add	x0, x21, #0x10
+
+	list_for_each_entry(table, &gpio_lookup_list, list) {
+    1940:	9100e2b5 	add	x21, x21, #0x38
+static struct gpiod_lookup_table *gpiod_find_lookup_table(struct device *dev)
+{
+	const char *dev_id = dev ? dev_name(dev) : NULL;
+	struct gpiod_lookup_table *table;
+
+	mutex_lock(&gpio_lookup_lock);
+    1944:	94000000 	bl	0 <mutex_lock>
+			1944: R_AARCH64_CALL26	mutex_lock
+
+	list_for_each_entry(table, &gpio_lookup_list, list) {
+    1948:	f94002b3 	ldr	x19, [x21]
+    194c:	eb15027f 	cmp	x19, x21
+    1950:	54000101 	b.ne	1970 <gpiod_find_lookup_table+0x58>
+    1954:	14000014 	b	19a4 <gpiod_find_lookup_table+0x8c>
+		if (table->dev_id && dev_id) {
+    1958:	b4000074 	cbz	x20, 1964 <gpiod_find_lookup_table+0x4c>
+			/*
+			 * Valid strings on both ends, must be identical to have
+			 * a match
+			 */
+			if (!strcmp(table->dev_id, dev_id))
+    195c:	94000000 	bl	0 <strcmp>
+			195c: R_AARCH64_CALL26	strcmp
+    1960:	34000120 	cbz	w0, 1984 <gpiod_find_lookup_table+0x6c>
+	const char *dev_id = dev ? dev_name(dev) : NULL;
+	struct gpiod_lookup_table *table;
+
+	mutex_lock(&gpio_lookup_lock);
+
+	list_for_each_entry(table, &gpio_lookup_list, list) {
+    1964:	f9400273 	ldr	x19, [x19]
+    1968:	eb15027f 	cmp	x19, x21
+    196c:	540001c0 	b.eq	19a4 <gpiod_find_lookup_table+0x8c>
+		if (table->dev_id && dev_id) {
+    1970:	f9400a62 	ldr	x2, [x19,#16]
+			/*
+			 * Valid strings on both ends, must be identical to have
+			 * a match
+			 */
+			if (!strcmp(table->dev_id, dev_id))
+    1974:	aa1403e1 	mov	x1, x20
+    1978:	aa0203e0 	mov	x0, x2
+	struct gpiod_lookup_table *table;
+
+	mutex_lock(&gpio_lookup_lock);
+
+	list_for_each_entry(table, &gpio_lookup_list, list) {
+		if (table->dev_id && dev_id) {
+    197c:	b5fffee2 	cbnz	x2, 1958 <gpiod_find_lookup_table+0x40>
+		} else {
+			/*
+			 * One of the pointers is NULL, so both must be to have
+			 * a match
+			 */
+			if (dev_id == table->dev_id)
+    1980:	b5ffff34 	cbnz	x20, 1964 <gpiod_find_lookup_table+0x4c>
+		}
+	}
+	table = NULL;
+
+found:
+	mutex_unlock(&gpio_lookup_lock);
+    1984:	910002c0 	add	x0, x22, #0x0
+			1984: R_AARCH64_ADD_ABS_LO12_NC	.data
+    1988:	91004000 	add	x0, x0, #0x10
+    198c:	94000000 	bl	0 <mutex_unlock>
+			198c: R_AARCH64_CALL26	mutex_unlock
+	return table;
+}
+    1990:	aa1303e0 	mov	x0, x19
+    1994:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1998:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    199c:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    19a0:	d65f03c0 	ret
+		}
+	}
+	table = NULL;
+
+found:
+	mutex_unlock(&gpio_lookup_lock);
+    19a4:	910002c0 	add	x0, x22, #0x0
+			19a4: R_AARCH64_ADD_ABS_LO12_NC	.data
+			 */
+			if (dev_id == table->dev_id)
+				goto found;
+		}
+	}
+	table = NULL;
+    19a8:	d2800013 	mov	x19, #0x0                   	// #0
+
+found:
+	mutex_unlock(&gpio_lookup_lock);
+    19ac:	91004000 	add	x0, x0, #0x10
+    19b0:	94000000 	bl	0 <mutex_unlock>
+			19b0: R_AARCH64_CALL26	mutex_unlock
+	return table;
+}
+    19b4:	aa1303e0 	mov	x0, x19
+    19b8:	a94153f3 	ldp	x19, x20, [sp,#16]
+    19bc:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    19c0:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    19c4:	d65f03c0 	ret
+	return desc;
+}
+
+static struct gpiod_lookup_table *gpiod_find_lookup_table(struct device *dev)
+{
+	const char *dev_id = dev ? dev_name(dev) : NULL;
+    19c8:	d2800014 	mov	x20, #0x0                   	// #0
+    19cc:	17ffffda 	b	1934 <gpiod_find_lookup_table+0x1c>
+    19d0:	f9400814 	ldr	x20, [x0,#16]
+    19d4:	17ffffd8 	b	1934 <gpiod_find_lookup_table+0x1c>
+
+00000000000019d8 <gpiolib_open>:
+	.stop = gpiolib_seq_stop,
+	.show = gpiolib_seq_show,
+};
+
+static int gpiolib_open(struct inode *inode, struct file *file)
+{
+    19d8:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    19dc:	aa0103e0 	mov	x0, x1
+	return seq_open(file, &gpiolib_seq_ops);
+    19e0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			19e0: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    19e4:	91000021 	add	x1, x1, #0x0
+			19e4: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+	.stop = gpiolib_seq_stop,
+	.show = gpiolib_seq_show,
+};
+
+static int gpiolib_open(struct inode *inode, struct file *file)
+{
+    19e8:	910003fd 	mov	x29, sp
+	return seq_open(file, &gpiolib_seq_ops);
+    19ec:	9107c021 	add	x1, x1, #0x1f0
+    19f0:	94000000 	bl	0 <seq_open>
+			19f0: R_AARCH64_CALL26	seq_open
+}
+    19f4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    19f8:	d65f03c0 	ret
+
+00000000000019fc <gpiolib_seq_show>:
+static void gpiolib_seq_stop(struct seq_file *s, void *v)
+{
+}
+
+static int gpiolib_seq_show(struct seq_file *s, void *v)
+{
+    19fc:	a9b87bfd 	stp	x29, x30, [sp,#-128]!
+    1a00:	910003fd 	mov	x29, sp
+    1a04:	a90153f3 	stp	x19, x20, [sp,#16]
+    1a08:	a9025bf5 	stp	x21, x22, [sp,#32]
+    1a0c:	a90363f7 	stp	x23, x24, [sp,#48]
+    1a10:	a9046bf9 	stp	x25, x26, [sp,#64]
+    1a14:	a90573fb 	stp	x27, x28, [sp,#80]
+    1a18:	aa0103f6 	mov	x22, x1
+    1a1c:	aa0003f4 	mov	x20, x0
+	struct gpio_device *gdev = v;
+	struct gpio_chip *chip = gdev->chip;
+    1a20:	f941a033 	ldr	x19, [x1,#832]
+    1a24:	f9402c23 	ldr	x3, [x1,#88]
+	struct device *parent;
+
+	if (!chip) {
+		seq_printf(s, "%s%s: (dangling chip)", (char *)s->private,
+    1a28:	f9403c02 	ldr	x2, [x0,#120]
+{
+	struct gpio_device *gdev = v;
+	struct gpio_chip *chip = gdev->chip;
+	struct device *parent;
+
+	if (!chip) {
+    1a2c:	b4001133 	cbz	x19, 1c50 <gpiolib_seq_show+0x254>
+    1a30:	b40012a3 	cbz	x3, 1c84 <gpiolib_seq_show+0x288>
+		return 0;
+	}
+
+	seq_printf(s, "%s%s: GPIOs %d-%d", (char *)s->private,
+		   dev_name(&gdev->dev),
+		   gdev->base, gdev->base + gdev->ngpio - 1);
+    1a34:	b94352c5 	ldr	w5, [x22,#848]
+		seq_printf(s, "%s%s: (dangling chip)", (char *)s->private,
+			   dev_name(&gdev->dev));
+		return 0;
+	}
+
+	seq_printf(s, "%s%s: GPIOs %d-%d", (char *)s->private,
+    1a38:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1a38: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x430
+		   dev_name(&gdev->dev),
+		   gdev->base, gdev->base + gdev->ngpio - 1);
+    1a3c:	7946aac0 	ldrh	w0, [x22,#852]
+		seq_printf(s, "%s%s: (dangling chip)", (char *)s->private,
+			   dev_name(&gdev->dev));
+		return 0;
+	}
+
+	seq_printf(s, "%s%s: GPIOs %d-%d", (char *)s->private,
+    1a40:	91000021 	add	x1, x1, #0x0
+			1a40: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x430
+    1a44:	2a0503e4 	mov	w4, w5
+		   dev_name(&gdev->dev),
+		   gdev->base, gdev->base + gdev->ngpio - 1);
+    1a48:	0b0000a5 	add	w5, w5, w0
+		seq_printf(s, "%s%s: (dangling chip)", (char *)s->private,
+			   dev_name(&gdev->dev));
+		return 0;
+	}
+
+	seq_printf(s, "%s%s: GPIOs %d-%d", (char *)s->private,
+    1a4c:	aa1403e0 	mov	x0, x20
+    1a50:	510004a5 	sub	w5, w5, #0x1
+    1a54:	94000000 	bl	0 <seq_printf>
+			1a54: R_AARCH64_CALL26	seq_printf
+		   dev_name(&gdev->dev),
+		   gdev->base, gdev->base + gdev->ngpio - 1);
+	parent = chip->parent;
+    1a58:	f9400a60 	ldr	x0, [x19,#16]
+	if (parent)
+    1a5c:	b4000140 	cbz	x0, 1a84 <gpiolib_seq_show+0x88>
+		seq_printf(s, ", parent: %s/%s",
+			   parent->bus ? parent->bus->name : "no-bus",
+    1a60:	f9404401 	ldr	x1, [x0,#136]
+	seq_printf(s, "%s%s: GPIOs %d-%d", (char *)s->private,
+		   dev_name(&gdev->dev),
+		   gdev->base, gdev->base + gdev->ngpio - 1);
+	parent = chip->parent;
+	if (parent)
+		seq_printf(s, ", parent: %s/%s",
+    1a64:	b4001141 	cbz	x1, 1c8c <gpiolib_seq_show+0x290>
+    1a68:	f9402803 	ldr	x3, [x0,#80]
+    1a6c:	f9400022 	ldr	x2, [x1]
+    1a70:	b4001163 	cbz	x3, 1c9c <gpiolib_seq_show+0x2a0>
+    1a74:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1a74: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x448
+    1a78:	aa1403e0 	mov	x0, x20
+    1a7c:	91000021 	add	x1, x1, #0x0
+			1a7c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x448
+    1a80:	94000000 	bl	0 <seq_printf>
+			1a80: R_AARCH64_CALL26	seq_printf
+			   parent->bus ? parent->bus->name : "no-bus",
+			   dev_name(parent));
+	if (chip->label)
+    1a84:	f9400262 	ldr	x2, [x19]
+    1a88:	b40000a2 	cbz	x2, 1a9c <gpiolib_seq_show+0xa0>
+		seq_printf(s, ", %s", chip->label);
+    1a8c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1a8c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x458
+    1a90:	aa1403e0 	mov	x0, x20
+    1a94:	91000021 	add	x1, x1, #0x0
+			1a94: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x458
+    1a98:	94000000 	bl	0 <seq_printf>
+			1a98: R_AARCH64_CALL26	seq_printf
+	if (chip->can_sleep)
+    1a9c:	39422260 	ldrb	w0, [x19,#136]
+    1aa0:	35000240 	cbnz	w0, 1ae8 <gpiolib_seq_show+0xec>
+		seq_printf(s, ", can sleep");
+	seq_printf(s, ":\n");
+    1aa4:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1aa4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x470
+    1aa8:	aa1403e0 	mov	x0, x20
+    1aac:	91000021 	add	x1, x1, #0x0
+			1aac: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x470
+    1ab0:	94000000 	bl	0 <seq_printf>
+			1ab0: R_AARCH64_CALL26	seq_printf
+
+	if (chip->dbg_show)
+    1ab4:	f9403a62 	ldr	x2, [x19,#112]
+    1ab8:	b40002c2 	cbz	x2, 1b10 <gpiolib_seq_show+0x114>
+		chip->dbg_show(s, chip);
+    1abc:	aa1303e1 	mov	x1, x19
+    1ac0:	aa1403e0 	mov	x0, x20
+    1ac4:	d63f0040 	blr	x2
+	else
+		gpiolib_dbg_show(s, gdev);
+
+	return 0;
+}
+    1ac8:	52800000 	mov	w0, #0x0                   	// #0
+    1acc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1ad0:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1ad4:	a94363f7 	ldp	x23, x24, [sp,#48]
+    1ad8:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    1adc:	a94573fb 	ldp	x27, x28, [sp,#80]
+    1ae0:	a8c87bfd 	ldp	x29, x30, [sp],#128
+    1ae4:	d65f03c0 	ret
+			   parent->bus ? parent->bus->name : "no-bus",
+			   dev_name(parent));
+	if (chip->label)
+		seq_printf(s, ", %s", chip->label);
+	if (chip->can_sleep)
+		seq_printf(s, ", can sleep");
+    1ae8:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1ae8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x460
+    1aec:	aa1403e0 	mov	x0, x20
+    1af0:	91000021 	add	x1, x1, #0x0
+			1af0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x460
+    1af4:	94000000 	bl	0 <seq_printf>
+			1af4: R_AARCH64_CALL26	seq_printf
+	seq_printf(s, ":\n");
+    1af8:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1af8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x470
+    1afc:	aa1403e0 	mov	x0, x20
+    1b00:	91000021 	add	x1, x1, #0x0
+			1b00: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x470
+    1b04:	94000000 	bl	0 <seq_printf>
+			1b04: R_AARCH64_CALL26	seq_printf
+
+	if (chip->dbg_show)
+    1b08:	f9403a62 	ldr	x2, [x19,#112]
+    1b0c:	b5fffd82 	cbnz	x2, 1abc <gpiolib_seq_show+0xc0>
+	unsigned		gpio = gdev->base;
+	struct gpio_desc	*gdesc = &gdev->descs[0];
+	int			is_out;
+	int			is_irq;
+
+	for (i = 0; i < gdev->ngpio; i++, gpio++, gdesc++) {
+    1b10:	7946aac0 	ldrh	w0, [x22,#852]
+    1b14:	52800015 	mov	w21, #0x0                   	// #0
+#ifdef CONFIG_DEBUG_FS
+
+static void gpiolib_dbg_show(struct seq_file *s, struct gpio_device *gdev)
+{
+	unsigned		i;
+	struct gpio_chip	*chip = gdev->chip;
+    1b18:	f941a2d9 	ldr	x25, [x22,#832]
+	unsigned		gpio = gdev->base;
+    1b1c:	b94352d7 	ldr	w23, [x22,#848]
+	struct gpio_desc	*gdesc = &gdev->descs[0];
+    1b20:	f941a6d3 	ldr	x19, [x22,#840]
+	int			is_out;
+	int			is_irq;
+
+	for (i = 0; i < gdev->ngpio; i++, gpio++, gdesc++) {
+    1b24:	34fffd20 	cbz	w0, 1ac8 <gpiolib_seq_show+0xcc>
+		if (!test_bit(FLAG_REQUESTED, &gdesc->flags)) {
+			if (gdesc->name) {
+				seq_printf(s, " gpio-%-3d (%-20.20s)\n",
+    1b28:	90000018 	adrp	x24, 0 <desc_to_gpio>
+			1b28: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x478
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1b2c:	9000001b 	adrp	x27, 0 <desc_to_gpio>
+			1b2c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x490
+			is_out ? "out" : "in ",
+			chip->get
+				? (chip->get(chip, i) ? "hi" : "lo")
+				: "?  ",
+			is_irq ? "IRQ" : "   ");
+		seq_printf(s, "\n");
+    1b30:	9000001a 	adrp	x26, 0 <desc_to_gpio>
+			1b30: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8
+	int			is_irq;
+
+	for (i = 0; i < gdev->ngpio; i++, gpio++, gdesc++) {
+		if (!test_bit(FLAG_REQUESTED, &gdesc->flags)) {
+			if (gdesc->name) {
+				seq_printf(s, " gpio-%-3d (%-20.20s)\n",
+    1b34:	91000318 	add	x24, x24, #0x0
+			1b34: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x478
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1b38:	9100037b 	add	x27, x27, #0x0
+			1b38: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x490
+			is_out ? "out" : "in ",
+			chip->get
+				? (chip->get(chip, i) ? "hi" : "lo")
+				: "?  ",
+			is_irq ? "IRQ" : "   ");
+		seq_printf(s, "\n");
+    1b3c:	9100035a 	add	x26, x26, #0x0
+			1b3c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8
+    1b40:	1400000b 	b	1b6c <gpiolib_seq_show+0x170>
+	int			is_out;
+	int			is_irq;
+
+	for (i = 0; i < gdev->ngpio; i++, gpio++, gdesc++) {
+		if (!test_bit(FLAG_REQUESTED, &gdesc->flags)) {
+			if (gdesc->name) {
+    1b44:	f9400e63 	ldr	x3, [x19,#24]
+    1b48:	b40000a3 	cbz	x3, 1b5c <gpiolib_seq_show+0x160>
+				seq_printf(s, " gpio-%-3d (%-20.20s)\n",
+    1b4c:	aa1403e0 	mov	x0, x20
+    1b50:	aa1803e1 	mov	x1, x24
+    1b54:	94000000 	bl	0 <seq_printf>
+			1b54: R_AARCH64_CALL26	seq_printf
+    1b58:	7946aac0 	ldrh	w0, [x22,#852]
+	unsigned		gpio = gdev->base;
+	struct gpio_desc	*gdesc = &gdev->descs[0];
+	int			is_out;
+	int			is_irq;
+
+	for (i = 0; i < gdev->ngpio; i++, gpio++, gdesc++) {
+    1b5c:	110006b5 	add	w21, w21, #0x1
+    1b60:	91008273 	add	x19, x19, #0x20
+    1b64:	6b0002bf 	cmp	w21, w0
+    1b68:	54fffb02 	b.cs	1ac8 <gpiolib_seq_show+0xcc>
+    1b6c:	f9400663 	ldr	x3, [x19,#8]
+    1b70:	0b1502e2 	add	w2, w23, w21
+		if (!test_bit(FLAG_REQUESTED, &gdesc->flags)) {
+    1b74:	3607fe83 	tbz	w3, #0, 1b44 <gpiolib_seq_show+0x148>
+					   gpio, gdesc->name);
+			}
+			continue;
+		}
+
+		gpiod_get_direction(gdesc);
+    1b78:	aa1303e0 	mov	x0, x19
+    1b7c:	b9007fa2 	str	w2, [x29,#124]
+    1b80:	94000000 	bl	288 <gpiod_get_direction>
+			1b80: R_AARCH64_CALL26	gpiod_get_direction
+    1b84:	f9400660 	ldr	x0, [x19,#8]
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+			gpio, gdesc->name ? gdesc->name : "", gdesc->label,
+    1b88:	f9400e63 	ldr	x3, [x19,#24]
+    1b8c:	f940067c 	ldr	x28, [x19,#8]
+    1b90:	927f0000 	and	x0, x0, #0x2
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1b94:	b9407fa2 	ldr	w2, [x29,#124]
+    1b98:	9277039c 	and	x28, x28, #0x200
+    1b9c:	b4000843 	cbz	x3, 1ca4 <gpiolib_seq_show+0x2a8>
+    1ba0:	f9400a64 	ldr	x4, [x19,#16]
+    1ba4:	b50003c0 	cbnz	x0, 1c1c <gpiolib_seq_show+0x220>
+			gpio, gdesc->name ? gdesc->name : "", gdesc->label,
+			is_out ? "out" : "in ",
+			chip->get
+    1ba8:	f9402726 	ldr	x6, [x25,#72]
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1bac:	90000005 	adrp	x5, 0 <desc_to_gpio>
+			1bac: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3e8
+    1bb0:	910000a5 	add	x5, x5, #0x0
+			1bb0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3e8
+    1bb4:	b40003c6 	cbz	x6, 1c2c <gpiolib_seq_show+0x230>
+			gpio, gdesc->name ? gdesc->name : "", gdesc->label,
+			is_out ? "out" : "in ",
+			chip->get
+				? (chip->get(chip, i) ? "hi" : "lo")
+    1bb8:	2a1503e1 	mov	w1, w21
+    1bbc:	aa1903e0 	mov	x0, x25
+    1bc0:	f90033a5 	str	x5, [x29,#96]
+    1bc4:	f90037a4 	str	x4, [x29,#104]
+    1bc8:	f9003ba3 	str	x3, [x29,#112]
+    1bcc:	b9007fa2 	str	w2, [x29,#124]
+    1bd0:	d63f00c0 	blr	x6
+    1bd4:	b9407fa2 	ldr	w2, [x29,#124]
+    1bd8:	f9403ba3 	ldr	x3, [x29,#112]
+    1bdc:	f94037a4 	ldr	x4, [x29,#104]
+    1be0:	f94033a5 	ldr	x5, [x29,#96]
+    1be4:	35000300 	cbnz	w0, 1c44 <gpiolib_seq_show+0x248>
+    1be8:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			1be8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3f8
+    1bec:	910000c6 	add	x6, x6, #0x0
+			1bec: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3f8
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1bf0:	b500025c 	cbnz	x28, 1c38 <gpiolib_seq_show+0x23c>
+    1bf4:	90000007 	adrp	x7, 0 <desc_to_gpio>
+			1bf4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x410
+    1bf8:	910000e7 	add	x7, x7, #0x0
+			1bf8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x410
+    1bfc:	aa1b03e1 	mov	x1, x27
+    1c00:	aa1403e0 	mov	x0, x20
+    1c04:	94000000 	bl	0 <seq_printf>
+			1c04: R_AARCH64_CALL26	seq_printf
+			is_out ? "out" : "in ",
+			chip->get
+				? (chip->get(chip, i) ? "hi" : "lo")
+				: "?  ",
+			is_irq ? "IRQ" : "   ");
+		seq_printf(s, "\n");
+    1c08:	aa1403e0 	mov	x0, x20
+    1c0c:	aa1a03e1 	mov	x1, x26
+    1c10:	94000000 	bl	0 <seq_printf>
+			1c10: R_AARCH64_CALL26	seq_printf
+    1c14:	7946aac0 	ldrh	w0, [x22,#852]
+    1c18:	17ffffd1 	b	1b5c <gpiolib_seq_show+0x160>
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+			gpio, gdesc->name ? gdesc->name : "", gdesc->label,
+			is_out ? "out" : "in ",
+			chip->get
+    1c1c:	f9402726 	ldr	x6, [x25,#72]
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1c20:	90000005 	adrp	x5, 0 <desc_to_gpio>
+			1c20: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3e0
+    1c24:	910000a5 	add	x5, x5, #0x0
+			1c24: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3e0
+    1c28:	b5fffc86 	cbnz	x6, 1bb8 <gpiolib_seq_show+0x1bc>
+    1c2c:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			1c2c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3f0
+    1c30:	910000c6 	add	x6, x6, #0x0
+			1c30: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3f0
+    1c34:	b4fffe1c 	cbz	x28, 1bf4 <gpiolib_seq_show+0x1f8>
+    1c38:	90000007 	adrp	x7, 0 <desc_to_gpio>
+			1c38: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x408
+    1c3c:	910000e7 	add	x7, x7, #0x0
+			1c3c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x408
+    1c40:	17ffffef 	b	1bfc <gpiolib_seq_show+0x200>
+			gpio, gdesc->name ? gdesc->name : "", gdesc->label,
+			is_out ? "out" : "in ",
+			chip->get
+				? (chip->get(chip, i) ? "hi" : "lo")
+    1c44:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			1c44: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x400
+    1c48:	910000c6 	add	x6, x6, #0x0
+			1c48: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x400
+    1c4c:	17ffffe9 	b	1bf0 <gpiolib_seq_show+0x1f4>
+    1c50:	b4000303 	cbz	x3, 1cb0 <gpiolib_seq_show+0x2b4>
+	struct gpio_device *gdev = v;
+	struct gpio_chip *chip = gdev->chip;
+	struct device *parent;
+
+	if (!chip) {
+		seq_printf(s, "%s%s: (dangling chip)", (char *)s->private,
+    1c54:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1c54: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x418
+    1c58:	aa1403e0 	mov	x0, x20
+    1c5c:	91000021 	add	x1, x1, #0x0
+			1c5c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x418
+    1c60:	94000000 	bl	0 <seq_printf>
+			1c60: R_AARCH64_CALL26	seq_printf
+		chip->dbg_show(s, chip);
+	else
+		gpiolib_dbg_show(s, gdev);
+
+	return 0;
+}
+    1c64:	52800000 	mov	w0, #0x0                   	// #0
+    1c68:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1c6c:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    1c70:	a94363f7 	ldp	x23, x24, [sp,#48]
+    1c74:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    1c78:	a94573fb 	ldp	x27, x28, [sp,#80]
+    1c7c:	a8c87bfd 	ldp	x29, x30, [sp],#128
+    1c80:	d65f03c0 	ret
+    1c84:	f9400c23 	ldr	x3, [x1,#24]
+    1c88:	17ffff6b 	b	1a34 <gpiolib_seq_show+0x38>
+    1c8c:	f9402803 	ldr	x3, [x0,#80]
+	seq_printf(s, "%s%s: GPIOs %d-%d", (char *)s->private,
+		   dev_name(&gdev->dev),
+		   gdev->base, gdev->base + gdev->ngpio - 1);
+	parent = chip->parent;
+	if (parent)
+		seq_printf(s, ", parent: %s/%s",
+    1c90:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			1c90: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3d8
+    1c94:	91000042 	add	x2, x2, #0x0
+			1c94: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3d8
+    1c98:	b5ffeee3 	cbnz	x3, 1a74 <gpiolib_seq_show+0x78>
+    1c9c:	f9400803 	ldr	x3, [x0,#16]
+    1ca0:	17ffff75 	b	1a74 <gpiolib_seq_show+0x78>
+		}
+
+		gpiod_get_direction(gdesc);
+		is_out = test_bit(FLAG_IS_OUT, &gdesc->flags);
+		is_irq = test_bit(FLAG_USED_AS_IRQ, &gdesc->flags);
+		seq_printf(s, " gpio-%-3d (%-20.20s|%-20.20s) %s %s %s",
+    1ca4:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			1ca4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x8
+    1ca8:	91000063 	add	x3, x3, #0x0
+			1ca8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x8
+    1cac:	17ffffbd 	b	1ba0 <gpiolib_seq_show+0x1a4>
+    1cb0:	f9400c23 	ldr	x3, [x1,#24]
+    1cb4:	17ffffe8 	b	1c54 <gpiolib_seq_show+0x258>
+
+0000000000001cb8 <gpiochip_line_is_irq>:
+}
+EXPORT_SYMBOL_GPL(gpiochip_unlock_as_irq);
+
+bool gpiochip_line_is_irq(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1cb8:	7940f803 	ldrh	w3, [x0,#124]
+		return false;
+    1cbc:	52800002 	mov	w2, #0x0                   	// #0
+}
+EXPORT_SYMBOL_GPL(gpiochip_unlock_as_irq);
+
+bool gpiochip_line_is_irq(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1cc0:	6b01007f 	cmp	w3, w1
+    1cc4:	540000e9 	b.ls	1ce0 <gpiochip_line_is_irq+0x28>
+		return false;
+
+	return test_bit(FLAG_USED_AS_IRQ, &chip->gpiodev->descs[offset].flags);
+    1cc8:	f9400400 	ldr	x0, [x0,#8]
+    1ccc:	d37b7c21 	ubfiz	x1, x1, #5, #32
+    1cd0:	f941a400 	ldr	x0, [x0,#840]
+    1cd4:	8b010001 	add	x1, x0, x1
+    1cd8:	f9400422 	ldr	x2, [x1,#8]
+    1cdc:	d3492442 	ubfx	x2, x2, #9, #1
+}
+    1ce0:	2a0203e0 	mov	w0, w2
+    1ce4:	d65f03c0 	ret
+
+0000000000001ce8 <gpiochip_line_is_open_drain>:
+EXPORT_SYMBOL_GPL(gpiochip_line_is_irq);
+
+bool gpiochip_line_is_open_drain(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1ce8:	7940f803 	ldrh	w3, [x0,#124]
+		return false;
+    1cec:	52800002 	mov	w2, #0x0                   	// #0
+}
+EXPORT_SYMBOL_GPL(gpiochip_line_is_irq);
+
+bool gpiochip_line_is_open_drain(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1cf0:	6b01007f 	cmp	w3, w1
+    1cf4:	540000e9 	b.ls	1d10 <gpiochip_line_is_open_drain+0x28>
+		return false;
+
+	return test_bit(FLAG_OPEN_DRAIN, &chip->gpiodev->descs[offset].flags);
+    1cf8:	f9400400 	ldr	x0, [x0,#8]
+    1cfc:	d37b7c21 	ubfiz	x1, x1, #5, #32
+    1d00:	f941a400 	ldr	x0, [x0,#840]
+    1d04:	8b010001 	add	x1, x0, x1
+    1d08:	f9400422 	ldr	x2, [x1,#8]
+    1d0c:	d3471c42 	ubfx	x2, x2, #7, #1
+}
+    1d10:	2a0203e0 	mov	w0, w2
+    1d14:	d65f03c0 	ret
+
+0000000000001d18 <gpiochip_line_is_open_source>:
+EXPORT_SYMBOL_GPL(gpiochip_line_is_open_drain);
+
+bool gpiochip_line_is_open_source(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1d18:	7940f803 	ldrh	w3, [x0,#124]
+		return false;
+    1d1c:	52800002 	mov	w2, #0x0                   	// #0
+}
+EXPORT_SYMBOL_GPL(gpiochip_line_is_open_drain);
+
+bool gpiochip_line_is_open_source(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1d20:	6b01007f 	cmp	w3, w1
+    1d24:	540000e9 	b.ls	1d40 <gpiochip_line_is_open_source+0x28>
+		return false;
+
+	return test_bit(FLAG_OPEN_SOURCE, &chip->gpiodev->descs[offset].flags);
+    1d28:	f9400400 	ldr	x0, [x0,#8]
+    1d2c:	d37b7c21 	ubfiz	x1, x1, #5, #32
+    1d30:	f941a400 	ldr	x0, [x0,#840]
+    1d34:	8b010001 	add	x1, x0, x1
+    1d38:	f9400422 	ldr	x2, [x1,#8]
+    1d3c:	d3482042 	ubfx	x2, x2, #8, #1
+}
+    1d40:	2a0203e0 	mov	w0, w2
+    1d44:	d65f03c0 	ret
+
+0000000000001d48 <gpio_to_desc>:
+
+/**
+ * Convert a GPIO number to its descriptor
+ */
+struct gpio_desc *gpio_to_desc(unsigned gpio)
+{
+    1d48:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+    1d4c:	910003fd 	mov	x29, sp
+    1d50:	f90013f5 	str	x21, [sp,#32]
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1d54:	90000015 	adrp	x21, 0 <desc_to_gpio>
+			1d54: R_AARCH64_ADR_PREL_PG_HI21	.bss
+
+/**
+ * Convert a GPIO number to its descriptor
+ */
+struct gpio_desc *gpio_to_desc(unsigned gpio)
+{
+    1d58:	a90153f3 	stp	x19, x20, [sp,#16]
+    1d5c:	2a0003f4 	mov	w20, w0
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    1d60:	910002a0 	add	x0, x21, #0x0
+			1d60: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    1d64:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			1d64: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+    1d68:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			1d68: R_AARCH64_ADR_PREL_PG_HI21	.data
+    1d6c:	91000044 	add	x4, x2, #0x0
+			1d6c: R_AARCH64_ADD_ABS_LO12_NC	.data
+    1d70:	f9400053 	ldr	x19, [x2]
+			1d70: R_AARCH64_LDST64_ABS_LO12_NC	.data
+    1d74:	eb13009f 	cmp	x4, x19
+    1d78:	d10da273 	sub	x19, x19, #0x368
+    1d7c:	54000180 	b.eq	1dac <gpio_to_desc+0x64>
+		if (gdev->base <= gpio &&
+    1d80:	b9435262 	ldr	w2, [x19,#848]
+    1d84:	6b14005f 	cmp	w2, w20
+    1d88:	540000a8 	b.hi	1d9c <gpio_to_desc+0x54>
+		    gdev->base + gdev->ngpio > gpio) {
+    1d8c:	7946aa63 	ldrh	w3, [x19,#852]
+    1d90:	0b030042 	add	w2, w2, w3
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+		if (gdev->base <= gpio &&
+    1d94:	6b02029f 	cmp	w20, w2
+    1d98:	54000203 	b.cc	1dd8 <gpio_to_desc+0x90>
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+    1d9c:	f941b673 	ldr	x19, [x19,#872]
+    1da0:	eb13009f 	cmp	x4, x19
+    1da4:	d10da273 	sub	x19, x19, #0x368
+    1da8:	54fffec1 	b.ne	1d80 <gpio_to_desc+0x38>
+    1dac:	aa0003e1 	mov	x1, x0
+    1db0:	910002a0 	add	x0, x21, #0x0
+			1db0: R_AARCH64_ADD_ABS_LO12_NC	.bss
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	if (!gpio_is_valid(gpio))
+		WARN(1, "invalid GPIO %d\n", gpio);
+
+	return NULL;
+    1db4:	d2800013 	mov	x19, #0x0                   	// #0
+    1db8:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			1db8: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		}
+	}
+
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	if (!gpio_is_valid(gpio))
+    1dbc:	7107fe9f 	cmp	w20, #0x1ff
+    1dc0:	54000248 	b.hi	1e08 <gpio_to_desc+0xc0>
+		WARN(1, "invalid GPIO %d\n", gpio);
+
+	return NULL;
+}
+    1dc4:	aa1303e0 	mov	x0, x19
+    1dc8:	f94013f5 	ldr	x21, [sp,#32]
+    1dcc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1dd0:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    1dd4:	d65f03c0 	ret
+    1dd8:	aa0003e1 	mov	x1, x0
+    1ddc:	910002a0 	add	x0, x21, #0x0
+			1ddc: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    1de0:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			1de0: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+    1de4:	f94013f5 	ldr	x21, [sp,#32]
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+		if (gdev->base <= gpio &&
+		    gdev->base + gdev->ngpio > gpio) {
+			spin_unlock_irqrestore(&gpio_lock, flags);
+			return &gdev->descs[gpio - gdev->base];
+    1de8:	b9435260 	ldr	w0, [x19,#848]
+    1dec:	f941a673 	ldr	x19, [x19,#840]
+    1df0:	4b000294 	sub	w20, w20, w0
+    1df4:	8b141673 	add	x19, x19, x20, lsl #5
+
+	if (!gpio_is_valid(gpio))
+		WARN(1, "invalid GPIO %d\n", gpio);
+
+	return NULL;
+}
+    1df8:	aa1303e0 	mov	x0, x19
+    1dfc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    1e00:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    1e04:	d65f03c0 	ret
+	}
+
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	if (!gpio_is_valid(gpio))
+		WARN(1, "invalid GPIO %d\n", gpio);
+    1e08:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			1e08: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x4b8
+    1e0c:	2a1403e1 	mov	w1, w20
+    1e10:	91000000 	add	x0, x0, #0x0
+			1e10: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x4b8
+    1e14:	94000000 	bl	0 <printk>
+			1e14: R_AARCH64_CALL26	printk
+    1e18:	d4210000 	brk	#0x800
+    1e1c:	17ffffea 	b	1dc4 <gpio_to_desc+0x7c>
+
+0000000000001e20 <gpiochip_irq_relres>:
+	}
+	return 0;
+}
+
+static void gpiochip_irq_relres(struct irq_data *d)
+{
+    1e20:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    1e24:	910003fd 	mov	x29, sp
+    1e28:	f9000bf3 	str	x19, [sp,#16]
+    1e2c:	f9401813 	ldr	x19, [x0,#48]
+	struct gpio_chip *chip = irq_data_get_irq_chip_data(d);
+
+	gpiochip_unlock_as_irq(chip, d->hwirq);
+    1e30:	f9400401 	ldr	x1, [x0,#8]
+ * This is used directly by GPIO drivers that want to indicate
+ * that a certain GPIO is no longer used exclusively for IRQ.
+ */
+void gpiochip_unlock_as_irq(struct gpio_chip *chip, unsigned int offset)
+{
+	if (offset >= chip->ngpio)
+    1e34:	7940fa60 	ldrh	w0, [x19,#124]
+    1e38:	6b01001f 	cmp	w0, w1
+    1e3c:	54000109 	b.ls	1e5c <gpiochip_irq_relres+0x3c>
+		return;
+
+	clear_bit(FLAG_USED_AS_IRQ, &chip->gpiodev->descs[offset].flags);
+    1e40:	f9400662 	ldr	x2, [x19,#8]
+    1e44:	d37b7c21 	ubfiz	x1, x1, #5, #32
+    1e48:	52800120 	mov	w0, #0x9                   	// #9
+    1e4c:	f941a442 	ldr	x2, [x2,#840]
+    1e50:	8b010041 	add	x1, x2, x1
+    1e54:	91002021 	add	x1, x1, #0x8
+    1e58:	94000000 	bl	0 <clear_bit>
+			1e58: R_AARCH64_CALL26	clear_bit
+static void gpiochip_irq_relres(struct irq_data *d)
+{
+	struct gpio_chip *chip = irq_data_get_irq_chip_data(d);
+
+	gpiochip_unlock_as_irq(chip, d->hwirq);
+	module_put(chip->gpiodev->owner);
+    1e5c:	f9400660 	ldr	x0, [x19,#8]
+    1e60:	f9419c00 	ldr	x0, [x0,#824]
+    1e64:	94000000 	bl	0 <module_put>
+			1e64: R_AARCH64_CALL26	module_put
+}
+    1e68:	f9400bf3 	ldr	x19, [sp,#16]
+    1e6c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    1e70:	d65f03c0 	ret
+
+0000000000001e74 <gpiod_direction_output_raw>:
+ * as raw value on the physical line without regard for the ACTIVE_LOW status.
+ *
+ * Return 0 in case of success, else an error code.
+ */
+int gpiod_direction_output_raw(struct gpio_desc *desc, int value)
+{
+    1e74:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    1e78:	910003fd 	mov	x29, sp
+	VALIDATE_DESC(desc);
+    1e7c:	b4000240 	cbz	x0, 1ec4 <gpiod_direction_output_raw+0x50>
+    1e80:	f9400003 	ldr	x3, [x0]
+    1e84:	b4000203 	cbz	x3, 1ec4 <gpiod_direction_output_raw+0x50>
+    1e88:	f941a062 	ldr	x2, [x3,#832]
+    1e8c:	b4000082 	cbz	x2, 1e9c <gpiod_direction_output_raw+0x28>
+	return _gpiod_direction_output_raw(desc, value);
+    1e90:	97fffa21 	bl	714 <_gpiod_direction_output_raw>
+}
+    1e94:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    1e98:	d65f03c0 	ret
+ *
+ * Return 0 in case of success, else an error code.
+ */
+int gpiod_direction_output_raw(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC(desc);
+    1e9c:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			1e9c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    1ea0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1ea0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    1ea4:	91000042 	add	x2, x2, #0x0
+			1ea4: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    1ea8:	91002060 	add	x0, x3, #0x8
+    1eac:	91000021 	add	x1, x1, #0x0
+			1eac: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    1eb0:	91084042 	add	x2, x2, #0x210
+    1eb4:	94000000 	bl	0 <dev_warn>
+			1eb4: R_AARCH64_CALL26	dev_warn
+    1eb8:	52800000 	mov	w0, #0x0                   	// #0
+	return _gpiod_direction_output_raw(desc, value);
+}
+    1ebc:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    1ec0:	d65f03c0 	ret
+ *
+ * Return 0 in case of success, else an error code.
+ */
+int gpiod_direction_output_raw(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC(desc);
+    1ec4:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1ec4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    1ec8:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			1ec8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    1ecc:	91000021 	add	x1, x1, #0x0
+			1ecc: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    1ed0:	91000000 	add	x0, x0, #0x0
+			1ed0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    1ed4:	91084021 	add	x1, x1, #0x210
+    1ed8:	94000000 	bl	0 <printk>
+			1ed8: R_AARCH64_CALL26	printk
+    1edc:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    1ee0:	17ffffed 	b	1e94 <gpiod_direction_output_raw+0x20>
+
+0000000000001ee4 <gpiod_direction_output>:
+ * account.
+ *
+ * Return 0 in case of success, else an error code.
+ */
+int gpiod_direction_output(struct gpio_desc *desc, int value)
+{
+    1ee4:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    1ee8:	910003fd 	mov	x29, sp
+	VALIDATE_DESC(desc);
+    1eec:	b40002c0 	cbz	x0, 1f44 <gpiod_direction_output+0x60>
+    1ef0:	f9400003 	ldr	x3, [x0]
+    1ef4:	b4000283 	cbz	x3, 1f44 <gpiod_direction_output+0x60>
+    1ef8:	f941a062 	ldr	x2, [x3,#832]
+    1efc:	b4000122 	cbz	x2, 1f20 <gpiod_direction_output+0x3c>
+    1f00:	f9400402 	ldr	x2, [x0,#8]
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+    1f04:	37300082 	tbnz	w2, #6, 1f14 <gpiod_direction_output+0x30>
+		value = !value;
+	return _gpiod_direction_output_raw(desc, value);
+    1f08:	97fffa03 	bl	714 <_gpiod_direction_output_raw>
+}
+    1f0c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    1f10:	d65f03c0 	ret
+ */
+int gpiod_direction_output(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC(desc);
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+		value = !value;
+    1f14:	6b1f003f 	cmp	w1, wzr
+    1f18:	1a9f17e1 	cset	w1, eq
+    1f1c:	17fffffb 	b	1f08 <gpiod_direction_output+0x24>
+ *
+ * Return 0 in case of success, else an error code.
+ */
+int gpiod_direction_output(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC(desc);
+    1f20:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			1f20: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    1f24:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1f24: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    1f28:	91000042 	add	x2, x2, #0x0
+			1f28: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    1f2c:	91002060 	add	x0, x3, #0x8
+    1f30:	91000021 	add	x1, x1, #0x0
+			1f30: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    1f34:	9108c042 	add	x2, x2, #0x230
+    1f38:	94000000 	bl	0 <dev_warn>
+			1f38: R_AARCH64_CALL26	dev_warn
+    1f3c:	52800000 	mov	w0, #0x0                   	// #0
+    1f40:	17fffff3 	b	1f0c <gpiod_direction_output+0x28>
+    1f44:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1f44: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    1f48:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			1f48: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    1f4c:	91000021 	add	x1, x1, #0x0
+			1f4c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    1f50:	91000000 	add	x0, x0, #0x0
+			1f50: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    1f54:	9108c021 	add	x1, x1, #0x230
+    1f58:	94000000 	bl	0 <printk>
+			1f58: R_AARCH64_CALL26	printk
+    1f5c:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    1f60:	17ffffeb 	b	1f0c <gpiod_direction_output+0x28>
+
+0000000000001f64 <gpiod_is_active_low>:
+ * @desc: the gpio descriptor to test
+ *
+ * Returns 1 if the GPIO is active-low, 0 otherwise.
+ */
+int gpiod_is_active_low(const struct gpio_desc *desc)
+{
+    1f64:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    1f68:	910003fd 	mov	x29, sp
+	VALIDATE_DESC(desc);
+    1f6c:	b4000240 	cbz	x0, 1fb4 <gpiod_is_active_low+0x50>
+    1f70:	f9400003 	ldr	x3, [x0]
+    1f74:	b4000203 	cbz	x3, 1fb4 <gpiod_is_active_low+0x50>
+    1f78:	f941a061 	ldr	x1, [x3,#832]
+    1f7c:	b40000a1 	cbz	x1, 1f90 <gpiod_is_active_low+0x2c>
+    1f80:	f9400400 	ldr	x0, [x0,#8]
+    1f84:	d3461800 	ubfx	x0, x0, #6, #1
+	return test_bit(FLAG_ACTIVE_LOW, &desc->flags);
+}
+    1f88:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    1f8c:	d65f03c0 	ret
+ *
+ * Returns 1 if the GPIO is active-low, 0 otherwise.
+ */
+int gpiod_is_active_low(const struct gpio_desc *desc)
+{
+	VALIDATE_DESC(desc);
+    1f90:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			1f90: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    1f94:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1f94: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    1f98:	91000042 	add	x2, x2, #0x0
+			1f98: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    1f9c:	91002060 	add	x0, x3, #0x8
+    1fa0:	91000021 	add	x1, x1, #0x0
+			1fa0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    1fa4:	91092042 	add	x2, x2, #0x248
+    1fa8:	94000000 	bl	0 <dev_warn>
+			1fa8: R_AARCH64_CALL26	dev_warn
+    1fac:	52800000 	mov	w0, #0x0                   	// #0
+    1fb0:	17fffff6 	b	1f88 <gpiod_is_active_low+0x24>
+    1fb4:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			1fb4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    1fb8:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			1fb8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    1fbc:	91000021 	add	x1, x1, #0x0
+			1fbc: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    1fc0:	91000000 	add	x0, x0, #0x0
+			1fc0: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    1fc4:	91092021 	add	x1, x1, #0x248
+    1fc8:	94000000 	bl	0 <printk>
+			1fc8: R_AARCH64_CALL26	printk
+    1fcc:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    1fd0:	17ffffee 	b	1f88 <gpiod_is_active_low+0x24>
+
+0000000000001fd4 <gpiod_get_raw_value>:
+ *
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+int gpiod_get_raw_value(const struct gpio_desc *desc)
+{
+    1fd4:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    1fd8:	910003fd 	mov	x29, sp
+	VALIDATE_DESC(desc);
+    1fdc:	b40002a0 	cbz	x0, 2030 <gpiod_get_raw_value+0x5c>
+    1fe0:	f9400003 	ldr	x3, [x0]
+    1fe4:	b4000263 	cbz	x3, 2030 <gpiod_get_raw_value+0x5c>
+    1fe8:	f941a061 	ldr	x1, [x3,#832]
+    1fec:	b4000101 	cbz	x1, 200c <gpiod_get_raw_value+0x38>
+	/* Should be using gpio_get_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+    1ff0:	39422021 	ldrb	w1, [x1,#136]
+    1ff4:	35000081 	cbnz	w1, 2004 <gpiod_get_raw_value+0x30>
+	return _gpiod_get_raw_value(desc);
+    1ff8:	97fff820 	bl	78 <_gpiod_get_raw_value>
+}
+    1ffc:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2000:	d65f03c0 	ret
+ */
+int gpiod_get_raw_value(const struct gpio_desc *desc)
+{
+	VALIDATE_DESC(desc);
+	/* Should be using gpio_get_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+    2004:	d4210000 	brk	#0x800
+    2008:	17fffffc 	b	1ff8 <gpiod_get_raw_value+0x24>
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+int gpiod_get_raw_value(const struct gpio_desc *desc)
+{
+	VALIDATE_DESC(desc);
+    200c:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			200c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2010:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2010: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2014:	91000042 	add	x2, x2, #0x0
+			2014: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2018:	91002060 	add	x0, x3, #0x8
+    201c:	91000021 	add	x1, x1, #0x0
+			201c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2020:	91098042 	add	x2, x2, #0x260
+    2024:	94000000 	bl	0 <dev_warn>
+			2024: R_AARCH64_CALL26	dev_warn
+    2028:	52800000 	mov	w0, #0x0                   	// #0
+    202c:	17fffff4 	b	1ffc <gpiod_get_raw_value+0x28>
+    2030:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2030: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2034:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2034: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    2038:	91000021 	add	x1, x1, #0x0
+			2038: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    203c:	91000000 	add	x0, x0, #0x0
+			203c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    2040:	91098021 	add	x1, x1, #0x260
+    2044:	94000000 	bl	0 <printk>
+			2044: R_AARCH64_CALL26	printk
+    2048:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    204c:	17ffffec 	b	1ffc <gpiod_get_raw_value+0x28>
+
+0000000000002050 <gpiod_set_raw_value>:
+ *
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+void gpiod_set_raw_value(struct gpio_desc *desc, int value)
+{
+    2050:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    2054:	910003fd 	mov	x29, sp
+	VALIDATE_DESC_VOID(desc);
+    2058:	b40002c0 	cbz	x0, 20b0 <gpiod_set_raw_value+0x60>
+    205c:	f9400003 	ldr	x3, [x0]
+    2060:	b4000283 	cbz	x3, 20b0 <gpiod_set_raw_value+0x60>
+    2064:	f941a062 	ldr	x2, [x3,#832]
+    2068:	b4000142 	cbz	x2, 2090 <gpiod_set_raw_value+0x40>
+	/* Should be using gpio_set_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+    206c:	39422042 	ldrb	w2, [x2,#136]
+    2070:	350000c2 	cbnz	w2, 2088 <gpiod_set_raw_value+0x38>
+	_gpiod_set_raw_value(desc, value);
+    2074:	6b1f003f 	cmp	w1, wzr
+    2078:	1a9f07e1 	cset	w1, ne
+    207c:	97fff913 	bl	4c8 <_gpiod_set_raw_value>
+}
+    2080:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2084:	d65f03c0 	ret
+ */
+void gpiod_set_raw_value(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC_VOID(desc);
+	/* Should be using gpio_set_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+    2088:	d4210000 	brk	#0x800
+    208c:	17fffffa 	b	2074 <gpiod_set_raw_value+0x24>
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+void gpiod_set_raw_value(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC_VOID(desc);
+    2090:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2090: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2094:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2094: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2098:	91000042 	add	x2, x2, #0x0
+			2098: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    209c:	91000021 	add	x1, x1, #0x0
+			209c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    20a0:	9109e042 	add	x2, x2, #0x278
+    20a4:	91002060 	add	x0, x3, #0x8
+    20a8:	94000000 	bl	0 <dev_warn>
+			20a8: R_AARCH64_CALL26	dev_warn
+    20ac:	17fffff5 	b	2080 <gpiod_set_raw_value+0x30>
+    20b0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			20b0: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    20b4:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			20b4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    20b8:	91000021 	add	x1, x1, #0x0
+			20b8: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    20bc:	91000000 	add	x0, x0, #0x0
+			20bc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    20c0:	9109e021 	add	x1, x1, #0x278
+    20c4:	94000000 	bl	0 <printk>
+			20c4: R_AARCH64_CALL26	printk
+    20c8:	17ffffee 	b	2080 <gpiod_set_raw_value+0x30>
+
+00000000000020cc <gpiod_set_value>:
+ *
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+void gpiod_set_value(struct gpio_desc *desc, int value)
+{
+    20cc:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    20d0:	910003fd 	mov	x29, sp
+	VALIDATE_DESC_VOID(desc);
+    20d4:	b4000360 	cbz	x0, 2140 <gpiod_set_value+0x74>
+    20d8:	f9400003 	ldr	x3, [x0]
+    20dc:	b4000323 	cbz	x3, 2140 <gpiod_set_value+0x74>
+    20e0:	f941a062 	ldr	x2, [x3,#832]
+    20e4:	b40001e2 	cbz	x2, 2120 <gpiod_set_value+0x54>
+	/* Should be using gpio_set_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+    20e8:	39422042 	ldrb	w2, [x2,#136]
+    20ec:	35000162 	cbnz	w2, 2118 <gpiod_set_value+0x4c>
+    20f0:	f9400402 	ldr	x2, [x0,#8]
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+    20f4:	373000c2 	tbnz	w2, #6, 210c <gpiod_set_value+0x40>
+		value = !value;
+	_gpiod_set_raw_value(desc, value);
+    20f8:	6b1f003f 	cmp	w1, wzr
+    20fc:	1a9f07e1 	cset	w1, ne
+    2100:	97fff8f2 	bl	4c8 <_gpiod_set_raw_value>
+}
+    2104:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2108:	d65f03c0 	ret
+{
+	VALIDATE_DESC_VOID(desc);
+	/* Should be using gpio_set_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+		value = !value;
+    210c:	6b1f003f 	cmp	w1, wzr
+    2110:	1a9f17e1 	cset	w1, eq
+    2114:	17fffff9 	b	20f8 <gpiod_set_value+0x2c>
+ */
+void gpiod_set_value(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC_VOID(desc);
+	/* Should be using gpio_set_value_cansleep() */
+	WARN_ON(desc->gdev->chip->can_sleep);
+    2118:	d4210000 	brk	#0x800
+    211c:	17fffff5 	b	20f0 <gpiod_set_value+0x24>
+ * This function should be called from contexts where we cannot sleep, and will
+ * complain if the GPIO chip functions potentially sleep.
+ */
+void gpiod_set_value(struct gpio_desc *desc, int value)
+{
+	VALIDATE_DESC_VOID(desc);
+    2120:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2120: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2124:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2124: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2128:	91000042 	add	x2, x2, #0x0
+			2128: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    212c:	91000021 	add	x1, x1, #0x0
+			212c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2130:	910a4042 	add	x2, x2, #0x290
+    2134:	91002060 	add	x0, x3, #0x8
+    2138:	94000000 	bl	0 <dev_warn>
+			2138: R_AARCH64_CALL26	dev_warn
+    213c:	17fffff2 	b	2104 <gpiod_set_value+0x38>
+    2140:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2140: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2144:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2144: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    2148:	91000021 	add	x1, x1, #0x0
+			2148: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    214c:	91000000 	add	x0, x0, #0x0
+			214c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    2150:	910a4021 	add	x1, x1, #0x290
+    2154:	94000000 	bl	0 <printk>
+			2154: R_AARCH64_CALL26	printk
+    2158:	17ffffeb 	b	2104 <gpiod_set_value+0x38>
+
+000000000000215c <gpiod_cansleep>:
+ * gpiod_cansleep() - report whether gpio value access may sleep
+ * @desc: gpio to check
+ *
+ */
+int gpiod_cansleep(const struct gpio_desc *desc)
+{
+    215c:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    2160:	910003fd 	mov	x29, sp
+	VALIDATE_DESC(desc);
+    2164:	b4000220 	cbz	x0, 21a8 <gpiod_cansleep+0x4c>
+    2168:	f9400000 	ldr	x0, [x0]
+    216c:	b40001e0 	cbz	x0, 21a8 <gpiod_cansleep+0x4c>
+    2170:	f941a001 	ldr	x1, [x0,#832]
+    2174:	b4000081 	cbz	x1, 2184 <gpiod_cansleep+0x28>
+	return desc->gdev->chip->can_sleep;
+    2178:	39422020 	ldrb	w0, [x1,#136]
+}
+    217c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2180:	d65f03c0 	ret
+ * @desc: gpio to check
+ *
+ */
+int gpiod_cansleep(const struct gpio_desc *desc)
+{
+	VALIDATE_DESC(desc);
+    2184:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2184: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2188:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2188: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    218c:	91000042 	add	x2, x2, #0x0
+			218c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2190:	91002000 	add	x0, x0, #0x8
+    2194:	91000021 	add	x1, x1, #0x0
+			2194: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2198:	910a8042 	add	x2, x2, #0x2a0
+    219c:	94000000 	bl	0 <dev_warn>
+			219c: R_AARCH64_CALL26	dev_warn
+    21a0:	52800000 	mov	w0, #0x0                   	// #0
+    21a4:	17fffff6 	b	217c <gpiod_cansleep+0x20>
+    21a8:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			21a8: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    21ac:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			21ac: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    21b0:	91000021 	add	x1, x1, #0x0
+			21b0: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    21b4:	91000000 	add	x0, x0, #0x0
+			21b4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    21b8:	910a8021 	add	x1, x1, #0x2a0
+    21bc:	94000000 	bl	0 <printk>
+			21bc: R_AARCH64_CALL26	printk
+    21c0:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    21c4:	17ffffee 	b	217c <gpiod_cansleep+0x20>
+
+00000000000021c8 <gpiod_to_irq>:
+ *
+ * Return the IRQ corresponding to the passed GPIO, or an error code in case of
+ * error.
+ */
+int gpiod_to_irq(const struct gpio_desc *desc)
+{
+    21c8:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    21cc:	910003fd 	mov	x29, sp
+	struct gpio_chip	*chip;
+	int			offset;
+
+	VALIDATE_DESC(desc);
+    21d0:	b4000340 	cbz	x0, 2238 <gpiod_to_irq+0x70>
+    21d4:	f9400003 	ldr	x3, [x0]
+    21d8:	b4000303 	cbz	x3, 2238 <gpiod_to_irq+0x70>
+    21dc:	f941a062 	ldr	x2, [x3,#832]
+    21e0:	b40001a2 	cbz	x2, 2214 <gpiod_to_irq+0x4c>
+	chip = desc->gdev->chip;
+	offset = gpio_chip_hwgpio(desc);
+	return chip->to_irq ? chip->to_irq(chip, offset) : -ENXIO;
+    21e4:	f9403444 	ldr	x4, [x2,#104]
+    21e8:	f941a461 	ldr	x1, [x3,#840]
+    21ec:	b40000e4 	cbz	x4, 2208 <gpiod_to_irq+0x40>
+    21f0:	cb010001 	sub	x1, x0, x1
+    21f4:	aa0203e0 	mov	x0, x2
+    21f8:	d345fc21 	lsr	x1, x1, #5
+    21fc:	d63f0080 	blr	x4
+}
+    2200:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2204:	d65f03c0 	ret
+	int			offset;
+
+	VALIDATE_DESC(desc);
+	chip = desc->gdev->chip;
+	offset = gpio_chip_hwgpio(desc);
+	return chip->to_irq ? chip->to_irq(chip, offset) : -ENXIO;
+    2208:	128000a0 	mov	w0, #0xfffffffa            	// #-6
+}
+    220c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2210:	d65f03c0 	ret
+int gpiod_to_irq(const struct gpio_desc *desc)
+{
+	struct gpio_chip	*chip;
+	int			offset;
+
+	VALIDATE_DESC(desc);
+    2214:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2214: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2218:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2218: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    221c:	91000042 	add	x2, x2, #0x0
+			221c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2220:	91002060 	add	x0, x3, #0x8
+    2224:	91000021 	add	x1, x1, #0x0
+			2224: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2228:	910ac042 	add	x2, x2, #0x2b0
+    222c:	94000000 	bl	0 <dev_warn>
+			222c: R_AARCH64_CALL26	dev_warn
+    2230:	52800000 	mov	w0, #0x0                   	// #0
+    2234:	17fffff3 	b	2200 <gpiod_to_irq+0x38>
+    2238:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2238: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    223c:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			223c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    2240:	91000021 	add	x1, x1, #0x0
+			2240: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2244:	91000000 	add	x0, x0, #0x0
+			2244: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    2248:	910ac021 	add	x1, x1, #0x2b0
+    224c:	94000000 	bl	0 <printk>
+			224c: R_AARCH64_CALL26	printk
+    2250:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    2254:	17ffffeb 	b	2200 <gpiod_to_irq+0x38>
+
+0000000000002258 <gpiod_get_raw_value_cansleep>:
+ * its ACTIVE_LOW status, or negative errno on failure.
+ *
+ * This function is to be called from contexts that can sleep.
+ */
+int gpiod_get_raw_value_cansleep(const struct gpio_desc *desc)
+{
+    2258:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    225c:	910003fd 	mov	x29, sp
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    2260:	b4000240 	cbz	x0, 22a8 <gpiod_get_raw_value_cansleep+0x50>
+    2264:	f9400003 	ldr	x3, [x0]
+    2268:	b4000203 	cbz	x3, 22a8 <gpiod_get_raw_value_cansleep+0x50>
+    226c:	f941a061 	ldr	x1, [x3,#832]
+    2270:	b4000081 	cbz	x1, 2280 <gpiod_get_raw_value_cansleep+0x28>
+	return _gpiod_get_raw_value(desc);
+    2274:	97fff781 	bl	78 <_gpiod_get_raw_value>
+}
+    2278:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    227c:	d65f03c0 	ret
+ * This function is to be called from contexts that can sleep.
+ */
+int gpiod_get_raw_value_cansleep(const struct gpio_desc *desc)
+{
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    2280:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2280: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2284:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2284: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2288:	91000042 	add	x2, x2, #0x0
+			2288: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    228c:	91002060 	add	x0, x3, #0x8
+    2290:	91000021 	add	x1, x1, #0x0
+			2290: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2294:	910b0042 	add	x2, x2, #0x2c0
+    2298:	94000000 	bl	0 <dev_warn>
+			2298: R_AARCH64_CALL26	dev_warn
+    229c:	52800000 	mov	w0, #0x0                   	// #0
+	return _gpiod_get_raw_value(desc);
+}
+    22a0:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    22a4:	d65f03c0 	ret
+ * This function is to be called from contexts that can sleep.
+ */
+int gpiod_get_raw_value_cansleep(const struct gpio_desc *desc)
+{
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    22a8:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			22a8: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    22ac:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			22ac: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    22b0:	91000021 	add	x1, x1, #0x0
+			22b0: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    22b4:	91000000 	add	x0, x0, #0x0
+			22b4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    22b8:	910b0021 	add	x1, x1, #0x2c0
+    22bc:	94000000 	bl	0 <printk>
+			22bc: R_AARCH64_CALL26	printk
+    22c0:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    22c4:	17ffffed 	b	2278 <gpiod_get_raw_value_cansleep+0x20>
+
+00000000000022c8 <gpiod_get_value_cansleep>:
+ * account, or negative errno on failure.
+ *
+ * This function is to be called from contexts that can sleep.
+ */
+int gpiod_get_value_cansleep(const struct gpio_desc *desc)
+{
+    22c8:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    22cc:	910003fd 	mov	x29, sp
+    22d0:	f9000bf3 	str	x19, [sp,#16]
+    22d4:	aa0003f3 	mov	x19, x0
+	int value;
+
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    22d8:	b4000320 	cbz	x0, 233c <gpiod_get_value_cansleep+0x74>
+    22dc:	f9400003 	ldr	x3, [x0]
+    22e0:	b40002e3 	cbz	x3, 233c <gpiod_get_value_cansleep+0x74>
+    22e4:	f941a061 	ldr	x1, [x3,#832]
+    22e8:	b4000141 	cbz	x1, 2310 <gpiod_get_value_cansleep+0x48>
+	value = _gpiod_get_raw_value(desc);
+    22ec:	97fff763 	bl	78 <_gpiod_get_raw_value>
+	if (value < 0)
+    22f0:	37f800a0 	tbnz	w0, #31, 2304 <gpiod_get_value_cansleep+0x3c>
+    22f4:	f9400661 	ldr	x1, [x19,#8]
+		return value;
+
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+    22f8:	36300061 	tbz	w1, #6, 2304 <gpiod_get_value_cansleep+0x3c>
+		value = !value;
+    22fc:	6b1f001f 	cmp	w0, wzr
+    2300:	1a9f17e0 	cset	w0, eq
+
+	return value;
+}
+    2304:	f9400bf3 	ldr	x19, [sp,#16]
+    2308:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    230c:	d65f03c0 	ret
+int gpiod_get_value_cansleep(const struct gpio_desc *desc)
+{
+	int value;
+
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    2310:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2310: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2314:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2314: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2318:	91000042 	add	x2, x2, #0x0
+			2318: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    231c:	91002060 	add	x0, x3, #0x8
+    2320:	91000021 	add	x1, x1, #0x0
+			2320: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2324:	910b8042 	add	x2, x2, #0x2e0
+    2328:	94000000 	bl	0 <dev_warn>
+			2328: R_AARCH64_CALL26	dev_warn
+
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+		value = !value;
+
+	return value;
+}
+    232c:	f9400bf3 	ldr	x19, [sp,#16]
+int gpiod_get_value_cansleep(const struct gpio_desc *desc)
+{
+	int value;
+
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    2330:	52800000 	mov	w0, #0x0                   	// #0
+
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+		value = !value;
+
+	return value;
+}
+    2334:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    2338:	d65f03c0 	ret
+int gpiod_get_value_cansleep(const struct gpio_desc *desc)
+{
+	int value;
+
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC(desc);
+    233c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			233c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2340:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2340: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    2344:	91000021 	add	x1, x1, #0x0
+			2344: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2348:	91000000 	add	x0, x0, #0x0
+			2348: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    234c:	910b8021 	add	x1, x1, #0x2e0
+    2350:	94000000 	bl	0 <printk>
+			2350: R_AARCH64_CALL26	printk
+    2354:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    2358:	17ffffeb 	b	2304 <gpiod_get_value_cansleep+0x3c>
+
+000000000000235c <gpiod_set_raw_value_cansleep>:
+ * regard for its ACTIVE_LOW status.
+ *
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_raw_value_cansleep(struct gpio_desc *desc, int value)
+{
+    235c:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    2360:	910003fd 	mov	x29, sp
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC_VOID(desc);
+    2364:	b4000260 	cbz	x0, 23b0 <gpiod_set_raw_value_cansleep+0x54>
+    2368:	f9400003 	ldr	x3, [x0]
+    236c:	b4000223 	cbz	x3, 23b0 <gpiod_set_raw_value_cansleep+0x54>
+    2370:	f941a062 	ldr	x2, [x3,#832]
+    2374:	b40000c2 	cbz	x2, 238c <gpiod_set_raw_value_cansleep+0x30>
+	_gpiod_set_raw_value(desc, value);
+    2378:	6b1f003f 	cmp	w1, wzr
+    237c:	1a9f07e1 	cset	w1, ne
+    2380:	97fff852 	bl	4c8 <_gpiod_set_raw_value>
+}
+    2384:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2388:	d65f03c0 	ret
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_raw_value_cansleep(struct gpio_desc *desc, int value)
+{
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC_VOID(desc);
+    238c:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			238c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2390:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2390: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2394:	91000042 	add	x2, x2, #0x0
+			2394: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2398:	91000021 	add	x1, x1, #0x0
+			2398: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    239c:	910c0042 	add	x2, x2, #0x300
+    23a0:	91002060 	add	x0, x3, #0x8
+    23a4:	94000000 	bl	0 <dev_warn>
+			23a4: R_AARCH64_CALL26	dev_warn
+	_gpiod_set_raw_value(desc, value);
+}
+    23a8:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    23ac:	d65f03c0 	ret
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_raw_value_cansleep(struct gpio_desc *desc, int value)
+{
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC_VOID(desc);
+    23b0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			23b0: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    23b4:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			23b4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    23b8:	91000021 	add	x1, x1, #0x0
+			23b8: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    23bc:	91000000 	add	x0, x0, #0x0
+			23bc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    23c0:	910c0021 	add	x1, x1, #0x300
+    23c4:	94000000 	bl	0 <printk>
+			23c4: R_AARCH64_CALL26	printk
+    23c8:	17ffffef 	b	2384 <gpiod_set_raw_value_cansleep+0x28>
+
+00000000000023cc <gpiod_set_value_cansleep>:
+ * account
+ *
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_value_cansleep(struct gpio_desc *desc, int value)
+{
+    23cc:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    23d0:	910003fd 	mov	x29, sp
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC_VOID(desc);
+    23d4:	b40002e0 	cbz	x0, 2430 <gpiod_set_value_cansleep+0x64>
+    23d8:	f9400003 	ldr	x3, [x0]
+    23dc:	b40002a3 	cbz	x3, 2430 <gpiod_set_value_cansleep+0x64>
+    23e0:	f941a062 	ldr	x2, [x3,#832]
+    23e4:	b4000162 	cbz	x2, 2410 <gpiod_set_value_cansleep+0x44>
+    23e8:	f9400402 	ldr	x2, [x0,#8]
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+    23ec:	373000c2 	tbnz	w2, #6, 2404 <gpiod_set_value_cansleep+0x38>
+		value = !value;
+	_gpiod_set_raw_value(desc, value);
+    23f0:	6b1f003f 	cmp	w1, wzr
+    23f4:	1a9f07e1 	cset	w1, ne
+    23f8:	97fff834 	bl	4c8 <_gpiod_set_raw_value>
+}
+    23fc:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    2400:	d65f03c0 	ret
+void gpiod_set_value_cansleep(struct gpio_desc *desc, int value)
+{
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC_VOID(desc);
+	if (test_bit(FLAG_ACTIVE_LOW, &desc->flags))
+		value = !value;
+    2404:	6b1f003f 	cmp	w1, wzr
+    2408:	1a9f17e1 	cset	w1, eq
+    240c:	17fffff9 	b	23f0 <gpiod_set_value_cansleep+0x24>
+ * This function is to be called from contexts that can sleep.
+ */
+void gpiod_set_value_cansleep(struct gpio_desc *desc, int value)
+{
+	might_sleep_if(extra_checks);
+	VALIDATE_DESC_VOID(desc);
+    2410:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2410: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2414:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2414: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    2418:	91000042 	add	x2, x2, #0x0
+			2418: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    241c:	91000021 	add	x1, x1, #0x0
+			241c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    2420:	910c8042 	add	x2, x2, #0x320
+    2424:	91002060 	add	x0, x3, #0x8
+    2428:	94000000 	bl	0 <dev_warn>
+			2428: R_AARCH64_CALL26	dev_warn
+    242c:	17fffff4 	b	23fc <gpiod_set_value_cansleep+0x30>
+    2430:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2430: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2434:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2434: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    2438:	91000021 	add	x1, x1, #0x0
+			2438: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    243c:	91000000 	add	x0, x0, #0x0
+			243c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    2440:	910c8021 	add	x1, x1, #0x320
+    2444:	94000000 	bl	0 <printk>
+			2444: R_AARCH64_CALL26	printk
+    2448:	17ffffed 	b	23fc <gpiod_set_value_cansleep+0x30>
+
+000000000000244c <gpiod_configure_flags>:
+ * requested function and/or index, or another IS_ERR() code if an error
+ * occurred while trying to acquire the GPIO.
+ */
+static int gpiod_configure_flags(struct gpio_desc *desc, const char *con_id,
+				 enum gpiod_flags dflags)
+{
+    244c:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    2450:	910003fd 	mov	x29, sp
+    2454:	f9000bf3 	str	x19, [sp,#16]
+	int status;
+
+	/* No particular flag request, return here... */
+	if (!(dflags & GPIOD_FLAGS_BIT_DIR_SET)) {
+    2458:	37000162 	tbnz	w2, #0, 2484 <gpiod_configure_flags+0x38>
+		pr_debug("no flags found for %s\n", con_id);
+    245c:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			245c: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+		return 0;
+    2460:	52800013 	mov	w19, #0x0                   	// #0
+{
+	int status;
+
+	/* No particular flag request, return here... */
+	if (!(dflags & GPIOD_FLAGS_BIT_DIR_SET)) {
+		pr_debug("no flags found for %s\n", con_id);
+    2464:	91000063 	add	x3, x3, #0x0
+			2464: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    2468:	9101e063 	add	x3, x3, #0x78
+    246c:	79404460 	ldrh	w0, [x3,#34]
+    2470:	37100260 	tbnz	w0, #2, 24bc <gpiod_configure_flags+0x70>
+					      dflags & GPIOD_FLAGS_BIT_DIR_VAL);
+	else
+		status = gpiod_direction_input(desc);
+
+	return status;
+}
+    2474:	2a1303e0 	mov	w0, w19
+    2478:	f9400bf3 	ldr	x19, [sp,#16]
+    247c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    2480:	d65f03c0 	ret
+		pr_debug("no flags found for %s\n", con_id);
+		return 0;
+	}
+
+	/* Process flags */
+	if (dflags & GPIOD_FLAGS_BIT_DIR_OUT)
+    2484:	36080102 	tbz	w2, #1, 24a4 <gpiod_configure_flags+0x58>
+		status = gpiod_direction_output(desc,
+    2488:	121e0041 	and	w1, w2, #0x4
+    248c:	94000000 	bl	1ee4 <gpiod_direction_output>
+			248c: R_AARCH64_CALL26	gpiod_direction_output
+    2490:	2a0003f3 	mov	w19, w0
+					      dflags & GPIOD_FLAGS_BIT_DIR_VAL);
+	else
+		status = gpiod_direction_input(desc);
+
+	return status;
+}
+    2494:	2a1303e0 	mov	w0, w19
+    2498:	f9400bf3 	ldr	x19, [sp,#16]
+    249c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    24a0:	d65f03c0 	ret
+	/* Process flags */
+	if (dflags & GPIOD_FLAGS_BIT_DIR_OUT)
+		status = gpiod_direction_output(desc,
+					      dflags & GPIOD_FLAGS_BIT_DIR_VAL);
+	else
+		status = gpiod_direction_input(desc);
+    24a4:	94000000 	bl	60c <gpiod_direction_input>
+			24a4: R_AARCH64_CALL26	gpiod_direction_input
+    24a8:	2a0003f3 	mov	w19, w0
+
+	return status;
+}
+    24ac:	2a1303e0 	mov	w0, w19
+    24b0:	f9400bf3 	ldr	x19, [sp,#16]
+    24b4:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    24b8:	d65f03c0 	ret
+{
+	int status;
+
+	/* No particular flag request, return here... */
+	if (!(dflags & GPIOD_FLAGS_BIT_DIR_SET)) {
+		pr_debug("no flags found for %s\n", con_id);
+    24bc:	aa0103e2 	mov	x2, x1
+    24c0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			24c0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x4d0
+    24c4:	91000021 	add	x1, x1, #0x0
+			24c4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x4d0
+    24c8:	aa0303e0 	mov	x0, x3
+    24cc:	94000000 	bl	0 <__dynamic_pr_debug>
+			24cc: R_AARCH64_CALL26	__dynamic_pr_debug
+    24d0:	17ffffe9 	b	2474 <gpiod_configure_flags+0x28>
+
+00000000000024d4 <gpiochip_set_chained_irqchip>:
+ */
+void gpiochip_set_chained_irqchip(struct gpio_chip *gpiochip,
+				  struct irq_chip *irqchip,
+				  int parent_irq,
+				  irq_flow_handler_t parent_handler)
+{
+    24d4:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+    24d8:	910003fd 	mov	x29, sp
+    24dc:	a90153f3 	stp	x19, x20, [sp,#16]
+    24e0:	f90013f5 	str	x21, [sp,#32]
+    24e4:	aa0003f4 	mov	x20, x0
+    24e8:	2a0203f5 	mov	w21, w2
+	unsigned int offset;
+
+	if (!gpiochip->irqdomain) {
+    24ec:	f9407400 	ldr	x0, [x0,#232]
+    24f0:	b4000460 	cbz	x0, 257c <gpiochip_set_chained_irqchip+0xa8>
+		chip_err(gpiochip, "called %s before setting up irqchip\n",
+			 __func__);
+		return;
+	}
+
+	if (parent_handler) {
+    24f4:	b4000103 	cbz	x3, 2514 <gpiochip_set_chained_irqchip+0x40>
+		if (gpiochip->can_sleep) {
+    24f8:	39422280 	ldrb	w0, [x20,#136]
+    24fc:	350002c0 	cbnz	w0, 2554 <gpiochip_set_chained_irqchip+0x80>
+		}
+		/*
+		 * The parent irqchip is already using the chip_data for this
+		 * irqchip, so our callbacks simply use the handler_data.
+		 */
+		irq_set_chained_handler_and_data(parent_irq, parent_handler,
+    2500:	aa1403e2 	mov	x2, x20
+    2504:	aa0303e1 	mov	x1, x3
+    2508:	2a1503e0 	mov	w0, w21
+    250c:	94000000 	bl	0 <irq_set_chained_handler_and_data>
+			250c: R_AARCH64_CALL26	irq_set_chained_handler_and_data
+						 gpiochip);
+
+		gpiochip->irq_parent = parent_irq;
+    2510:	b9010695 	str	w21, [x20,#260]
+	}
+
+	/* Set the parent IRQ for all affected IRQs */
+	for (offset = 0; offset < gpiochip->ngpio; offset++)
+    2514:	7940fa80 	ldrh	w0, [x20,#124]
+    2518:	52800013 	mov	w19, #0x0                   	// #0
+    251c:	34000140 	cbz	w0, 2544 <gpiochip_set_chained_irqchip+0x70>
+		irq_set_parent(irq_find_mapping(gpiochip->irqdomain, offset),
+    2520:	f9407680 	ldr	x0, [x20,#232]
+    2524:	2a1303e1 	mov	w1, w19
+
+		gpiochip->irq_parent = parent_irq;
+	}
+
+	/* Set the parent IRQ for all affected IRQs */
+	for (offset = 0; offset < gpiochip->ngpio; offset++)
+    2528:	11000673 	add	w19, w19, #0x1
+		irq_set_parent(irq_find_mapping(gpiochip->irqdomain, offset),
+    252c:	94000000 	bl	0 <irq_find_mapping>
+			252c: R_AARCH64_CALL26	irq_find_mapping
+    2530:	2a1503e1 	mov	w1, w21
+    2534:	94000000 	bl	0 <irq_set_parent>
+			2534: R_AARCH64_CALL26	irq_set_parent
+
+		gpiochip->irq_parent = parent_irq;
+	}
+
+	/* Set the parent IRQ for all affected IRQs */
+	for (offset = 0; offset < gpiochip->ngpio; offset++)
+    2538:	7940fa83 	ldrh	w3, [x20,#124]
+    253c:	6b13007f 	cmp	w3, w19
+    2540:	54ffff08 	b.hi	2520 <gpiochip_set_chained_irqchip+0x4c>
+		irq_set_parent(irq_find_mapping(gpiochip->irqdomain, offset),
+			       parent_irq);
+}
+    2544:	a94153f3 	ldp	x19, x20, [sp,#16]
+    2548:	f94013f5 	ldr	x21, [sp,#32]
+    254c:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    2550:	d65f03c0 	ret
+		return;
+	}
+
+	if (parent_handler) {
+		if (gpiochip->can_sleep) {
+			chip_err(gpiochip,
+    2554:	f9400680 	ldr	x0, [x20,#8]
+    2558:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2558: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x518
+    255c:	f9400282 	ldr	x2, [x20]
+    2560:	91000021 	add	x1, x1, #0x0
+			2560: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x518
+    2564:	91002000 	add	x0, x0, #0x8
+    2568:	94000000 	bl	0 <dev_err>
+			2568: R_AARCH64_CALL26	dev_err
+
+	/* Set the parent IRQ for all affected IRQs */
+	for (offset = 0; offset < gpiochip->ngpio; offset++)
+		irq_set_parent(irq_find_mapping(gpiochip->irqdomain, offset),
+			       parent_irq);
+}
+    256c:	f94013f5 	ldr	x21, [sp,#32]
+    2570:	a94153f3 	ldp	x19, x20, [sp,#16]
+    2574:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    2578:	d65f03c0 	ret
+				  irq_flow_handler_t parent_handler)
+{
+	unsigned int offset;
+
+	if (!gpiochip->irqdomain) {
+		chip_err(gpiochip, "called %s before setting up irqchip\n",
+    257c:	f9400680 	ldr	x0, [x20,#8]
+    2580:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			2580: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2584:	f9400282 	ldr	x2, [x20]
+    2588:	91000063 	add	x3, x3, #0x0
+			2588: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    258c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			258c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x4e8
+    2590:	910d0063 	add	x3, x3, #0x340
+    2594:	91000021 	add	x1, x1, #0x0
+			2594: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x4e8
+    2598:	91002000 	add	x0, x0, #0x8
+    259c:	94000000 	bl	0 <dev_err>
+			259c: R_AARCH64_CALL26	dev_err
+    25a0:	17ffffe9 	b	2544 <gpiochip_set_chained_irqchip+0x70>
+
+00000000000025a4 <gpiochip_free_hogs.isra.36>:
+ * gpiochip_free_hogs - Scan gpio-controller chip and release GPIO hog
+ * @chip:	gpio chip to act on
+ *
+ * This is only used by of_gpiochip_remove to free hogged gpios
+ */
+static void gpiochip_free_hogs(struct gpio_chip *chip)
+    25a4:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+    25a8:	910003fd 	mov	x29, sp
+    25ac:	a90153f3 	stp	x19, x20, [sp,#16]
+    25b0:	f90013f5 	str	x21, [sp,#32]
+    25b4:	aa0003f4 	mov	x20, x0
+    25b8:	aa0103f5 	mov	x21, x1
+{
+	int id;
+
+	for (id = 0; id < chip->ngpio; id++) {
+    25bc:	52800013 	mov	w19, #0x0                   	// #0
+    25c0:	79400024 	ldrh	w4, [x1]
+    25c4:	340001c4 	cbz	w4, 25fc <gpiochip_free_hogs.isra.36+0x58>
+		if (test_bit(FLAG_IS_HOGGED, &chip->gpiodev->descs[id].flags))
+    25c8:	f9400283 	ldr	x3, [x20]
+    25cc:	937b7e62 	sbfiz	x2, x19, #5, #32
+    25d0:	11000673 	add	w19, w19, #0x1
+    25d4:	f941a463 	ldr	x3, [x3,#840]
+    25d8:	8b020062 	add	x2, x3, x2
+ * gpiochip_request_own_desc().
+ */
+void gpiochip_free_own_desc(struct gpio_desc *desc)
+{
+	if (desc)
+		__gpiod_free(desc);
+    25dc:	aa0203e0 	mov	x0, x2
+    25e0:	f9400443 	ldr	x3, [x2,#8]
+ * Function frees the given GPIO requested previously with
+ * gpiochip_request_own_desc().
+ */
+void gpiochip_free_own_desc(struct gpio_desc *desc)
+{
+	if (desc)
+    25e4:	36580083 	tbz	w3, #11, 25f4 <gpiochip_free_hogs.isra.36+0x50>
+    25e8:	b4000062 	cbz	x2, 25f4 <gpiochip_free_hogs.isra.36+0x50>
+		__gpiod_free(desc);
+    25ec:	97fffbbe 	bl	14e4 <__gpiod_free>
+    25f0:	794002a4 	ldrh	w4, [x21]
+ */
+static void gpiochip_free_hogs(struct gpio_chip *chip)
+{
+	int id;
+
+	for (id = 0; id < chip->ngpio; id++) {
+    25f4:	6b04027f 	cmp	w19, w4
+    25f8:	54fffe8b 	b.lt	25c8 <gpiochip_free_hogs.isra.36+0x24>
+		if (test_bit(FLAG_IS_HOGGED, &chip->gpiodev->descs[id].flags))
+			gpiochip_free_own_desc(&chip->gpiodev->descs[id]);
+	}
+}
+    25fc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    2600:	f94013f5 	ldr	x21, [sp,#32]
+    2604:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    2608:	d65f03c0 	ret
+
+000000000000260c <gpiochip_add_data>:
+ *
+ * If chip->base is negative, this requests dynamic assignment of
+ * a range of valid GPIOs.
+ */
+int gpiochip_add_data(struct gpio_chip *chip, void *data)
+{
+    260c:	a9b57bfd 	stp	x29, x30, [sp,#-176]!
+    2610:	52901802 	mov	w2, #0x80c0                	// #32960
+    2614:	910003fd 	mov	x29, sp
+    2618:	a90363f7 	stp	x23, x24, [sp,#48]
+    261c:	aa0003f8 	mov	x24, x0
+    2620:	90000000 	adrp	x0, 0 <kmalloc_caches>
+			2620: R_AARCH64_ADR_PREL_PG_HI21	kmalloc_caches+0x50
+    2624:	72a04802 	movk	w2, #0x240, lsl #16
+    2628:	a90153f3 	stp	x19, x20, [sp,#16]
+    262c:	f9400000 	ldr	x0, [x0]
+			262c: R_AARCH64_LDST64_ABS_LO12_NC	kmalloc_caches+0x50
+    2630:	aa0103f4 	mov	x20, x1
+    2634:	a9046bf9 	stp	x25, x26, [sp,#64]
+    2638:	a9025bf5 	stp	x21, x22, [sp,#32]
+    263c:	a90573fb 	stp	x27, x28, [sp,#80]
+    2640:	2a0203e1 	mov	w1, w2
+	unsigned long	flags;
+	int		status = 0;
+	unsigned	i;
+	int		base = chip->base;
+    2644:	b9407b13 	ldr	w19, [x24,#120]
+    2648:	94000000 	bl	0 <kmem_cache_alloc>
+			2648: R_AARCH64_CALL26	kmem_cache_alloc
+    264c:	aa0003f9 	mov	x25, x0
+	/*
+	 * First: allocate and populate the internal stat container, and
+	 * set up the struct device.
+	 */
+	gdev = kzalloc(sizeof(*gdev), GFP_KERNEL);
+	if (!gdev)
+    2650:	b4003c40 	cbz	x0, 2dd8 <gpiochip_add_data+0x7cc>
+		return -ENOMEM;
+	gdev->dev.bus = &gpio_bus_type;
+    2654:	9000001b 	adrp	x27, 0 <desc_to_gpio>
+			2654: R_AARCH64_ADR_PREL_PG_HI21	.data
+	gdev->chip = chip;
+    2658:	f901a018 	str	x24, [x0,#832]
+	 * set up the struct device.
+	 */
+	gdev = kzalloc(sizeof(*gdev), GFP_KERNEL);
+	if (!gdev)
+		return -ENOMEM;
+	gdev->dev.bus = &gpio_bus_type;
+    265c:	91000360 	add	x0, x27, #0x0
+			265c: R_AARCH64_ADD_ABS_LO12_NC	.data
+    2660:	91012000 	add	x0, x0, #0x48
+    2664:	f9004b20 	str	x0, [x25,#144]
+	gdev->chip = chip;
+	chip->gpiodev = gdev;
+    2668:	f9000719 	str	x25, [x24,#8]
+	if (chip->parent) {
+    266c:	f9400b00 	ldr	x0, [x24,#16]
+    2670:	b4002e20 	cbz	x0, 2c34 <gpiochip_add_data+0x628>
+		gdev->dev.parent = chip->parent;
+    2674:	f9000720 	str	x0, [x25,#8]
+		gdev->dev.of_node = chip->parent->of_node;
+    2678:	f9400b00 	ldr	x0, [x24,#16]
+    267c:	f9412400 	ldr	x0, [x0,#584]
+    2680:	f9012b20 	str	x0, [x25,#592]
+	/* If the gpiochip has an assigned OF node this takes precedence */
+		if (chip->of_node)
+			gdev->dev.of_node = chip->of_node;
+#endif
+	}
+	gdev->id = ida_simple_get(&gpio_ida, 0, 0, GFP_KERNEL);
+    2684:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2684: R_AARCH64_ADR_PREL_PG_HI21	.bss
+    2688:	52801803 	mov	w3, #0xc0                  	// #192
+    268c:	91000000 	add	x0, x0, #0x0
+			268c: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    2690:	72a04803 	movk	w3, #0x240, lsl #16
+    2694:	52800002 	mov	w2, #0x0                   	// #0
+    2698:	52800001 	mov	w1, #0x0                   	// #0
+    269c:	91002000 	add	x0, x0, #0x8
+    26a0:	94000000 	bl	0 <ida_simple_get>
+			26a0: R_AARCH64_CALL26	ida_simple_get
+    26a4:	2a0003f5 	mov	w21, w0
+    26a8:	b9000320 	str	w0, [x25]
+	if (gdev->id < 0) {
+    26ac:	37f83a55 	tbnz	w21, #31, 2df4 <gpiochip_add_data+0x7e8>
+		status = gdev->id;
+		goto err_free_gdev;
+	}
+	dev_set_name(&gdev->dev, "gpiochip%d", gdev->id);
+    26b0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			26b0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x568
+    26b4:	91002320 	add	x0, x25, #0x8
+    26b8:	2a1503e2 	mov	w2, w21
+    26bc:	91000021 	add	x1, x1, #0x0
+			26bc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x568
+    26c0:	aa0003f5 	mov	x21, x0
+    26c4:	f9003ba0 	str	x0, [x29,#112]
+    26c8:	94000000 	bl	0 <dev_set_name>
+			26c8: R_AARCH64_CALL26	dev_set_name
+	device_initialize(&gdev->dev);
+    26cc:	aa1503e0 	mov	x0, x21
+    26d0:	94000000 	bl	0 <device_initialize>
+			26d0: R_AARCH64_CALL26	device_initialize
+	return dev->driver_data;
+}
+
+static inline void dev_set_drvdata(struct device *dev, void *data)
+{
+	dev->driver_data = data;
+    26d4:	f9005739 	str	x25, [x25,#168]
+	dev_set_drvdata(&gdev->dev, gdev);
+	if (chip->parent && chip->parent->driver)
+    26d8:	f9400b00 	ldr	x0, [x24,#16]
+    26dc:	b4002320 	cbz	x0, 2b40 <gpiochip_add_data+0x534>
+    26e0:	f9404800 	ldr	x0, [x0,#144]
+    26e4:	b40022e0 	cbz	x0, 2b40 <gpiochip_add_data+0x534>
+		gdev->owner = chip->parent->driver->owner;
+    26e8:	f9400800 	ldr	x0, [x0,#16]
+    26ec:	f9019f20 	str	x0, [x25,#824]
+static inline void *devm_kmalloc_array(struct device *dev,
+				       size_t n, size_t size, gfp_t flags)
+{
+	if (size != 0 && n > SIZE_MAX / size)
+		return NULL;
+	return devm_kmalloc(dev, n * size, flags);
+    26f0:	7940fb01 	ldrh	w1, [x24,#124]
+    26f4:	52901802 	mov	w2, #0x80c0                	// #32960
+    26f8:	f9403ba0 	ldr	x0, [x29,#112]
+    26fc:	72a04802 	movk	w2, #0x240, lsl #16
+    2700:	d37be821 	lsl	x1, x1, #5
+    2704:	94000000 	bl	0 <devm_kmalloc>
+			2704: R_AARCH64_CALL26	devm_kmalloc
+		/* TODO: remove chip->owner */
+		gdev->owner = chip->owner;
+	else
+		gdev->owner = THIS_MODULE;
+
+	gdev->descs = devm_kcalloc(&gdev->dev, chip->ngpio,
+    2708:	f901a720 	str	x0, [x25,#840]
+				   sizeof(gdev->descs[0]), GFP_KERNEL);
+	if (!gdev->descs) {
+    270c:	b40036a0 	cbz	x0, 2de0 <gpiochip_add_data+0x7d4>
+		status = -ENOMEM;
+		goto err_free_gdev;
+	}
+
+	if (chip->ngpio == 0) {
+    2710:	7940fb00 	ldrh	w0, [x24,#124]
+    2714:	34003780 	cbz	w0, 2e04 <gpiochip_add_data+0x7f8>
+		chip_err(chip, "tried to insert a GPIO chip with zero lines\n");
+		status = -EINVAL;
+		goto err_free_gdev;
+	}
+
+	if (chip->label)
+    2718:	f9400301 	ldr	x1, [x24]
+		gdev->label = devm_kstrdup(&gdev->dev, chip->label, GFP_KERNEL);
+    271c:	52801802 	mov	w2, #0xc0                  	// #192
+    2720:	72a04802 	movk	w2, #0x240, lsl #16
+		chip_err(chip, "tried to insert a GPIO chip with zero lines\n");
+		status = -EINVAL;
+		goto err_free_gdev;
+	}
+
+	if (chip->label)
+    2724:	b4002901 	cbz	x1, 2c44 <gpiochip_add_data+0x638>
+		gdev->label = devm_kstrdup(&gdev->dev, chip->label, GFP_KERNEL);
+	else
+		gdev->label = devm_kstrdup(&gdev->dev, "unknown", GFP_KERNEL);
+    2728:	f9403ba0 	ldr	x0, [x29,#112]
+    272c:	94000000 	bl	0 <devm_kstrdup>
+			272c: R_AARCH64_CALL26	devm_kstrdup
+    2730:	f901af20 	str	x0, [x25,#856]
+	if (!gdev->label) {
+    2734:	b4003560 	cbz	x0, 2de0 <gpiochip_add_data+0x7d4>
+		status = -ENOMEM;
+		goto err_free_gdev;
+	}
+
+	gdev->ngpio = chip->ngpio;
+    2738:	7940fb01 	ldrh	w1, [x24,#124]
+	gdev->data = data;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    273c:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			273c: R_AARCH64_ADR_PREL_PG_HI21	.bss
+	if (!gdev->label) {
+		status = -ENOMEM;
+		goto err_free_gdev;
+	}
+
+	gdev->ngpio = chip->ngpio;
+    2740:	7906ab21 	strh	w1, [x25,#852]
+	gdev->data = data;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    2744:	91000000 	add	x0, x0, #0x0
+			2744: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    2748:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2748: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+		status = -ENOMEM;
+		goto err_free_gdev;
+	}
+
+	gdev->ngpio = chip->ngpio;
+	gdev->data = data;
+    274c:	f901b334 	str	x20, [x25,#864]
+    2750:	f90037a1 	str	x1, [x29,#104]
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    2754:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			2754: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+    2758:	aa0003f4 	mov	x20, x0
+	 * GPIO numberspace for this chip. In the long run we want to
+	 * get *rid* of this numberspace and use only descriptors, but
+	 * it may be a pipe dream. It will not happen before we get rid
+	 * of the sysfs interface anyways.
+	 */
+	if (base < 0) {
+    275c:	37f81f93 	tbnz	w19, #31, 2b4c <gpiochip_add_data+0x540>
+})
+
+static __always_inline
+void __read_once_size(const volatile void *p, void *res, int size)
+{
+	__READ_ONCE_SIZE;
+    2760:	f9400360 	ldr	x0, [x27]
+			2760: R_AARCH64_LDST64_ABS_LO12_NC	.data
+    2764:	91000363 	add	x3, x27, #0x0
+			2764: R_AARCH64_ADD_ABS_LO12_NC	.data
+		 * see if anyone makes use of this, else drop this and assign
+		 * a poison instead.
+		 */
+		chip->base = base;
+	}
+	gdev->base = base;
+    2768:	b9035333 	str	w19, [x25,#848]
+    276c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			276c: R_AARCH64_ADR_PREL_PG_HI21	.data
+ */
+static int gpiodev_add_to_list(struct gpio_device *gdev)
+{
+	struct gpio_device *prev, *next;
+
+	if (list_empty(&gpio_devices)) {
+    2770:	eb00007f 	cmp	x3, x0
+    2774:	540023c0 	b.eq	2bec <gpiochip_add_data+0x5e0>
+		/* initial entry in list */
+		list_add_tail(&gdev->list, &gpio_devices);
+		return 0;
+	}
+
+	next = list_entry(gpio_devices.next, struct gpio_device, list);
+    2778:	f9400025 	ldr	x5, [x1]
+			2778: R_AARCH64_LDST64_ABS_LO12_NC	.data
+	if (gdev->base + gdev->ngpio <= next->base) {
+    277c:	7946ab26 	ldrh	w6, [x25,#852]
+    2780:	d10da0a0 	sub	x0, x5, #0x368
+    2784:	b85e80a4 	ldr	w4, [x5,#-24]
+    2788:	0b060266 	add	w6, w19, w6
+    278c:	6b0400df 	cmp	w6, w4
+    2790:	54001cad 	b.le	2b24 <gpiochip_add_data+0x518>
+		/* add before first entry */
+		list_add(&gdev->list, &gpio_devices);
+		return 0;
+	}
+
+	prev = list_entry(gpio_devices.prev, struct gpio_device, list);
+    2794:	f9400461 	ldr	x1, [x3,#8]
+	if (prev->base + prev->ngpio <= gdev->base) {
+    2798:	785ec027 	ldrh	w7, [x1,#-20]
+    279c:	b85e8022 	ldr	w2, [x1,#-24]
+    27a0:	0b0200e2 	add	w2, w7, w2
+    27a4:	6b02027f 	cmp	w19, w2
+    27a8:	540006ea 	b.ge	2884 <gpiochip_add_data+0x278>
+		/* add behind last entry */
+		list_add_tail(&gdev->list, &gpio_devices);
+		return 0;
+	}
+
+	list_for_each_entry_safe(prev, next, &gpio_devices, list) {
+    27ac:	f941b401 	ldr	x1, [x0,#872]
+    27b0:	eb0300bf 	cmp	x5, x3
+    27b4:	d10da022 	sub	x2, x1, #0x368
+    27b8:	540002a0 	b.eq	280c <gpiochip_add_data+0x200>
+		/* at the end of the list */
+		if (&next->list == &gpio_devices)
+    27bc:	eb01007f 	cmp	x3, x1
+    27c0:	540000c1 	b.ne	27d8 <gpiochip_add_data+0x1cc>
+    27c4:	14000012 	b	280c <gpiochip_add_data+0x200>
+    27c8:	eb04007f 	cmp	x3, x4
+    27cc:	54000200 	b.eq	280c <gpiochip_add_data+0x200>
+    27d0:	b9435044 	ldr	w4, [x2,#848]
+		/* add behind last entry */
+		list_add_tail(&gdev->list, &gpio_devices);
+		return 0;
+	}
+
+	list_for_each_entry_safe(prev, next, &gpio_devices, list) {
+    27d4:	aa0103e2 	mov	x2, x1
+		/* at the end of the list */
+		if (&next->list == &gpio_devices)
+			break;
+
+		/* add between prev and next */
+		if (prev->base + prev->ngpio <= gdev->base
+    27d8:	7946a801 	ldrh	w1, [x0,#852]
+    27dc:	0b040024 	add	w4, w1, w4
+    27e0:	6b04027f 	cmp	w19, w4
+    27e4:	5400008b 	b.lt	27f4 <gpiochip_add_data+0x1e8>
+				&& gdev->base + gdev->ngpio <= next->base) {
+    27e8:	b9435041 	ldr	w1, [x2,#848]
+    27ec:	6b0100df 	cmp	w6, w1
+    27f0:	540028cd 	b.le	2d08 <gpiochip_add_data+0x6fc>
+		/* add behind last entry */
+		list_add_tail(&gdev->list, &gpio_devices);
+		return 0;
+	}
+
+	list_for_each_entry_safe(prev, next, &gpio_devices, list) {
+    27f4:	910da045 	add	x5, x2, #0x368
+    27f8:	f941b444 	ldr	x4, [x2,#872]
+    27fc:	eb0300bf 	cmp	x5, x3
+		/* at the end of the list */
+		if (&next->list == &gpio_devices)
+    2800:	aa0203e0 	mov	x0, x2
+		/* add behind last entry */
+		list_add_tail(&gdev->list, &gpio_devices);
+		return 0;
+	}
+
+	list_for_each_entry_safe(prev, next, &gpio_devices, list) {
+    2804:	d10da081 	sub	x1, x4, #0x368
+    2808:	54fffe01 	b.ne	27c8 <gpiochip_add_data+0x1bc>
+			list_add(&gdev->list, &prev->list);
+			return 0;
+		}
+	}
+
+	dev_err(&gdev->dev, "GPIO integer space overlap, cannot add chip\n");
+    280c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			280c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x5f8
+    2810:	f9403ba0 	ldr	x0, [x29,#112]
+    2814:	91000021 	add	x1, x1, #0x0
+			2814: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x5f8
+	return -EBUSY;
+    2818:	128001f5 	mov	w21, #0xfffffff0            	// #-16
+			list_add(&gdev->list, &prev->list);
+			return 0;
+		}
+	}
+
+	dev_err(&gdev->dev, "GPIO integer space overlap, cannot add chip\n");
+    281c:	94000000 	bl	0 <dev_err>
+			281c: R_AARCH64_CALL26	dev_err
+    2820:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2820: R_AARCH64_ADR_PREL_PG_HI21	.bss
+    2824:	aa1403e1 	mov	x1, x20
+    2828:	91000000 	add	x0, x0, #0x0
+			2828: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    282c:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			282c: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+    2830:	b9400321 	ldr	w1, [x25]
+err_remove_from_list:
+	spin_lock_irqsave(&gpio_lock, flags);
+	list_del(&gdev->list);
+	spin_unlock_irqrestore(&gpio_lock, flags);
+err_free_gdev:
+	ida_simple_remove(&gpio_ida, gdev->id);
+    2834:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2834: R_AARCH64_ADR_PREL_PG_HI21	.bss
+    2838:	91000000 	add	x0, x0, #0x0
+			2838: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    283c:	91002000 	add	x0, x0, #0x8
+    2840:	94000000 	bl	0 <ida_simple_remove>
+			2840: R_AARCH64_CALL26	ida_simple_remove
+	/* failures here can mean systems won't boot... */
+	pr_err("%s: GPIOs %d..%d (%s) failed to register\n", __func__,
+    2844:	b9435322 	ldr	w2, [x25,#848]
+    2848:	7946ab23 	ldrh	w3, [x25,#852]
+    284c:	f9400304 	ldr	x4, [x24]
+    2850:	0b030043 	add	w3, w2, w3
+    2854:	51000463 	sub	w3, w3, #0x1
+    2858:	b4002724 	cbz	x4, 2d3c <gpiochip_add_data+0x730>
+    285c:	f94037a0 	ldr	x0, [x29,#104]
+    2860:	91000001 	add	x1, x0, #0x0
+			2860: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2864:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2864: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x6e0
+    2868:	9111a021 	add	x1, x1, #0x468
+    286c:	91000000 	add	x0, x0, #0x0
+			286c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x6e0
+    2870:	94000000 	bl	0 <printk>
+			2870: R_AARCH64_CALL26	printk
+	       gdev->base, gdev->base + gdev->ngpio - 1,
+	       chip->label ? : "generic");
+	kfree(gdev);
+    2874:	aa1903e0 	mov	x0, x25
+    2878:	94000000 	bl	0 <kfree>
+			2878: R_AARCH64_CALL26	kfree
+	return status;
+    287c:	2a1503e0 	mov	w0, w21
+    2880:	140000a2 	b	2b08 <gpiochip_add_data+0x4fc>
+	}
+
+	prev = list_entry(gpio_devices.prev, struct gpio_device, list);
+	if (prev->base + prev->ngpio <= gdev->base) {
+		/* add behind last entry */
+		list_add_tail(&gdev->list, &gpio_devices);
+    2884:	910da320 	add	x0, x25, #0x368
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+	new->next = next;
+    2888:	f901b723 	str	x3, [x25,#872]
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    288c:	f9000460 	str	x0, [x3,#8]
+	new->next = next;
+	new->prev = prev;
+    2890:	f901bb21 	str	x1, [x25,#880]
+    2894:	f90033a0 	str	x0, [x29,#96]
+{
+	switch (size) {
+	case 1: *(volatile __u8 *)p = *(__u8 *)res; break;
+	case 2: *(volatile __u16 *)p = *(__u16 *)res; break;
+	case 4: *(volatile __u32 *)p = *(__u32 *)res; break;
+	case 8: *(volatile __u64 *)p = *(__u64 *)res; break;
+    2898:	f9000020 	str	x0, [x1]
+	if (status) {
+		spin_unlock_irqrestore(&gpio_lock, flags);
+		goto err_free_gdev;
+	}
+
+	for (i = 0; i < chip->ngpio; i++) {
+    289c:	7940fb01 	ldrh	w1, [x24,#124]
+    28a0:	52800002 	mov	w2, #0x0                   	// #0
+		 * with pullups enabled) so power usage is minimized. Linux
+		 * code should set the gpio direction first thing; but until
+		 * it does, and in case chip->get_direction is not set, we may
+		 * expose the wrong direction in sysfs.
+		 */
+		desc->flags = !chip->direction_input ? (1 << FLAG_IS_OUT) : 0;
+    28a4:	d2800040 	mov	x0, #0x2                   	// #2
+	if (status) {
+		spin_unlock_irqrestore(&gpio_lock, flags);
+		goto err_free_gdev;
+	}
+
+	for (i = 0; i < chip->ngpio; i++) {
+    28a8:	340001a1 	cbz	w1, 28dc <gpiochip_add_data+0x2d0>
+		struct gpio_desc *desc = &gdev->descs[i];
+    28ac:	d37b7c43 	ubfiz	x3, x2, #5, #32
+    28b0:	f941a724 	ldr	x4, [x25,#840]
+	if (status) {
+		spin_unlock_irqrestore(&gpio_lock, flags);
+		goto err_free_gdev;
+	}
+
+	for (i = 0; i < chip->ngpio; i++) {
+    28b4:	11000442 	add	w2, w2, #0x1
+		struct gpio_desc *desc = &gdev->descs[i];
+    28b8:	8b030085 	add	x5, x4, x3
+
+		desc->gdev = gdev;
+    28bc:	f8236899 	str	x25, [x4,x3]
+		 * with pullups enabled) so power usage is minimized. Linux
+		 * code should set the gpio direction first thing; but until
+		 * it does, and in case chip->get_direction is not set, we may
+		 * expose the wrong direction in sysfs.
+		 */
+		desc->flags = !chip->direction_input ? (1 << FLAG_IS_OUT) : 0;
+    28c0:	f9401f03 	ldr	x3, [x24,#56]
+    28c4:	eb1f007f 	cmp	x3, xzr
+    28c8:	9a9f0003 	csel	x3, x0, xzr, eq
+    28cc:	f90004a3 	str	x3, [x5,#8]
+	if (status) {
+		spin_unlock_irqrestore(&gpio_lock, flags);
+		goto err_free_gdev;
+	}
+
+	for (i = 0; i < chip->ngpio; i++) {
+    28d0:	7940fb03 	ldrh	w3, [x24,#124]
+    28d4:	6b02007f 	cmp	w3, w2
+    28d8:	54fffea8 	b.hi	28ac <gpiochip_add_data+0x2a0>
+    28dc:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			28dc: R_AARCH64_ADR_PREL_PG_HI21	.bss
+    28e0:	aa1403e1 	mov	x1, x20
+    28e4:	91000013 	add	x19, x0, #0x0
+			28e4: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    28e8:	aa1303e0 	mov	x0, x19
+    28ec:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			28ec: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+	}
+
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+#ifdef CONFIG_PINCTRL
+	INIT_LIST_HEAD(&gdev->pin_ranges);
+    28f0:	910de321 	add	x1, x25, #0x378
+    28f4:	f901bf21 	str	x1, [x25,#888]
+	struct list_head name = LIST_HEAD_INIT(name)
+
+static inline void INIT_LIST_HEAD(struct list_head *list)
+{
+	WRITE_ONCE(list->next, list);
+	list->prev = list;
+    28f8:	f9000421 	str	x1, [x1,#8]
+ *
+ * Warning if one of the names is already used for a different GPIO.
+ */
+static int gpiochip_set_desc_names(struct gpio_chip *gc)
+{
+	struct gpio_device *gdev = gc->gpiodev;
+    28fc:	f9400700 	ldr	x0, [x24,#8]
+	int i;
+
+	if (!gc->names)
+    2900:	f9404301 	ldr	x1, [x24,#128]
+ *
+ * Warning if one of the names is already used for a different GPIO.
+ */
+static int gpiochip_set_desc_names(struct gpio_chip *gc)
+{
+	struct gpio_device *gdev = gc->gpiodev;
+    2904:	f90047a0 	str	x0, [x29,#136]
+	int i;
+
+	if (!gc->names)
+    2908:	b4000a61 	cbz	x1, 2a54 <gpiochip_add_data+0x448>
+		return 0;
+
+	/* First check all names if they are unique */
+	for (i = 0; i != gc->ngpio; ++i) {
+    290c:	7940fb00 	ldrh	w0, [x24,#124]
+    2910:	34000a20 	cbz	w0, 2a54 <gpiochip_add_data+0x448>
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+    2914:	91000360 	add	x0, x27, #0x0
+			2914: R_AARCH64_ADD_ABS_LO12_NC	.data
+    2918:	f90057a0 	str	x0, [x29,#168]
+	for (i = 0; i != gc->ngpio; ++i) {
+		struct gpio_desc *gpio;
+
+		gpio = gpio_name_to_desc(gc->names[i]);
+		if (gpio)
+			dev_warn(&gdev->dev,
+    291c:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			291c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x628
+
+	if (!gc->names)
+		return 0;
+
+	/* First check all names if they are unique */
+	for (i = 0; i != gc->ngpio; ++i) {
+    2920:	5280001a 	mov	w26, #0x0                   	// #0
+		struct gpio_desc *gpio;
+
+		gpio = gpio_name_to_desc(gc->names[i]);
+		if (gpio)
+			dev_warn(&gdev->dev,
+    2924:	91000000 	add	x0, x0, #0x0
+			2924: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x628
+    2928:	f90043a0 	str	x0, [x29,#128]
+    292c:	f94047a0 	ldr	x0, [x29,#136]
+static struct gpio_desc *gpio_name_to_desc(const char * const name)
+{
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    2930:	f90053b3 	str	x19, [x29,#160]
+	for (i = 0; i != gc->ngpio; ++i) {
+		struct gpio_desc *gpio;
+
+		gpio = gpio_name_to_desc(gc->names[i]);
+		if (gpio)
+			dev_warn(&gdev->dev,
+    2934:	91002000 	add	x0, x0, #0x8
+    2938:	f9003fa0 	str	x0, [x29,#120]
+static struct gpio_desc *gpio_name_to_desc(const char * const name)
+{
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    293c:	f94053a0 	ldr	x0, [x29,#160]
+
+	/* First check all names if they are unique */
+	for (i = 0; i != gc->ngpio; ++i) {
+		struct gpio_desc *gpio;
+
+		gpio = gpio_name_to_desc(gc->names[i]);
+    2940:	f87ad834 	ldr	x20, [x1,w26,sxtw #3]
+    2944:	93407f41 	sxtw	x1, w26
+    2948:	f9004ba1 	str	x1, [x29,#144]
+static struct gpio_desc *gpio_name_to_desc(const char * const name)
+{
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    294c:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			294c: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+    2950:	f9004fa0 	str	x0, [x29,#152]
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+    2954:	f94057a0 	ldr	x0, [x29,#168]
+    2958:	f9400017 	ldr	x23, [x0]
+    295c:	eb17001f 	cmp	x0, x23
+    2960:	d10da2f7 	sub	x23, x23, #0x368
+    2964:	54000300 	b.eq	29c4 <gpiochip_add_data+0x3b8>
+		int i;
+
+		for (i = 0; i != gdev->ngpio; ++i) {
+    2968:	7946aaf3 	ldrh	w19, [x23,#852]
+    296c:	34000233 	cbz	w19, 29b0 <gpiochip_add_data+0x3a4>
+    2970:	eb1f029f 	cmp	x20, xzr
+    2974:	f941a6f6 	ldr	x22, [x23,#840]
+    2978:	1a9f17f5 	cset	w21, eq
+    297c:	5280001b 	mov	w27, #0x0                   	// #0
+			struct gpio_desc *desc = &gdev->descs[i];
+    2980:	937b7f62 	sbfiz	x2, x27, #5, #32
+
+			if (!desc->name || !name)
+				continue;
+
+			if (!strcmp(desc->name, name)) {
+    2984:	aa1403e1 	mov	x1, x20
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+		int i;
+
+		for (i = 0; i != gdev->ngpio; ++i) {
+			struct gpio_desc *desc = &gdev->descs[i];
+    2988:	8b0202dc 	add	x28, x22, x2
+    298c:	1100077b 	add	w27, w27, #0x1
+
+			if (!desc->name || !name)
+    2990:	f9400f84 	ldr	x4, [x28,#24]
+    2994:	350000b5 	cbnz	w21, 29a8 <gpiochip_add_data+0x39c>
+				continue;
+
+			if (!strcmp(desc->name, name)) {
+    2998:	aa0403e0 	mov	x0, x4
+		int i;
+
+		for (i = 0; i != gdev->ngpio; ++i) {
+			struct gpio_desc *desc = &gdev->descs[i];
+
+			if (!desc->name || !name)
+    299c:	b4000064 	cbz	x4, 29a8 <gpiochip_add_data+0x39c>
+				continue;
+
+			if (!strcmp(desc->name, name)) {
+    29a0:	94000000 	bl	0 <strcmp>
+			29a0: R_AARCH64_CALL26	strcmp
+    29a4:	34000220 	cbz	w0, 29e8 <gpiochip_add_data+0x3dc>
+	spin_lock_irqsave(&gpio_lock, flags);
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+		int i;
+
+		for (i = 0; i != gdev->ngpio; ++i) {
+    29a8:	6b13037f 	cmp	w27, w19
+    29ac:	54fffea1 	b.ne	2980 <gpiochip_add_data+0x374>
+	struct gpio_device *gdev;
+	unsigned long flags;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+
+	list_for_each_entry(gdev, &gpio_devices, list) {
+    29b0:	f941b6f7 	ldr	x23, [x23,#872]
+    29b4:	f94057a0 	ldr	x0, [x29,#168]
+    29b8:	eb17001f 	cmp	x0, x23
+    29bc:	d10da2f7 	sub	x23, x23, #0x368
+    29c0:	54fffd41 	b.ne	2968 <gpiochip_add_data+0x35c>
+    29c4:	f9404fa1 	ldr	x1, [x29,#152]
+    29c8:	f94053a0 	ldr	x0, [x29,#160]
+    29cc:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			29cc: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+
+	if (!gc->names)
+		return 0;
+
+	/* First check all names if they are unique */
+	for (i = 0; i != gc->ngpio; ++i) {
+    29d0:	7940fb00 	ldrh	w0, [x24,#124]
+    29d4:	1100075a 	add	w26, w26, #0x1
+    29d8:	6b00035f 	cmp	w26, w0
+    29dc:	54000220 	b.eq	2a20 <gpiochip_add_data+0x414>
+    29e0:	f9404301 	ldr	x1, [x24,#128]
+    29e4:	17ffffd6 	b	293c <gpiochip_add_data+0x330>
+    29e8:	f9404fa1 	ldr	x1, [x29,#152]
+    29ec:	f94053a0 	ldr	x0, [x29,#160]
+    29f0:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			29f0: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		struct gpio_desc *gpio;
+
+		gpio = gpio_name_to_desc(gc->names[i]);
+		if (gpio)
+    29f4:	b4fffefc 	cbz	x28, 29d0 <gpiochip_add_data+0x3c4>
+			dev_warn(&gdev->dev,
+    29f8:	f9404302 	ldr	x2, [x24,#128]
+
+	if (!gc->names)
+		return 0;
+
+	/* First check all names if they are unique */
+	for (i = 0; i != gc->ngpio; ++i) {
+    29fc:	1100075a 	add	w26, w26, #0x1
+		struct gpio_desc *gpio;
+
+		gpio = gpio_name_to_desc(gc->names[i]);
+		if (gpio)
+			dev_warn(&gdev->dev,
+    2a00:	f9404ba3 	ldr	x3, [x29,#144]
+    2a04:	f9403fa0 	ldr	x0, [x29,#120]
+    2a08:	f94043a1 	ldr	x1, [x29,#128]
+    2a0c:	f8637842 	ldr	x2, [x2,x3,lsl #3]
+    2a10:	94000000 	bl	0 <dev_warn>
+			2a10: R_AARCH64_CALL26	dev_warn
+
+	if (!gc->names)
+		return 0;
+
+	/* First check all names if they are unique */
+	for (i = 0; i != gc->ngpio; ++i) {
+    2a14:	7940fb00 	ldrh	w0, [x24,#124]
+    2a18:	6b00035f 	cmp	w26, w0
+    2a1c:	54fffe21 	b.ne	29e0 <gpiochip_add_data+0x3d4>
+				 "Detected name collision for GPIO name '%s'\n",
+				 gc->names[i]);
+	}
+
+	/* Then add all names to the GPIO descriptors */
+	for (i = 0; i != gc->ngpio; ++i)
+    2a20:	340001ba 	cbz	w26, 2a54 <gpiochip_add_data+0x448>
+    2a24:	52800000 	mov	w0, #0x0                   	// #0
+		gdev->descs[i].name = gc->names[i];
+    2a28:	f94047a1 	ldr	x1, [x29,#136]
+    2a2c:	f9404302 	ldr	x2, [x24,#128]
+    2a30:	f941a423 	ldr	x3, [x1,#840]
+    2a34:	937b7c01 	sbfiz	x1, x0, #5, #32
+    2a38:	f860d842 	ldr	x2, [x2,w0,sxtw #3]
+				 "Detected name collision for GPIO name '%s'\n",
+				 gc->names[i]);
+	}
+
+	/* Then add all names to the GPIO descriptors */
+	for (i = 0; i != gc->ngpio; ++i)
+    2a3c:	11000400 	add	w0, w0, #0x1
+		gdev->descs[i].name = gc->names[i];
+    2a40:	8b010061 	add	x1, x3, x1
+    2a44:	f9000c22 	str	x2, [x1,#24]
+				 "Detected name collision for GPIO name '%s'\n",
+				 gc->names[i]);
+	}
+
+	/* Then add all names to the GPIO descriptors */
+	for (i = 0; i != gc->ngpio; ++i)
+    2a48:	7940fb01 	ldrh	w1, [x24,#124]
+    2a4c:	6b01001f 	cmp	w0, w1
+    2a50:	54fffec1 	b.ne	2a28 <gpiochip_add_data+0x41c>
+
+	status = gpiochip_set_desc_names(chip);
+	if (status)
+		goto err_remove_from_list;
+
+	status = of_gpiochip_add(chip);
+    2a54:	aa1803e0 	mov	x0, x24
+    2a58:	94000000 	bl	0 <of_gpiochip_add>
+			2a58: R_AARCH64_CALL26	of_gpiochip_add
+    2a5c:	2a0003f5 	mov	w21, w0
+	if (status)
+    2a60:	350017c0 	cbnz	w0, 2d58 <gpiochip_add_data+0x74c>
+	 * By first adding the chardev, and then adding the device,
+	 * we get a device node entry in sysfs under
+	 * /sys/bus/gpio/devices/gpiochipN/dev that can be used for
+	 * coldplug of device nodes and other udev business.
+	 */
+	cdev_init(&gdev->chrdev, &gpio_fileops);
+    2a64:	f94037a0 	ldr	x0, [x29,#104]
+    2a68:	910b2333 	add	x19, x25, #0x2c8
+    2a6c:	91000001 	add	x1, x0, #0x0
+			2a6c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+	gdev->chrdev.owner = THIS_MODULE;
+	gdev->chrdev.kobj.parent = &gdev->dev.kobj;
+	gdev->dev.devt = MKDEV(MAJOR(gpio_devt), gdev->id);
+    2a70:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2a70: R_AARCH64_ADR_PREL_PG_HI21	.bss
+    2a74:	91000014 	add	x20, x0, #0x0
+			2a74: R_AARCH64_ADD_ABS_LO12_NC	.bss
+	 * By first adding the chardev, and then adding the device,
+	 * we get a device node entry in sysfs under
+	 * /sys/bus/gpio/devices/gpiochipN/dev that can be used for
+	 * coldplug of device nodes and other udev business.
+	 */
+	cdev_init(&gdev->chrdev, &gpio_fileops);
+    2a78:	910de021 	add	x1, x1, #0x378
+    2a7c:	aa1303e0 	mov	x0, x19
+    2a80:	94000000 	bl	0 <cdev_init>
+			2a80: R_AARCH64_CALL26	cdev_init
+	gdev->chrdev.owner = THIS_MODULE;
+    2a84:	f901873f 	str	xzr, [x25,#776]
+	gdev->chrdev.kobj.parent = &gdev->dev.kobj;
+	gdev->dev.devt = MKDEV(MAJOR(gpio_devt), gdev->id);
+    2a88:	b9403a81 	ldr	w1, [x20,#56]
+	 * /sys/bus/gpio/devices/gpiochipN/dev that can be used for
+	 * coldplug of device nodes and other udev business.
+	 */
+	cdev_init(&gdev->chrdev, &gpio_fileops);
+	gdev->chrdev.owner = THIS_MODULE;
+	gdev->chrdev.kobj.parent = &gdev->dev.kobj;
+    2a8c:	91006322 	add	x2, x25, #0x18
+	gdev->dev.devt = MKDEV(MAJOR(gpio_devt), gdev->id);
+    2a90:	b9400320 	ldr	w0, [x25]
+    2a94:	120c2c21 	and	w1, w1, #0xfff00000
+	 * /sys/bus/gpio/devices/gpiochipN/dev that can be used for
+	 * coldplug of device nodes and other udev business.
+	 */
+	cdev_init(&gdev->chrdev, &gpio_fileops);
+	gdev->chrdev.owner = THIS_MODULE;
+	gdev->chrdev.kobj.parent = &gdev->dev.kobj;
+    2a98:	f9017322 	str	x2, [x25,#736]
+	gdev->dev.devt = MKDEV(MAJOR(gpio_devt), gdev->id);
+    2a9c:	2a000021 	orr	w1, w1, w0
+	status = cdev_add(&gdev->chrdev, gdev->dev.devt, 1);
+    2aa0:	52800022 	mov	w2, #0x1                   	// #1
+	 * coldplug of device nodes and other udev business.
+	 */
+	cdev_init(&gdev->chrdev, &gpio_fileops);
+	gdev->chrdev.owner = THIS_MODULE;
+	gdev->chrdev.kobj.parent = &gdev->dev.kobj;
+	gdev->dev.devt = MKDEV(MAJOR(gpio_devt), gdev->id);
+    2aa4:	b9026321 	str	w1, [x25,#608]
+	status = cdev_add(&gdev->chrdev, gdev->dev.devt, 1);
+    2aa8:	aa1303e0 	mov	x0, x19
+    2aac:	94000000 	bl	0 <cdev_add>
+			2aac: R_AARCH64_CALL26	cdev_add
+	if (status < 0)
+    2ab0:	37f80d00 	tbnz	w0, #31, 2c50 <gpiochip_add_data+0x644>
+		chip_warn(chip, "failed to add char device %d:%d\n",
+			  MAJOR(gpio_devt), gdev->id);
+	else
+		chip_dbg(chip, "added GPIO chardev (%d:%d)\n",
+    2ab4:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			2ab4: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+    2ab8:	910000c6 	add	x6, x6, #0x0
+			2ab8: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    2abc:	910320c6 	add	x6, x6, #0xc8
+    2ac0:	794044c0 	ldrh	w0, [x6,#34]
+    2ac4:	371010c0 	tbnz	w0, #2, 2cdc <gpiochip_add_data+0x6d0>
+			 MAJOR(gpio_devt), gdev->id);
+	status = device_add(&gdev->dev);
+    2ac8:	f9403ba0 	ldr	x0, [x29,#112]
+    2acc:	94000000 	bl	0 <device_add>
+			2acc: R_AARCH64_CALL26	device_add
+    2ad0:	2a0003f5 	mov	w21, w0
+	if (status)
+    2ad4:	350013e0 	cbnz	w0, 2d50 <gpiochip_add_data+0x744>
+		goto err_remove_chardev;
+
+	status = gpiochip_sysfs_register(gdev);
+    2ad8:	aa1903e0 	mov	x0, x25
+    2adc:	94000000 	bl	0 <gpiochip_sysfs_register>
+			2adc: R_AARCH64_CALL26	gpiochip_sysfs_register
+    2ae0:	2a0003f5 	mov	w21, w0
+	if (status)
+    2ae4:	35001320 	cbnz	w0, 2d48 <gpiochip_add_data+0x73c>
+		goto err_remove_device;
+
+	/* From this point, the .release() function cleans up gpio_device */
+	gdev->dev.release = gpiodevice_release;
+	pr_debug("%s: registered GPIOs %d to %d on device: %s (%s)\n",
+    2ae8:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2ae8: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+	status = gpiochip_sysfs_register(gdev);
+	if (status)
+		goto err_remove_device;
+
+	/* From this point, the .release() function cleans up gpio_device */
+	gdev->dev.release = gpiodevice_release;
+    2aec:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2aec: R_AARCH64_ADR_PREL_PG_HI21	.text+0x9dc
+	pr_debug("%s: registered GPIOs %d to %d on device: %s (%s)\n",
+    2af0:	91000043 	add	x3, x2, #0x0
+			2af0: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+	status = gpiochip_sysfs_register(gdev);
+	if (status)
+		goto err_remove_device;
+
+	/* From this point, the .release() function cleans up gpio_device */
+	gdev->dev.release = gpiodevice_release;
+    2af4:	91000021 	add	x1, x1, #0x0
+			2af4: R_AARCH64_ADD_ABS_LO12_NC	.text+0x9dc
+    2af8:	f9015b21 	str	x1, [x25,#688]
+	pr_debug("%s: registered GPIOs %d to %d on device: %s (%s)\n",
+		 __func__, gdev->base, gdev->base + gdev->ngpio - 1,
+		 dev_name(&gdev->dev), chip->label ? : "generic");
+
+	return 0;
+    2afc:	52800000 	mov	w0, #0x0                   	// #0
+	if (status)
+		goto err_remove_device;
+
+	/* From this point, the .release() function cleans up gpio_device */
+	gdev->dev.release = gpiodevice_release;
+	pr_debug("%s: registered GPIOs %d to %d on device: %s (%s)\n",
+    2b00:	79422461 	ldrh	w1, [x3,#274]
+    2b04:	37100ba1 	tbnz	w1, #2, 2c78 <gpiochip_add_data+0x66c>
+	pr_err("%s: GPIOs %d..%d (%s) failed to register\n", __func__,
+	       gdev->base, gdev->base + gdev->ngpio - 1,
+	       chip->label ? : "generic");
+	kfree(gdev);
+	return status;
+}
+    2b08:	a94153f3 	ldp	x19, x20, [sp,#16]
+    2b0c:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    2b10:	a94363f7 	ldp	x23, x24, [sp,#48]
+    2b14:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    2b18:	a94573fb 	ldp	x27, x28, [sp,#80]
+    2b1c:	a8cb7bfd 	ldp	x29, x30, [sp],#176
+    2b20:	d65f03c0 	ret
+	}
+
+	next = list_entry(gpio_devices.next, struct gpio_device, list);
+	if (gdev->base + gdev->ngpio <= next->base) {
+		/* add before first entry */
+		list_add(&gdev->list, &gpio_devices);
+    2b24:	910da320 	add	x0, x25, #0x368
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    2b28:	f90004a0 	str	x0, [x5,#8]
+    2b2c:	f90033a0 	str	x0, [x29,#96]
+	new->next = next;
+    2b30:	f901b725 	str	x5, [x25,#872]
+    2b34:	f9000020 	str	x0, [x1]
+			2b34: R_AARCH64_LDST64_ABS_LO12_NC	.data
+	new->prev = prev;
+    2b38:	f901bb23 	str	x3, [x25,#880]
+    2b3c:	17ffff58 	b	289c <gpiochip_add_data+0x290>
+	dev_set_drvdata(&gdev->dev, gdev);
+	if (chip->parent && chip->parent->driver)
+		gdev->owner = chip->parent->driver->owner;
+	else if (chip->owner)
+		/* TODO: remove chip->owner */
+		gdev->owner = chip->owner;
+    2b40:	f9400f00 	ldr	x0, [x24,#24]
+    2b44:	f9019f20 	str	x0, [x25,#824]
+    2b48:	17fffeea 	b	26f0 <gpiochip_add_data+0xe4>
+static int gpiochip_find_base(int ngpio)
+{
+	struct gpio_device *gdev;
+	int base = ARCH_NR_GPIOS - ngpio;
+
+	list_for_each_entry_reverse(gdev, &gpio_devices, list) {
+    2b4c:	91000364 	add	x4, x27, #0x0
+			2b4c: R_AARCH64_ADD_ABS_LO12_NC	.data
+	 * get *rid* of this numberspace and use only descriptors, but
+	 * it may be a pipe dream. It will not happen before we get rid
+	 * of the sysfs interface anyways.
+	 */
+	if (base < 0) {
+		base = gpiochip_find_base(chip->ngpio);
+    2b50:	7940fb05 	ldrh	w5, [x24,#124]
+
+/* dynamic allocation of GPIOs, e.g. on a hotplugged device */
+static int gpiochip_find_base(int ngpio)
+{
+	struct gpio_device *gdev;
+	int base = ARCH_NR_GPIOS - ngpio;
+    2b54:	52804013 	mov	w19, #0x200                 	// #512
+    2b58:	4b050273 	sub	w19, w19, w5
+
+	list_for_each_entry_reverse(gdev, &gpio_devices, list) {
+    2b5c:	f9400480 	ldr	x0, [x4,#8]
+    2b60:	eb00009f 	cmp	x4, x0
+    2b64:	d10da003 	sub	x3, x0, #0x368
+    2b68:	54000220 	b.eq	2bac <gpiochip_add_data+0x5a0>
+		/* found a free space? */
+		if (gdev->base + gdev->ngpio <= base)
+    2b6c:	b85e8001 	ldr	w1, [x0,#-24]
+    2b70:	785ec000 	ldrh	w0, [x0,#-20]
+    2b74:	0b000020 	add	w0, w1, w0
+    2b78:	6b13001f 	cmp	w0, w19
+    2b7c:	540000ec 	b.gt	2b98 <gpiochip_add_data+0x58c>
+    2b80:	1400000b 	b	2bac <gpiochip_add_data+0x5a0>
+    2b84:	b85e8041 	ldr	w1, [x2,#-24]
+    2b88:	785ec040 	ldrh	w0, [x2,#-20]
+    2b8c:	0b000020 	add	w0, w1, w0
+    2b90:	6b13001f 	cmp	w0, w19
+    2b94:	540000cd 	b.le	2bac <gpiochip_add_data+0x5a0>
+static int gpiochip_find_base(int ngpio)
+{
+	struct gpio_device *gdev;
+	int base = ARCH_NR_GPIOS - ngpio;
+
+	list_for_each_entry_reverse(gdev, &gpio_devices, list) {
+    2b98:	f941b862 	ldr	x2, [x3,#880]
+		/* found a free space? */
+		if (gdev->base + gdev->ngpio <= base)
+			break;
+		else
+			/* nope, check the space right before the chip */
+			base = gdev->base - ngpio;
+    2b9c:	4b050033 	sub	w19, w1, w5
+static int gpiochip_find_base(int ngpio)
+{
+	struct gpio_device *gdev;
+	int base = ARCH_NR_GPIOS - ngpio;
+
+	list_for_each_entry_reverse(gdev, &gpio_devices, list) {
+    2ba0:	eb02009f 	cmp	x4, x2
+    2ba4:	d10da043 	sub	x3, x2, #0x368
+    2ba8:	54fffee1 	b.ne	2b84 <gpiochip_add_data+0x578>
+    2bac:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2bac: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+		else
+			/* nope, check the space right before the chip */
+			base = gdev->base - ngpio;
+	}
+
+	if (gpio_is_valid(base)) {
+    2bb0:	7107fe7f 	cmp	w19, #0x1ff
+    2bb4:	f90037a0 	str	x0, [x29,#104]
+    2bb8:	54001028 	b.hi	2dbc <gpiochip_add_data+0x7b0>
+		pr_debug("%s: found new base at %d\n", __func__, base);
+    2bbc:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2bbc: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+    2bc0:	91000000 	add	x0, x0, #0x0
+			2bc0: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    2bc4:	91028000 	add	x0, x0, #0xa0
+    2bc8:	79404401 	ldrh	w1, [x0,#34]
+    2bcc:	37100221 	tbnz	w1, #2, 2c10 <gpiochip_add_data+0x604>
+		 * TODO: it should not be necessary to reflect the assigned
+		 * base outside of the GPIO subsystem. Go over drivers and
+		 * see if anyone makes use of this, else drop this and assign
+		 * a poison instead.
+		 */
+		chip->base = base;
+    2bd0:	b9007b13 	str	w19, [x24,#120]
+})
+
+static __always_inline
+void __read_once_size(const volatile void *p, void *res, int size)
+{
+	__READ_ONCE_SIZE;
+    2bd4:	f9400360 	ldr	x0, [x27]
+			2bd4: R_AARCH64_LDST64_ABS_LO12_NC	.data
+    2bd8:	91000363 	add	x3, x27, #0x0
+			2bd8: R_AARCH64_ADD_ABS_LO12_NC	.data
+	}
+	gdev->base = base;
+    2bdc:	b9035333 	str	w19, [x25,#848]
+    2be0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2be0: R_AARCH64_ADR_PREL_PG_HI21	.data
+ */
+static int gpiodev_add_to_list(struct gpio_device *gdev)
+{
+	struct gpio_device *prev, *next;
+
+	if (list_empty(&gpio_devices)) {
+    2be4:	eb00007f 	cmp	x3, x0
+    2be8:	54ffdc81 	b.ne	2778 <gpiochip_add_data+0x16c>
+		/* initial entry in list */
+		list_add_tail(&gdev->list, &gpio_devices);
+    2bec:	910da320 	add	x0, x25, #0x368
+    2bf0:	f90033a0 	str	x0, [x29,#96]
+    2bf4:	aa0003e1 	mov	x1, x0
+ * Insert a new entry before the specified head.
+ * This is useful for implementing queues.
+ */
+static inline void list_add_tail(struct list_head *new, struct list_head *head)
+{
+	__list_add(new, head->prev, head);
+    2bf8:	f9400460 	ldr	x0, [x3,#8]
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+	new->next = next;
+    2bfc:	f901b723 	str	x3, [x25,#872]
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    2c00:	f9000461 	str	x1, [x3,#8]
+	new->next = next;
+	new->prev = prev;
+    2c04:	f9000420 	str	x0, [x1,#8]
+{
+	switch (size) {
+	case 1: *(volatile __u8 *)p = *(__u8 *)res; break;
+	case 2: *(volatile __u16 *)p = *(__u16 *)res; break;
+	case 4: *(volatile __u32 *)p = *(__u32 *)res; break;
+	case 8: *(volatile __u64 *)p = *(__u64 *)res; break;
+    2c08:	f9000001 	str	x1, [x0]
+    2c0c:	17ffff24 	b	289c <gpiochip_add_data+0x290>
+			/* nope, check the space right before the chip */
+			base = gdev->base - ngpio;
+	}
+
+	if (gpio_is_valid(base)) {
+		pr_debug("%s: found new base at %d\n", __func__, base);
+    2c10:	f94037a1 	ldr	x1, [x29,#104]
+    2c14:	2a1303e3 	mov	w3, w19
+    2c18:	91000022 	add	x2, x1, #0x0
+			2c18: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2c1c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2c1c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x5b8
+    2c20:	910d8042 	add	x2, x2, #0x360
+    2c24:	91000021 	add	x1, x1, #0x0
+			2c24: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x5b8
+    2c28:	94000000 	bl	0 <__dynamic_pr_debug>
+			2c28: R_AARCH64_CALL26	__dynamic_pr_debug
+		 * TODO: it should not be necessary to reflect the assigned
+		 * base outside of the GPIO subsystem. Go over drivers and
+		 * see if anyone makes use of this, else drop this and assign
+		 * a poison instead.
+		 */
+		chip->base = base;
+    2c2c:	b9007b13 	str	w19, [x24,#120]
+    2c30:	17ffffe9 	b	2bd4 <gpiochip_add_data+0x5c8>
+		gdev->dev.parent = chip->parent;
+		gdev->dev.of_node = chip->parent->of_node;
+	} else {
+#ifdef CONFIG_OF_GPIO
+	/* If the gpiochip has an assigned OF node this takes precedence */
+		if (chip->of_node)
+    2c34:	f9408b00 	ldr	x0, [x24,#272]
+    2c38:	b4ffd260 	cbz	x0, 2684 <gpiochip_add_data+0x78>
+			gdev->dev.of_node = chip->of_node;
+    2c3c:	f9012b20 	str	x0, [x25,#592]
+    2c40:	17fffe91 	b	2684 <gpiochip_add_data+0x78>
+	}
+
+	if (chip->label)
+		gdev->label = devm_kstrdup(&gdev->dev, chip->label, GFP_KERNEL);
+	else
+		gdev->label = devm_kstrdup(&gdev->dev, "unknown", GFP_KERNEL);
+    2c44:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2c44: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x5b0
+    2c48:	91000021 	add	x1, x1, #0x0
+			2c48: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x5b0
+    2c4c:	17fffeb7 	b	2728 <gpiochip_add_data+0x11c>
+	gdev->chrdev.owner = THIS_MODULE;
+	gdev->chrdev.kobj.parent = &gdev->dev.kobj;
+	gdev->dev.devt = MKDEV(MAJOR(gpio_devt), gdev->id);
+	status = cdev_add(&gdev->chrdev, gdev->dev.devt, 1);
+	if (status < 0)
+		chip_warn(chip, "failed to add char device %d:%d\n",
+    2c50:	b9403a83 	ldr	w3, [x20,#56]
+    2c54:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2c54: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x658
+    2c58:	f9400700 	ldr	x0, [x24,#8]
+    2c5c:	91000021 	add	x1, x1, #0x0
+			2c5c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x658
+    2c60:	b9400324 	ldr	w4, [x25]
+    2c64:	53147c63 	lsr	w3, w3, #20
+    2c68:	f9400302 	ldr	x2, [x24]
+    2c6c:	91002000 	add	x0, x0, #0x8
+    2c70:	94000000 	bl	0 <dev_warn>
+			2c70: R_AARCH64_CALL26	dev_warn
+    2c74:	17ffff95 	b	2ac8 <gpiochip_add_data+0x4bc>
+#include <linux/pm_wakeup.h>
+
+static inline const char *dev_name(const struct device *dev)
+{
+	/* Use the init name until the kobject becomes available */
+	if (dev->init_name)
+    2c78:	f9403ba0 	ldr	x0, [x29,#112]
+	if (status)
+		goto err_remove_device;
+
+	/* From this point, the .release() function cleans up gpio_device */
+	gdev->dev.release = gpiodevice_release;
+	pr_debug("%s: registered GPIOs %d to %d on device: %s (%s)\n",
+    2c7c:	b9435323 	ldr	w3, [x25,#848]
+    2c80:	7946ab24 	ldrh	w4, [x25,#852]
+    2c84:	f9402805 	ldr	x5, [x0,#80]
+    2c88:	0b040064 	add	w4, w3, w4
+    2c8c:	51000484 	sub	w4, w4, #0x1
+    2c90:	b40004c5 	cbz	x5, 2d28 <gpiochip_add_data+0x71c>
+    2c94:	f9400306 	ldr	x6, [x24]
+    2c98:	b40004c6 	cbz	x6, 2d30 <gpiochip_add_data+0x724>
+    2c9c:	f94037a1 	ldr	x1, [x29,#104]
+    2ca0:	91000040 	add	x0, x2, #0x0
+			2ca0: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    2ca4:	9103c000 	add	x0, x0, #0xf0
+    2ca8:	91000022 	add	x2, x1, #0x0
+			2ca8: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2cac:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2cac: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x6a8
+    2cb0:	9111a042 	add	x2, x2, #0x468
+    2cb4:	91000021 	add	x1, x1, #0x0
+			2cb4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x6a8
+    2cb8:	94000000 	bl	0 <__dynamic_pr_debug>
+			2cb8: R_AARCH64_CALL26	__dynamic_pr_debug
+		 __func__, gdev->base, gdev->base + gdev->ngpio - 1,
+		 dev_name(&gdev->dev), chip->label ? : "generic");
+
+	return 0;
+    2cbc:	52800000 	mov	w0, #0x0                   	// #0
+	pr_err("%s: GPIOs %d..%d (%s) failed to register\n", __func__,
+	       gdev->base, gdev->base + gdev->ngpio - 1,
+	       chip->label ? : "generic");
+	kfree(gdev);
+	return status;
+}
+    2cc0:	a94153f3 	ldp	x19, x20, [sp,#16]
+    2cc4:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    2cc8:	a94363f7 	ldp	x23, x24, [sp,#48]
+    2ccc:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    2cd0:	a94573fb 	ldp	x27, x28, [sp,#80]
+    2cd4:	a8cb7bfd 	ldp	x29, x30, [sp],#176
+    2cd8:	d65f03c0 	ret
+	status = cdev_add(&gdev->chrdev, gdev->dev.devt, 1);
+	if (status < 0)
+		chip_warn(chip, "failed to add char device %d:%d\n",
+			  MAJOR(gpio_devt), gdev->id);
+	else
+		chip_dbg(chip, "added GPIO chardev (%d:%d)\n",
+    2cdc:	b9403a84 	ldr	w4, [x20,#56]
+    2ce0:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2ce0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x680
+    2ce4:	f9400701 	ldr	x1, [x24,#8]
+    2ce8:	91000042 	add	x2, x2, #0x0
+			2ce8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x680
+    2cec:	b9400325 	ldr	w5, [x25]
+    2cf0:	53147c84 	lsr	w4, w4, #20
+    2cf4:	f9400303 	ldr	x3, [x24]
+    2cf8:	91002021 	add	x1, x1, #0x8
+    2cfc:	aa0603e0 	mov	x0, x6
+    2d00:	94000000 	bl	0 <__dynamic_dev_dbg>
+			2d00: R_AARCH64_CALL26	__dynamic_dev_dbg
+    2d04:	17ffff71 	b	2ac8 <gpiochip_add_data+0x4bc>
+ * Insert a new entry after the specified head.
+ * This is good for implementing stacks.
+ */
+static inline void list_add(struct list_head *new, struct list_head *head)
+{
+	__list_add(new, head, head->next);
+    2d08:	f941b401 	ldr	x1, [x0,#872]
+			break;
+
+		/* add between prev and next */
+		if (prev->base + prev->ngpio <= gdev->base
+				&& gdev->base + gdev->ngpio <= next->base) {
+			list_add(&gdev->list, &prev->list);
+    2d0c:	910da322 	add	x2, x25, #0x368
+    2d10:	f90033a2 	str	x2, [x29,#96]
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    2d14:	f9000422 	str	x2, [x1,#8]
+	new->next = next;
+    2d18:	f901b721 	str	x1, [x25,#872]
+	new->prev = prev;
+    2d1c:	f901bb25 	str	x5, [x25,#880]
+    2d20:	f901b402 	str	x2, [x0,#872]
+    2d24:	17fffede 	b	289c <gpiochip_add_data+0x290>
+    2d28:	f9400f25 	ldr	x5, [x25,#24]
+    2d2c:	17ffffda 	b	2c94 <gpiochip_add_data+0x688>
+	if (status)
+		goto err_remove_device;
+
+	/* From this point, the .release() function cleans up gpio_device */
+	gdev->dev.release = gpiodevice_release;
+	pr_debug("%s: registered GPIOs %d to %d on device: %s (%s)\n",
+    2d30:	90000006 	adrp	x6, 0 <desc_to_gpio>
+			2d30: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x560
+    2d34:	910000c6 	add	x6, x6, #0x0
+			2d34: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x560
+    2d38:	17ffffd9 	b	2c9c <gpiochip_add_data+0x690>
+	list_del(&gdev->list);
+	spin_unlock_irqrestore(&gpio_lock, flags);
+err_free_gdev:
+	ida_simple_remove(&gpio_ida, gdev->id);
+	/* failures here can mean systems won't boot... */
+	pr_err("%s: GPIOs %d..%d (%s) failed to register\n", __func__,
+    2d3c:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			2d3c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x560
+    2d40:	91000084 	add	x4, x4, #0x0
+			2d40: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x560
+    2d44:	17fffec6 	b	285c <gpiochip_add_data+0x250>
+		 dev_name(&gdev->dev), chip->label ? : "generic");
+
+	return 0;
+
+err_remove_device:
+	device_del(&gdev->dev);
+    2d48:	f9403ba0 	ldr	x0, [x29,#112]
+    2d4c:	94000000 	bl	0 <device_del>
+			2d4c: R_AARCH64_CALL26	device_del
+err_remove_chardev:
+	cdev_del(&gdev->chrdev);
+    2d50:	aa1303e0 	mov	x0, x19
+    2d54:	94000000 	bl	0 <cdev_del>
+			2d54: R_AARCH64_CALL26	cdev_del
+err_remove_chip:
+	acpi_gpiochip_remove(chip);
+	gpiochip_free_hogs(chip);
+	of_gpiochip_remove(chip);
+err_remove_from_list:
+	spin_lock_irqsave(&gpio_lock, flags);
+    2d58:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2d58: R_AARCH64_ADR_PREL_PG_HI21	.bss
+	device_del(&gdev->dev);
+err_remove_chardev:
+	cdev_del(&gdev->chrdev);
+err_remove_chip:
+	acpi_gpiochip_remove(chip);
+	gpiochip_free_hogs(chip);
+    2d5c:	9101f301 	add	x1, x24, #0x7c
+    2d60:	91002300 	add	x0, x24, #0x8
+	of_gpiochip_remove(chip);
+err_remove_from_list:
+	spin_lock_irqsave(&gpio_lock, flags);
+    2d64:	91000053 	add	x19, x2, #0x0
+			2d64: R_AARCH64_ADD_ABS_LO12_NC	.bss
+	device_del(&gdev->dev);
+err_remove_chardev:
+	cdev_del(&gdev->chrdev);
+err_remove_chip:
+	acpi_gpiochip_remove(chip);
+	gpiochip_free_hogs(chip);
+    2d68:	97fffe0f 	bl	25a4 <gpiochip_free_hogs.isra.36>
+	of_gpiochip_remove(chip);
+    2d6c:	aa1803e0 	mov	x0, x24
+    2d70:	94000000 	bl	0 <of_gpiochip_remove>
+			2d70: R_AARCH64_CALL26	of_gpiochip_remove
+err_remove_from_list:
+	spin_lock_irqsave(&gpio_lock, flags);
+    2d74:	aa1303e0 	mov	x0, x19
+    2d78:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			2d78: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+    2d7c:	f94033a5 	ldr	x5, [x29,#96]
+	entry->next = LIST_POISON1;
+    2d80:	d2802003 	mov	x3, #0x100                 	// #256
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+    2d84:	f941b724 	ldr	x4, [x25,#872]
+	entry->next = LIST_POISON1;
+    2d88:	f2fbd5a3 	movk	x3, #0xdead, lsl #48
+	entry->prev = LIST_POISON2;
+    2d8c:	d2804002 	mov	x2, #0x200                 	// #512
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+    2d90:	f94004a1 	ldr	x1, [x5,#8]
+	entry->next = LIST_POISON1;
+	entry->prev = LIST_POISON2;
+    2d94:	f2fbd5a2 	movk	x2, #0xdead, lsl #48
+ * This is only for internal list manipulation where we know
+ * the prev/next entries already!
+ */
+static inline void __list_del(struct list_head * prev, struct list_head * next)
+{
+	next->prev = prev;
+    2d98:	f9000481 	str	x1, [x4,#8]
+    2d9c:	f9000024 	str	x4, [x1]
+    2da0:	aa0003e1 	mov	x1, x0
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+    2da4:	f901b723 	str	x3, [x25,#872]
+    2da8:	aa1303e0 	mov	x0, x19
+	entry->prev = LIST_POISON2;
+    2dac:	f90004a2 	str	x2, [x5,#8]
+    2db0:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			2db0: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+    2db4:	b9400321 	ldr	w1, [x25]
+    2db8:	17fffe9f 	b	2834 <gpiochip_add_data+0x228>
+
+	if (gpio_is_valid(base)) {
+		pr_debug("%s: found new base at %d\n", __func__, base);
+		return base;
+	} else {
+		pr_err("%s: cannot find free range\n", __func__);
+    2dbc:	91000001 	add	x1, x0, #0x0
+			2dbc: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    2dc0:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2dc0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x5d8
+    2dc4:	910d8021 	add	x1, x1, #0x360
+    2dc8:	91000000 	add	x0, x0, #0x0
+			2dc8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x5d8
+		return -ENOSPC;
+    2dcc:	12800375 	mov	w21, #0xffffffe4            	// #-28
+
+	if (gpio_is_valid(base)) {
+		pr_debug("%s: found new base at %d\n", __func__, base);
+		return base;
+	} else {
+		pr_err("%s: cannot find free range\n", __func__);
+    2dd0:	94000000 	bl	0 <printk>
+			2dd0: R_AARCH64_CALL26	printk
+    2dd4:	17fffe93 	b	2820 <gpiochip_add_data+0x214>
+	 * First: allocate and populate the internal stat container, and
+	 * set up the struct device.
+	 */
+	gdev = kzalloc(sizeof(*gdev), GFP_KERNEL);
+	if (!gdev)
+		return -ENOMEM;
+    2dd8:	12800160 	mov	w0, #0xfffffff4            	// #-12
+    2ddc:	17ffff4b 	b	2b08 <gpiochip_add_data+0x4fc>
+    2de0:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2de0: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2de4:	b9400321 	ldr	w1, [x25]
+	if (chip->label)
+		gdev->label = devm_kstrdup(&gdev->dev, chip->label, GFP_KERNEL);
+	else
+		gdev->label = devm_kstrdup(&gdev->dev, "unknown", GFP_KERNEL);
+	if (!gdev->label) {
+		status = -ENOMEM;
+    2de8:	12800175 	mov	w21, #0xfffffff4            	// #-12
+    2dec:	f90037a0 	str	x0, [x29,#104]
+    2df0:	17fffe91 	b	2834 <gpiochip_add_data+0x228>
+    2df4:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2df4: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2df8:	2a1503e1 	mov	w1, w21
+    2dfc:	f90037a0 	str	x0, [x29,#104]
+    2e00:	17fffe8d 	b	2834 <gpiochip_add_data+0x228>
+		status = -ENOMEM;
+		goto err_free_gdev;
+	}
+
+	if (chip->ngpio == 0) {
+		chip_err(chip, "tried to insert a GPIO chip with zero lines\n");
+    2e04:	f9400700 	ldr	x0, [x24,#8]
+    2e08:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2e08: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x578
+    2e0c:	f9400302 	ldr	x2, [x24]
+    2e10:	91000021 	add	x1, x1, #0x0
+			2e10: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x578
+    2e14:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			2e14: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    2e18:	91002000 	add	x0, x0, #0x8
+    2e1c:	f90037a3 	str	x3, [x29,#104]
+		status = -EINVAL;
+    2e20:	128002b5 	mov	w21, #0xffffffea            	// #-22
+		status = -ENOMEM;
+		goto err_free_gdev;
+	}
+
+	if (chip->ngpio == 0) {
+		chip_err(chip, "tried to insert a GPIO chip with zero lines\n");
+    2e24:	94000000 	bl	0 <dev_err>
+			2e24: R_AARCH64_CALL26	dev_err
+    2e28:	b9400321 	ldr	w1, [x25]
+		status = -EINVAL;
+		goto err_free_gdev;
+    2e2c:	17fffe82 	b	2834 <gpiochip_add_data+0x228>
+
+0000000000002e30 <gpiochip_remove>:
+ * @chip: the chip to unregister
+ *
+ * A gpio_chip with any GPIOs still requested may not be removed.
+ */
+void gpiochip_remove(struct gpio_chip *chip)
+{
+    2e30:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+    2e34:	910003fd 	mov	x29, sp
+    2e38:	a90153f3 	stp	x19, x20, [sp,#16]
+    2e3c:	a9025bf5 	stp	x21, x22, [sp,#32]
+    2e40:	aa0003f4 	mov	x20, x0
+	struct gpio_device *gdev = chip->gpiodev;
+    2e44:	f9400415 	ldr	x21, [x0,#8]
+	unsigned long	flags;
+	unsigned	i;
+	bool		requested = false;
+
+	/* FIXME: should the legacy sysfs handling be moved to gpio_device? */
+	gpiochip_sysfs_unregister(gdev);
+    2e48:	aa1503e0 	mov	x0, x21
+    2e4c:	94000000 	bl	0 <gpiochip_sysfs_unregister>
+			2e4c: R_AARCH64_CALL26	gpiochip_sysfs_unregister
+	/* Numb the device, cancelling all outstanding operations */
+	gdev->chip = NULL;
+    2e50:	f901a2bf 	str	xzr, [x21,#832]
+{
+	unsigned int offset;
+
+	acpi_gpiochip_free_interrupts(gpiochip);
+
+	if (gpiochip->irq_parent) {
+    2e54:	b9410680 	ldr	w0, [x20,#260]
+    2e58:	35000880 	cbnz	w0, 2f68 <gpiochip_remove+0x138>
+		irq_set_chained_handler(gpiochip->irq_parent, NULL);
+		irq_set_handler_data(gpiochip->irq_parent, NULL);
+	}
+
+	/* Remove all IRQ mappings and delete the domain */
+	if (gpiochip->irqdomain) {
+    2e5c:	f9407680 	ldr	x0, [x20,#232]
+    2e60:	b40001a0 	cbz	x0, 2e94 <gpiochip_remove+0x64>
+		for (offset = 0; offset < gpiochip->ngpio; offset++)
+    2e64:	7940fa81 	ldrh	w1, [x20,#124]
+    2e68:	34000141 	cbz	w1, 2e90 <gpiochip_remove+0x60>
+    2e6c:	52800013 	mov	w19, #0x0                   	// #0
+			irq_dispose_mapping(
+    2e70:	2a1303e1 	mov	w1, w19
+		irq_set_handler_data(gpiochip->irq_parent, NULL);
+	}
+
+	/* Remove all IRQ mappings and delete the domain */
+	if (gpiochip->irqdomain) {
+		for (offset = 0; offset < gpiochip->ngpio; offset++)
+    2e74:	11000673 	add	w19, w19, #0x1
+			irq_dispose_mapping(
+    2e78:	94000000 	bl	0 <irq_find_mapping>
+			2e78: R_AARCH64_CALL26	irq_find_mapping
+    2e7c:	94000000 	bl	0 <irq_dispose_mapping>
+			2e7c: R_AARCH64_CALL26	irq_dispose_mapping
+		irq_set_handler_data(gpiochip->irq_parent, NULL);
+	}
+
+	/* Remove all IRQ mappings and delete the domain */
+	if (gpiochip->irqdomain) {
+		for (offset = 0; offset < gpiochip->ngpio; offset++)
+    2e80:	7940fa80 	ldrh	w0, [x20,#124]
+    2e84:	6b00027f 	cmp	w19, w0
+    2e88:	f9407680 	ldr	x0, [x20,#232]
+    2e8c:	54ffff23 	b.cc	2e70 <gpiochip_remove+0x40>
+			irq_dispose_mapping(
+				irq_find_mapping(gpiochip->irqdomain, offset));
+		irq_domain_remove(gpiochip->irqdomain);
+    2e90:	94000000 	bl	0 <irq_domain_remove>
+			2e90: R_AARCH64_CALL26	irq_domain_remove
+	}
+
+	if (gpiochip->irqchip) {
+    2e94:	f9407280 	ldr	x0, [x20,#224]
+    2e98:	b40000a0 	cbz	x0, 2eac <gpiochip_remove+0x7c>
+		gpiochip->irqchip->irq_request_resources = NULL;
+    2e9c:	f9005c1f 	str	xzr, [x0,#184]
+		gpiochip->irqchip->irq_release_resources = NULL;
+    2ea0:	f9407280 	ldr	x0, [x20,#224]
+    2ea4:	f900601f 	str	xzr, [x0,#192]
+		gpiochip->irqchip = NULL;
+    2ea8:	f900729f 	str	xzr, [x20,#224]
+	gpiochip_sysfs_unregister(gdev);
+	/* Numb the device, cancelling all outstanding operations */
+	gdev->chip = NULL;
+	gpiochip_irqchip_remove(chip);
+	acpi_gpiochip_remove(chip);
+	gpiochip_remove_pin_ranges(chip);
+    2eac:	aa1403e0 	mov	x0, x20
+	 * We accept no more calls into the driver from this point, so
+	 * NULL the driver data pointer
+	 */
+	gdev->data = NULL;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    2eb0:	90000016 	adrp	x22, 0 <desc_to_gpio>
+			2eb0: R_AARCH64_ADR_PREL_PG_HI21	.bss
+    2eb4:	910002d3 	add	x19, x22, #0x0
+			2eb4: R_AARCH64_ADD_ABS_LO12_NC	.bss
+	gpiochip_sysfs_unregister(gdev);
+	/* Numb the device, cancelling all outstanding operations */
+	gdev->chip = NULL;
+	gpiochip_irqchip_remove(chip);
+	acpi_gpiochip_remove(chip);
+	gpiochip_remove_pin_ranges(chip);
+    2eb8:	94000000 	bl	1298 <gpiochip_remove_pin_ranges>
+			2eb8: R_AARCH64_CALL26	gpiochip_remove_pin_ranges
+	gpiochip_free_hogs(chip);
+    2ebc:	9101f281 	add	x1, x20, #0x7c
+    2ec0:	91002280 	add	x0, x20, #0x8
+    2ec4:	97fffdb8 	bl	25a4 <gpiochip_free_hogs.isra.36>
+	of_gpiochip_remove(chip);
+    2ec8:	aa1403e0 	mov	x0, x20
+    2ecc:	94000000 	bl	0 <of_gpiochip_remove>
+			2ecc: R_AARCH64_CALL26	of_gpiochip_remove
+	/*
+	 * We accept no more calls into the driver from this point, so
+	 * NULL the driver data pointer
+	 */
+	gdev->data = NULL;
+    2ed0:	f901b2bf 	str	xzr, [x21,#864]
+
+	spin_lock_irqsave(&gpio_lock, flags);
+    2ed4:	aa1303e0 	mov	x0, x19
+    2ed8:	94000000 	bl	0 <_raw_spin_lock_irqsave>
+			2ed8: R_AARCH64_CALL26	_raw_spin_lock_irqsave
+	for (i = 0; i < gdev->ngpio; i++) {
+    2edc:	7946aaa4 	ldrh	w4, [x21,#852]
+    2ee0:	34000544 	cbz	w4, 2f88 <gpiochip_remove+0x158>
+    2ee4:	51000484 	sub	w4, w4, #0x1
+    2ee8:	f941a6a2 	ldr	x2, [x21,#840]
+    2eec:	91000484 	add	x4, x4, #0x1
+    2ef0:	52800013 	mov	w19, #0x0                   	// #0
+    2ef4:	8b041444 	add	x4, x2, x4, lsl #5
+    2ef8:	f9400443 	ldr	x3, [x2,#8]
+    2efc:	91008042 	add	x2, x2, #0x20
+    2f00:	12000063 	and	w3, w3, #0x1
+		desc = &gdev->descs[i];
+		if (test_bit(FLAG_REQUESTED, &desc->flags))
+			requested = true;
+    2f04:	6b1f007f 	cmp	w3, wzr
+    2f08:	1a9f0673 	csinc	w19, w19, wzr, eq
+	 * NULL the driver data pointer
+	 */
+	gdev->data = NULL;
+
+	spin_lock_irqsave(&gpio_lock, flags);
+	for (i = 0; i < gdev->ngpio; i++) {
+    2f0c:	eb04005f 	cmp	x2, x4
+    2f10:	54ffff41 	b.ne	2ef8 <gpiochip_remove+0xc8>
+    2f14:	aa0003e1 	mov	x1, x0
+    2f18:	910002c0 	add	x0, x22, #0x0
+			2f18: R_AARCH64_ADD_ABS_LO12_NC	.bss
+    2f1c:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			2f1c: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+		if (test_bit(FLAG_REQUESTED, &desc->flags))
+			requested = true;
+	}
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	if (requested)
+    2f20:	35000193 	cbnz	w19, 2f50 <gpiochip_remove+0x120>
+    2f24:	910022b3 	add	x19, x21, #0x8
+		dev_crit(&gdev->dev,
+			 "REMOVING GPIOCHIP WITH GPIOS STILL REQUESTED\n");
+
+	device_del(&gdev->dev);
+    2f28:	aa1303e0 	mov	x0, x19
+    2f2c:	94000000 	bl	0 <device_del>
+			2f2c: R_AARCH64_CALL26	device_del
+	cdev_del(&gdev->chrdev);
+    2f30:	910b22a0 	add	x0, x21, #0x2c8
+    2f34:	94000000 	bl	0 <cdev_del>
+			2f34: R_AARCH64_CALL26	cdev_del
+	put_device(&gdev->dev);
+    2f38:	aa1303e0 	mov	x0, x19
+    2f3c:	94000000 	bl	0 <put_device>
+			2f3c: R_AARCH64_CALL26	put_device
+}
+    2f40:	a94153f3 	ldp	x19, x20, [sp,#16]
+    2f44:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    2f48:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    2f4c:	d65f03c0 	ret
+			requested = true;
+	}
+	spin_unlock_irqrestore(&gpio_lock, flags);
+
+	if (requested)
+		dev_crit(&gdev->dev,
+    2f50:	910022b3 	add	x19, x21, #0x8
+    2f54:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			2f54: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x710
+    2f58:	91000021 	add	x1, x1, #0x0
+			2f58: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x710
+    2f5c:	aa1303e0 	mov	x0, x19
+    2f60:	94000000 	bl	0 <dev_crit>
+			2f60: R_AARCH64_CALL26	dev_crit
+    2f64:	17fffff1 	b	2f28 <gpiochip_remove+0xf8>
+ *  IRQ_NOREQUEST, IRQ_NOPROBE, and IRQ_NOTHREAD)
+ */
+static inline void
+irq_set_chained_handler(unsigned int irq, irq_flow_handler_t handle)
+{
+	__irq_set_handler(irq, handle, 1, NULL);
+    2f68:	d2800001 	mov	x1, #0x0                   	// #0
+    2f6c:	d2800003 	mov	x3, #0x0                   	// #0
+    2f70:	52800022 	mov	w2, #0x1                   	// #1
+    2f74:	94000000 	bl	0 <__irq_set_handler>
+			2f74: R_AARCH64_CALL26	__irq_set_handler
+
+	acpi_gpiochip_free_interrupts(gpiochip);
+
+	if (gpiochip->irq_parent) {
+		irq_set_chained_handler(gpiochip->irq_parent, NULL);
+		irq_set_handler_data(gpiochip->irq_parent, NULL);
+    2f78:	b9410680 	ldr	w0, [x20,#260]
+    2f7c:	d2800001 	mov	x1, #0x0                   	// #0
+    2f80:	94000000 	bl	0 <irq_set_handler_data>
+			2f80: R_AARCH64_CALL26	irq_set_handler_data
+    2f84:	17ffffb6 	b	2e5c <gpiochip_remove+0x2c>
+    2f88:	aa0003e1 	mov	x1, x0
+    2f8c:	aa1303e0 	mov	x0, x19
+    2f90:	910022b3 	add	x19, x21, #0x8
+    2f94:	94000000 	bl	0 <_raw_spin_unlock_irqrestore>
+			2f94: R_AARCH64_CALL26	_raw_spin_unlock_irqrestore
+    2f98:	17ffffe4 	b	2f28 <gpiochip_remove+0xf8>
+
+0000000000002f9c <gpiod_count>:
+ *		or -ENOENT if no GPIO has been assigned to the requested function
+ * @dev:	GPIO consumer, can be NULL for system-global GPIOs
+ * @con_id:	function within the GPIO consumer
+ */
+int gpiod_count(struct device *dev, const char *con_id)
+{
+    2f9c:	a9b97bfd 	stp	x29, x30, [sp,#-112]!
+    2fa0:	910003fd 	mov	x29, sp
+    2fa4:	a90153f3 	stp	x19, x20, [sp,#16]
+    2fa8:	a9025bf5 	stp	x21, x22, [sp,#32]
+    2fac:	a90363f7 	stp	x23, x24, [sp,#48]
+    2fb0:	f90023f9 	str	x25, [sp,#64]
+    2fb4:	aa0003f5 	mov	x21, x0
+    2fb8:	aa0103f3 	mov	x19, x1
+	int count = -ENOENT;
+
+	if (IS_ENABLED(CONFIG_OF) && dev && dev->of_node)
+    2fbc:	b4000380 	cbz	x0, 302c <gpiod_count+0x90>
+    2fc0:	f9412400 	ldr	x0, [x0,#584]
+    2fc4:	b4000340 	cbz	x0, 302c <gpiod_count+0x90>
+    2fc8:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			2fc8: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(propname, sizeof(propname), "%s-%s",
+				 con_id, gpio_suffixes[i]);
+		else
+			snprintf(propname, sizeof(propname), "%s",
+    2fcc:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			2fcc: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x748
+    2fd0:	91000000 	add	x0, x0, #0x0
+			2fd0: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+	char propname[32];
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(propname, sizeof(propname), "%s-%s",
+    2fd4:	90000018 	adrp	x24, 0 <desc_to_gpio>
+			2fd4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x740
+ * The above example defines four GPIOs, two of which are not specified.
+ * This function will return '4'
+ */
+static inline int of_gpio_named_count(struct device_node *np, const char* propname)
+{
+	return of_count_phandle_with_args(np, propname, "#gpio-cells");
+    2fd8:	90000017 	adrp	x23, 0 <desc_to_gpio>
+			2fd8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x750
+    2fdc:	91120014 	add	x20, x0, #0x480
+    2fe0:	91124016 	add	x22, x0, #0x490
+				 con_id, gpio_suffixes[i]);
+		else
+			snprintf(propname, sizeof(propname), "%s",
+    2fe4:	91000059 	add	x25, x2, #0x0
+			2fe4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x748
+	char propname[32];
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(propname, sizeof(propname), "%s-%s",
+    2fe8:	91000318 	add	x24, x24, #0x0
+			2fe8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x740
+    2fec:	910002f7 	add	x23, x23, #0x0
+			2fec: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x750
+    2ff0:	aa1303e3 	mov	x3, x19
+    2ff4:	aa1803e2 	mov	x2, x24
+    2ff8:	d2800401 	mov	x1, #0x20                  	// #32
+    2ffc:	910143a0 	add	x0, x29, #0x50
+	int ret;
+	char propname[32];
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+    3000:	b4000553 	cbz	x19, 30a8 <gpiod_count+0x10c>
+			snprintf(propname, sizeof(propname), "%s-%s",
+    3004:	f9400284 	ldr	x4, [x20]
+    3008:	94000000 	bl	0 <snprintf>
+			3008: R_AARCH64_CALL26	snprintf
+    300c:	f94126a0 	ldr	x0, [x21,#584]
+    3010:	aa1703e2 	mov	x2, x23
+    3014:	910143a1 	add	x1, x29, #0x50
+    3018:	91002294 	add	x20, x20, #0x8
+    301c:	94000000 	bl	0 <of_count_phandle_with_args>
+			301c: R_AARCH64_CALL26	of_count_phandle_with_args
+{
+	int ret;
+	char propname[32];
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+    3020:	eb16029f 	cmp	x20, x22
+		else
+			snprintf(propname, sizeof(propname), "%s",
+				 gpio_suffixes[i]);
+
+		ret = of_gpio_named_count(dev->of_node, propname);
+		if (ret >= 0)
+    3024:	36f802c0 	tbz	w0, #31, 307c <gpiod_count+0xe0>
+{
+	int ret;
+	char propname[32];
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+    3028:	54fffe41 	b.ne	2ff0 <gpiod_count+0x54>
+{
+	struct gpiod_lookup_table *table;
+	struct gpiod_lookup *p;
+	unsigned int count = 0;
+
+	table = gpiod_find_lookup_table(dev);
+    302c:	aa1503e0 	mov	x0, x21
+    3030:	97fffa3a 	bl	1918 <gpiod_find_lookup_table>
+	if (!table)
+    3034:	b4000460 	cbz	x0, 30c0 <gpiod_count+0x124>
+		return -ENOENT;
+
+	for (p = &table->table[0]; p->chip_label; p++) {
+    3038:	f9400c01 	ldr	x1, [x0,#24]
+    303c:	91006014 	add	x20, x0, #0x18
+    3040:	b4000401 	cbz	x1, 30c0 <gpiod_count+0x124>
+    3044:	52800015 	mov	w21, #0x0                   	// #0
+		if ((con_id && p->con_id && !strcmp(con_id, p->con_id)) ||
+    3048:	aa1303e0 	mov	x0, x19
+    304c:	b4000253 	cbz	x19, 3094 <gpiod_count+0xf8>
+    3050:	f9400a82 	ldr	x2, [x20,#16]
+    3054:	aa0203e1 	mov	x1, x2
+    3058:	b4000082 	cbz	x2, 3068 <gpiod_count+0xcc>
+    305c:	94000000 	bl	0 <strcmp>
+			305c: R_AARCH64_CALL26	strcmp
+    3060:	35000040 	cbnz	w0, 3068 <gpiod_count+0xcc>
+		    (!con_id && !p->con_id))
+			count++;
+    3064:	110006b5 	add	w21, w21, #0x1
+
+	table = gpiod_find_lookup_table(dev);
+	if (!table)
+		return -ENOENT;
+
+	for (p = &table->table[0]; p->chip_label; p++) {
+    3068:	f8420e80 	ldr	x0, [x20,#32]!
+    306c:	b5fffee0 	cbnz	x0, 3048 <gpiod_count+0xac>
+			count++;
+	}
+	if (!count)
+		return -ENOENT;
+
+	return count;
+    3070:	6b1f02bf 	cmp	w21, wzr
+    3074:	12800020 	mov	w0, #0xfffffffe            	// #-2
+    3078:	1a8012a0 	csel	w0, w21, w0, ne
+
+	if (count < 0)
+		count = platform_gpio_count(dev, con_id);
+
+	return count;
+}
+    307c:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3080:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    3084:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3088:	f94023f9 	ldr	x25, [sp,#64]
+    308c:	a8c77bfd 	ldp	x29, x30, [sp],#112
+    3090:	d65f03c0 	ret
+	if (!table)
+		return -ENOENT;
+
+	for (p = &table->table[0]; p->chip_label; p++) {
+		if ((con_id && p->con_id && !strcmp(con_id, p->con_id)) ||
+		    (!con_id && !p->con_id))
+    3094:	f9400a80 	ldr	x0, [x20,#16]
+    3098:	b4fffe60 	cbz	x0, 3064 <gpiod_count+0xc8>
+
+	table = gpiod_find_lookup_table(dev);
+	if (!table)
+		return -ENOENT;
+
+	for (p = &table->table[0]; p->chip_label; p++) {
+    309c:	f8420e80 	ldr	x0, [x20,#32]!
+    30a0:	b5fffd40 	cbnz	x0, 3048 <gpiod_count+0xac>
+    30a4:	17fffff3 	b	3070 <gpiod_count+0xd4>
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(propname, sizeof(propname), "%s-%s",
+				 con_id, gpio_suffixes[i]);
+		else
+			snprintf(propname, sizeof(propname), "%s",
+    30a8:	f9400283 	ldr	x3, [x20]
+    30ac:	aa1903e2 	mov	x2, x25
+    30b0:	d2800401 	mov	x1, #0x20                  	// #32
+    30b4:	910143a0 	add	x0, x29, #0x50
+    30b8:	94000000 	bl	0 <snprintf>
+			30b8: R_AARCH64_CALL26	snprintf
+    30bc:	17ffffd4 	b	300c <gpiod_count+0x70>
+	struct gpiod_lookup *p;
+	unsigned int count = 0;
+
+	table = gpiod_find_lookup_table(dev);
+	if (!table)
+		return -ENOENT;
+    30c0:	12800020 	mov	w0, #0xfffffffe            	// #-2
+    30c4:	17ffffee 	b	307c <gpiod_count+0xe0>
+
+00000000000030c8 <gpiochip_unlock_as_irq>:
+ *
+ * This is used directly by GPIO drivers that want to indicate
+ * that a certain GPIO is no longer used exclusively for IRQ.
+ */
+void gpiochip_unlock_as_irq(struct gpio_chip *chip, unsigned int offset)
+{
+    30c8:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    30cc:	910003fd 	mov	x29, sp
+	if (offset >= chip->ngpio)
+    30d0:	7940f802 	ldrh	w2, [x0,#124]
+    30d4:	6b01005f 	cmp	w2, w1
+    30d8:	54000109 	b.ls	30f8 <gpiochip_unlock_as_irq+0x30>
+		return;
+
+	clear_bit(FLAG_USED_AS_IRQ, &chip->gpiodev->descs[offset].flags);
+    30dc:	f9400402 	ldr	x2, [x0,#8]
+    30e0:	d37b7c21 	ubfiz	x1, x1, #5, #32
+    30e4:	52800120 	mov	w0, #0x9                   	// #9
+    30e8:	f941a442 	ldr	x2, [x2,#840]
+    30ec:	8b010041 	add	x1, x2, x1
+    30f0:	91002021 	add	x1, x1, #0x8
+    30f4:	94000000 	bl	0 <clear_bit>
+			30f4: R_AARCH64_CALL26	clear_bit
+}
+    30f8:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    30fc:	d65f03c0 	ret
+
+0000000000003100 <gpiochip_get_desc>:
+ * Get the GPIO descriptor corresponding to the given hw number for this chip.
+ */
+struct gpio_desc *gpiochip_get_desc(struct gpio_chip *chip,
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+    3100:	f9400402 	ldr	x2, [x0,#8]
+/**
+ * Get the GPIO descriptor corresponding to the given hw number for this chip.
+ */
+struct gpio_desc *gpiochip_get_desc(struct gpio_chip *chip,
+				    u16 hwnum)
+{
+    3104:	53003c21 	uxth	w1, w1
+	struct gpio_device *gdev = chip->gpiodev;
+
+	if (hwnum >= gdev->ngpio)
+		return ERR_PTR(-EINVAL);
+    3108:	928002a0 	mov	x0, #0xffffffffffffffea    	// #-22
+struct gpio_desc *gpiochip_get_desc(struct gpio_chip *chip,
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+
+	if (hwnum >= gdev->ngpio)
+    310c:	7946a843 	ldrh	w3, [x2,#852]
+    3110:	6b01007f 	cmp	w3, w1
+    3114:	54000089 	b.ls	3124 <gpiochip_get_desc+0x24>
+		return ERR_PTR(-EINVAL);
+
+	return &gdev->descs[hwnum];
+    3118:	f941a442 	ldr	x2, [x2,#840]
+    311c:	d37b3c20 	ubfiz	x0, x1, #5, #16
+    3120:	8b000040 	add	x0, x2, x0
+}
+    3124:	d65f03c0 	ret
+
+0000000000003128 <gpiod_request>:
+		return; \
+	} } while (0)
+
+
+int gpiod_request(struct gpio_desc *desc, const char *label)
+{
+    3128:	a9bc7bfd 	stp	x29, x30, [sp,#-64]!
+    312c:	910003fd 	mov	x29, sp
+    3130:	a90153f3 	stp	x19, x20, [sp,#16]
+    3134:	f90013f5 	str	x21, [sp,#32]
+    3138:	aa0003f4 	mov	x20, x0
+	int status = -EPROBE_DEFER;
+	struct gpio_device *gdev;
+
+	VALIDATE_DESC(desc);
+    313c:	b40008c0 	cbz	x0, 3254 <gpiod_request+0x12c>
+    3140:	f9400013 	ldr	x19, [x0]
+    3144:	b4000893 	cbz	x19, 3254 <gpiod_request+0x12c>
+    3148:	f941a260 	ldr	x0, [x19,#832]
+    314c:	b4000400 	cbz	x0, 31cc <gpiod_request+0xa4>
+	gdev = desc->gdev;
+
+	if (try_module_get(gdev->owner)) {
+    3150:	f9419e60 	ldr	x0, [x19,#824]
+	} } while (0)
+
+
+int gpiod_request(struct gpio_desc *desc, const char *label)
+{
+	int status = -EPROBE_DEFER;
+    3154:	12804095 	mov	w21, #0xfffffdfb            	// #-517
+    3158:	f9001fa1 	str	x1, [x29,#56]
+	struct gpio_device *gdev;
+
+	VALIDATE_DESC(desc);
+	gdev = desc->gdev;
+
+	if (try_module_get(gdev->owner)) {
+    315c:	94000000 	bl	0 <try_module_get>
+			315c: R_AARCH64_CALL26	try_module_get
+    3160:	53001c00 	uxtb	w0, w0
+    3164:	f9401fa1 	ldr	x1, [x29,#56]
+    3168:	35000140 	cbnz	w0, 3190 <gpiod_request+0x68>
+		else
+			get_device(&gdev->dev);
+	}
+
+	if (status)
+		gpiod_dbg(desc, "%s: status %d\n", __func__, status);
+    316c:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			316c: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+    3170:	2a1503e0 	mov	w0, w21
+    3174:	91000022 	add	x2, x1, #0x0
+			3174: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    3178:	79427442 	ldrh	w2, [x2,#314]
+    317c:	37100402 	tbnz	w2, #2, 31fc <gpiod_request+0xd4>
+
+	return status;
+}
+    3180:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3184:	f94013f5 	ldr	x21, [sp,#32]
+    3188:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    318c:	d65f03c0 	ret
+
+	VALIDATE_DESC(desc);
+	gdev = desc->gdev;
+
+	if (try_module_get(gdev->owner)) {
+		status = __gpiod_request(desc, label);
+    3190:	aa1403e0 	mov	x0, x20
+    3194:	97fff862 	bl	131c <__gpiod_request>
+    3198:	2a0003f5 	mov	w21, w0
+		if (status < 0)
+    319c:	37f80135 	tbnz	w21, #31, 31c0 <gpiod_request+0x98>
+			module_put(gdev->owner);
+		else
+			get_device(&gdev->dev);
+    31a0:	91002260 	add	x0, x19, #0x8
+    31a4:	94000000 	bl	0 <get_device>
+			31a4: R_AARCH64_CALL26	get_device
+    31a8:	52800000 	mov	w0, #0x0                   	// #0
+	}
+
+	if (status)
+    31ac:	35fffe15 	cbnz	w21, 316c <gpiod_request+0x44>
+		gpiod_dbg(desc, "%s: status %d\n", __func__, status);
+
+	return status;
+}
+    31b0:	a94153f3 	ldp	x19, x20, [sp,#16]
+    31b4:	f94013f5 	ldr	x21, [sp,#32]
+    31b8:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    31bc:	d65f03c0 	ret
+	gdev = desc->gdev;
+
+	if (try_module_get(gdev->owner)) {
+		status = __gpiod_request(desc, label);
+		if (status < 0)
+			module_put(gdev->owner);
+    31c0:	f9419e60 	ldr	x0, [x19,#824]
+    31c4:	94000000 	bl	0 <module_put>
+			31c4: R_AARCH64_CALL26	module_put
+    31c8:	17ffffe9 	b	316c <gpiod_request+0x44>
+int gpiod_request(struct gpio_desc *desc, const char *label)
+{
+	int status = -EPROBE_DEFER;
+	struct gpio_device *gdev;
+
+	VALIDATE_DESC(desc);
+    31cc:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			31cc: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    31d0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			31d0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xe8
+    31d4:	91000042 	add	x2, x2, #0x0
+			31d4: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    31d8:	91002260 	add	x0, x19, #0x8
+    31dc:	91000021 	add	x1, x1, #0x0
+			31dc: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xe8
+    31e0:	91124042 	add	x2, x2, #0x490
+    31e4:	94000000 	bl	0 <dev_warn>
+			31e4: R_AARCH64_CALL26	dev_warn
+
+	if (status)
+		gpiod_dbg(desc, "%s: status %d\n", __func__, status);
+
+	return status;
+}
+    31e8:	f94013f5 	ldr	x21, [sp,#32]
+int gpiod_request(struct gpio_desc *desc, const char *label)
+{
+	int status = -EPROBE_DEFER;
+	struct gpio_device *gdev;
+
+	VALIDATE_DESC(desc);
+    31ec:	52800000 	mov	w0, #0x0                   	// #0
+
+	if (status)
+		gpiod_dbg(desc, "%s: status %d\n", __func__, status);
+
+	return status;
+}
+    31f0:	a94153f3 	ldp	x19, x20, [sp,#16]
+    31f4:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    31f8:	d65f03c0 	ret
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+    31fc:	f9400280 	ldr	x0, [x20]
+		else
+			get_device(&gdev->dev);
+	}
+
+	if (status)
+		gpiod_dbg(desc, "%s: status %d\n", __func__, status);
+    3200:	f9400a83 	ldr	x3, [x20,#16]
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+    3204:	f941a404 	ldr	x4, [x0,#840]
+    3208:	b9435002 	ldr	w2, [x0,#848]
+    320c:	cb040294 	sub	x20, x20, x4
+    3210:	9345fe94 	asr	x20, x20, #5
+    3214:	0b140042 	add	w2, w2, w20
+		else
+			get_device(&gdev->dev);
+	}
+
+	if (status)
+		gpiod_dbg(desc, "%s: status %d\n", __func__, status);
+    3218:	b4000183 	cbz	x3, 3248 <gpiod_request+0x120>
+    321c:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			321c: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    3220:	91000020 	add	x0, x1, #0x0
+			3220: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    3224:	91000084 	add	x4, x4, #0x0
+			3224: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    3228:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			3228: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x760
+    322c:	91046000 	add	x0, x0, #0x118
+    3230:	2a1503e5 	mov	w5, w21
+    3234:	91124084 	add	x4, x4, #0x490
+    3238:	91000021 	add	x1, x1, #0x0
+			3238: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x760
+    323c:	94000000 	bl	0 <__dynamic_pr_debug>
+			323c: R_AARCH64_CALL26	__dynamic_pr_debug
+    3240:	2a1503e0 	mov	w0, w21
+    3244:	17ffffcf 	b	3180 <gpiod_request+0x58>
+    3248:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			3248: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x10
+    324c:	91000063 	add	x3, x3, #0x0
+			324c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x10
+    3250:	17fffff3 	b	321c <gpiod_request+0xf4>
+int gpiod_request(struct gpio_desc *desc, const char *label)
+{
+	int status = -EPROBE_DEFER;
+	struct gpio_device *gdev;
+
+	VALIDATE_DESC(desc);
+    3254:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			3254: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+    3258:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			3258: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0xd0
+    325c:	91000021 	add	x1, x1, #0x0
+			325c: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+    3260:	91000000 	add	x0, x0, #0x0
+			3260: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0xd0
+    3264:	91124021 	add	x1, x1, #0x490
+    3268:	94000000 	bl	0 <printk>
+			3268: R_AARCH64_CALL26	printk
+    326c:	128002a0 	mov	w0, #0xffffffea            	// #-22
+    3270:	17ffffc4 	b	3180 <gpiod_request+0x58>
+
+0000000000003274 <fwnode_get_named_gpiod>:
+ *
+ * In case of error an ERR_PTR() is returned.
+ */
+struct gpio_desc *fwnode_get_named_gpiod(struct fwnode_handle *fwnode,
+					 const char *propname)
+{
+    3274:	a9bc7bfd 	stp	x29, x30, [sp,#-64]!
+    3278:	910003fd 	mov	x29, sp
+    327c:	a90153f3 	stp	x19, x20, [sp,#16]
+    3280:	f90013f5 	str	x21, [sp,#32]
+	struct gpio_desc *desc = ERR_PTR(-ENODEV);
+	bool active_low = false;
+	bool single_ended = false;
+	int ret;
+
+	if (!fwnode)
+    3284:	b4000540 	cbz	x0, 332c <fwnode_get_named_gpiod+0xb8>
+#ifdef CONFIG_OF
+void of_core_init(void);
+
+static inline bool is_of_node(struct fwnode_handle *fwnode)
+{
+	return fwnode && fwnode->type == FWNODE_OF;
+    3288:	b9400002 	ldr	w2, [x0]
+    328c:	7100045f 	cmp	w2, #0x1
+    3290:	540000c0 	b.eq	32a8 <fwnode_get_named_gpiod+0x34>
+ * In case of error an ERR_PTR() is returned.
+ */
+struct gpio_desc *fwnode_get_named_gpiod(struct fwnode_handle *fwnode,
+					 const char *propname)
+{
+	struct gpio_desc *desc = ERR_PTR(-ENODEV);
+    3294:	92800240 	mov	x0, #0xffffffffffffffed    	// #-19
+	ret = gpiod_request(desc, NULL);
+	if (ret)
+		return ERR_PTR(ret);
+
+	return desc;
+}
+    3298:	a94153f3 	ldp	x19, x20, [sp,#16]
+    329c:	f94013f5 	ldr	x21, [sp,#32]
+    32a0:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    32a4:	d65f03c0 	ret
+		return ERR_PTR(-EINVAL);
+
+	if (is_of_node(fwnode)) {
+		enum of_gpio_flags flags;
+
+		desc = of_get_named_gpiod_flags(to_of_node(fwnode), propname, 0,
+    32a8:	9100f3a3 	add	x3, x29, #0x3c
+    32ac:	52800002 	mov	w2, #0x0                   	// #0
+    32b0:	d1008000 	sub	x0, x0, #0x20
+    32b4:	94000000 	bl	0 <of_get_named_gpiod_flags>
+			32b4: R_AARCH64_CALL26	of_get_named_gpiod_flags
+						&flags);
+		if (!IS_ERR(desc)) {
+    32b8:	b140041f 	cmn	x0, #0x1, lsl #12
+		return ERR_PTR(-EINVAL);
+
+	if (is_of_node(fwnode)) {
+		enum of_gpio_flags flags;
+
+		desc = of_get_named_gpiod_flags(to_of_node(fwnode), propname, 0,
+    32bc:	aa0003f3 	mov	x19, x0
+						&flags);
+		if (!IS_ERR(desc)) {
+    32c0:	54fffec8 	b.hi	3298 <fwnode_get_named_gpiod+0x24>
+			active_low = flags & OF_GPIO_ACTIVE_LOW;
+    32c4:	b9403fa0 	ldr	w0, [x29,#60]
+			single_ended = flags & OF_GPIO_SINGLE_ENDED;
+    32c8:	d3410414 	ubfx	x20, x0, #1, #1
+	}
+
+	if (IS_ERR(desc))
+		return desc;
+
+	if (active_low)
+    32cc:	370001e0 	tbnz	w0, #0, 3308 <fwnode_get_named_gpiod+0x94>
+		set_bit(FLAG_ACTIVE_LOW, &desc->flags);
+
+	if (single_ended) {
+    32d0:	34000094 	cbz	w20, 32e0 <fwnode_get_named_gpiod+0x6c>
+		if (active_low)
+			set_bit(FLAG_OPEN_DRAIN, &desc->flags);
+		else
+			set_bit(FLAG_OPEN_SOURCE, &desc->flags);
+    32d4:	91002261 	add	x1, x19, #0x8
+    32d8:	52800100 	mov	w0, #0x8                   	// #8
+    32dc:	94000000 	bl	0 <set_bit>
+			32dc: R_AARCH64_CALL26	set_bit
+	}
+
+	ret = gpiod_request(desc, NULL);
+    32e0:	d2800001 	mov	x1, #0x0                   	// #0
+    32e4:	aa1303e0 	mov	x0, x19
+    32e8:	94000000 	bl	3128 <gpiod_request>
+			32e8: R_AARCH64_CALL26	gpiod_request
+	if (ret)
+		return ERR_PTR(ret);
+    32ec:	6b1f001f 	cmp	w0, wzr
+    32f0:	93407c00 	sxtw	x0, w0
+
+	return desc;
+}
+    32f4:	f94013f5 	ldr	x21, [sp,#32]
+			set_bit(FLAG_OPEN_SOURCE, &desc->flags);
+	}
+
+	ret = gpiod_request(desc, NULL);
+	if (ret)
+		return ERR_PTR(ret);
+    32f8:	9a800260 	csel	x0, x19, x0, eq
+
+	return desc;
+}
+    32fc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3300:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    3304:	d65f03c0 	ret
+
+	if (IS_ERR(desc))
+		return desc;
+
+	if (active_low)
+		set_bit(FLAG_ACTIVE_LOW, &desc->flags);
+    3308:	91002275 	add	x21, x19, #0x8
+    330c:	528000c0 	mov	w0, #0x6                   	// #6
+    3310:	aa1503e1 	mov	x1, x21
+    3314:	94000000 	bl	0 <set_bit>
+			3314: R_AARCH64_CALL26	set_bit
+
+	if (single_ended) {
+    3318:	34fffe54 	cbz	w20, 32e0 <fwnode_get_named_gpiod+0x6c>
+		if (active_low)
+			set_bit(FLAG_OPEN_DRAIN, &desc->flags);
+    331c:	aa1503e1 	mov	x1, x21
+    3320:	528000e0 	mov	w0, #0x7                   	// #7
+    3324:	94000000 	bl	0 <set_bit>
+			3324: R_AARCH64_CALL26	set_bit
+    3328:	17ffffee 	b	32e0 <fwnode_get_named_gpiod+0x6c>
+	bool active_low = false;
+	bool single_ended = false;
+	int ret;
+
+	if (!fwnode)
+		return ERR_PTR(-EINVAL);
+    332c:	928002a0 	mov	x0, #0xffffffffffffffea    	// #-22
+	ret = gpiod_request(desc, NULL);
+	if (ret)
+		return ERR_PTR(ret);
+
+	return desc;
+}
+    3330:	f94013f5 	ldr	x21, [sp,#32]
+    3334:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3338:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    333c:	d65f03c0 	ret
+
+0000000000003340 <gpiod_free>:
+	spin_unlock_irqrestore(&gpio_lock, flags);
+	return ret;
+}
+
+void gpiod_free(struct gpio_desc *desc)
+{
+    3340:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    3344:	910003fd 	mov	x29, sp
+    3348:	f9000bf3 	str	x19, [sp,#16]
+	if (desc && desc->gdev && __gpiod_free(desc)) {
+    334c:	b40000e0 	cbz	x0, 3368 <gpiod_free+0x28>
+    3350:	f9400002 	ldr	x2, [x0]
+    3354:	b40000a2 	cbz	x2, 3368 <gpiod_free+0x28>
+    3358:	aa0003f3 	mov	x19, x0
+    335c:	97fff862 	bl	14e4 <__gpiod_free>
+    3360:	53001c00 	uxtb	w0, w0
+    3364:	35000080 	cbnz	w0, 3374 <gpiod_free+0x34>
+		module_put(desc->gdev->owner);
+		put_device(&desc->gdev->dev);
+	} else {
+		WARN_ON(extra_checks);
+	}
+}
+    3368:	f9400bf3 	ldr	x19, [sp,#16]
+    336c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    3370:	d65f03c0 	ret
+}
+
+void gpiod_free(struct gpio_desc *desc)
+{
+	if (desc && desc->gdev && __gpiod_free(desc)) {
+		module_put(desc->gdev->owner);
+    3374:	f9400260 	ldr	x0, [x19]
+    3378:	f9419c00 	ldr	x0, [x0,#824]
+    337c:	94000000 	bl	0 <module_put>
+			337c: R_AARCH64_CALL26	module_put
+		put_device(&desc->gdev->dev);
+    3380:	f9400260 	ldr	x0, [x19]
+    3384:	91002000 	add	x0, x0, #0x8
+    3388:	94000000 	bl	0 <put_device>
+			3388: R_AARCH64_CALL26	put_device
+	} else {
+		WARN_ON(extra_checks);
+	}
+}
+    338c:	f9400bf3 	ldr	x19, [sp,#16]
+    3390:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    3394:	d65f03c0 	ret
+
+0000000000003398 <gpiod_put>:
+ * @desc:	GPIO descriptor to dispose of
+ *
+ * No descriptor can be used after gpiod_put() has been called on it.
+ */
+void gpiod_put(struct gpio_desc *desc)
+{
+    3398:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    339c:	910003fd 	mov	x29, sp
+	gpiod_free(desc);
+    33a0:	94000000 	bl	3340 <gpiod_free>
+			33a0: R_AARCH64_CALL26	gpiod_free
+}
+    33a4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    33a8:	d65f03c0 	ret
+
+00000000000033ac <gpiod_get_index>:
+ */
+struct gpio_desc *__must_check gpiod_get_index(struct device *dev,
+					       const char *con_id,
+					       unsigned int idx,
+					       enum gpiod_flags flags)
+{
+    33ac:	a9b77bfd 	stp	x29, x30, [sp,#-144]!
+    33b0:	910003fd 	mov	x29, sp
+    33b4:	a9025bf5 	stp	x21, x22, [sp,#32]
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+
+	dev_dbg(dev, "GPIO lookup for consumer %s\n", con_id);
+    33b8:	90000015 	adrp	x21, 0 <desc_to_gpio>
+			33b8: R_AARCH64_ADR_PREL_PG_HI21	__verbose
+ */
+struct gpio_desc *__must_check gpiod_get_index(struct device *dev,
+					       const char *con_id,
+					       unsigned int idx,
+					       enum gpiod_flags flags)
+{
+    33bc:	aa0103f6 	mov	x22, x1
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+
+	dev_dbg(dev, "GPIO lookup for consumer %s\n", con_id);
+    33c0:	910002a4 	add	x4, x21, #0x0
+			33c0: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+ */
+struct gpio_desc *__must_check gpiod_get_index(struct device *dev,
+					       const char *con_id,
+					       unsigned int idx,
+					       enum gpiod_flags flags)
+{
+    33c4:	a90363f7 	stp	x23, x24, [sp,#48]
+    33c8:	a9046bf9 	stp	x25, x26, [sp,#64]
+    33cc:	a90153f3 	stp	x19, x20, [sp,#16]
+    33d0:	a90573fb 	stp	x27, x28, [sp,#80]
+    33d4:	aa0003f7 	mov	x23, x0
+    33d8:	2a0203f9 	mov	w25, w2
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+
+	dev_dbg(dev, "GPIO lookup for consumer %s\n", con_id);
+    33dc:	7942c480 	ldrh	w0, [x4,#354]
+ */
+struct gpio_desc *__must_check gpiod_get_index(struct device *dev,
+					       const char *con_id,
+					       unsigned int idx,
+					       enum gpiod_flags flags)
+{
+    33e0:	2a0303f8 	mov	w24, w3
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+
+	dev_dbg(dev, "GPIO lookup for consumer %s\n", con_id);
+    33e4:	91050084 	add	x4, x4, #0x140
+    33e8:	37100fc0 	tbnz	w0, #2, 35e0 <gpiod_get_index+0x234>
+
+	if (dev) {
+    33ec:	b4000897 	cbz	x23, 34fc <gpiod_get_index+0x150>
+		/* Using device tree? */
+		if (IS_ENABLED(CONFIG_OF) && dev->of_node) {
+    33f0:	f94126e0 	ldr	x0, [x23,#584]
+    33f4:	b4000840 	cbz	x0, 34fc <gpiod_get_index+0x150>
+			dev_dbg(dev, "using device tree for GPIO lookup\n");
+    33f8:	910002a0 	add	x0, x21, #0x0
+			33f8: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    33fc:	91064000 	add	x0, x0, #0x190
+    3400:	79404401 	ldrh	w1, [x0,#34]
+    3404:	37101301 	tbnz	w1, #2, 3664 <gpiod_get_index+0x2b8>
+    3408:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			3408: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(prop_name, sizeof(prop_name), "%s-%s", con_id,
+				 gpio_suffixes[i]);
+		else
+			snprintf(prop_name, sizeof(prop_name), "%s",
+    340c:	9000001c 	adrp	x28, 0 <desc_to_gpio>
+			340c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x748
+    3410:	91000000 	add	x0, x0, #0x0
+			3410: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+	struct gpio_desc *desc;
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(prop_name, sizeof(prop_name), "%s-%s", con_id,
+    3414:	9000001a 	adrp	x26, 0 <desc_to_gpio>
+			3414: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x740
+    3418:	9112001b 	add	x27, x0, #0x480
+    341c:	91124014 	add	x20, x0, #0x490
+				 gpio_suffixes[i]);
+		else
+			snprintf(prop_name, sizeof(prop_name), "%s",
+    3420:	9100039c 	add	x28, x28, #0x0
+			3420: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x748
+	struct gpio_desc *desc;
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(prop_name, sizeof(prop_name), "%s-%s", con_id,
+    3424:	9100035a 	add	x26, x26, #0x0
+			3424: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x740
+    3428:	aa1603e3 	mov	x3, x22
+    342c:	aa1a03e2 	mov	x2, x26
+    3430:	d2800401 	mov	x1, #0x20                  	// #32
+    3434:	9101c3a0 	add	x0, x29, #0x70
+	enum of_gpio_flags of_flags;
+	struct gpio_desc *desc;
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+    3438:	b4000e36 	cbz	x22, 35fc <gpiod_get_index+0x250>
+			snprintf(prop_name, sizeof(prop_name), "%s-%s", con_id,
+    343c:	f9400364 	ldr	x4, [x27]
+    3440:	94000000 	bl	0 <snprintf>
+			3440: R_AARCH64_CALL26	snprintf
+				 gpio_suffixes[i]);
+		else
+			snprintf(prop_name, sizeof(prop_name), "%s",
+				 gpio_suffixes[i]);
+
+		desc = of_get_named_gpiod_flags(dev->of_node, prop_name, idx,
+    3444:	f94126e0 	ldr	x0, [x23,#584]
+    3448:	2a1903e2 	mov	w2, w25
+    344c:	9101b3a3 	add	x3, x29, #0x6c
+    3450:	9101c3a1 	add	x1, x29, #0x70
+    3454:	94000000 	bl	0 <of_get_named_gpiod_flags>
+			3454: R_AARCH64_CALL26	of_get_named_gpiod_flags
+						&of_flags);
+		if (!IS_ERR(desc) || (PTR_ERR(desc) == -EPROBE_DEFER))
+    3458:	b140041f 	cmn	x0, #0x1, lsl #12
+				 gpio_suffixes[i]);
+		else
+			snprintf(prop_name, sizeof(prop_name), "%s",
+				 gpio_suffixes[i]);
+
+		desc = of_get_named_gpiod_flags(dev->of_node, prop_name, idx,
+    345c:	aa0003f3 	mov	x19, x0
+	return (long) ptr;
+}
+
+static inline bool __must_check IS_ERR(__force const void *ptr)
+{
+	return IS_ERR_VALUE((unsigned long)ptr);
+    3460:	aa0003e2 	mov	x2, x0
+						&of_flags);
+		if (!IS_ERR(desc) || (PTR_ERR(desc) == -EPROBE_DEFER))
+    3464:	54001128 	b.hi	3688 <gpiod_get_index+0x2dc>
+	}
+
+	if (IS_ERR(desc))
+		return desc;
+
+	if (of_flags & OF_GPIO_ACTIVE_LOW)
+    3468:	b9406fa3 	ldr	w3, [x29,#108]
+    346c:	12000060 	and	w0, w3, #0x1
+					       unsigned int idx,
+					       enum gpiod_flags flags)
+{
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+    3470:	2a0003e1 	mov	w1, w0
+	}
+
+	if (IS_ERR(desc))
+		return desc;
+
+	if (of_flags & OF_GPIO_ACTIVE_LOW)
+    3474:	53001c00 	uxtb	w0, w0
+		*flags |= GPIO_ACTIVE_LOW;
+
+	if (of_flags & OF_GPIO_SINGLE_ENDED) {
+    3478:	360800a3 	tbz	w3, #1, 348c <gpiod_get_index+0xe0>
+		if (of_flags & OF_GPIO_ACTIVE_LOW)
+			*flags |= GPIO_OPEN_DRAIN;
+    347c:	321f0023 	orr	w3, w1, #0x2
+    3480:	6b1f001f 	cmp	w0, wzr
+    3484:	321e0021 	orr	w1, w1, #0x4
+    3488:	1a830021 	csel	w1, w1, w3, eq
+
+	/*
+	 * Either we are not using DT or ACPI, or their lookup did not return
+	 * a result. In that case, use platform lookup as a fallback.
+	 */
+	if (!desc || desc == ERR_PTR(-ENOENT)) {
+    348c:	b4000393 	cbz	x19, 34fc <gpiod_get_index+0x150>
+    3490:	b1000a7f 	cmn	x19, #0x2
+    3494:	54000340 	b.eq	34fc <gpiod_get_index+0x150>
+		dev_dbg(dev, "using lookup tables for GPIO lookup\n");
+		desc = gpiod_find(dev, con_id, idx, &lookupflags);
+	}
+
+	if (IS_ERR(desc)) {
+    3498:	b140045f 	cmn	x2, #0x1, lsl #12
+    349c:	54000ca8 	b.hi	3630 <gpiod_get_index+0x284>
+		dev_dbg(dev, "lookup for GPIO %s failed\n", con_id);
+		return desc;
+	}
+
+	gpiod_parse_flags(desc, lookupflags);
+    34a0:	2a0103e1 	mov	w1, w1
+    34a4:	aa1303e0 	mov	x0, x19
+    34a8:	97fff422 	bl	530 <gpiod_parse_flags>
+
+	status = gpiod_request(desc, con_id);
+    34ac:	aa1603e1 	mov	x1, x22
+    34b0:	aa1303e0 	mov	x0, x19
+    34b4:	94000000 	bl	3128 <gpiod_request>
+			34b4: R_AARCH64_CALL26	gpiod_request
+	if (status < 0)
+		return ERR_PTR(status);
+    34b8:	93407c14 	sxtw	x20, w0
+	}
+
+	gpiod_parse_flags(desc, lookupflags);
+
+	status = gpiod_request(desc, con_id);
+	if (status < 0)
+    34bc:	37f80100 	tbnz	w0, #31, 34dc <gpiod_get_index+0x130>
+		return ERR_PTR(status);
+
+	status = gpiod_configure_flags(desc, con_id, flags);
+    34c0:	2a1803e2 	mov	w2, w24
+    34c4:	aa1603e1 	mov	x1, x22
+    34c8:	aa1303e0 	mov	x0, x19
+    34cc:	aa1303f4 	mov	x20, x19
+    34d0:	97fffbdf 	bl	244c <gpiod_configure_flags>
+    34d4:	2a0003f8 	mov	w24, w0
+	if (status < 0) {
+    34d8:	37f80678 	tbnz	w24, #31, 35a4 <gpiod_get_index+0x1f8>
+		gpiod_put(desc);
+		return ERR_PTR(status);
+	}
+
+	return desc;
+}
+    34dc:	aa1403e0 	mov	x0, x20
+    34e0:	a94153f3 	ldp	x19, x20, [sp,#16]
+    34e4:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    34e8:	a94363f7 	ldp	x23, x24, [sp,#48]
+    34ec:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    34f0:	a94573fb 	ldp	x27, x28, [sp,#80]
+    34f4:	a8c97bfd 	ldp	x29, x30, [sp],#144
+    34f8:	d65f03c0 	ret
+	/*
+	 * Either we are not using DT or ACPI, or their lookup did not return
+	 * a result. In that case, use platform lookup as a fallback.
+	 */
+	if (!desc || desc == ERR_PTR(-ENOENT)) {
+		dev_dbg(dev, "using lookup tables for GPIO lookup\n");
+    34fc:	910002a0 	add	x0, x21, #0x0
+			34fc: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    3500:	9105a000 	add	x0, x0, #0x168
+    3504:	79404401 	ldrh	w1, [x0,#34]
+    3508:	37100da1 	tbnz	w1, #2, 36bc <gpiod_get_index+0x310>
+{
+	struct gpio_desc *desc = ERR_PTR(-ENOENT);
+	struct gpiod_lookup_table *table;
+	struct gpiod_lookup *p;
+
+	table = gpiod_find_lookup_table(dev);
+    350c:	aa1703e0 	mov	x0, x23
+    3510:	97fff902 	bl	1918 <gpiod_find_lookup_table>
+	if (!table)
+    3514:	b4000a40 	cbz	x0, 365c <gpiod_get_index+0x2b0>
+		return desc;
+
+	for (p = &table->table[0]; p->chip_label; p++) {
+    3518:	f9400c13 	ldr	x19, [x0,#24]
+    351c:	91006014 	add	x20, x0, #0x18
+    3520:	b5000093 	cbnz	x19, 3530 <gpiod_get_index+0x184>
+    3524:	1400004e 	b	365c <gpiod_get_index+0x2b0>
+    3528:	f8420e93 	ldr	x19, [x20,#32]!
+    352c:	b4000993 	cbz	x19, 365c <gpiod_get_index+0x2b0>
+		struct gpio_chip *chip;
+
+		/* idx must always match exactly */
+		if (p->idx != idx)
+    3530:	b9401a80 	ldr	w0, [x20,#24]
+    3534:	6b00033f 	cmp	w25, w0
+    3538:	54ffff81 	b.ne	3528 <gpiod_get_index+0x17c>
+			continue;
+
+		/* If the lookup entry has a con_id, require exact match */
+		if (p->con_id && (!con_id || strcmp(p->con_id, con_id)))
+    353c:	f9400a82 	ldr	x2, [x20,#16]
+    3540:	aa1603e1 	mov	x1, x22
+    3544:	aa0203e0 	mov	x0, x2
+    3548:	b4000082 	cbz	x2, 3558 <gpiod_get_index+0x1ac>
+    354c:	b4fffef6 	cbz	x22, 3528 <gpiod_get_index+0x17c>
+    3550:	94000000 	bl	0 <strcmp>
+			3550: R_AARCH64_CALL26	strcmp
+    3554:	35fffea0 	cbnz	w0, 3528 <gpiod_get_index+0x17c>
+	return !strcmp(chip->label, name);
+}
+
+static struct gpio_chip *find_chip_by_name(const char *name)
+{
+	return gpiochip_find((void *)name, gpiochip_match_name);
+    3558:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			3558: R_AARCH64_ADR_PREL_PG_HI21	.text+0xcd4
+    355c:	aa1303e0 	mov	x0, x19
+    3560:	91000021 	add	x1, x1, #0x0
+			3560: R_AARCH64_ADD_ABS_LO12_NC	.text+0xcd4
+    3564:	94000000 	bl	c8 <gpiochip_find>
+			3564: R_AARCH64_CALL26	gpiochip_find
+		if (p->con_id && (!con_id || strcmp(p->con_id, con_id)))
+			continue;
+
+		chip = find_chip_by_name(p->chip_label);
+
+		if (!chip) {
+    3568:	b4000b40 	cbz	x0, 36d0 <gpiod_get_index+0x324>
+			dev_err(dev, "cannot find GPIO chip %s\n",
+				p->chip_label);
+			return ERR_PTR(-ENODEV);
+		}
+
+		if (chip->ngpio <= p->chip_hwnum) {
+    356c:	7940f803 	ldrh	w3, [x0,#124]
+    3570:	79401281 	ldrh	w1, [x20,#8]
+    3574:	6b01007f 	cmp	w3, w1
+    3578:	540004e9 	b.ls	3614 <gpiod_get_index+0x268>
+ * Get the GPIO descriptor corresponding to the given hw number for this chip.
+ */
+struct gpio_desc *gpiochip_get_desc(struct gpio_chip *chip,
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+    357c:	f9400400 	ldr	x0, [x0,#8]
+
+	if (hwnum >= gdev->ngpio)
+    3580:	7946a802 	ldrh	w2, [x0,#852]
+    3584:	6b01005f 	cmp	w2, w1
+    3588:	54000789 	b.ls	3678 <gpiod_get_index+0x2cc>
+		return ERR_PTR(-EINVAL);
+
+	return &gdev->descs[hwnum];
+    358c:	f941a413 	ldr	x19, [x0,#840]
+    3590:	d37b3c21 	ubfiz	x1, x1, #5, #16
+    3594:	8b010273 	add	x19, x19, x1
+				idx, chip->ngpio, chip->label);
+			return ERR_PTR(-EINVAL);
+		}
+
+		desc = gpiochip_get_desc(chip, p->chip_hwnum);
+		*flags = p->flags;
+    3598:	b9401e81 	ldr	w1, [x20,#28]
+    359c:	aa1303e2 	mov	x2, x19
+    35a0:	17ffffbe 	b	3498 <gpiod_get_index+0xec>
+	if (status < 0)
+		return ERR_PTR(status);
+
+	status = gpiod_configure_flags(desc, con_id, flags);
+	if (status < 0) {
+		dev_dbg(dev, "setup of GPIO %s failed\n", con_id);
+    35a4:	910002a0 	add	x0, x21, #0x0
+			35a4: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    35a8:	91078000 	add	x0, x0, #0x1e0
+    35ac:	79404401 	ldrh	w1, [x0,#34]
+    35b0:	371007a1 	tbnz	w1, #2, 36a4 <gpiod_get_index+0x2f8>
+ *
+ * No descriptor can be used after gpiod_put() has been called on it.
+ */
+void gpiod_put(struct gpio_desc *desc)
+{
+	gpiod_free(desc);
+    35b4:	aa1303e0 	mov	x0, x19
+
+	status = gpiod_configure_flags(desc, con_id, flags);
+	if (status < 0) {
+		dev_dbg(dev, "setup of GPIO %s failed\n", con_id);
+		gpiod_put(desc);
+		return ERR_PTR(status);
+    35b8:	93407f14 	sxtw	x20, w24
+ *
+ * No descriptor can be used after gpiod_put() has been called on it.
+ */
+void gpiod_put(struct gpio_desc *desc)
+{
+	gpiod_free(desc);
+    35bc:	94000000 	bl	3340 <gpiod_free>
+			35bc: R_AARCH64_CALL26	gpiod_free
+		gpiod_put(desc);
+		return ERR_PTR(status);
+	}
+
+	return desc;
+}
+    35c0:	aa1403e0 	mov	x0, x20
+    35c4:	a94153f3 	ldp	x19, x20, [sp,#16]
+    35c8:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    35cc:	a94363f7 	ldp	x23, x24, [sp,#48]
+    35d0:	a9446bf9 	ldp	x25, x26, [sp,#64]
+    35d4:	a94573fb 	ldp	x27, x28, [sp,#80]
+    35d8:	a8c97bfd 	ldp	x29, x30, [sp],#144
+    35dc:	d65f03c0 	ret
+{
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+
+	dev_dbg(dev, "GPIO lookup for consumer %s\n", con_id);
+    35e0:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			35e0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x780
+    35e4:	aa0103e3 	mov	x3, x1
+    35e8:	91000042 	add	x2, x2, #0x0
+			35e8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x780
+    35ec:	aa1703e1 	mov	x1, x23
+    35f0:	aa0403e0 	mov	x0, x4
+    35f4:	94000000 	bl	0 <__dynamic_dev_dbg>
+			35f4: R_AARCH64_CALL26	__dynamic_dev_dbg
+    35f8:	17ffff7d 	b	33ec <gpiod_get_index+0x40>
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+		if (con_id)
+			snprintf(prop_name, sizeof(prop_name), "%s-%s", con_id,
+				 gpio_suffixes[i]);
+		else
+			snprintf(prop_name, sizeof(prop_name), "%s",
+    35fc:	f9400363 	ldr	x3, [x27]
+    3600:	aa1c03e2 	mov	x2, x28
+    3604:	d2800401 	mov	x1, #0x20                  	// #32
+    3608:	9101c3a0 	add	x0, x29, #0x70
+    360c:	94000000 	bl	0 <snprintf>
+			360c: R_AARCH64_CALL26	snprintf
+    3610:	17ffff8d 	b	3444 <gpiod_get_index+0x98>
+				p->chip_label);
+			return ERR_PTR(-ENODEV);
+		}
+
+		if (chip->ngpio <= p->chip_hwnum) {
+			dev_err(dev,
+    3614:	f9400004 	ldr	x4, [x0]
+    3618:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			3618: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x810
+    361c:	2a1903e2 	mov	w2, w25
+    3620:	91000021 	add	x1, x1, #0x0
+			3620: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x810
+    3624:	aa1703e0 	mov	x0, x23
+				"requested GPIO %d is out of range [0..%d] for chip %s\n",
+				idx, chip->ngpio, chip->label);
+			return ERR_PTR(-EINVAL);
+    3628:	928002b3 	mov	x19, #0xffffffffffffffea    	// #-22
+				p->chip_label);
+			return ERR_PTR(-ENODEV);
+		}
+
+		if (chip->ngpio <= p->chip_hwnum) {
+			dev_err(dev,
+    362c:	94000000 	bl	0 <dev_err>
+			362c: R_AARCH64_CALL26	dev_err
+		dev_dbg(dev, "using lookup tables for GPIO lookup\n");
+		desc = gpiod_find(dev, con_id, idx, &lookupflags);
+	}
+
+	if (IS_ERR(desc)) {
+		dev_dbg(dev, "lookup for GPIO %s failed\n", con_id);
+    3630:	910002a0 	add	x0, x21, #0x0
+			3630: R_AARCH64_ADD_ABS_LO12_NC	__verbose
+    3634:	aa1303f4 	mov	x20, x19
+    3638:	9106e000 	add	x0, x0, #0x1b8
+    363c:	79404401 	ldrh	w1, [x0,#34]
+    3640:	3617f4e1 	tbz	w1, #2, 34dc <gpiod_get_index+0x130>
+    3644:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			3644: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x848
+    3648:	aa1603e3 	mov	x3, x22
+    364c:	91000042 	add	x2, x2, #0x0
+			364c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x848
+    3650:	aa1703e1 	mov	x1, x23
+    3654:	94000000 	bl	0 <__dynamic_dev_dbg>
+			3654: R_AARCH64_CALL26	__dynamic_dev_dbg
+    3658:	17ffffa1 	b	34dc <gpiod_get_index+0x130>
+	struct gpiod_lookup_table *table;
+	struct gpiod_lookup *p;
+
+	table = gpiod_find_lookup_table(dev);
+	if (!table)
+		return desc;
+    365c:	92800033 	mov	x19, #0xfffffffffffffffe    	// #-2
+    3660:	17fffff4 	b	3630 <gpiod_get_index+0x284>
+	dev_dbg(dev, "GPIO lookup for consumer %s\n", con_id);
+
+	if (dev) {
+		/* Using device tree? */
+		if (IS_ENABLED(CONFIG_OF) && dev->of_node) {
+			dev_dbg(dev, "using device tree for GPIO lookup\n");
+    3664:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			3664: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x7a0
+    3668:	aa1703e1 	mov	x1, x23
+    366c:	91000042 	add	x2, x2, #0x0
+			366c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x7a0
+    3670:	94000000 	bl	0 <__dynamic_dev_dbg>
+			3670: R_AARCH64_CALL26	__dynamic_dev_dbg
+    3674:	17ffff65 	b	3408 <gpiod_get_index+0x5c>
+struct gpio_desc *gpiochip_get_desc(struct gpio_chip *chip,
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+
+	if (hwnum >= gdev->ngpio)
+    3678:	928002a2 	mov	x2, #0xffffffffffffffea    	// #-22
+				idx, chip->ngpio, chip->label);
+			return ERR_PTR(-EINVAL);
+		}
+
+		desc = gpiochip_get_desc(chip, p->chip_hwnum);
+		*flags = p->flags;
+    367c:	b9401e81 	ldr	w1, [x20,#28]
+				    u16 hwnum)
+{
+	struct gpio_device *gdev = chip->gpiodev;
+
+	if (hwnum >= gdev->ngpio)
+		return ERR_PTR(-EINVAL);
+    3680:	aa0203f3 	mov	x19, x2
+    3684:	17ffff85 	b	3498 <gpiod_get_index+0xec>
+			snprintf(prop_name, sizeof(prop_name), "%s",
+				 gpio_suffixes[i]);
+
+		desc = of_get_named_gpiod_flags(dev->of_node, prop_name, idx,
+						&of_flags);
+		if (!IS_ERR(desc) || (PTR_ERR(desc) == -EPROBE_DEFER))
+    3688:	b108141f 	cmn	x0, #0x205
+    368c:	9100237b 	add	x27, x27, #0x8
+    3690:	54000060 	b.eq	369c <gpiod_get_index+0x2f0>
+	char prop_name[32]; /* 32 is max size of property name */
+	enum of_gpio_flags of_flags;
+	struct gpio_desc *desc;
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gpio_suffixes); i++) {
+    3694:	eb14037f 	cmp	x27, x20
+    3698:	54ffec81 	b.ne	3428 <gpiod_get_index+0x7c>
+					       unsigned int idx,
+					       enum gpiod_flags flags)
+{
+	struct gpio_desc *desc = NULL;
+	int status;
+	enum gpio_lookup_flags lookupflags = 0;
+    369c:	52800001 	mov	w1, #0x0                   	// #0
+    36a0:	17ffff7b 	b	348c <gpiod_get_index+0xe0>
+	if (status < 0)
+		return ERR_PTR(status);
+
+	status = gpiod_configure_flags(desc, con_id, flags);
+	if (status < 0) {
+		dev_dbg(dev, "setup of GPIO %s failed\n", con_id);
+    36a4:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			36a4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x868
+    36a8:	aa1603e3 	mov	x3, x22
+    36ac:	91000042 	add	x2, x2, #0x0
+			36ac: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x868
+    36b0:	aa1703e1 	mov	x1, x23
+    36b4:	94000000 	bl	0 <__dynamic_dev_dbg>
+			36b4: R_AARCH64_CALL26	__dynamic_dev_dbg
+    36b8:	17ffffbf 	b	35b4 <gpiod_get_index+0x208>
+	/*
+	 * Either we are not using DT or ACPI, or their lookup did not return
+	 * a result. In that case, use platform lookup as a fallback.
+	 */
+	if (!desc || desc == ERR_PTR(-ENOENT)) {
+		dev_dbg(dev, "using lookup tables for GPIO lookup\n");
+    36bc:	90000002 	adrp	x2, 0 <desc_to_gpio>
+			36bc: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x7c8
+    36c0:	aa1703e1 	mov	x1, x23
+    36c4:	91000042 	add	x2, x2, #0x0
+			36c4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x7c8
+    36c8:	94000000 	bl	0 <__dynamic_dev_dbg>
+			36c8: R_AARCH64_CALL26	__dynamic_dev_dbg
+    36cc:	17ffff90 	b	350c <gpiod_get_index+0x160>
+			continue;
+
+		chip = find_chip_by_name(p->chip_label);
+
+		if (!chip) {
+			dev_err(dev, "cannot find GPIO chip %s\n",
+    36d0:	f9400282 	ldr	x2, [x20]
+    36d4:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			36d4: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x7f0
+    36d8:	91000021 	add	x1, x1, #0x0
+			36d8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x7f0
+    36dc:	aa1703e0 	mov	x0, x23
+				p->chip_label);
+			return ERR_PTR(-ENODEV);
+    36e0:	92800253 	mov	x19, #0xffffffffffffffed    	// #-19
+			continue;
+
+		chip = find_chip_by_name(p->chip_label);
+
+		if (!chip) {
+			dev_err(dev, "cannot find GPIO chip %s\n",
+    36e4:	94000000 	bl	0 <dev_err>
+			36e4: R_AARCH64_CALL26	dev_err
+    36e8:	17ffffd2 	b	3630 <gpiod_get_index+0x284>
+
+00000000000036ec <gpiod_get>:
+ * dev, -ENOENT if no GPIO has been assigned to the requested function, or
+ * another IS_ERR() code if an error occurred while trying to acquire the GPIO.
+ */
+struct gpio_desc *__must_check gpiod_get(struct device *dev, const char *con_id,
+					 enum gpiod_flags flags)
+{
+    36ec:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+	return gpiod_get_index(dev, con_id, 0, flags);
+    36f0:	2a0203e3 	mov	w3, w2
+    36f4:	52800002 	mov	w2, #0x0                   	// #0
+ * dev, -ENOENT if no GPIO has been assigned to the requested function, or
+ * another IS_ERR() code if an error occurred while trying to acquire the GPIO.
+ */
+struct gpio_desc *__must_check gpiod_get(struct device *dev, const char *con_id,
+					 enum gpiod_flags flags)
+{
+    36f8:	910003fd 	mov	x29, sp
+	return gpiod_get_index(dev, con_id, 0, flags);
+    36fc:	94000000 	bl	33ac <gpiod_get_index>
+			36fc: R_AARCH64_CALL26	gpiod_get_index
+}
+    3700:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    3704:	d65f03c0 	ret
+
+0000000000003708 <gpiod_get_index_optional>:
+ */
+struct gpio_desc *__must_check gpiod_get_index_optional(struct device *dev,
+							const char *con_id,
+							unsigned int index,
+							enum gpiod_flags flags)
+{
+    3708:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    370c:	910003fd 	mov	x29, sp
+	struct gpio_desc *desc;
+
+	desc = gpiod_get_index(dev, con_id, index, flags);
+    3710:	94000000 	bl	33ac <gpiod_get_index>
+			3710: R_AARCH64_CALL26	gpiod_get_index
+	if (IS_ERR(desc)) {
+    3714:	b140041f 	cmn	x0, #0x1, lsl #12
+    3718:	54000068 	b.hi	3724 <gpiod_get_index_optional+0x1c>
+		if (PTR_ERR(desc) == -ENOENT)
+			return NULL;
+	}
+
+	return desc;
+}
+    371c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    3720:	d65f03c0 	ret
+	struct gpio_desc *desc;
+
+	desc = gpiod_get_index(dev, con_id, index, flags);
+	if (IS_ERR(desc)) {
+		if (PTR_ERR(desc) == -ENOENT)
+			return NULL;
+    3724:	b100081f 	cmn	x0, #0x2
+    3728:	9a9f1000 	csel	x0, x0, xzr, ne
+	}
+
+	return desc;
+}
+    372c:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    3730:	d65f03c0 	ret
+
+0000000000003734 <gpiod_get_optional>:
+ * that need to handle optional GPIOs.
+ */
+struct gpio_desc *__must_check gpiod_get_optional(struct device *dev,
+						  const char *con_id,
+						  enum gpiod_flags flags)
+{
+    3734:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+							unsigned int index,
+							enum gpiod_flags flags)
+{
+	struct gpio_desc *desc;
+
+	desc = gpiod_get_index(dev, con_id, index, flags);
+    3738:	2a0203e3 	mov	w3, w2
+    373c:	52800002 	mov	w2, #0x0                   	// #0
+ * that need to handle optional GPIOs.
+ */
+struct gpio_desc *__must_check gpiod_get_optional(struct device *dev,
+						  const char *con_id,
+						  enum gpiod_flags flags)
+{
+    3740:	910003fd 	mov	x29, sp
+							unsigned int index,
+							enum gpiod_flags flags)
+{
+	struct gpio_desc *desc;
+
+	desc = gpiod_get_index(dev, con_id, index, flags);
+    3744:	94000000 	bl	33ac <gpiod_get_index>
+			3744: R_AARCH64_CALL26	gpiod_get_index
+	if (IS_ERR(desc)) {
+    3748:	b140041f 	cmn	x0, #0x1, lsl #12
+    374c:	54000068 	b.hi	3758 <gpiod_get_optional+0x24>
+struct gpio_desc *__must_check gpiod_get_optional(struct device *dev,
+						  const char *con_id,
+						  enum gpiod_flags flags)
+{
+	return gpiod_get_index_optional(dev, con_id, 0, flags);
+}
+    3750:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    3754:	d65f03c0 	ret
+	struct gpio_desc *desc;
+
+	desc = gpiod_get_index(dev, con_id, index, flags);
+	if (IS_ERR(desc)) {
+		if (PTR_ERR(desc) == -ENOENT)
+			return NULL;
+    3758:	b100081f 	cmn	x0, #0x2
+    375c:	9a9f1000 	csel	x0, x0, xzr, ne
+struct gpio_desc *__must_check gpiod_get_optional(struct device *dev,
+						  const char *con_id,
+						  enum gpiod_flags flags)
+{
+	return gpiod_get_index_optional(dev, con_id, 0, flags);
+}
+    3760:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    3764:	d65f03c0 	ret
+
+0000000000003768 <gpiod_put_array>:
+/**
+ * gpiod_put_array - dispose of multiple GPIO descriptors
+ * @descs:	struct gpio_descs containing an array of descriptors
+ */
+void gpiod_put_array(struct gpio_descs *descs)
+{
+    3768:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    376c:	910003fd 	mov	x29, sp
+    3770:	a90153f3 	stp	x19, x20, [sp,#16]
+    3774:	aa0003f4 	mov	x20, x0
+	unsigned int i;
+
+	for (i = 0; i < descs->ndescs; i++)
+    3778:	52800013 	mov	w19, #0x0                   	// #0
+    377c:	b9400000 	ldr	w0, [x0]
+    3780:	34000100 	cbz	w0, 37a0 <gpiod_put_array+0x38>
+		gpiod_put(descs->desc[i]);
+    3784:	8b334e80 	add	x0, x20, w19, uxtw #3
+ */
+void gpiod_put_array(struct gpio_descs *descs)
+{
+	unsigned int i;
+
+	for (i = 0; i < descs->ndescs; i++)
+    3788:	11000673 	add	w19, w19, #0x1
+ *
+ * No descriptor can be used after gpiod_put() has been called on it.
+ */
+void gpiod_put(struct gpio_desc *desc)
+{
+	gpiod_free(desc);
+    378c:	f9400400 	ldr	x0, [x0,#8]
+    3790:	94000000 	bl	3340 <gpiod_free>
+			3790: R_AARCH64_CALL26	gpiod_free
+ */
+void gpiod_put_array(struct gpio_descs *descs)
+{
+	unsigned int i;
+
+	for (i = 0; i < descs->ndescs; i++)
+    3794:	b9400280 	ldr	w0, [x20]
+    3798:	6b13001f 	cmp	w0, w19
+    379c:	54ffff48 	b.hi	3784 <gpiod_put_array+0x1c>
+		gpiod_put(descs->desc[i]);
+
+	kfree(descs);
+    37a0:	aa1403e0 	mov	x0, x20
+    37a4:	94000000 	bl	0 <kfree>
+			37a4: R_AARCH64_CALL26	kfree
+}
+    37a8:	a94153f3 	ldp	x19, x20, [sp,#16]
+    37ac:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    37b0:	d65f03c0 	ret
+
+00000000000037b4 <gpiod_get_array>:
+ * code if an error occurred while trying to acquire the GPIOs.
+ */
+struct gpio_descs *__must_check gpiod_get_array(struct device *dev,
+						const char *con_id,
+						enum gpiod_flags flags)
+{
+    37b4:	a9bc7bfd 	stp	x29, x30, [sp,#-64]!
+    37b8:	910003fd 	mov	x29, sp
+    37bc:	a9025bf5 	stp	x21, x22, [sp,#32]
+    37c0:	a90363f7 	stp	x23, x24, [sp,#48]
+    37c4:	a90153f3 	stp	x19, x20, [sp,#16]
+    37c8:	aa0003f6 	mov	x22, x0
+    37cc:	aa0103f7 	mov	x23, x1
+    37d0:	2a0203f8 	mov	w24, w2
+	struct gpio_desc *desc;
+	struct gpio_descs *descs;
+	int count;
+
+	count = gpiod_count(dev, con_id);
+    37d4:	94000000 	bl	2f9c <gpiod_count>
+			37d4: R_AARCH64_CALL26	gpiod_count
+    37d8:	2a0003f5 	mov	w21, w0
+	if (count < 0)
+    37dc:	37f80535 	tbnz	w21, #31, 3880 <gpiod_get_array+0xcc>
+		return ERR_PTR(count);
+
+	descs = kzalloc(sizeof(*descs) + sizeof(descs->desc[0]) * count,
+    37e0:	93407ea0 	sxtw	x0, w21
+			return kmem_cache_alloc_trace(kmalloc_caches[index],
+					flags, size);
+		}
+#endif
+	}
+	return __kmalloc(size, flags);
+    37e4:	52901801 	mov	w1, #0x80c0                	// #32960
+    37e8:	91000400 	add	x0, x0, #0x1
+    37ec:	72a04801 	movk	w1, #0x240, lsl #16
+    37f0:	d37df000 	lsl	x0, x0, #3
+    37f4:	94000000 	bl	0 <__kmalloc>
+			37f4: R_AARCH64_CALL26	__kmalloc
+    37f8:	aa0003f4 	mov	x20, x0
+			GFP_KERNEL);
+	if (!descs)
+    37fc:	b40004e0 	cbz	x0, 3898 <gpiod_get_array+0xe4>
+		return ERR_PTR(-ENOMEM);
+
+	for (descs->ndescs = 0; descs->ndescs < count; ) {
+    3800:	b900001f 	str	wzr, [x0]
+    3804:	34000335 	cbz	w21, 3868 <gpiod_get_array+0xb4>
+    3808:	52800002 	mov	w2, #0x0                   	// #0
+    380c:	14000008 	b	382c <gpiod_get_array+0x78>
+		desc = gpiod_get_index(dev, con_id, descs->ndescs, flags);
+		if (IS_ERR(desc)) {
+			gpiod_put_array(descs);
+			return ERR_CAST(desc);
+		}
+		descs->desc[descs->ndescs] = desc;
+    3810:	b9400284 	ldr	w4, [x20]
+		descs->ndescs++;
+    3814:	11000482 	add	w2, w4, #0x1
+		desc = gpiod_get_index(dev, con_id, descs->ndescs, flags);
+		if (IS_ERR(desc)) {
+			gpiod_put_array(descs);
+			return ERR_CAST(desc);
+		}
+		descs->desc[descs->ndescs] = desc;
+    3818:	8b244e84 	add	x4, x20, w4, uxtw #3
+	descs = kzalloc(sizeof(*descs) + sizeof(descs->desc[0]) * count,
+			GFP_KERNEL);
+	if (!descs)
+		return ERR_PTR(-ENOMEM);
+
+	for (descs->ndescs = 0; descs->ndescs < count; ) {
+    381c:	6b15005f 	cmp	w2, w21
+		desc = gpiod_get_index(dev, con_id, descs->ndescs, flags);
+		if (IS_ERR(desc)) {
+			gpiod_put_array(descs);
+			return ERR_CAST(desc);
+		}
+		descs->desc[descs->ndescs] = desc;
+    3820:	f9000480 	str	x0, [x4,#8]
+		descs->ndescs++;
+    3824:	b9000282 	str	w2, [x20]
+	descs = kzalloc(sizeof(*descs) + sizeof(descs->desc[0]) * count,
+			GFP_KERNEL);
+	if (!descs)
+		return ERR_PTR(-ENOMEM);
+
+	for (descs->ndescs = 0; descs->ndescs < count; ) {
+    3828:	54000202 	b.cs	3868 <gpiod_get_array+0xb4>
+		desc = gpiod_get_index(dev, con_id, descs->ndescs, flags);
+    382c:	2a1803e3 	mov	w3, w24
+    3830:	aa1703e1 	mov	x1, x23
+    3834:	aa1603e0 	mov	x0, x22
+    3838:	94000000 	bl	33ac <gpiod_get_index>
+			3838: R_AARCH64_CALL26	gpiod_get_index
+		if (IS_ERR(desc)) {
+    383c:	b140041f 	cmn	x0, #0x1, lsl #12
+			GFP_KERNEL);
+	if (!descs)
+		return ERR_PTR(-ENOMEM);
+
+	for (descs->ndescs = 0; descs->ndescs < count; ) {
+		desc = gpiod_get_index(dev, con_id, descs->ndescs, flags);
+    3840:	aa0003f3 	mov	x19, x0
+		if (IS_ERR(desc)) {
+    3844:	54fffe69 	b.ls	3810 <gpiod_get_array+0x5c>
+			gpiod_put_array(descs);
+    3848:	aa1403e0 	mov	x0, x20
+    384c:	94000000 	bl	3768 <gpiod_put_array>
+			384c: R_AARCH64_CALL26	gpiod_put_array
+			GFP_KERNEL);
+	if (!descs)
+		return ERR_PTR(-ENOMEM);
+
+	for (descs->ndescs = 0; descs->ndescs < count; ) {
+		desc = gpiod_get_index(dev, con_id, descs->ndescs, flags);
+    3850:	aa1303e0 	mov	x0, x19
+		}
+		descs->desc[descs->ndescs] = desc;
+		descs->ndescs++;
+	}
+	return descs;
+}
+    3854:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3858:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    385c:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3860:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    3864:	d65f03c0 	ret
+	descs = kzalloc(sizeof(*descs) + sizeof(descs->desc[0]) * count,
+			GFP_KERNEL);
+	if (!descs)
+		return ERR_PTR(-ENOMEM);
+
+	for (descs->ndescs = 0; descs->ndescs < count; ) {
+    3868:	aa1403e0 	mov	x0, x20
+		}
+		descs->desc[descs->ndescs] = desc;
+		descs->ndescs++;
+	}
+	return descs;
+}
+    386c:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3870:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    3874:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3878:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    387c:	d65f03c0 	ret
+	struct gpio_descs *descs;
+	int count;
+
+	count = gpiod_count(dev, con_id);
+	if (count < 0)
+		return ERR_PTR(count);
+    3880:	93407ea0 	sxtw	x0, w21
+		}
+		descs->desc[descs->ndescs] = desc;
+		descs->ndescs++;
+	}
+	return descs;
+}
+    3884:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3888:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    388c:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3890:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    3894:	d65f03c0 	ret
+		return ERR_PTR(count);
+
+	descs = kzalloc(sizeof(*descs) + sizeof(descs->desc[0]) * count,
+			GFP_KERNEL);
+	if (!descs)
+		return ERR_PTR(-ENOMEM);
+    3898:	92800160 	mov	x0, #0xfffffffffffffff4    	// #-12
+		}
+		descs->desc[descs->ndescs] = desc;
+		descs->ndescs++;
+	}
+	return descs;
+}
+    389c:	a94153f3 	ldp	x19, x20, [sp,#16]
+    38a0:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    38a4:	a94363f7 	ldp	x23, x24, [sp,#48]
+    38a8:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    38ac:	d65f03c0 	ret
+
+00000000000038b0 <gpiod_get_array_optional>:
+ * assigned to the requested function it will return NULL.
+ */
+struct gpio_descs *__must_check gpiod_get_array_optional(struct device *dev,
+							const char *con_id,
+							enum gpiod_flags flags)
+{
+    38b0:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+    38b4:	910003fd 	mov	x29, sp
+	struct gpio_descs *descs;
+
+	descs = gpiod_get_array(dev, con_id, flags);
+    38b8:	94000000 	bl	37b4 <gpiod_get_array>
+			38b8: R_AARCH64_CALL26	gpiod_get_array
+	if (IS_ERR(descs) && (PTR_ERR(descs) == -ENOENT))
+    38bc:	b140041f 	cmn	x0, #0x1, lsl #12
+    38c0:	54000068 	b.hi	38cc <gpiod_get_array_optional+0x1c>
+		return NULL;
+
+	return descs;
+}
+    38c4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    38c8:	d65f03c0 	ret
+{
+	struct gpio_descs *descs;
+
+	descs = gpiod_get_array(dev, con_id, flags);
+	if (IS_ERR(descs) && (PTR_ERR(descs) == -ENOENT))
+		return NULL;
+    38cc:	b100081f 	cmn	x0, #0x2
+    38d0:	9a9f1000 	csel	x0, x0, xzr, ne
+
+	return descs;
+}
+    38d4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+    38d8:	d65f03c0 	ret
+
+00000000000038dc <gpiod_add_lookup_table>:
+/**
+ * gpiod_add_lookup_table() - register GPIO device consumers
+ * @table: table of consumers to register
+ */
+void gpiod_add_lookup_table(struct gpiod_lookup_table *table)
+{
+    38dc:	a9bd7bfd 	stp	x29, x30, [sp,#-48]!
+	mutex_lock(&gpio_lookup_lock);
+    38e0:	90000001 	adrp	x1, 0 <desc_to_gpio>
+			38e0: R_AARCH64_ADR_PREL_PG_HI21	.data
+/**
+ * gpiod_add_lookup_table() - register GPIO device consumers
+ * @table: table of consumers to register
+ */
+void gpiod_add_lookup_table(struct gpiod_lookup_table *table)
+{
+    38e4:	910003fd 	mov	x29, sp
+    38e8:	a90153f3 	stp	x19, x20, [sp,#16]
+	mutex_lock(&gpio_lookup_lock);
+    38ec:	91000033 	add	x19, x1, #0x0
+			38ec: R_AARCH64_ADD_ABS_LO12_NC	.data
+/**
+ * gpiod_add_lookup_table() - register GPIO device consumers
+ * @table: table of consumers to register
+ */
+void gpiod_add_lookup_table(struct gpiod_lookup_table *table)
+{
+    38f0:	f90013f5 	str	x21, [sp,#32]
+	mutex_lock(&gpio_lookup_lock);
+    38f4:	91004275 	add	x21, x19, #0x10
+/**
+ * gpiod_add_lookup_table() - register GPIO device consumers
+ * @table: table of consumers to register
+ */
+void gpiod_add_lookup_table(struct gpiod_lookup_table *table)
+{
+    38f8:	aa0003f4 	mov	x20, x0
+	mutex_lock(&gpio_lookup_lock);
+    38fc:	aa1503e0 	mov	x0, x21
+    3900:	94000000 	bl	0 <mutex_lock>
+			3900: R_AARCH64_CALL26	mutex_lock
+ * Insert a new entry before the specified head.
+ * This is useful for implementing queues.
+ */
+static inline void list_add_tail(struct list_head *new, struct list_head *head)
+{
+	__list_add(new, head->prev, head);
+    3904:	f9402262 	ldr	x2, [x19,#64]
+    3908:	9100e261 	add	x1, x19, #0x38
+#ifndef CONFIG_DEBUG_LIST
+static inline void __list_add(struct list_head *new,
+			      struct list_head *prev,
+			      struct list_head *next)
+{
+	next->prev = new;
+    390c:	f9002274 	str	x20, [x19,#64]
+
+	list_add_tail(&table->list, &gpio_lookup_list);
+
+	mutex_unlock(&gpio_lookup_lock);
+    3910:	aa1503e0 	mov	x0, x21
+	new->next = next;
+    3914:	f9000281 	str	x1, [x20]
+	new->prev = prev;
+    3918:	f9000682 	str	x2, [x20,#8]
+    391c:	f9000054 	str	x20, [x2]
+    3920:	94000000 	bl	0 <mutex_unlock>
+			3920: R_AARCH64_CALL26	mutex_unlock
+}
+    3924:	f94013f5 	ldr	x21, [sp,#32]
+    3928:	a94153f3 	ldp	x19, x20, [sp,#16]
+    392c:	a8c37bfd 	ldp	x29, x30, [sp],#48
+    3930:	d65f03c0 	ret
+
+0000000000003934 <gpiod_remove_lookup_table>:
+/**
+ * gpiod_remove_lookup_table() - unregister GPIO device consumers
+ * @table: table of consumers to unregister
+ */
+void gpiod_remove_lookup_table(struct gpiod_lookup_table *table)
+{
+    3934:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+    3938:	910003fd 	mov	x29, sp
+    393c:	a90153f3 	stp	x19, x20, [sp,#16]
+	mutex_lock(&gpio_lookup_lock);
+    3940:	90000013 	adrp	x19, 0 <desc_to_gpio>
+			3940: R_AARCH64_ADR_PREL_PG_HI21	.data
+/**
+ * gpiod_remove_lookup_table() - unregister GPIO device consumers
+ * @table: table of consumers to unregister
+ */
+void gpiod_remove_lookup_table(struct gpiod_lookup_table *table)
+{
+    3944:	aa0003f4 	mov	x20, x0
+	mutex_lock(&gpio_lookup_lock);
+    3948:	91000273 	add	x19, x19, #0x0
+			3948: R_AARCH64_ADD_ABS_LO12_NC	.data
+    394c:	91004273 	add	x19, x19, #0x10
+    3950:	aa1303e0 	mov	x0, x19
+    3954:	94000000 	bl	0 <mutex_lock>
+			3954: R_AARCH64_CALL26	mutex_lock
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+    3958:	f9400283 	ldr	x3, [x20]
+	entry->next = LIST_POISON1;
+    395c:	d2802002 	mov	x2, #0x100                 	// #256
+	__list_del(entry->prev, entry->next);
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+    3960:	f9400680 	ldr	x0, [x20,#8]
+	entry->next = LIST_POISON1;
+	entry->prev = LIST_POISON2;
+    3964:	d2804001 	mov	x1, #0x200                 	// #512
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+    3968:	f2fbd5a2 	movk	x2, #0xdead, lsl #48
+	entry->prev = LIST_POISON2;
+    396c:	f2fbd5a1 	movk	x1, #0xdead, lsl #48
+ * This is only for internal list manipulation where we know
+ * the prev/next entries already!
+ */
+static inline void __list_del(struct list_head * prev, struct list_head * next)
+{
+	next->prev = prev;
+    3970:	f9000460 	str	x0, [x3,#8]
+    3974:	f9000003 	str	x3, [x0]
+
+	list_del(&table->list);
+
+	mutex_unlock(&gpio_lookup_lock);
+    3978:	aa1303e0 	mov	x0, x19
+}
+
+static inline void list_del(struct list_head *entry)
+{
+	__list_del(entry->prev, entry->next);
+	entry->next = LIST_POISON1;
+    397c:	f9000282 	str	x2, [x20]
+	entry->prev = LIST_POISON2;
+    3980:	f9000681 	str	x1, [x20,#8]
+    3984:	94000000 	bl	0 <mutex_unlock>
+			3984: R_AARCH64_CALL26	mutex_unlock
+}
+    3988:	a94153f3 	ldp	x19, x20, [sp,#16]
+    398c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+    3990:	d65f03c0 	ret
+
+0000000000003994 <gpiod_hog>:
+ *		of_get_gpio_hog()
+ * @dflags:	gpiod_flags - optional GPIO initialization flags
+ */
+int gpiod_hog(struct gpio_desc *desc, const char *name,
+	      unsigned long lflags, enum gpiod_flags dflags)
+{
+    3994:	a9bc7bfd 	stp	x29, x30, [sp,#-64]!
+    3998:	910003fd 	mov	x29, sp
+    399c:	a90153f3 	stp	x19, x20, [sp,#16]
+    39a0:	a9025bf5 	stp	x21, x22, [sp,#32]
+    39a4:	a90363f7 	stp	x23, x24, [sp,#48]
+    39a8:	aa0103f6 	mov	x22, x1
+    39ac:	2a0303f7 	mov	w23, w3
+    39b0:	aa0003f3 	mov	x19, x0
+    39b4:	aa0203e1 	mov	x1, x2
+    39b8:	f9400003 	ldr	x3, [x0]
+ * gpiod_to_chip - Return the GPIO chip to which a GPIO descriptor belongs
+ * @desc:	descriptor to return the chip of
+ */
+struct gpio_chip *gpiod_to_chip(const struct gpio_desc *desc)
+{
+	if (!desc || !desc->gdev || !desc->gdev->chip)
+    39bc:	b4000680 	cbz	x0, 3a8c <gpiod_hog+0xf8>
+    39c0:	b4000643 	cbz	x3, 3a88 <gpiod_hog+0xf4>
+    39c4:	f941a078 	ldr	x24, [x3,#832]
+    39c8:	f941a474 	ldr	x20, [x3,#840]
+	int status;
+
+	chip = gpiod_to_chip(desc);
+	hwnum = gpio_chip_hwgpio(desc);
+
+	gpiod_parse_flags(desc, lflags);
+    39cc:	aa1303e0 	mov	x0, x19
+    39d0:	cb140274 	sub	x20, x19, x20
+    39d4:	97fff2d7 	bl	530 <gpiod_parse_flags>
+    39d8:	9345fe94 	asr	x20, x20, #5
+
+	local_desc = gpiochip_request_own_desc(chip, hwnum, name);
+    39dc:	aa1603e2 	mov	x2, x22
+    39e0:	2a1403e1 	mov	w1, w20
+    39e4:	aa1803e0 	mov	x0, x24
+    39e8:	94000000 	bl	1460 <gpiochip_request_own_desc>
+			39e8: R_AARCH64_CALL26	gpiochip_request_own_desc
+	if (IS_ERR(local_desc)) {
+    39ec:	b140041f 	cmn	x0, #0x1, lsl #12
+	chip = gpiod_to_chip(desc);
+	hwnum = gpio_chip_hwgpio(desc);
+
+	gpiod_parse_flags(desc, lflags);
+
+	local_desc = gpiochip_request_own_desc(chip, hwnum, name);
+    39f0:	aa0003f5 	mov	x21, x0
+	if (IS_ERR(local_desc)) {
+    39f4:	54000788 	b.hi	3ae4 <gpiod_hog+0x150>
+		pr_err("requesting hog GPIO %s (chip %s, offset %d) failed\n",
+		       name, chip->label, hwnum);
+		return PTR_ERR(local_desc);
+	}
+
+	status = gpiod_configure_flags(desc, name, dflags);
+    39f8:	2a1703e2 	mov	w2, w23
+    39fc:	aa1603e1 	mov	x1, x22
+    3a00:	aa1303e0 	mov	x0, x19
+    3a04:	97fffa92 	bl	244c <gpiod_configure_flags>
+    3a08:	2a0003f5 	mov	w21, w0
+	if (status < 0) {
+    3a0c:	37f80455 	tbnz	w21, #31, 3a94 <gpiod_hog+0x100>
+		gpiochip_free_own_desc(desc);
+		return status;
+	}
+
+	/* Mark GPIO as hogged so it can be identified and removed later */
+	set_bit(FLAG_IS_HOGGED, &desc->flags);
+    3a10:	91002261 	add	x1, x19, #0x8
+    3a14:	52800160 	mov	w0, #0xb                   	// #11
+    3a18:	94000000 	bl	0 <set_bit>
+			3a18: R_AARCH64_CALL26	set_bit
+ * This should disappear in the future but is needed since we still
+ * use GPIO numbers for error messages and sysfs nodes
+ */
+int desc_to_gpio(const struct gpio_desc *desc)
+{
+	return desc->gdev->base + (desc - &desc->gdev->descs[0]);
+    3a1c:	f9400260 	ldr	x0, [x19]
+    3a20:	f941a402 	ldr	x2, [x0,#840]
+    3a24:	b9435001 	ldr	w1, [x0,#848]
+    3a28:	cb020273 	sub	x19, x19, x2
+    3a2c:	9345fe73 	asr	x19, x19, #5
+    3a30:	0b130021 	add	w1, w1, w19
+	}
+
+	/* Mark GPIO as hogged so it can be identified and removed later */
+	set_bit(FLAG_IS_HOGGED, &desc->flags);
+
+	pr_info("GPIO line %d (%s) hogged as %s%s\n",
+    3a34:	370801f7 	tbnz	w23, #1, 3a70 <gpiod_hog+0xdc>
+    3a38:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			3a38: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x898
+    3a3c:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			3a3c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x8
+    3a40:	91000063 	add	x3, x3, #0x0
+			3a40: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x898
+    3a44:	91000084 	add	x4, x4, #0x0
+			3a44: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x8
+    3a48:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			3a48: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x918
+    3a4c:	aa1603e2 	mov	x2, x22
+    3a50:	91000000 	add	x0, x0, #0x0
+			3a50: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x918
+    3a54:	94000000 	bl	0 <printk>
+			3a54: R_AARCH64_CALL26	printk
+		desc_to_gpio(desc), name,
+		(dflags&GPIOD_FLAGS_BIT_DIR_OUT) ? "output" : "input",
+		(dflags&GPIOD_FLAGS_BIT_DIR_OUT) ?
+		  (dflags&GPIOD_FLAGS_BIT_DIR_VAL) ? "/high" : "/low":"");
+
+	return 0;
+    3a58:	52800000 	mov	w0, #0x0                   	// #0
+}
+    3a5c:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3a60:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    3a64:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3a68:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    3a6c:	d65f03c0 	ret
+	}
+
+	/* Mark GPIO as hogged so it can be identified and removed later */
+	set_bit(FLAG_IS_HOGGED, &desc->flags);
+
+	pr_info("GPIO line %d (%s) hogged as %s%s\n",
+    3a70:	90000003 	adrp	x3, 0 <desc_to_gpio>
+			3a70: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x888
+    3a74:	91000063 	add	x3, x3, #0x0
+			3a74: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x888
+    3a78:	361002d7 	tbz	w23, #2, 3ad0 <gpiod_hog+0x13c>
+    3a7c:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			3a7c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x8a0
+    3a80:	91000084 	add	x4, x4, #0x0
+			3a80: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x8a0
+    3a84:	17fffff1 	b	3a48 <gpiod_hog+0xb4>
+ * gpiod_to_chip - Return the GPIO chip to which a GPIO descriptor belongs
+ * @desc:	descriptor to return the chip of
+ */
+struct gpio_chip *gpiod_to_chip(const struct gpio_desc *desc)
+{
+	if (!desc || !desc->gdev || !desc->gdev->chip)
+    3a88:	d2800003 	mov	x3, #0x0                   	// #0
+		return NULL;
+    3a8c:	d2800018 	mov	x24, #0x0                   	// #0
+    3a90:	17ffffce 	b	39c8 <gpiod_hog+0x34>
+		return PTR_ERR(local_desc);
+	}
+
+	status = gpiod_configure_flags(desc, name, dflags);
+	if (status < 0) {
+		pr_err("setup of hog GPIO %s (chip %s, offset %d) failed\n",
+    3a94:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			3a94: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x8e0
+    3a98:	f9400302 	ldr	x2, [x24]
+    3a9c:	2a1403e3 	mov	w3, w20
+    3aa0:	aa1603e1 	mov	x1, x22
+    3aa4:	91000000 	add	x0, x0, #0x0
+			3aa4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x8e0
+    3aa8:	94000000 	bl	0 <printk>
+			3aa8: R_AARCH64_CALL26	printk
+ * Function frees the given GPIO requested previously with
+ * gpiochip_request_own_desc().
+ */
+void gpiochip_free_own_desc(struct gpio_desc *desc)
+{
+	if (desc)
+    3aac:	b4000193 	cbz	x19, 3adc <gpiod_hog+0x148>
+		__gpiod_free(desc);
+    3ab0:	aa1303e0 	mov	x0, x19
+    3ab4:	97fff68c 	bl	14e4 <__gpiod_free>
+    3ab8:	2a1503e0 	mov	w0, w21
+		(dflags&GPIOD_FLAGS_BIT_DIR_OUT) ? "output" : "input",
+		(dflags&GPIOD_FLAGS_BIT_DIR_OUT) ?
+		  (dflags&GPIOD_FLAGS_BIT_DIR_VAL) ? "/high" : "/low":"");
+
+	return 0;
+}
+    3abc:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3ac0:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    3ac4:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3ac8:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    3acc:	d65f03c0 	ret
+	}
+
+	/* Mark GPIO as hogged so it can be identified and removed later */
+	set_bit(FLAG_IS_HOGGED, &desc->flags);
+
+	pr_info("GPIO line %d (%s) hogged as %s%s\n",
+    3ad0:	90000004 	adrp	x4, 0 <desc_to_gpio>
+			3ad0: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x890
+    3ad4:	91000084 	add	x4, x4, #0x0
+			3ad4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x890
+    3ad8:	17ffffdc 	b	3a48 <gpiod_hog+0xb4>
+ * Function frees the given GPIO requested previously with
+ * gpiochip_request_own_desc().
+ */
+void gpiochip_free_own_desc(struct gpio_desc *desc)
+{
+	if (desc)
+    3adc:	2a1503e0 	mov	w0, w21
+    3ae0:	17ffffdf 	b	3a5c <gpiod_hog+0xc8>
+
+	gpiod_parse_flags(desc, lflags);
+
+	local_desc = gpiochip_request_own_desc(chip, hwnum, name);
+	if (IS_ERR(local_desc)) {
+		pr_err("requesting hog GPIO %s (chip %s, offset %d) failed\n",
+    3ae4:	f9400302 	ldr	x2, [x24]
+    3ae8:	90000000 	adrp	x0, 0 <desc_to_gpio>
+			3ae8: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x8a8
+    3aec:	2a1403e3 	mov	w3, w20
+    3af0:	aa1603e1 	mov	x1, x22
+    3af4:	91000000 	add	x0, x0, #0x0
+			3af4: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x8a8
+    3af8:	94000000 	bl	0 <printk>
+			3af8: R_AARCH64_CALL26	printk
+		       name, chip->label, hwnum);
+		return PTR_ERR(local_desc);
+    3afc:	2a1503e0 	mov	w0, w21
+		(dflags&GPIOD_FLAGS_BIT_DIR_OUT) ? "output" : "input",
+		(dflags&GPIOD_FLAGS_BIT_DIR_OUT) ?
+		  (dflags&GPIOD_FLAGS_BIT_DIR_VAL) ? "/high" : "/low":"");
+
+	return 0;
+}
+    3b00:	a94153f3 	ldp	x19, x20, [sp,#16]
+    3b04:	a9425bf5 	ldp	x21, x22, [sp,#32]
+    3b08:	a94363f7 	ldp	x23, x24, [sp,#48]
+    3b0c:	a8c47bfd 	ldp	x29, x30, [sp],#64
+    3b10:	d65f03c0 	ret
+
+Disassembly of section .init.text:
+
+0000000000000000 <gpiolib_dev_init>:
+	kfree(descs);
+}
+EXPORT_SYMBOL_GPL(gpiod_put_array);
+
+static int __init gpiolib_dev_init(void)
+{
+   0:	a9be7bfd 	stp	x29, x30, [sp,#-32]!
+   4:	910003fd 	mov	x29, sp
+   8:	a90153f3 	stp	x19, x20, [sp,#16]
+	int ret;
+
+	/* Register GPIO sysfs bus */
+	ret  = bus_register(&gpio_bus_type);
+   c:	90000013 	adrp	x19, 0 <gpiolib_dev_init>
+			c: R_AARCH64_ADR_PREL_PG_HI21	.data
+  10:	91000273 	add	x19, x19, #0x0
+			10: R_AARCH64_ADD_ABS_LO12_NC	.data
+  14:	91012273 	add	x19, x19, #0x48
+  18:	aa1303e0 	mov	x0, x19
+  1c:	94000000 	bl	0 <bus_register>
+			1c: R_AARCH64_CALL26	bus_register
+	if (ret < 0) {
+  20:	36f800c0 	tbz	w0, #31, 38 <gpiolib_dev_init+0x38>
+		pr_err("gpiolib: could not register GPIO bus type\n");
+		return ret;
+  24:	2a0003f4 	mov	w20, w0
+	int ret;
+
+	/* Register GPIO sysfs bus */
+	ret  = bus_register(&gpio_bus_type);
+	if (ret < 0) {
+		pr_err("gpiolib: could not register GPIO bus type\n");
+  28:	90000000 	adrp	x0, 0 <gpiolib_dev_init>
+			28: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x360
+  2c:	91000000 	add	x0, x0, #0x0
+			2c: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x360
+  30:	94000000 	bl	0 <printk>
+			30: R_AARCH64_CALL26	printk
+		return ret;
+  34:	14000010 	b	74 <gpiolib_dev_init+0x74>
+	}
+
+	ret = alloc_chrdev_region(&gpio_devt, 0, GPIO_DEV_MAX, "gpiochip");
+  38:	90000000 	adrp	x0, 0 <gpiolib_dev_init>
+			38: R_AARCH64_ADR_PREL_PG_HI21	.bss
+  3c:	90000003 	adrp	x3, 0 <gpiolib_dev_init>
+			3c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x390
+  40:	91000000 	add	x0, x0, #0x0
+			40: R_AARCH64_ADD_ABS_LO12_NC	.bss
+  44:	91000063 	add	x3, x3, #0x0
+			44: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x390
+  48:	52802002 	mov	w2, #0x100                 	// #256
+  4c:	52800001 	mov	w1, #0x0                   	// #0
+  50:	9100e000 	add	x0, x0, #0x38
+  54:	94000000 	bl	0 <alloc_chrdev_region>
+			54: R_AARCH64_CALL26	alloc_chrdev_region
+  58:	2a0003f4 	mov	w20, w0
+	if (ret < 0) {
+  5c:	36f800d4 	tbz	w20, #31, 74 <gpiolib_dev_init+0x74>
+		pr_err("gpiolib: failed to allocate char dev region\n");
+  60:	90000000 	adrp	x0, 0 <gpiolib_dev_init>
+			60: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3a0
+  64:	91000000 	add	x0, x0, #0x0
+			64: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3a0
+  68:	94000000 	bl	0 <printk>
+			68: R_AARCH64_CALL26	printk
+		bus_unregister(&gpio_bus_type);
+  6c:	aa1303e0 	mov	x0, x19
+  70:	94000000 	bl	0 <bus_unregister>
+			70: R_AARCH64_CALL26	bus_unregister
+	}
+	return ret;
+}
+  74:	2a1403e0 	mov	w0, w20
+  78:	a94153f3 	ldp	x19, x20, [sp,#16]
+  7c:	a8c27bfd 	ldp	x29, x30, [sp],#32
+  80:	d65f03c0 	ret
+
+0000000000000084 <gpiolib_debugfs_init>:
+	.llseek		= seq_lseek,
+	.release	= seq_release,
+};
+
+static int __init gpiolib_debugfs_init(void)
+{
+  84:	a9bf7bfd 	stp	x29, x30, [sp,#-16]!
+	/* /sys/kernel/debug/gpio */
+	(void) debugfs_create_file("gpio", S_IFREG | S_IRUGO,
+  88:	90000004 	adrp	x4, 0 <gpiolib_dev_init>
+			88: R_AARCH64_ADR_PREL_PG_HI21	.rodata
+  8c:	90000000 	adrp	x0, 0 <gpiolib_dev_init>
+			8c: R_AARCH64_ADR_PREL_PG_HI21	.rodata.str1.8+0x3d0
+  90:	91000084 	add	x4, x4, #0x0
+			90: R_AARCH64_ADD_ABS_LO12_NC	.rodata
+	.llseek		= seq_lseek,
+	.release	= seq_release,
+};
+
+static int __init gpiolib_debugfs_init(void)
+{
+  94:	910003fd 	mov	x29, sp
+	/* /sys/kernel/debug/gpio */
+	(void) debugfs_create_file("gpio", S_IFREG | S_IRUGO,
+  98:	d2800003 	mov	x3, #0x0                   	// #0
+  9c:	91040084 	add	x4, x4, #0x100
+  a0:	d2800002 	mov	x2, #0x0                   	// #0
+  a4:	128fdb61 	mov	w1, #0xffff8124            	// #-32476
+  a8:	91000000 	add	x0, x0, #0x0
+			a8: R_AARCH64_ADD_ABS_LO12_NC	.rodata.str1.8+0x3d0
+  ac:	94000000 	bl	0 <debugfs_create_file>
+			ac: R_AARCH64_CALL26	debugfs_create_file
+				NULL, NULL, &gpiolib_operations);
+	return 0;
+}
+  b0:	52800000 	mov	w0, #0x0                   	// #0
+  b4:	a8c17bfd 	ldp	x29, x30, [sp],#16
+  b8:	d65f03c0 	ret
