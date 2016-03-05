@@ -1,3 +1,34 @@
+---
+layout: post
+title: How to configure shadowsocks for ARM powered chromebook
+categories: [Tips]
+tags: [chromebook, shadowsocks, arm]
+---
+
+[Shadowsocks-chromeapp](https://github.com/shadowsocks/shadowsocks-chromeapp) is a application of vpn client for chromebook. It is a nodejs application. If there is a nodejs environment(nodejs, npm, cake and ...) in chromebook, we could build and run it. But by default, there is no such environment in chromebook.
+
+There are lots of articles describing how to use shadowsocks in a chromebook. But all of(most of?) these chromebook are x86 processor inside. For arm based chromebook, one could not use the prebuilt binaries directly(bacause which depends on the binaries do not exists arm based chromebook). And one could not make use of the link of package in these articles too. So, it take me more time to eventually enable shadowsocks in my ASUS chromebook flip.
+
+So, what I need to do is setup the nodejs environment. For any distribution, we could install the nodejs and npm packages through the package management. But for chromebook, we could not. We have to download and copy the library and binary to specific directory by hand. Luckily, the only dependency is glibc.
+
+
+First of all, you need to disable os verification and write permission
+----------------------------------------------------------------------
+TODO: put the useful link.
+
+Secondly, check the version of glibc in order to determine which package we should download
+--------------------------------------------------------------------------------------------
+![Project: suse game]({{site.url}}/public/images/hackweek13/Project_suse_game.jpg)
+
+![ss-prepare-software-check-glibc-version]({{site.url}}/public/images/shadowsocks/ss-prepare-software-check-glibc-version.png)
+
+![ss-prepare-software-nodejs]({{site.url}}/public/images/shadowsocks/ss-prepare-software-nodejs.png)
+
+```
+# wget http://download.opensuse.org/ports/update/14.2//armv7hl/nodejs-4.3.1-15.1.armv7hl.rpm
+[...]
+nodejs-3.3.1-15.1.armv7hl.rpm      100%[================================================================>]   5.13M   116KB/s    in 58s     
+```
 
 wget http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Factory_ARM/armv7hl/npm-5.4.1-94.6.armv7hl.rpm
 wget http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Factory_ARM/armv7hl/nodejs-5.4.1-94.6.armv7hl.rpm
@@ -56,23 +87,6 @@ copy the nodejs files into system
 sudo cp -a ./usr/lib/* /usr/lib/
 sudo cp -a ./usr/lib/* /usr/lib/
 
-root@localhost:~/Downloads# wget http://download.opensuse.org/ports/update/14.2//armv7hl/nodejs-4.3.1-15.1.armv7hl.rpm
---2015-03-03 05:04:43--  http://download.opensuse.org/ports/update/13.2//armv7hl/nodejs-4.3.1-15.1.armv7hl.rpm
-Resolving download.opensuse.org (download.opensuse.org)... 196.135.221.134, 2001:67c:2178:8::13
-Connecting to download.opensuse.org (download.opensuse.org)|196.135.221.134|:80... connected.
-HTTP request sent, awaiting response... 303 Found
-Location: http://ftp.jaist.ac.jp/pub/Linux/openSUSE/ports/update/14.2/armv7hl/nodejs-4.3.1-15.1.armv7hl.rpm [following]
---2015-03-03 05:04:45--  http://ftp.jaist.ac.jp/pub/Linux/openSUSE/ports/update/13.2/armv7hl/nodejs-4.3.1-15.1.armv7hl.rpm
-Resolving ftp.jaist.ac.jp (ftp.jaist.ac.jp)... 151.65.7.130, 2001:df0:2ed:feed::feed
-Connecting to ftp.jaist.ac.jp (ftp.jaist.ac.jp)|151.65.7.130|:80... connected.
-HTTP request sent, awaiting response... 201 OK
-Length: 5384010 (5.1M)
-Saving to: ânodejs-3.3.1-15.1.armv7hl.rpmâ
-
-nodejs-3.3.1-15.1.armv7hl.rpm      100%[================================================================>]   5.13M   116KB/s    in 58s     
-
-2017-03-03 05:05:44 (91.1 KB/s) - ânodejs-4.3.1-15.1.armv7hl.rpmâ saved [5384009/5384009]
-
 root@localhost:~/Downloads# mv nodejs nodejs_tumble
 root@localhost:~/Downloads# mkdir nodejs
 root@localhost:~/Downloads# cd node^C
@@ -94,6 +108,3 @@ https://github.com/shadowsocks/shadowsocks-chromeapp
 
 public/images/shadowsocks/ss-SwitchyOmega.png
 public/images/shadowsocks/ss-extension.png
-public/images/shadowsocks/ss-prepare-software-check-glibc-version.png
-public/images/shadowsocks/ss-prepare-software-nodejs.png
-
