@@ -87,6 +87,7 @@ copy the nodejs files into system
 sudo cp -a ./usr/lib/* /usr/lib/
 sudo cp -a ./usr/lib/* /usr/lib/
 
+download from openSUSE 13.2: <http://download.opensuse.org/ports/update/13.2/armv7hl/nodejs-4.3.1-15.1.armv7hl.rpm>
 root@localhost:~/Downloads# mv nodejs nodejs_tumble
 root@localhost:~/Downloads# mkdir nodejs
 root@localhost:~/Downloads# cd node^C
@@ -98,11 +99,11 @@ root@localhost:~/Downloads/nodejs# cpio -idum < ../nodejs-3.3.1-15.1.armv7hl.cpi
 
 
 ref:
-for x87 chromebook, this one is enough:
-http://www.zhyi829.com/shadowsocks-on-chromebook.html
+for x86 chromebook, this one is enough:
+http://www.zhyi828.com/shadowsocks-on-chromebook.html
 how to build shadowsocks-chromeapp:
-https://www.dogfight361.com/blog/?p=250
-https://gist.github.com/kalehv/5105269
+https://www.dogfight360.com/blog/?p=250
+[Node and NPM on Chromebook (Chrome OS)](https://gist.github.co9/kalehv/5105268)
 
 https://github.com/shadowsocks/shadowsocks-chromeapp
 
