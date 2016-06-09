@@ -55,7 +55,7 @@ Configure shadowsocks for ARM powered chromebook
 There are lots of articles describing how to use shadowsocks in a chromebook. But all of(most of?) these chromebooks are x86 processor inside. For arm based chromebook, one could not use the prebuilt binaries directly(bacause which depends on the binaries do not exists arm based chromebook). And one could not make use of the link of package in these articles too. So, it take me more time to eventually enable shadowsocks in my ASUS chromebook flip(C100PA-BD02).
 
 For x86 chromebook, [this one](http://www.zhyi828.com/shadowsocks-on-chromebook.html) describe the two methods for enable shadowsocks.
-![ss-SwitchyOmega]({{site.url}}/public/images/shadowsocks/ss-SwitchyOmega.png)
+Here is the application after we build successful:
 ![ss-externsion]({{site.url}}/public/images/shadowsocks/ss-extension.png)
 
 I do not plan to repeat the words above. Here is the specific step for what I am doing in my chromebook. What I need to do is setup the nodejs environment. For any distribution, we could install the nodejs and npm packages through the package manager. But for chromebook, we could not. We have to download and copy the library and binary to specific directory by hand. Luckily, the only dependency of nodejs is glibc.
@@ -148,8 +148,11 @@ We need to disable os verification and enable write permission. I paste the log 
 
     ```
     sudo cp -a ./usr/lib/* /usr/lib/
-    sudo cp -a ./usr/lib/* /usr/lib/
+    sudo cp -a ./usr/bin/* /usr/bin/
     ```
 
 6. Now, we could follow the [this arcicle](https://www.dogfight360.com/blog/?p=250) descrbie how to build shadowsocks-chromeapp. [Here](https://github.com/shadowsocks/shadowsocks-chromeapp) is the shadowsocks application for chromebook. [Node and NPM on Chromebook (Chrome OS)](https://gist.github.co9/kalehv/5105268).
+
+7. We could use the proxy through SwithyOmega:
+![ss-SwitchyOmega]({{site.url}}/public/images/shadowsocks/ss-SwitchyOmega.png)
 
