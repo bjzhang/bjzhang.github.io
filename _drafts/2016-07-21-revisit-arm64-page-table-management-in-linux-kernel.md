@@ -6,7 +6,7 @@ tags: [kernel, arm64, pagetable]
 ---
 
 
-Several years ago, I read the ARM ARM carefullly when I want to add Cortex-a8 support for nucleus which supported arm9. At that time, I understand the basic knowledge of memory mapping in arm architecture. I thought it is similar in Linux(In theory, it is. In practice, the memory management is complex than Nucleus).
+Several years ago, I read the ARM ARM carefullly when I want to add Cortex-a8 support for nucleus which supported arm9. At that time, I understand the basic knowledge of memory mapping of arm architecture. I thought it is similar in Linux(In theory, it is. In practice, the memory management is complex than Nucleus).
 
 Recently, when I plan to investigate the contiguous hint bit for arm64("66b3923 arm64: hugetlb: add support for PTE contiguous bit" is a start point). I realise that I need to really understand that.
 
@@ -33,4 +33,7 @@ Translation table lookup with 4KB pages:
 ```
 
 In arm64 kernel, ARM64_HW_PGTABLE_LEVEL_SHIFT is introduce to convert between PXD and levelX.
+
+Ok, Let me read the page tables.
+show_pte.
 
