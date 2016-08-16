@@ -37,3 +37,21 @@ In arm64 kernel, ARM64_HW_PGTABLE_LEVEL_SHIFT is introduce to convert between PX
 Ok, Let me read the page tables.
 show_pte.
 
+## mmap and brk
+Userspace malloc the memory through mmap and brk syscall. Modern 64bit kernel define mapp as the wrapper of mmap_pgoff. The latter one is defined in mm/mmap.c
+```
+SYSCALL_DEFINE6(mmap_pgoff, unsigned long, addr, unsigned long, len,
+                unsigned long, prot, unsigned long, flags,
+                unsigned long, fd, unsigned long, pgoff)
+{
+        if (!(flags & MAP_ANONYMOUS)) {
+		//align len if f_op is hugetlbfs_file_operations
+		//check if set MAP_HUGETLB and hugetlbfs_file_operations at the same time
+        } else if (flags & MAP_HUGETLB) {
+		//align len if f_op is hugetlbfs_file_operations
+		//register hugetlb file hugetlb_file_setup and set f_op as hugetlbfs_file_operations in it.
+	}
+	vm_mmap_pgoff()
+}
+```
+hugetlbfs_file_operations
