@@ -20,16 +20,16 @@ ILP32 is one of three abis existing on arm64. Which provide a software migration
 
 ## What is ILP32?
 ### Data model
-![data model](data_model.png)
+![data model](../../public/images/syscall_unit_test/data_model.png)
 
 ### arm architecture
-![arm architechture](arm_architecture.jpg)
+![arm architechture](../../public/images/syscall_unit_test/arm_architecture.jpg)
 
 ### Migrate 32bit application to 64bit hardware
-![migrate](migrate_32bit_app_to_64bit_hardware.svg)
+![migrate](../../public/images/syscall_unit_test/migrate_32bit_app_to_64bit_hardware.svg)
 
 ### ILP32 enablement
-![enablement](aarch64_ilp32_architecture.png)
+![enablement](../../public/images/syscall_unit_test/aarch64_ilp32_architecture.png)
 
 ## Why we need unit test for ILP32?
 ### There are actually lots of choices for a new api.
@@ -87,7 +87,7 @@ Current version. Glibc community is re-organzie the code for a generic new api.
 Trinity is developed in a long time. It could randomize the parameter of syscall and run individual syscall standalone or parallel. When I do the long time parallel test(not for ILP32), it could report some bug, e.g. hang, panic. It is useful but it is indeed hard to debug because it usually fail after a long time running. I do not know what does it exactly do.
 
 ## Syzkaller
-![structure of syzkaller](syzkaller-structure.png)
+![structure of syzkaller](../../public/images/syscall_unit_test/syzkaller-structure.png)
 ???
 The picture came from https://github.com/google/syzkaller
 
@@ -133,7 +133,7 @@ Using TriforceAFL, we built a Linux syscall fuzzer (TriforceLinuxSyscallFuzzer).
 # Introduce syscall unit test
 
 ## The test flow of syscall unit test
-![syscall unit test diagram](syscall_unit_test_diagram.svg)
+![syscall unit test diagram](../../public/images/syscall_unit_test/syscall_unit_test_diagram.svg)
 
 ???
 Dump the function                                 Dump the function

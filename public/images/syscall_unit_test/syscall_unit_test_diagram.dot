@@ -4,10 +4,10 @@ digraph syscall_unit_test{
     rankdir = LR;
 //    rankdir = TB;
     fontname = "Microsoft YaHei";
-    fontsize = 12;
+    fontsize = 20;
 
-    node [ fontname = "Microsoft YaHei", fontsize = 12, shape = "record", color="skyblue", style="bold"];
-    edge [ fontname = "Microsoft YaHei", fontsize = 12 ];
+    node [ fontname = "Microsoft YaHei", fontsize = 20, shape = "record", color="skyblue", style="bold"];
+    edge [ fontname = "Microsoft YaHei", fontsize = 20 ];
 
     subgraph cluster__kernel {
         label = "kernel";
