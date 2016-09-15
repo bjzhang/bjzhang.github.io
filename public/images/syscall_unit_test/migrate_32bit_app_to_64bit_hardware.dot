@@ -1,0 +1,46 @@
+//dot -Tjpeg ilp32_debug_flow.dot -o ilp32_debug_flow.jpeg
+
+digraph migrate_32bit_to_64bit{
+    rankdir = TB;
+    fontname = "Microsoft YaHei";
+    fontsize = 12;
+
+    node [ fontname = "Microsoft YaHei", fontsize = 12, shape = "record", color="skyblue", style="bold"];
+    edge [ fontname = "Microsoft YaHei", fontsize = 12 ];
+
+    subgraph cluster__aarch32 {
+        label = "aarch32";
+        aarch32_app [ label = application ];
+        aarch32_midware [ label = midware ];
+        aarch32_libc [ label = libc ];
+        aarch32_app -> aarch32_midware -> aarch32_libc[ style = invis ];
+    }
+
+    subgraph cluster__aarch64_ILP32 {
+        label = "aarch64_ILP32";
+        aarch64_ILP32_app [ label = application ];
+        aarch64_ILP32_midware [ label = midware ];
+        aarch64_ILP32_libc [ label = libc ];
+        aarch64_ILP32_app -> aarch64_ILP32_midware -> aarch64_ILP32_libc[ style = invis ];
+    }
+
+    subgraph cluster__aarch64_LP64 {
+        label = "aarch64_LP64";
+        aarch64_LP64_app [ label = application ];
+        aarch64_LP64_midware [ label = midware ];
+        aarch64_LP64_libc [ label = libc ];
+        aarch64_LP64_app -> aarch64_LP64_midware -> aarch64_LP64_libc[ style = invis ];
+    }
+
+    subgraph cluster__kernel {
+        label = "kernel";
+        compat_syscall;
+        syscall;
+    }
+
+    aarch32_libc->compat_syscall;
+    aarch64_ILP32_libc->compat_syscall;
+    aarch64_ILP32_libc->syscall;
+    aarch64_LP64_libc->syscall;
+}
+

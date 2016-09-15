@@ -1,0 +1,33 @@
+//dot -Tjpeg a.dot -o a.jpeg
+
+digraph syscall_unit_test{
+    rankdir = LR;
+//    rankdir = TB;
+    fontname = "Microsoft YaHei";
+    fontsize = 12;
+
+    node [ fontname = "Microsoft YaHei", fontsize = 12, shape = "record", color="skyblue", style="bold"];
+    edge [ fontname = "Microsoft YaHei", fontsize = 12 ];
+
+    subgraph cluster__kernel {
+        label = "kernel";
+        dump_function_prototype_from_kernel [ label = "Dump function prototype\n from kernel"];
+        generate_jprobe_hook [ label = "Generate jprobe hook" ];
+
+    }
+
+    subgraph cluster__userspace {
+        label = "userspace";
+        dump_function_prototype_from_userspace [ label = "Dump function prototype\n from userspace"];
+        generate_parameter_fuzzer [ label = "Generate parameter fuzzer"];
+    }
+
+    run_test_case_with_modified_trinity [ label = "run test case with\n modified trinity"];
+    analysis_result [ label = "analysis result" ];
+
+    dump_function_prototype_from_kernel -> generate_jprobe_hook -> run_test_case_with_modified_trinity;
+    dump_function_prototype_from_userspace -> generate_parameter_fuzzer -> run_test_case_with_modified_trinity;
+
+    run_test_case_with_modified_trinity -> analysis_result;
+}
+
