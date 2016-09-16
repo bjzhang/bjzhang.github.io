@@ -4,22 +4,22 @@ digraph syscall_unit_test{
     rankdir = LR;
 //    rankdir = TB;
     fontname = "Microsoft YaHei";
-    fontsize = 30;
+    fontsize = 20;
 
-    node [ fontname = "Microsoft YaHei", fontsize = 30, shape = "record", color="skyblue", style="bold"];
-    edge [ fontname = "Microsoft YaHei", fontsize = 30 ];
+    node [ fontname = "Microsoft YaHei", fontsize = 20, shape = "record", color="skyblue", style="bold"];
+    edge [ fontname = "Microsoft YaHei", fontsize = 20 ];
 
     subgraph cluster__kernel {
         label = "kernel";
         dump_function_prototype_from_kernel [ label = "Dump function\n prototype\n from kernel"];
-        generate_jprobe_hook [ label = "Generate jprobe\n hook" ];
+        generate_jprobe_hook [ label = "Generate\n jprobe\n hook" ];
 
     }
 
     subgraph cluster__userspace {
         label = "userspace";
         dump_function_prototype_from_userspace [ label = "Dump function\n prototype\n from userspace"];
-        generate_parameter_fuzzer [ label = "Generate parameter\n fuzzer"];
+        generate_parameter_fuzzer [ label = "Generate\n parameter\n fuzzer"];
     }
 
     run_test_case_with_modified_trinity [ label = "run test case\nwith modified\n trinity"];

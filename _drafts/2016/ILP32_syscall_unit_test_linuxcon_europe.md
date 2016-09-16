@@ -1,8 +1,7 @@
 
 class: center, middle
 
-#An efficiency unit test and fuzz tools for kernel/libc porting
-
+#An efficient unit test and fuzz tools for kernel/libc porting
 
 Bamvor Jian Zhang
 
@@ -11,6 +10,8 @@ Huawei
 .date[Oct, 6, 2016]
 
 ???
+cmd: markdown-to-slides --style remark-template.css --l template.html -d ILP32_syscall_unit_test_linuxcon_europe.md -o ILP32_syscall_unit_test_linuxcon_europe.html
+
 The idea is:
 1.  Share the experience of development of ILP32 which show the lack of syscall unit test.
 2.  Compare the exist testsuite for kernel and glibc. The shortage.
@@ -24,7 +25,7 @@ The idea is:
 
 # aarch64 ILP32 overview.
 ???
-ILP32 is one of three abis existing on arm64. Which provide a software migration path from arm 32bit hardware to 64bit hardware.
+ILP32 is one of three ABIs existing on arm64. Which provide a software migration path from arm 32bit hardware to 64bit hardware.
 
 ## What is ILP32?
 ### Data model
@@ -41,12 +42,12 @@ ILP32 is one of three abis existing on arm64. Which provide a software migration
 
 ## Why we need unit test for ILP32?
 ### There are actually lots of choices for a new api.
-*   The definition of basic type, such as time_t, off_t and so on.
+*   The definition of basic type in userspace, such as time_t, off_t(file relative types) and so on.
 *   Argument passing.
-*   Sign extended for 32bit variable.
+*   Sanitize register contents.
 
-## Lots of abi changes.
-During developemnt of ILP32, there are three big change in ILP32 which lead to lots of duplicate verfication work.
+## Lots of ABI changes.
+During developemnt of ILP32, there are four big changes in ILP32 which lead to lots of duplicate verfication work.
 
 ### Version A
 *   Most of syscall is compat syscall.
@@ -70,8 +71,8 @@ It is hard to maintain the code of glibc because of the arguments passing and de
 
 ### Version D
 *   Most of syscall is compat syscall.
-*   time_t is 32bit and off_t is 64bit
-*   Pass 64bit variable through two 32bit register.
+*   time_t is 32bit and **off_t is 64bit**(only affect the userspace interface!)
+*   Pass 64bit variable through two 32bit register instead of one 64bit register
 *   Clear the top-havies of of all the registers of syscall when enter kernel.
 ???
 Current version. Glibc community is re-organzie the code for a generic new api.
@@ -108,14 +109,14 @@ Trinity is developed in a long time. It could randomize the parameter of syscall
 The picture came from https://github.com/google/syzkaller
 
 ## Syzkaller(Cont.)
-1.  Syzkaller could recursively randomize base date type
+1.  Syzkaller could recursively randomize base data type
 2.  Syzkaller could generate the readable short testcases
 3.  Syzkaller could do the coverage
 4.  Syzkaller do not test glibc
 
 ???
 Compare with Trinity, syzkaller is quite different. Here is the comparision between syzkaller and our tools:
-1.  Syzkaller could recursively randomize base date type in syscall which means it is possible generate more meaningfull syscall test. But it only test the syscall through syscall() function. It assume that the c library is correct and stable. But it is wrong if we are porting new abi(such as ILP32) or architecture to glibc and kernel. We need to take c library into account. This is what my tools could do.
+1.  Syzkaller could recursively randomize base date type in syscall which means it is possible generate more meaningfull syscall test. But it only test the syscall through syscall() function. It assume that the c library is correct and stable. But it is wrong if we are porting new ABI(such as ILP32) or architecture to glibc and kernel. We need to take c library into account. This is what my tools could do.
 
 2.  Syzkaller could generate the readable short testcases. Our tools could only test individual syscall and check the correctness of parameter and return value. I think it is enough for the unit test which tests syscall one by one.
 
@@ -183,7 +184,7 @@ value.                       |                    will recursively
               32<->64bit conversion issue and
               so on.
 
-## Found twos issue with our tools in a specific version
+## Found two issues with our tools in a specific version
 *   readahead
 *   sync_file_range
 
@@ -191,9 +192,14 @@ value.                       |                    will recursively
 Contribution to LTP and/or glibc testsuite?
 Or keep it as a standalone test case?
 
+## The return value test of syscall
+Random return the value of syscall to userspace to in order to test whether userspace handle the return value/errno correctly.
 # TODO list
 *   Support all the syscalls which are not wrapped by libc.
 *   Full automation in generating the fuzz code.
+
+## Code published in github
+<https://github.com/bjzhang/trinity>
 
 # Q & A
 
