@@ -188,15 +188,16 @@ value.                       |                    will recursively
 *   readahead
 *   sync_file_range
 
+## The return value test of syscall
+Random return the value of syscall to userspace to in order to test whether userspace handle the return value/errno correctly.
+
+## TODO list
+*   Support all the syscalls which are not wrapped by libc.
+*   Full automation in generating the fuzz code.
+
 ## What is the future of syscall unit test?
 Contribution to LTP and/or glibc testsuite?
 Or keep it as a standalone test case?
-
-## The return value test of syscall
-Random return the value of syscall to userspace to in order to test whether userspace handle the return value/errno correctly.
-# TODO list
-*   Support all the syscalls which are not wrapped by libc.
-*   Full automation in generating the fuzz code.
 
 ## Code published in github
 <https://github.com/bjzhang/trinity>
