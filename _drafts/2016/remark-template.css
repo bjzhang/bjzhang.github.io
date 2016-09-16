@@ -121,7 +121,7 @@ blockquote {
     width: 120px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(huawei_logo.png);
+    background-image: url(../../public/images/syscall_unit_test/huawei_logo.png); 
 }
 
 .remark-slide-content h1 {
