@@ -7,3 +7,5 @@ https://github.com/nodejs/node-v0.x-archive/issues/3911
 cd /usr/bin
 ln -sf nodejs node
 
+# the properties
+https://github.com/gnab/remark/wiki/Markdown#slide-properties

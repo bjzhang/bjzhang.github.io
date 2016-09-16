@@ -1,6 +1,14 @@
 
-An efficiency unit test and fuzz tools for kernel/libc porting
---------------------------------------------------------------
+class: center, middle
+
+#An efficiency unit test and fuzz tools for kernel/libc porting
+
+
+Bamvor Jian Zhang
+
+Huawei
+
+.date[Oct, 6, 2016]
 
 ???
 The idea is:
@@ -35,18 +43,24 @@ ILP32 is one of three abis existing on arm64. Which provide a software migration
 ### There are actually lots of choices for a new api.
 *   The definition of basic type, such as time_t, off_t and so on.
 *   Argument passing.
-*   delouse.
+*   Sign extended for 32bit variable.
 
 ## Lots of abi changes.
 During developemnt of ILP32, there are three big change in ILP32 which lead to lots of duplicate verfication work.
 
 ### Version A
+*   Most of syscall is compat syscall.
+*   time_t and off_t is 32bit
+
+### Version B
 *   Most of syscall is as same as 64bit syscall.
 *   time_t and off_t is 64bit. But in POSIX, time_t should be 32bit for 32bit application.
 ???
 Glibc community think that time_t must be 32bit.
 
-### Version B
+### Version C
+Came back to verion A
+
 *   Most of syscall is compat syscall.
 *   time_t and off_t is 32bit
 *   Pass 64bit variable through one 64bit register.
@@ -54,7 +68,7 @@ Glibc community think that time_t must be 32bit.
 ???
 It is hard to maintain the code of glibc because of the arguments passing and delouse.
 
-### Version C
+### Version D
 *   Most of syscall is compat syscall.
 *   time_t is 32bit and off_t is 64bit
 *   Pass 64bit variable through two 32bit register.
@@ -88,6 +102,8 @@ Trinity is developed in a long time. It could randomize the parameter of syscall
 
 ## Syzkaller
 ![structure of syzkaller](../../public/images/syscall_unit_test/syzkaller-structure.png)
+
+.footnote[.red[*] The original [picture](https://github.com/google/syzkaller/blob/master/structure.png?raw=true) is belong to the syzkaller project)]
 ???
 The picture came from https://github.com/google/syzkaller
 

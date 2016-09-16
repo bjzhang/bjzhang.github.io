@@ -65,8 +65,8 @@ li:before {
 
 img {
     vertical-align: middle;
-    max-height: 933px;
-    max-width: 700px;
+    max-height: 550px;
+    max-width: 1000px;
     margin: 0 auto 1em;
     display: block;
 }
@@ -112,7 +112,7 @@ blockquote {
     vertical-align: middle;
     padding: 0 6em;
     border-bottom: 18px solid #00989e;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 .remark-slide-content:after {
@@ -168,3 +168,26 @@ blockquote {
     color: #fff;
     padding: 0 1em;
 }
+
+/* come from http://www.jmlilly.net/liminal/talks/template.html */
+.red { color: #fa0000; }
+/* Slide-specific styling */
+.footnote {
+position: absolute;
+bottom: 2em;
+font-size: 12px;
+}
+/*
+#slide-inverse .footnote {
+bottom: 20px;
+font-size: 8px;
+left: 20px;
+}
+.title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+.subtitle {font-size: 1.4em}
+.author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}
+.coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}
+.institution {font-size: 1.0em;}
+*/
+.date {font-size: 1.0em;font-style: italic}
+
