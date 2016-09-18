@@ -97,7 +97,8 @@ blockquote {
 }
 
 .remark-slide-number {
-    display: none;
+/*    display: none;*/
+    padding-right: 1050px;
 }
 
 .remark-slide {
@@ -117,8 +118,8 @@ blockquote {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    height: 40px;
-    width: 120px;
+    height: 55px;
+    width: 200px;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../../public/images/syscall_unit_test/huawei_logo.png); 
