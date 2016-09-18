@@ -46,7 +46,7 @@ ILP32 is one of three ABIs existing on arm64. Which provide a software migration
 ![enablement](../../public/images/syscall_unit_test/aarch64_ilp32_architecture.png)
 
 ## Why we need unit test for ILP32?
-### There are actually lots of choices to be made for a new api
+### Lots of choices to be made for a new api
 *   The definition of basic type in userspace
 *   Argument passing
 *   Sanitize register contents
@@ -79,9 +79,10 @@ It is hard to maintain the code of glibc because of the arguments passing and de
 
 ### Version D
 *   Most of syscall is compat syscall
-*   time_t is 32-bit and **off_t is 64-bit**(only affect the userspace interface!)
-*   Pass 64-bit variable through two 32-bit register instead of one 64-bit register
-*   Clear the top-halves of of all the 64-bit registers of syscall when enter kernel
+*   Pass 64-bit variable through two 32-bit regs
+*   Clear the top-halves of of all the 64-bit regs of syscall when enter kernel
+*   time_t is 32-bit and **off_t is 64-bit**
+<br>(only affect the userspace interface!)</br>
 ???
 Current version. Glibc community is re-organzie the code for a generic new api
 
@@ -104,7 +105,8 @@ Current version. Glibc community is re-organzie the code for a generic new api
 *   Generate fuzz data in a set of data type
 *   Generate random address instead of basic data type for most of pointers
 *   Support lots of architecture
-*   Takes too long to produce an issue and takes much longer to re-produce and analyze it
+*   Takes too long to produce an issue
+*   Takes much longer to re-produce and analyze it
 *   Is going to add coverage support(?)
 
 ???
@@ -264,7 +266,7 @@ Step to generate generate-struct.c and jprobe hooks:
 ### Modify trinity
 *   Call syscall through c library
 *   Add the missing struct in syscall
-*   Add jprobe hooks for capturing the argument of syscall
+*   Add jprobe hooks for capturing the arguments of syscall
 *   Add or Change some output message for script
 
 ???
@@ -279,7 +281,7 @@ There are some hacks and the original funtion of trinity may be broken. The main
 ### Run it!
 trinity/scripts/do_test_struct.sh
 
-## Found two issues with our tools in a specific version
+## Found two issues in a specific version
 *   readahead
 *   sync_file_range
 
