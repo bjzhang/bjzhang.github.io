@@ -198,15 +198,60 @@ value.                       |                    will recursively
 *   Script base on [abi-dumper](https://github.com/lvc/abi-dumper.git)
 *   Generate the function and struct fuzz from json.
 
-```
-struct timespec *get_timespec()
+### The fuzzer of struct in userspace
+```cpp
+struct itimerspec *get_itimerspec()
 {
-    struct timespec *p3 = malloc(sizeof(struct timespec));
-    p3->tv_sec = (unsigned long) rand64() % 60;
-    p3->tv_nsec = (unsigned long) rand64() % 1000 ;
-    printf("parameter value: p3->tv_sec=%u, p3->tv_nsec=%u,", p3->tv_sec,
-           p3->tv_nsec);
-    return p3;
+    struct itimerspec *p = malloc(sizeof(struct itimerspec));
+
+    p->it_interval.tv_sec = (unsigned long) rand64();
+    p->it_interval.tv_nsec = (unsigned long) rand64();
+    p->it_value.tv_sec = (unsigned long) rand64();
+    p->it_value.tv_nsec = (unsigned long) rand64();
+
+    //print all the value of this struct
+    return p;
+}
+```
+
+### The Jprobe hook in kernel module
+```cpp
+long JC_SyS_getitimer(int which, struct compat_itimerval *it)
+{
+    printk("parameter value:it<%u>, which<%u>", it, which);
+    printk("it->it_interval.tv_sec<%u>, it->it_interval.tv_usec<%u>, it->it_value.tv_sec<%u>, it->it_value.tv_usec<%u>",
+            it->it_interval.tv_sec, it->it_interval.tv_usec,
+            it->it_value.tv_sec, it->it_value.tv_usec);
+    jprobe_return();        /* Always end with a call to jprobe_return(). */
+    return 0;
+}
+
+static struct jprobe my_jprobe = {
+    .entry = JC_SyS_getitimer,
+    .kp = {
+    .    symbol_name = "compat_sys_getitimer",
+    },
+};
+```
+---
+```cpp
+static int __init jprobe_init(void)
+{
+    int ret;
+
+    ret = register_jprobe(&my_jprobe);
+    if (ret < 0) {
+            printk(KERN_INFO "register_jprobe failed, returned %d\n", ret);
+            return -1;
+    }
+
+    return 0;
+}
+
+static void __exit jprobe_exit(void)
+{
+    unregister_jprobe(&my_jprobe);
+    printk(KERN_INFO "jprobe at %p unregistered\n", my_jprobe.kp.addr);
 }
 ```
 
@@ -255,6 +300,7 @@ Or keep it as a standalone testsuite?
 
 ## Code published in github
 <https://github.com/bjzhang/trinity/tree/syscall_unittest>
+
 <https://github.com/bjzhang/abi-dumper/tree/json_output>
 
 # Q & A

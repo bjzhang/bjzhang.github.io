@@ -151,6 +151,14 @@ blockquote {
     font-size: 24px;
 }
 
+.remark-slide-content li {
+    text-align: left;
+    font-size: 1em;
+    text-indent: -0.8em;
+    padding-left: 0em;
+    margin-left: 0em;
+}
+
 .remark-slide-content > :first-child {
     margin-top: 0;
 }
@@ -159,6 +167,7 @@ blockquote {
     margin-bottom: 0;
 }
 
+/*
 .remark-code-line {
     white-space: normal;
     background-color: #000;
@@ -166,13 +175,39 @@ blockquote {
     color: #fff;
     padding: 0 1em;
 }
+*/
+
+a, a > code {
+	color: rgb(249, 38, 114);
+	text-decoration: none;
+}
+code {
+	background: none repeat scroll 0 0 #F8F8FF;
+  border: 1px solid #DEDEDE;
+  border-radius: 3px 	;
+  padding: 0 0.2em;
+}
+#slideshow .slide .content code {
+	font-size: 0.8em;
+}
+#slideshow .slide .content pre code {
+	font-size: 0.9em;
+	padding: 15px;
+}
+/* Custom */
+.remark-code {
+	display: block;
+	padding: 0.5em;
+}
+.remark-code, .remark-inline-code { font-family: "Bitstream Vera Sans Mono", "Courier", monospace; }
+.remark-code-line-highlighted     { background-color: #373832; }
 
 /* come from http://www.jmlilly.net/liminal/talks/template.html */
 .red { color: #fa0000; }
 /* Slide-specific styling */
 .footnote {
 position: absolute;
-bottom: 1em;
+bottom: 1.1em;
 font-size: 12px;
 }
 /*
