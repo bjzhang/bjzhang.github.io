@@ -26,6 +26,7 @@ The idea is:
 ???
 Migrate from arm 32-bit hardware to 64-bit hardware which include the features, interfaces and kabi.
 Mentioned the THP code?
+ILP32 is one of three abis existing on arm64. Which provide a software migration path from arm 32bit hardware to 64bit hardware.
 
 # aarch64 ILP32 overview
 ???
@@ -45,7 +46,7 @@ ILP32 is one of three ABIs existing on arm64. Which provide a software migration
 ![enablement](../../public/images/syscall_unit_test/aarch64_ilp32_architecture.png)
 
 ## Why we need unit test for ILP32?
-### There are actually lots of choices for a new api
+### There are actually lots of choices to be made for a new api
 *   The definition of basic type in userspace
 *   Argument passing
 *   Sanitize register contents
@@ -67,20 +68,20 @@ Such as time_t, off_t(file relative types) and so on
 Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompatible with arm32 compat-ioctl
 
 ### Version C
-Came back to verion A
+Come back to verion A
 
 *   Most of syscall is compat syscall
 *   time_t and off_t is 32-bit
 *   Pass 64-bit variable through one 64-bit reg
-*   Do the sign extend when enter into kernel
+*   Do the sign extension when enter into kernel
 ???
 It is hard to maintain the code of glibc because of the arguments passing and delouse
 
 ### Version D
 *   Most of syscall is compat syscall
-*   time_t is 32-bit and **off_t is 64-bit**(only affect     the userspace interface!)
-*   Pass 64-bit variable through two 32-bit register     instead of one 64-bit register
-*   Clear the top-halves of of all the registers of syscall when enter kernel
+*   time_t is 32-bit and **off_t is 64-bit**(only affect the userspace interface!)
+*   Pass 64-bit variable through two 32-bit register instead of one 64-bit register
+*   Clear the top-halves of of all the 64-bit registers of syscall when enter kernel
 ???
 Current version. Glibc community is re-organzie the code for a generic new api
 
@@ -88,23 +89,23 @@ Current version. Glibc community is re-organzie the code for a generic new api
 
 ## 0
 
-# Compare the exist kernel/glibc test tools
-## Compare the exist kernel/glibc test tools
-*   Whether easy to reproduce the failure
+# Compare existing kernel/glibc test tools
+## Compare existing kernel/glibc test tools
+*   Whether easy to reproduce a failure
 *   Whether support coverage
 *   Whether support libc test
-*   Whether generate the full random data to basic data type
+*   Whether generate full random data to basic data type
 
 ## LTP and glibc testsuite
-*   The tridition testsuite for kernel and glibc
-*   No fuzz test. Test pass may hide some issue
+*   The tradition testsuite for kernel and glibc
+*   No fuzz test. Test may pass while some issues are hidden.
 
 ## Trinity
-*   Generate the fuzz data in a set of data type
-*   Generate the random address instead of basic data type for most of pointers
+*   Generate fuzz data in a set of data type
+*   Generate random address instead of basic data type for most of pointers
 *   Support lots of architecture
-*   Takes too long to produce an issue and takes more and more to re-produce and analysis it
-*   Is going to add the coverage support(?)
+*   Takes too long to produce an issue and takes much longer to re-produce and analyze it
+*   Is going to add coverage support(?)
 
 ???
 Trinity is developed in a long time. It could randomize the parameter of syscall and run individual syscall standalone or parallel. When I do the long time parallel test(not for ILP32), it could report some bug, e.g. hang, panic. It is useful but it is indeed hard to debug because it usually fail after a long time running. I do not know what does it exactly do
@@ -117,10 +118,10 @@ Trinity is developed in a long time. It could randomize the parameter of syscall
 The picture came from https://github.com/google/syzkaller
 
 ## Syzkaller(Cont.)
-*   Syzkaller could recursively randomize base data type
-*   Syzkaller could generate the readable short testcases
-*   Syzkaller could do the coverage
-*   Syzkaller do not test glibc
+*   Syzkaller can recursively randomize base data type
+*   Syzkaller can generate readable short testcases
+*   Syzkaller can do the coverage
+*   Syzkaller does not test glibc
 
 ???
 Compare with Trinity, syzkaller is quite different. Here is the comparision between syzkaller and our tools:
@@ -134,7 +135,7 @@ The main function in syz-fuzzer/fuzzer.go will check whether kcov is enabled whe
 ## AFL and triforce
 *   Do not need the coverage support in kernel
     Cool for the old kernel
-*   Need special instrucion in qemu
+*   Need special instruction in qemu
 
 ???
 Project Triforce: Run AFL on Everything!
@@ -205,7 +206,7 @@ Random return the value of syscall to userspace to in order to test whether user
 *   Full automation in generating the fuzz code
 
 ## What is the future of syscall unit test?
-Contribution to LTP and/or glibc testsuite?
+Contribute to LTP and/or glibc testsuite?
 
 Or keep it as a standalone testsuite?
 
