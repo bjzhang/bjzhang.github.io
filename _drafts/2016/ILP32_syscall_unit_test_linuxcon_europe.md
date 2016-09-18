@@ -33,11 +33,11 @@ Mentioned the THP code?
 ILP32 is one of three ABIs existing on arm64. Which provide a software migration path from arm 32-bit hardware to 64-bit hardware
 
 ## What is ILP32?
-### Data model
-![data model](../../public/images/syscall_unit_test/data_model.png)
-
 ### arm architecture
 ![arm architechture](../../public/images/syscall_unit_test/arm_architecture.jpg)
+
+### Data model
+![data model](../../public/images/syscall_unit_test/data_model.png)
 
 ### Migrate 32-bit application to 64-bit hardware
 ![migrate](../../public/images/syscall_unit_test/migrate_32bit_app_to_64bit_hardware.svg)
@@ -62,7 +62,7 @@ Such as time_t, off_t(file relative types) and so on
 
 ### Version B
 *   Most of syscall is as same as 64-bit syscall
-*   time_t and off_t is 64-bit.
+*   time_t and off_t is 64-bit
 *   Incompatible with arm32 compat-ioctl
 ???
 Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompatible with arm32 compat-ioctl
@@ -99,7 +99,7 @@ Current version. Glibc community is re-organzie the code for a generic new api
 
 ## LTP and glibc testsuite
 *   The tradition testsuite for kernel and glibc
-*   No fuzz test. Test may pass while some issues are hidden.
+*   No fuzz test. Test may pass while some issues are hidden
 
 ## [Trinity](https://github.com/kernelslacker/trinity)
 *   Generate fuzz data in a set of data type
@@ -120,10 +120,10 @@ Trinity is developed in a long time. It could randomize the parameter of syscall
 The picture came from https://github.com/google/syzkaller
 
 ## Syzkaller(Cont.)
-*   Syzkaller can recursively randomize base data type
-*   Syzkaller can generate readable short testcases
-*   Syzkaller can do the coverage
-*   Syzkaller does not test glibc
+*   Can recursively randomize base data type
+*   Can generate readable short testcases
+*   Can do the coverage
+*   Does not test c library
 
 ???
 Compare with Trinity, syzkaller is quite different. Here is the comparision between syzkaller and our tools:
@@ -152,8 +152,8 @@ The driver communicates with the virtual machine through a special instruction t
 Using TriforceAFL, we built a Linux syscall fuzzer (TriforceLinuxSyscallFuzzer). We'll have a whitepaper coming out soon detailing how we built it, how we generated test cases, how it works, and analyzing the bugs it found.
 
 ## What's missing?
-*   There is no testsuite care about the porting of libc and kernel
-*   There is no full unit test for syscall
+*   No testsuite care about the porting of libc and kernel
+*   No full unit test for syscall
 
 ???
 *   The developer who do the port is care about both kernel and libc
@@ -198,7 +198,10 @@ value.                       |                    will recursively
 
 ### Dump the prototype of function and struct
 *   Script base on [abi-dumper](https://github.com/lvc/abi-dumper.git)
-*   Generate the function and struct fuzz from json.
+*   Generate the fuzzer from json.
+
+???
+Including struct fuzzer and jprobe hook.
 
 ### The fuzzer of struct in userspace
 ```cpp
