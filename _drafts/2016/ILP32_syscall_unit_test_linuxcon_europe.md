@@ -197,7 +197,8 @@ value.                       |                    will recursively
 ### Dump the prototype of function and struct
 *   Script base on [abi-dumper](https://github.com/lvc/abi-dumper.git)
 *   Generate the function and struct fuzz from json.
-```c
+
+```
 struct timespec *get_timespec()
 {
     struct timespec *p3 = malloc(sizeof(struct timespec));
