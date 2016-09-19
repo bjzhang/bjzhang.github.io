@@ -21,10 +21,9 @@ The idea is:
 *   Kernel developer from Huawei
 *   Linaro kernel working group assignee
 *   Focus on migration of 32-bit application
-*   Interested in in memory management
+*   Interested in memory management
 
 ???
-ILP32 is one of three abis existing on arm64. Which provide a software migration path from arm 32bit hardware to 64bit hardware.
 Migrate from arm 32-bit hardware to 64-bit hardware which include the features, interfaces and kabi.
 Mentioned the THP code?
 
@@ -57,12 +56,12 @@ Such as time_t, off_t(file relative types) and so on
 ## Four big changes in 3 years
 
 ### Version A
-*   Most of syscall is compat syscall
-*   time_t and off_t is 32-bit
+*   Most of syscalls are compat syscalls
+*   time_t and off_t are 32-bit
 
 ### Version B
-*   Most of syscall is as same as 64-bit syscall
-*   time_t and off_t is 64-bit
+*   Most of syscalls are 64-bit syscalls
+*   time_t and off_t are 64-bit
 *   Incompatible with arm32 compat-ioctl
 ???
 Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompatible with arm32 compat-ioctl
@@ -70,28 +69,28 @@ Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompat
 ### Version C
 Come back to verion A
 
-*   Most of syscall is compat syscall
-*   time_t and off_t is 32-bit
+*   Most of syscalls are compat syscalls
+*   time_t and off_t are 32-bit
 *   Pass 64-bit variable through one 64-bit reg
-*   Do the sign extension when enter into kernel
+*   Do the sign extension when entering kernel
 ???
 It is hard to maintain the code of glibc because of the arguments passing and delouse
 
 ### Version D
-*   Most of syscall is compat syscall
+*   Most of syscalls are compat syscalls
 *   Pass 64-bit variable through two 32-bit regs
-*   Clear the top-halves of of all the 64-bit regs of syscall when enter kernel
+*   Clear the top-halves of of all the 64-bit regs of a syscall when entering kernel
 *   time_t is 32-bit and **off_t is 64-bit**
 <br>(only affect the userspace interface!)</br>
 ???
 Current version. Glibc community is re-organzie the code for a generic new api
 
-## How many issues found by trinity when LTP syscall fails is < 20?
+## How many issues found by trinity when LTP syscall fails are < 20?
 
 ## 0
 
 # Compare existing kernel/glibc test tools
-## Compare existing kernel/glibc test tools
+---
 *   Whether easy to reproduce a failure
 *   Whether support coverage
 *   Whether support libc test
