@@ -74,6 +74,7 @@ Come back to version A
 *   Pass 64-bit variable through one 64-bit reg
 *   Do the sign extension when entering kernel
 ???
+TODO: need more picture to illustate why it is not a clear design.
 It is hard to maintain the code of glibc because of the arguments passing and delouse
 
 ### Version D
@@ -96,16 +97,18 @@ Current version. Glibc community is re-organzie the code for a generic new api
 *   Whether generate full random data to basic data type
 
 ## LTP and glibc testsuite
-*   The tradition testsuite for kernel and glibc
-*   No fuzz test. Test may pass while some issues are hidden
+*   The Classic testsuite for kernel and glibc
+*   Cons
+    *   No fuzz test. Test may pass while some issues are hidden
 
 ## [Trinity](https://github.com/kernelslacker/trinity)
-*   Generate fuzz data in a set of data type
-*   Generate random address instead of basic data type for most of pointers
-*   Support lots of architecture
-*   Takes too long to produce an issue
-*   Takes much longer to re-produce and analyze it
-*   Is going to add coverage support(?)
+*   Pros
+    *   Generate fuzz data in a set of data type
+    *   Support lots of architecture
+*   Cons
+    *   Generate random address instead of basic data type for most of pointers
+    *   Takes too long to produce an issue and Takes much longer to re-produce and analyze it
+    *   Do not support coverage(?)
 
 ???
 Trinity is developed in a long time. It could randomize the parameter of syscall and run individual syscall standalone or parallel. When I do the long time parallel test(not for ILP32), it could report some bug, e.g. hang, panic. It is useful but it is indeed hard to debug because it usually fail after a long time running. I do not know what does it exactly do
@@ -118,10 +121,12 @@ Trinity is developed in a long time. It could randomize the parameter of syscall
 The picture came from https://github.com/google/syzkaller
 
 ## Syzkaller(Cont.)
-*   Can recursively randomize base data type
-*   Can generate readable short testcases
-*   Can do the coverage
-*   Does not test C library
+*   Pros
+    *   Can recursively randomize base data type
+    *   Can generate readable short testcases
+    *   Can do the coverage
+*   Cons
+    *   Does not test C library
 
 ???
 Compare with Trinity, syzkaller is quite different. Here is the comparision between syzkaller and our tools:
@@ -133,10 +138,12 @@ Compare with Trinity, syzkaller is quite different. Here is the comparision betw
 The main function in syz-fuzzer/fuzzer.go will check whether kcov is enabled when noCover flag is not set.  Function triageInput is only used when noCover is not set. It will generate the score of coverage difference.  It seems that syz-fuzzer/fuzzer.go call BuildChoiceTable to generate the syscall list which is the input for syz-executor
 
 ## AFL and [Triforce](https://github.com/nccgroup/TriforceLinuxSyscallFuzzer)
-*   Base on the [TriforceAFL](https://github.com/nccgroup/TriforceAFL)
-*   Do not need the coverage support in kernel
-    Cool for the old kernel
-*   Need special instruction in qemu
+*   Pros:
+    *   Base on the [TriforceAFL](https://github.com/nccgroup/TriforceAFL)
+    *   Do not need the coverage support in kernel
+        Cool for the old kernel
+*   Cons
+    *   Need special instruction in qemu
 
 ???
 Project Triforce: Run AFL on Everything!
