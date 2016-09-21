@@ -67,7 +67,7 @@ Such as time_t, off_t(file relative types) and so on
 Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompatible with arm32 compat-ioctl
 
 ### Version C
-Come back to verion A
+Come back to version A
 
 *   Most of syscalls are compat syscalls
 *   time_t and off_t are 32-bit
@@ -122,11 +122,11 @@ The picture came from https://github.com/google/syzkaller
 *   Can recursively randomize base data type
 *   Can generate readable short testcases
 *   Can do the coverage
-*   Does not test c library
+*   Does not test C library
 
 ???
 Compare with Trinity, syzkaller is quite different. Here is the comparision between syzkaller and our tools:
-1.  Syzkaller could recursively randomize base date type in syscall which means it is possible generate more meaningfull syscall test. But it only test the syscall through syscall() function. It assume that the c library is correct and stable. But it is wrong if we are porting new ABI(such as ILP32) or architecture to glibc and kernel. We need to take c library into account. This is what my tools could do
+1.  Syzkaller could recursively randomize base date type in syscall which means it is possible generate more meaningfull syscall test. But it only test the syscall through syscall() function. It assume that the C library is correct and stable. But it is wrong if we are porting new ABI(such as ILP32) or architecture to glibc and kernel. We need to take C library into account. This is what my tools could do
 
 2.  Syzkaller could generate the readable short testcases. Our tools could only test individual syscall and check the correctness of parameter and return value. I think it is enough for the unit test which tests syscall one by one
 
@@ -165,7 +165,7 @@ Using TriforceAFL, we built a Linux syscall fuzzer (TriforceLinuxSyscallFuzzer).
 
 ???
 Dump the function                                 Dump the function
-prototype from                                    prototype from c
+prototype from                                    prototype from C
 vmlinux from the                                  library from the
 sys_call_table                                    given list(posix
 array in kernel.                                  interfaces or user
@@ -176,7 +176,7 @@ array in kernel.                                  interfaces or user
        `                                                 `
 Generate jprobe        Modity Trinity to          Generate struct
 hook according to      support run syscall        fuzz generator
-prototype which        syscall from c             from the prototype
+prototype which        syscall from C             from the prototype
 will recursively       libray instead             And add them of
 print the syscall      syscall() function         to trinity. Trinity
 value.                       |                    will recursively
@@ -202,7 +202,7 @@ value.                       |                    will recursively
 ???
 Including struct fuzzer and jprobe hook.
 
-### The fuzzer of struct in userspace
+### The fuzzer for structs in userspace
 ```cpp
 struct itimerspec *get_itimerspec()
 {
@@ -266,7 +266,7 @@ Step to generate generate-struct.c and jprobe hooks:
 3.  Generate the file through trinity/scripts/struct_extract.py.
 
 ### Modify trinity
-*   Call syscall through c library
+*   Call syscall through C library
 *   Add the missing struct in syscall
 *   Add jprobe hooks for capturing the arguments of syscall
 *   Add or Change some output message for script
