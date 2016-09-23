@@ -64,6 +64,18 @@ Reference my [document](https://github.com/bjzhang/bjzhang.github.io/blob/master
 ## Using [remark](remarkjs.com)
 Remark is one of the famous framework to show the markdown slide in html. It is a standalone html which make people easy to copy and distribute.
 
+Refernce the <remarkjs.com> to understand how to use it. `wget remarkjs.com` will get the index.html which is the result of markdown to slide.
+
+## Using [decktape](https://github.com/astefanutti/decktape) to convert html to pdf
+Decktape release its 1.0.0 in 23, Sep. Just follow the instruction in the website
+> ./phantomjs decktape.js remark ../../bjzhang.github.io/_drafts/2016/ILP32_syscall_unit_test_linuxcon_europe.html ../../bjzhang
+.github.io/_drafts/2016/ILP32_syscall_unit_test_linuxcon_europe.pdf
+Loading page ../../bjzhang.github.io/_drafts/2016/ILP32_syscall_unit_test_linuxcon_europe.html ...
+Loading page finished with status: success
+Remark JS DeckTape plugin activated
+Printing slide #41      (41/41) ...
+Printed 41 slides
+
 
 Issue in chromebook
 ----------

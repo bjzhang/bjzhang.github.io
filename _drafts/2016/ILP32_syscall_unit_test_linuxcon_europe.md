@@ -213,7 +213,6 @@ The main function in syz-fuzzer/fuzzer.go will check whether kcov is enabled whe
 *   Pros:
     *   Base on the [TriforceAFL](https://github.com/nccgroup/TriforceAFL)
     *   Do not need the coverage support in kernel
-        Cool for the old kernel
 *   Cons
     *   Need special instruction in qemu
 
@@ -407,6 +406,10 @@ trinity/scripts/do_test_struct.sh
 *   readahead
 *   sync_file_range
 
+???
+readahead: pass off64_t error
+sync_file_range: wrong order of parameter.
+
 ## The return value test of syscall
 *   Random return value through kretprobe
 
@@ -427,5 +430,5 @@ Or keep it as a standalone testsuite?
 
 <https://github.com/bjzhang/abi-dumper/tree/json_output>
 
-# Q & A
+# Thanks
 
