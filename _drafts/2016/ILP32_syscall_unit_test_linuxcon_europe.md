@@ -28,30 +28,89 @@ Migrate from arm 32-bit hardware to 64-bit hardware which include the features, 
 Mentioned the THP code?
 
 # aarch64 ILP32 overview
+
 ???
 ILP32 is one of three ABIs existing on arm64. Which provide a software migration path from arm 32-bit hardware to 64-bit hardware
 
 ## What is ILP32?
 ### arm architecture
 ![arm architechture](../../public/images/syscall_unit_test/arm_architecture.jpg)
+.footnote[.red[*] This [picture](http://www.arm.com/zh/assets/images/roadmap/V5_to_V8_Architecture.jpg) is belong to the ARM company]
+
+???
+aarch32 is almost compabilities with armv7. If your application is compiled as armv6 or previous architectures, there is some instruction emulation. performance degrade.
+What is aarch32 is not supported by hardware? Cortex-A35 do not support aarch64.
 
 ### Data model
 ![data model](../../public/images/syscall_unit_test/data_model.png)
 
+???
+mentioned the difference ILP32. Version B of ILP32 is align with x32.
+
 ### Migrate 32-bit application to 64-bit hardware
 ![migrate](../../public/images/syscall_unit_test/migrate_32bit_app_to_64bit_hardware.svg)
+
+???
+ILP32 could choise which type of syscall, compat, or normal?
+I will mention the difference design of it.
 
 ### ILP32 enablement
 ![enablement](../../public/images/syscall_unit_test/aarch64_ilp32_architecture.png)
 
+???
+Technology details of ILP32.
+
 ## Why we need unit test for ILP32?
 ### Lots of choices to be made for a new api
-*   The definition of basic type in userspace
-*   Argument passing
+*   The definition of basic type in userspace(NOT the kernel part!)
+*   Argument passing: one 64-bit register or two 32-bit registers
 *   Sanitize register contents
 
 ???
 Such as time_t, off_t(file relative types) and so on
+
+### The definition of basic type in userspace
+```c
+#define __DEV_T_TYPE            __UQUAD_TYPE
+#define __UID_T_TYPE            __U32_TYPE
+#define __GID_T_TYPE            __U32_TYPE
+#define __INO_T_TYPE            __UQUAD_TYPE
+#define __INO64_T_TYPE          __UQUAD_TYPE
+#define __MODE_T_TYPE           __U32_TYPE
+#define __NLINK_T_TYPE          __U32_TYPE
+#define __OFF_T_TYPE            __SQUAD_TYPE
+#define __OFF64_T_TYPE          __SQUAD_TYPE
+#define __PID_T_TYPE            __S32_TYPE
+#define __RLIM_T_TYPE           __UQUAD_TYPE
+#define __RLIM64_T_TYPE         __UQUAD_TYPE
+#define __BLKCNT_T_TYPE         __SQUAD_TYPE
+#define __BLKCNT64_T_TYPE       __SQUAD_TYPE
+#define __FSBLKCNT_T_TYPE       __UQUAD_TYPE
+#define __FSBLKCNT64_T_TYPE     __UQUAD_TYPE
+#define __FSFILCNT_T_TYPE       __UQUAD_TYPE
+#define __FSFILCNT64_T_TYPE     __UQUAD_TYPE
+```
+
+### The definition of basic type in userspace(Cont.)
+```c
+#define __FSWORD_T_TYPE         __SWORD_TYPE
+#define __ID_T_TYPE             __U32_TYPE
+#define __CLOCK_T_TYPE          __SLONGWORD_TYPE
+#define __TIME_T_TYPE           __SLONGWORD_TYPE
+#define __USECONDS_T_TYPE       __U32_TYPE
+#define __SUSECONDS_T_TYPE      __SLONGWORD_TYPE
+#define __DADDR_T_TYPE          __S32_TYPE
+#define __KEY_T_TYPE            __S32_TYPE
+#define __CLOCKID_T_TYPE        __S32_TYPE
+#define __TIMER_T_TYPE          void *
+#define __BLKSIZE_T_TYPE        __S32_TYPE
+#define __FSID_T_TYPE           struct { int __val[2]; }
+/* ssize_t is always singed long in both ABIs. */
+#define __SSIZE_T_TYPE          __SLONGWORD_TYPE
+#define __SYSCALL_SLONG_TYPE    __SLONGWORD_TYPE
+#define __SYSCALL_ULONG_TYPE    __ULONGWORD_TYPE
+#define __CPU_MASK_TYPE         __ULONGWORD_TYPE
+```
 
 ## Four big changes in 3 years
 
@@ -72,18 +131,31 @@ Come back to version A
 *   Most of syscalls are compat syscalls
 *   time_t and off_t are 32-bit
 *   Pass 64-bit variable through one 64-bit reg
-*   Do the sign extension when entering kernel
+*   Do the sign/zero extension when entering kernel
 ???
 TODO: need more picture to illustate why it is not a clear design.
 It is hard to maintain the code of glibc because of the arguments passing and delouse
 
+/*
+#### Pass 64-bit variable through one 64-bit reg
+*   Kernel
+    *   More than 10 syscalls is differenct from arm
+*   Glibc
+    *   Could not inherit the arm design. Need to handle by hand.
+
+#### Sign/zero extension in kernel
+*   Easy to handle if all the variable is 32-bit in userspace
+*   Need handle by hand if mix 32-bit and 64-bit variable
+*/
+
 ### Version D
-*   Most of syscalls are compat syscalls
+*   More compat syscalls compare with version C
 *   Pass 64-bit variable through two 32-bit regs
 *   Clear the top-halves of of all the 64-bit regs of a syscall when entering kernel
-*   time_t is 32-bit and **off_t is 64-bit**(only affect the userspace interface!)
+*   time_t is 32-bit and **off_t is 64-bit**
 ???
 Current version. Glibc community is re-organzie the code for a generic new api
+We hope ILP32 could be upstreamed soon. This is part of reason we want to add this unit test.
 
 ## How many issues found by trinity when LTP syscall fails are < 20?
 
@@ -116,7 +188,7 @@ Trinity is developed in a long time. It could randomize the parameter of syscall
 ## [Syzkaller](https://github.com/google/syzkaller)
 ![structure of syzkaller](../../public/images/syscall_unit_test/syzkaller-structure.png)
 
-.footnote[.red[*] The original [picture](https://github.com/google/syzkaller/blob/master/structure.png?raw=true) is belong to the syzkaller project]
+.footnote[.red[*] This [picture](https://github.com/google/syzkaller/blob/master/structure.png?raw=true) is belong to the syzkaller project]
 ???
 The picture came from https://github.com/google/syzkaller
 
@@ -207,6 +279,48 @@ value.                       |                    will recursively
 
 ???
 Including struct fuzzer and jprobe hook.
+/*
+function:
+"get_compat_itimerval":[
+    {"Param":{
+        "o": "7022179",
+        "i": "8184682"    }},
+    {"Return": "432"}
+],
+
+type:
+"7022179":[
+    {"Name":"struct itimerval*"},
+    {"BaseType":"6986882"},
+    {"Type":"Pointer"}],
+"6986882":[
+    {"Name":"struct itimerval"},
+    {"Type":"Struct"},
+    {"Memb":{
+        "it_interval": "1136139",
+        "it_value": "1136139"    }}],
+"1136139":[
+    {"Name":"struct timeval"},
+    {"Type":"Struct"},
+    {"Memb":{
+        "tv_sec": "532",
+        "tv_usec": "1131789"    }}],
+"532":[
+    {"Name":"__kernel_time_t"},
+    {"BaseType":"421"},
+    {"Type":"Typedef"}],
+"1131789":[
+    {"Name":"__kernel_suseconds_t"},
+    {"BaseType":"421"},
+    {"Type":"Typedef"}],
+"421":[
+    {"Name":"__kernel_long_t"},
+    {"BaseType":"432"},
+    {"Type":"Typedef"}],
+"432":[
+    {"Name":"long"},
+    {"Type":"Intrinsic"}],
+*/
 
 ### The fuzzer for structs in userspace
 ```cpp

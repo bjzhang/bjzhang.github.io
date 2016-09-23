@@ -176,7 +176,7 @@ code {
 .remark-code, .remark-inline-code { font-family: "Bitstream Vera Sans Mono", "Courier", monospace; }
 .remark-code-line-highlighted     { background-color: #373832; }
 
-/* come from http://www.jmlilly.net/liminal/talks/template.html */
+/* copy from http://www.jmlilly.net/liminal/talks/template.html */
 .red { color: #fa0000; }
 /* Slide-specific styling */
 .footnote {
@@ -185,5 +185,4 @@ bottom: 1.1em;
 font-size: 12px;
 }
 .date {font-size: 1.0em;font-style: italic;}
-/* come from http://www.jmlilly.net/liminal/talks/template.html end*/
-
+/* copy from http://www.jmlilly.net/liminal/talks/template.html end*/
