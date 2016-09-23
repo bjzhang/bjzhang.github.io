@@ -60,6 +60,7 @@ Such as time_t, off_t(file relative types) and so on
 *   time_t and off_t are 32-bit
 
 ### Version B
+Similar to x32(x86 ILP32)
 *   Most of syscalls are 64-bit syscalls
 *   time_t and off_t are 64-bit
 *   Incompatible with arm32 compat-ioctl
@@ -68,7 +69,6 @@ Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompat
 
 ### Version C
 Come back to version A
-
 *   Most of syscalls are compat syscalls
 *   time_t and off_t are 32-bit
 *   Pass 64-bit variable through one 64-bit reg
@@ -80,8 +80,7 @@ It is hard to maintain the code of glibc because of the arguments passing and de
 *   Most of syscalls are compat syscalls
 *   Pass 64-bit variable through two 32-bit regs
 *   Clear the top-halves of of all the 64-bit regs of a syscall when entering kernel
-*   time_t is 32-bit and **off_t is 64-bit**
-<br>(only affect the userspace interface!)</br>
+*   time_t is 32-bit and **off_t is 64-bit**(only affect the userspace interface!)
 ???
 Current version. Glibc community is re-organzie the code for a generic new api
 
