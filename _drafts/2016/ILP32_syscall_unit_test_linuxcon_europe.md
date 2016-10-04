@@ -44,8 +44,8 @@ ILP32 is one of three ABIs existing on arm64. Which provide a software migration
 .footnote[.red[*] This [picture](http://www.arm.com/zh/assets/images/roadmap/V5_to_V8_Architecture.jpg) is belong to the ARM company]
 
 ???
-aarch32 is almost compabilities with armv7. If your application is compiled as armv6 or previous architectures, there is some instruction emulation. performance degrade.
-What is aarch32 is not supported by hardware? Cortex-A35 do not support aarch64.
+aarch32 is almost compatable with armv7. If your application is compiled as armv6 or previous architectures, there is some instruction emulation. performance degrade.
+What if aarch32 is not supported by hardware? Cortex-A35 do not support aarch64.
 
 ### Data model
 ![data model](../../public/images/syscall_unit_test/data_model.png)
@@ -409,8 +409,15 @@ There are some hacks and the original funtion of trinity may be broken. The main
 trinity/scripts/do_test_struct.sh
 
 ## Found two issues in a specific version
-*   readahead
-*   sync_file_range
+### readahead
+```cpp
+ssize_t readahead(int fd, off64_t offset, size_t count);
+```
+
+## Found two issues in a specific version
+### sync_file_range
+*   int sync_file_range(int fd, off64_t offset, off64_t nbytes, unsigned int flags);
+*   int sync_file_range2(int fd, unsigned int flags, off64_t offset, off64_t nbytes);
 
 ???
 readahead: pass off64_t error
