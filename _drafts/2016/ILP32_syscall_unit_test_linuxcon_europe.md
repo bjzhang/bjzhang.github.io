@@ -24,11 +24,11 @@ The idea is:
 *   Interested in memory management
 
 ???
-Migrate from arm 32-bit hardware to 64-bit hardware which include the features, interfaces and kabi.
+Migrate from ARM 32-bit hardware to 64-bit hardware which include the features, interfaces and kabi.
 Mentioned the THP code?
 
 ## Contents
-*   What is aach64 ILP32?
+*   What is aarch64 ILP32?
 *   Why we need more test for ILP32?
 *   What's missing in the existing test tools?
 *   Introduce our test tools.
@@ -36,15 +36,15 @@ Mentioned the THP code?
 # aarch64 ILP32 overview
 
 ???
-ILP32 is one of three ABIs existing on arm64. Which provide a software migration path from arm 32-bit hardware to 64-bit hardware
+ILP32 is one of three ABIs existing on ARM64. Which provide a software migration path from ARM 32-bit hardware to 64-bit hardware
 
 ## What is ILP32?
-### arm architecture
-![arm architechture](../../public/images/syscall_unit_test/arm_architecture.jpg)
+### ARM architecture
+![ARM architechture](../../public/images/syscall_unit_test/arm_architecture.jpg)
 .footnote[.red[*] This [picture](http://www.arm.com/zh/assets/images/roadmap/V5_to_V8_Architecture.jpg) is belong to the ARM company]
 
 ???
-aarch32 is almost compatable with armv7. If your application is compiled as armv6 or previous architectures, there is some instruction emulation. performance degrade.
+aarch32 is almost compatable with ARMv7. If your application is compiled as ARMv6 or previous architectures, there is some instruction emulation. performance degrade.
 What if aarch32 is not supported by hardware? Cortex-A35 do not support aarch64.
 
 ### Data model
@@ -67,7 +67,7 @@ I will mention the difference design of it.
 Technology details of ILP32.
 
 ## Why we need unit test for ILP32?
-### Lots of choices to be made for a new api
+### Lots of choices to be made for a new API
 *   The definition of basic type in userspace(NOT the kernel part!)
 *   Argument passing: one 64-bit register or two 32-bit registers
 *   Sanitize register contents
@@ -128,9 +128,9 @@ Such as time_t, off_t(file relative types) and so on
 Similar to x32(x86 ILP32)
 *   Most of syscalls are 64-bit syscalls
 *   time_t and off_t are 64-bit
-*   Incompatible with arm32 compat-ioctl
+*   Incompatible with ARM32 compat-ioctl
 ???
-Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompatible with arm32 compat-ioctl
+Glibc community think that time_t must be 32-bit. 32-bit time_t lead to incompatible with ARM32 compat-ioctl
 
 ### Version C
 Come back to version A
@@ -145,9 +145,9 @@ It is hard to maintain the code of glibc because of the arguments passing and de
 /*
 #### Pass 64-bit variable through one 64-bit reg
 *   Kernel
-    *   More than 10 syscalls is differenct from arm
+    *   More than 10 syscalls is differenct from ARM
 *   Glibc
-    *   Could not inherit the arm design. Need to handle by hand.
+    *   Could not inherit the ARM design. Need to handle by hand.
 
 #### Sign/zero extension in kernel
 *   Easy to handle if all the variable is 32-bit in userspace
@@ -160,7 +160,7 @@ It is hard to maintain the code of glibc because of the arguments passing and de
 *   Clear the top-halves of of all the 64-bit regs of a syscall when entering kernel
 *   time_t is 32-bit and **off_t is 64-bit**
 ???
-Current version. Glibc community is re-organzie the code for a generic new api
+Current version. Glibc community is re-organzie the code for a generic new API
 We hope ILP32 could be upstreamed soon. This is part of reason we want to add this unit test.
 
 ## How many issues found by trinity when LTP syscall fails are < 20?
