@@ -17,6 +17,9 @@ The idea is:
 2.  Compare the exist testsuite for kernel and glibc. The shortage
 3.  Introduce our syscall unit test which based on trinity
 
+Example:
+Hi, every. Welcome. It is the first time I join Linuxcon. If you have question, please interrupt me in any time. Let''s started. I am Bamvor from Huawei kernel team. We support difference architecture in difference stable kernel. I am also the assignee from linaro kernel working group. I am focus on migrating our 32-bit application to our arm64 hardware in recent two years. There are millions of code of our 32-bit application. We need to keep the capatability as much as we can. I am also interested in the memory management area.
+
 ## Self introduction
 *   Kernel developer from Huawei
 *   Linaro kernel working group assignee
@@ -57,8 +60,16 @@ mentioned the difference ILP32. Version B of ILP32 is align with x32.
 ![migrate](../../public/images/syscall_unit_test/migrate_32bit_app_to_64bit_hardware.svg)
 
 ???
-ILP32 could choise which type of syscall, compat, or normal?
+**ILP32 could choise which type of syscall, compat, or normal?**. prepare the discussion of ILP32 about syscall later.
 I will mention the difference design of it.
+
+Example:
+Difference type of application will call difference set of syscall.
+The compat syscall will be called if it is the aarch32 application. These syscall include the necessary convertion of parameter of syscall.
+
+Unused:
+The kernel will decide which set of syscall provided to application by checking the elf type and architecture, when the application enter the kernel.
+We know that we need different implementation of syscall for different abi of binary.
 
 ### ILP32 enablement
 ![enablement](../../public/images/syscall_unit_test/aarch64_ilp32_architecture.png)
@@ -66,14 +77,18 @@ I will mention the difference design of it.
 ???
 Technology details of ILP32.
 
+Example: The ILP32 application could run in linux if we have compiler and a new set of syscall provided by kernel.
+
 ## Why we need unit test for ILP32?
 ### Lots of choices to be made for a new API
 *   The definition of basic type in userspace(NOT the kernel part!)
-*   Argument passing: one 64-bit register or two 32-bit registers
+*   Argument passing for 64-bit variable
 *   Sanitize register contents
 
 ???
 Such as time_t, off_t(file relative types) and so on
+
+Example: Let''s have a close look at ILP32, we will find that there are lots of corner cases may not covered by existing test tools.
 
 ### The definition of basic type in userspace
 ```c
@@ -414,7 +429,6 @@ trinity/scripts/do_test_struct.sh
 ssize_t readahead(int fd, off64_t offset, size_t count);
 ```
 
-## Found two issues in a specific version
 ### sync_file_range
 *   int sync_file_range(int fd, off64_t offset, off64_t nbytes, unsigned int flags);
 *   int sync_file_range2(int fd, unsigned int flags, off64_t offset, off64_t nbytes);
