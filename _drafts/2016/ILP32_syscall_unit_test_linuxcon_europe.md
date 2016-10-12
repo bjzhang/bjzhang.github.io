@@ -18,7 +18,7 @@ The idea is:
 3.  Introduce our syscall unit test which based on trinity
 
 Example:
-Hi, every. Welcome. It is the first time I join Linuxcon. If you have question, please interrupt me in any time. Let''s started. I am Bamvor from Huawei kernel team. We support difference architecture in difference stable kernel. I am also the assignee from linaro kernel working group. I am focus on migrating our 32-bit application to our arm64 hardware in recent two years. There are millions of code of our 32-bit application. We need to keep the capatability as much as we can. I am also interested in the memory management area.
+Hi, every. Welcome. It is the first time I join Linuxcon. If you have question, please interrupt me at any time. Let''s started. I am Bamvor from Huawei kernel team. We support difference architecture in difference stable kernel. I am also the assignee from linaro kernel working group. I am focus on migrating our 32-bit application to our arm64 hardware in recent two years. There are millions of code of our 32-bit application. We need to keep the capatability as much as we can. I am also interested in the memory management area.
 
 ## Self introduction
 *   Kernel developer from Huawei
