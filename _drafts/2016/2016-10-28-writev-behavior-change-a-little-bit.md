@@ -10,14 +10,14 @@ tags: [kernel, glibc, syscall, writev]
 #include <sys/uio.h>
 ssize_t writev(int fd, const struct iovec *iov, int iovcnt);
 ```
-reference <https://lwn.net/Articles/625077/> for iovec.
+It just like write but could write more than one buffers(through iovec). Reference <https://lwn.net/Articles/625077/> for iovec.
 
 # The issue
-Recently, we found that the writev01, write03, write04 of ltp fail with EFAULT. And aftet git bisect we could know it is lead by the following commit: Al Viro Commit d4690f1e1cda ("fix iov_iter_fault_in_readable()").
+Recently, we found that the writev01, write03, write04 of ltp fail with EFAULT. And aftet git bisect we could know it is lead by the following commit from Al Viro: Commit d4690f1e1cda ("fix iov_iter_fault_in_readable()").
 
 It is not suprise that it is not a bug. The behavior of writev change slightly in order to keep the same behavior as write and obey the posix requirement.
 
-Al Viro raise this issue in LKML: <http://www.gossamer-threads.com/lists/linux/kernel/2527020>:
+Al Viro raise this issue in LKML before send out the patch: <http://www.gossamer-threads.com/lists/linux/kernel/2527020>:
 ```
 Right now writev() with 3-iovec array that has unmapped address in
 the second element and total length less than PAGE_SIZE will write the
@@ -50,7 +50,8 @@ db19194 syscalls: new test writev07
 ```
 
 # In details
-"lib/iov_iter.c"
+I am not fimilar with writev, could not understand the relation between writev and iov_iter_fault_in_readable. read the code in "lib/iov_iter.c" and "include/linux/pagemap.h".
+
 1.  old code:
 ```
 /*
@@ -151,31 +152,47 @@ static inline int fault_in_multipages_readable(const char __user *uaddr,
 }
 ```
 
-The diference is `fault_in_multipages_readable()` will check all the start address of page in this io_vec, while fault_in_pages_readable only check the first  page.
+The diference is `fault_in_multipages_readable()` will check all the start address of page in this io_vec, while `fault_in_pages_readable()` only check the first  page.
 
 # Calling sequence of writev
-`sys_writev()` -> `vfs_writev()` -> `do_readv_writev()`.
-if fs support write_iter, call `do_iter_readv_writev()`, otherwise `do_loop_readv_writev()`. Most of file system support write_iter, so I only look at the first path.
-Some filesystem will call `generic_file_write_iter()` -> `__generic_file_write_iter()` -> `generic_perform_write()`
-Other filesystem like ext4 will call `ext4_file_write_iter()` -> `__generic_file_write_iter()`.
+*   `sys_writev()` -> `vfs_writev()` -> `do_readv_writev()`.
+*   if fs support write_iter, call `do_iter_readv_writev()`, otherwise `do_loop_readv_writev()`. Most of file system support write_iter, so I only look at the first path.
+*   Some filesystem will call `generic_file_write_iter()` -> `__generic_file_write_iter()` -> `generic_perform_write()`
+*   Other filesystem like ext4 will call `ext4_file_write_iter()` -> `__generic_file_write_iter()`.
+*   The logic in `generic_perform_write()`:
+    ```
+    generic_perform_write()
+    {
+        do {
+            if (unlikely(iov_iter_fault_in_readable(i, bytes))) {
+                status = -EFAULT;
+                break;
+            }
+            status = a_ops->write_begin(file, mapping, pos, bytes, flags, &page, &fsdata);
+            copied = iov_iter_copy_from_user_atomic(page, i, offset, bytes);
+            flush_dcache_page(page);
+            status = a_ops->write_end(file, mapping, pos, bytes, copied, page, fsdata);
+        } while(count)
+    }
+    ```
 
-```
-generic_perform_write()
-{
-    do {
-        if (unlikely(iov_iter_fault_in_readable(i, bytes))) {
-            status = -EFAULT;
-            break;
-        }
-        status = a_ops->write_begin(file, mapping, pos, bytes, flags, &page, &fsdata);
-        copied = iov_iter_copy_from_user_atomic(page, i, offset, bytes);
-        flush_dcache_page(page);
-        status = a_ops->write_end(file, mapping, pos, bytes, copied, page, fsdata);
-    } while(count)
-}
-```
+`write_begin()` and `write_end()` is the hook in address_space_operations which are implemented by fs. Reference the "Documentation/filesystems/vfs.txt"
 
-write_begin and writea_end is the hook in address_space_operations which are implemented by fs. Reference the "Documentation/filesystems/vfs.txt"
+# Compile the latet LTP and test
+The 4.9.x compile is too old for ltp?
+```
+aarch64-linux-gnu-gcc -mabi=lp64 -g -O2 -g -O2 -fno-strict-aliasing -pipe -Wall -W -Wold-style-definition -I. -D_FORTIFY_SOURCE=2 -I/home/z00293696/works/source/testsuite/LTP/ltp/include -I/home/z00293696/works/source/testsuite/LTP/ltp_build_aarch64_lp64/include -I/home/z00293696/works/source/testsuite/LTP/ltp/include/old/  -c -o write_log.o /home/z00293696/works/source/testsuite/LTP/ltp/lib/write_log.c
+In file included from /home/z00293696/works/source/testsuite/LTP/ltp/include/tst_test.h:33:0,
+                 from /home/z00293696/works/source/testsuite/LTP/ltp/lib/tst_test.c:29:
+/home/z00293696/works/source/testsuite/LTP/ltp/include/tst_atomic.h:135:3: error: #error Your compiler does not provide __sync_add_and_fetch and LTP implementation is missing for your architecture.
+ # error Your compiler does not provide __sync_add_and_fetch and LTP\
+   ^
+/home/z00293696/works/source/testsuite/LTP/ltp/include/tst_atomic.h: In function 'tst_atomic_inc':
+/home/z00293696/works/source/testsuite/LTP/ltp/include/tst_atomic.h:141:2: warning: implicit declaration of function 'tst_atomic_add_return' [-Wimplicit-function-declaration]
+  return tst_atomic_add_return(1, v);
+  ^
+```
+6.1 also failed.
 
 # Unused
 Jan Stancek <jstancek@redhat.com>:
