@@ -53,104 +53,104 @@ db19194 syscalls: new test writev07
 I am not fimilar with writev, could not understand the relation between writev and iov_iter_fault_in_readable. read the code in "lib/iov_iter.c" and "include/linux/pagemap.h".
 
 1.  old code:
-```
-/*
- * Fault in the first iovec of the given iov_iter, to a maximum length
- * of bytes. Returns 0 on success, or non-zero if the memory could not be
- * accessed (ie. because it is an invalid address).
- *
- * writev-intensive code may want this to prefault several iovecs -- that
- * would be possible (callers must not rely on the fact that _only_ the
- * first iovec will be faulted with the current implementation).
- */
-int iov_iter_fault_in_readable(struct iov_iter *i, size_t bytes)
-{
-       if (!(i->type & (ITER_BVEC|ITER_KVEC))) {
-               char __user *buf = i->iov->iov_base + i->iov_offset;
-               bytes = min(bytes, i->iov->iov_len - i->iov_offset);
-               return fault_in_pages_readable(buf, bytes);
-       }
-       return 0;
-}
-EXPORT_SYMBOL(iov_iter_fault_in_readable);
+    ```
+    /*
+     * Fault in the first iovec of the given iov_iter, to a maximum length
+     * of bytes. Returns 0 on success, or non-zero if the memory could not be
+     * accessed (ie. because it is an invalid address).
+     *
+     * writev-intensive code may want this to prefault several iovecs -- that
+     * would be possible (callers must not rely on the fact that _only_ the
+     * first iovec will be faulted with the current implementation).
+     */
+    int iov_iter_fault_in_readable(struct iov_iter *i, size_t bytes)
+    {
+           if (!(i->type & (ITER_BVEC|ITER_KVEC))) {
+                   char __user *buf = i->iov->iov_base + i->iov_offset;
+                   bytes = min(bytes, i->iov->iov_len - i->iov_offset);
+                   return fault_in_pages_readable(buf, bytes);
+           }
+           return 0;
+    }
+    EXPORT_SYMBOL(iov_iter_fault_in_readable);
 
-static inline int fault_in_pages_readable(const char __user *uaddr, int size)
-{
-        volatile char c;
-        int ret;
+    static inline int fault_in_pages_readable(const char __user *uaddr, int size)
+    {
+            volatile char c;
+            int ret;
 
-        if (unlikely(size == 0))
-                return 0;
+            if (unlikely(size == 0))
+                    return 0;
 
-        ret = __get_user(c, uaddr);
-        if (ret == 0) {
-                const char __user *end = uaddr + size - 1;
+            ret = __get_user(c, uaddr);
+            if (ret == 0) {
+                    const char __user *end = uaddr + size - 1;
 
-                if (((unsigned long)uaddr & PAGE_MASK) !=
-                                ((unsigned long)end & PAGE_MASK)) {
-                        ret = __get_user(c, end);
-                        (void)c;
-                }
-        }
-        return ret;
-}
-```
+                    if (((unsigned long)uaddr & PAGE_MASK) !=
+                                    ((unsigned long)end & PAGE_MASK)) {
+                            ret = __get_user(c, end);
+                            (void)c;
+                    }
+            }
+            return ret;
+    }
+    ```
 
 2.  new behavior:
-```
-/*
- * Fault in one or more iovecs of the given iov_iter, to a maximum length of
- * bytes.  For each iovec, fault in each page that constitutes the iovec.
- *
- * Return 0 on success, or non-zero if the memory could not be accessed (i.e.
- * because it is an invalid address).
- */
-int iov_iter_fault_in_readable(struct iov_iter *i, size_t bytes)
-{
-        size_t skip = i->iov_offset;
-        const struct iovec *iov;
-        int err;
-        struct iovec v;
+    ```
+    /*
+     * Fault in one or more iovecs of the given iov_iter, to a maximum length of
+     * bytes.  For each iovec, fault in each page that constitutes the iovec.
+     *
+     * Return 0 on success, or non-zero if the memory could not be accessed (i.e.
+     * because it is an invalid address).
+     */
+    int iov_iter_fault_in_readable(struct iov_iter *i, size_t bytes)
+    {
+            size_t skip = i->iov_offset;
+            const struct iovec *iov;
+            int err;
+            struct iovec v;
 
-        if (!(i->type & (ITER_BVEC|ITER_KVEC))) {
-                iterate_iovec(i, bytes, v, iov, skip, ({
-                        err = fault_in_multipages_readable(v.iov_base,
-                                        v.iov_len);
-                        if (unlikely(err))
-                                return err;
-                0;}))
-        }
-        return 0;
-}
-EXPORT_SYMBOL(iov_iter_fault_in_readable);
+            if (!(i->type & (ITER_BVEC|ITER_KVEC))) {
+                    iterate_iovec(i, bytes, v, iov, skip, ({
+                            err = fault_in_multipages_readable(v.iov_base,
+                                            v.iov_len);
+                            if (unlikely(err))
+                                    return err;
+                    0;}))
+            }
+            return 0;
+    }
+    EXPORT_SYMBOL(iov_iter_fault_in_readable);
 
-static inline int fault_in_multipages_readable(const char __user *uaddr,
-                                               int size)
-{
-        volatile char c;
-        const char __user *end = uaddr + size - 1;
+    static inline int fault_in_multipages_readable(const char __user *uaddr,
+                                                   int size)
+    {
+            volatile char c;
+            const char __user *end = uaddr + size - 1;
 
-        if (unlikely(size == 0))
-                return 0;
+            if (unlikely(size == 0))
+                    return 0;
 
-        if (unlikely(uaddr > end))
-                return -EFAULT;
+            if (unlikely(uaddr > end))
+                    return -EFAULT;
 
-        do {
-                if (unlikely(__get_user(c, uaddr) != 0))
-                        return -EFAULT;
-                uaddr += PAGE_SIZE;
-        } while (uaddr <= end);
+            do {
+                    if (unlikely(__get_user(c, uaddr) != 0))
+                            return -EFAULT;
+                    uaddr += PAGE_SIZE;
+            } while (uaddr <= end);
 
-        /* Check whether the range spilled into the next page. */
-        if (((unsigned long)uaddr & PAGE_MASK) ==
-                        ((unsigned long)end & PAGE_MASK)) {
-                return __get_user(c, end);
-        }
+            /* Check whether the range spilled into the next page. */
+            if (((unsigned long)uaddr & PAGE_MASK) ==
+                            ((unsigned long)end & PAGE_MASK)) {
+                    return __get_user(c, end);
+            }
 
-        return 0;
-}
-```
+            return 0;
+    }
+    ```
 
 The diference is `fault_in_multipages_readable()` will check all the start address of page in this io_vec, while `fault_in_pages_readable()` only check the first  page.
 
@@ -160,6 +160,7 @@ The diference is `fault_in_multipages_readable()` will check all the start addre
 *   Some filesystem will call `generic_file_write_iter()` -> `__generic_file_write_iter()` -> `generic_perform_write()`
 *   Other filesystem like ext4 will call `ext4_file_write_iter()` -> `__generic_file_write_iter()`.
 *   The logic in `generic_perform_write()`:
+
     ```
     generic_perform_write()
     {
@@ -177,26 +178,4 @@ The diference is `fault_in_multipages_readable()` will check all the start addre
     ```
 
 `write_begin()` and `write_end()` is the hook in address_space_operations which are implemented by fs. Reference the "Documentation/filesystems/vfs.txt"
-
-# Compile the latet LTP and test
-The 4.9.x compile is too old for ltp?
-```
-aarch64-linux-gnu-gcc -mabi=lp64 -g -O2 -g -O2 -fno-strict-aliasing -pipe -Wall -W -Wold-style-definition -I. -D_FORTIFY_SOURCE=2 -I/home/z00293696/works/source/testsuite/LTP/ltp/include -I/home/z00293696/works/source/testsuite/LTP/ltp_build_aarch64_lp64/include -I/home/z00293696/works/source/testsuite/LTP/ltp/include/old/  -c -o write_log.o /home/z00293696/works/source/testsuite/LTP/ltp/lib/write_log.c
-In file included from /home/z00293696/works/source/testsuite/LTP/ltp/include/tst_test.h:33:0,
-                 from /home/z00293696/works/source/testsuite/LTP/ltp/lib/tst_test.c:29:
-/home/z00293696/works/source/testsuite/LTP/ltp/include/tst_atomic.h:135:3: error: #error Your compiler does not provide __sync_add_and_fetch and LTP implementation is missing for your architecture.
- # error Your compiler does not provide __sync_add_and_fetch and LTP\
-   ^
-/home/z00293696/works/source/testsuite/LTP/ltp/include/tst_atomic.h: In function 'tst_atomic_inc':
-/home/z00293696/works/source/testsuite/LTP/ltp/include/tst_atomic.h:141:2: warning: implicit declaration of function 'tst_atomic_add_return' [-Wimplicit-function-declaration]
-  return tst_atomic_add_return(1, v);
-  ^
-```
-6.1 also failed.
-
-# Unused
-Jan Stancek <jstancek@redhat.com>:
-This test doesn't make assumptions how much will write get
-shortened. It only tests that file content/offset after
-syscall corresponds to return value of writev().
 
