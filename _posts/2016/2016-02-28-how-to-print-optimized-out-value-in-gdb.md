@@ -7,7 +7,7 @@ tags: [debug, gdb]
 
 This [article](http://ask.xmodulo.com/print-optimized-out-value-gdb.html) said that user could define variable as volatile or compile with "-O0" in order to debug such variable in gdb. The thing is some time we could not do it, such as we want to debug Linux kernel. Recently, I found that the refcount in gpiochip is incorrect. I hope I could debug it through the gdb in host.
 
-# The source code and disassembly
+# Disassembly the source code
 Disassembly with `objdump -Dx` or `objdump -Sx`:
 ```
 $ objdump --help |grep "\-[DS]"
@@ -16,7 +16,7 @@ $ objdump --help |grep "\-[DS]"
 ```
 
 # Find out the pointer of gpio_device(gdev in followings):
-From the c source code we could know that the gdev is allocated by kzalloc. According to APCS, we know that x0 is the return value. So, we could know that the x25 hold the address of gpio_device.
+From the c source code we could know that the gdev is allocated by kzalloc. According to APCS, we know that x0 is return value. So, we could know that the x25 hold the address of gpio_device.
 
 ```
     28ec:       b9408314        ldr     w20, [x24,#128]
@@ -54,7 +54,7 @@ From the c source code we could know that the gdev is allocated by kzalloc. Acco
 # Print refcount
 We could find out the refcount by the above print or investigate the source code as follows:
 
-```
+```c
 struct gpio_device {
         int                     id;
         struct device           dev;
@@ -101,6 +101,6 @@ End with a line saying just "end".
 >print ((struct gpio_device*)$x25)->dev->kobj->kref->refcount->counter
 >end
 (gdb) npgdev
-$11 = 3
+$10 = 1
 ```
 
