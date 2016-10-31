@@ -18,6 +18,7 @@ Recently, we found that the writev01, write03, write04 of ltp fail with EFAULT. 
 It is not suprise that it is not a bug. The behavior of writev change slightly in order to keep the same behavior as write and obey the posix requirement.
 
 Al Viro raise this issue in LKML before send out the patch: <http://www.gossamer-threads.com/lists/linux/kernel/2527020>:
+
 ```
 Right now writev() with 3-iovec array that has unmapped address in
 the second element and total length less than PAGE_SIZE will write the
@@ -33,6 +34,7 @@ instances in the current mainline fixed, but they are often suboptimal.
 ```
 
 In the commit of LTP, Jan Stancek <jstancek@redhat.com> wrote:
+
 ```
 Verify writev() behaviour with partially valid iovec list.
 Kernel <4.8 used to shorten write up to first bad invalid
@@ -43,6 +45,7 @@ EFAULT.
 
 ## The ltp patch
 The ltp already merge the commit:
+
 ```
 b3671b7 writev01: rewrite and drop partially valid iovec tests
 9a62652 writev: remove writev03 and writev04
@@ -50,9 +53,10 @@ db19194 syscalls: new test writev07
 ```
 
 # In details
-I am not fimilar with writev, could not understand the relation between writev and iov_iter_fault_in_readable. read the code in "lib/iov_iter.c" and "include/linux/pagemap.h".
+I am not fimilar with writev, could not understand the relation between `writev()` and `iov_iter_fault_in_readable()`. read the code in "lib/iov_iter.c" and "include/linux/pagemap.h".
 
 1.  old code:
+
     ```
     /*
      * Fault in the first iovec of the given iov_iter, to a maximum length
@@ -97,6 +101,7 @@ I am not fimilar with writev, could not understand the relation between writev a
     ```
 
 2.  new behavior:
+
     ```
     /*
      * Fault in one or more iovecs of the given iov_iter, to a maximum length of
