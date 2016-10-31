@@ -9,6 +9,7 @@ This [article](http://ask.xmodulo.com/print-optimized-out-value-gdb.html) said t
 
 # Disassembly the source code
 Disassembly with `objdump -Dx` or `objdump -Sx`:
+
 ```
 $ objdump --help |grep "\-[DS]"
   -D, --disassemble-all    Display assembler contents of all sections
@@ -18,7 +19,7 @@ $ objdump --help |grep "\-[DS]"
 # Find out the pointer of gpio_device(gdev in followings):
 From the c source code we could know that the gdev is allocated by kzalloc. According to APCS, we know that x0 is return value. So, we could know that the x25 hold the address of gpio_device.
 
-```
+```cpp
     28ec:       b9408314        ldr     w20, [x24,#128]
     28f0:       94000000        bl      0 <kmem_cache_alloc>
                         28f0: R_AARCH64_CALL26  kmem_cache_alloc
@@ -33,17 +34,19 @@ From the c source code we could know that the gdev is allocated by kzalloc. Acco
 ```
 
 *   Print address through register
+
     ```
     (gdb) info registers x25
     x25            0xffffffc075405800       -272910755840
     ```
-    or,
+    or
     ```
     (gdb) p $x25
     $6 = -272910755840
     ```
 
 *   Print it as pointer:
+
     ```
     (gdb) p *(struct gpio_device*)$x25
     $7 = {id = 0, dev = {parent = 0xffffffc075405c10, p = 0x0, kobj = {name = 0xffffffc0755d0600 "gpiochip0", entry = {
@@ -54,7 +57,7 @@ From the c source code we could know that the gdev is allocated by kzalloc. Acco
 # Print refcount
 We could find out the refcount by the above print or investigate the source code as follows:
 
-```c
+```cpp
 struct gpio_device {
         int                     id;
         struct device           dev;
@@ -86,6 +89,7 @@ typedef struct {
 ```
 
 So we could print the refcount by the following command:
+
 ```
 (gdb) p ((struct gpio_device*)$x25)->dev->kobj->kref->refcount->counter
 $9 = 1
@@ -93,6 +97,7 @@ $9 = 1
 
 # define macro to print the variable quickly
 But the above command is too long to use, we could define the following macro:
+
 ```
 (gdb) define npgdev
 Type commands for definition of "npgdev".
