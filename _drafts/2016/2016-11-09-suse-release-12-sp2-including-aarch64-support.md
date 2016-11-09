@@ -5,7 +5,8 @@ categories: [Linux]
 tags: [suse, arm64, aarch64, respberry pi]
 ---
 
-上个月月底Suse宣布年底提供sles12 sp2(Suse Linux Enterprise Server 12, Service Pack 2) arm64版本. 今天看Lwn上sles12sp2的(highlight)[https://www.suse.com/products/server/highlights], 发现除了原先看到的五个SOC(定位是网络和服务器):
+上个月月底Suse宣布年底提供sles12 sp2(Suse Linux Enterprise Server 12, Service Pack 2) arm64版本. 今天看Lwn上sles12sp2的[highlight](https://www.suse.com/products/server/highlights), 发现除了原先看到的五个SOC(定位是网络和服务器):
+
 *  Advanced Micro Devices (AMD)—Opteron A1100
 *  Applied Micro—X-Gene 1, X-Gene 2
 *  Cavium—ThunderX
@@ -22,8 +23,8 @@ tags: [suse, arm64, aarch64, respberry pi]
 
 GM是Gold Master, 通常来说, 如果没有问题, 1-2周之后就会有GA, 也就是正式版本release.
 
-
 参考链接:
+
 1.  [SUSE Linux Enterprise Server 12 SP2 Release Notes](https://www.suse.com/releasenotes/x86_64/SUSE-SLES/12-SP2/)
 2.  [SUSE Linux Enterprise Server for ARM](https://www.suse.com/products/arm)
 
