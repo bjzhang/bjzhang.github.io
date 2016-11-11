@@ -1,0 +1,71 @@
+//dot -Tsvg cont_page_development.dot -o cont_page_development.svg
+digraph cont_page_hint{
+//    rankdir = LR;
+    rankdir = TB;
+    fontname = "Courier";
+    fontsize = 12;
+
+//    node [ fontname = "Microsoft YaHei", fontsize = 12, shape = "record", color="skyblue", style="bold"];
+//    edge [ fontname = "Microsoft YaHei", fontsize = 12 ];
+    node [fontsize = 12, shape = "record", color="skyblue", style="bold"];
+    edge [fontsize = 12 ];
+
+    cont_page_hint;
+    a_proven_benchmark;
+    b_prototype [label = "Ignore the following feature\n\
+                        before the prototype works\n\
+                        memcg, userfaultfd, numa, swap"];
+    c_full_function;
+
+    //a_proven_benchmark
+    subgraph a_proven_benchmark {
+        specint [style="filled"];
+
+        a_proven_benchmark -> specint;
+        specint -> specint_4k_page_without_transpage;
+        specint -> specint_4k_page_with_transpage;
+        specint -> specint_64k_page_with_hugetlb;
+    }
+
+    //b_prototype
+    subgraph ba_grouping_pages {
+//        label = "";
+        bgcolor="mintcream";
+        ba_grouping_pages [ label = "grouping pages", style="filled"];
+        pte_invalid_when_read [label = "pte invalid when read.\n\
+                                        (except s390)"];
+
+        ba_grouping_pages -> pte_is_invalid;
+        ba_grouping_pages -> pte_is_valid;
+
+        pte_is_invalid -> handle_pte_fault;
+
+        handle_pte_fault->pte_invalid_when_read;
+        handle_pte_fault->pte_invalid_when_write;
+
+    }
+    subgraph bb_spliting_64k_pages {
+        bgcolor="mintcream";
+        bb_spliting_64k_pages [label = "spliting 64k pages when needed: \n\
+                                     e.g. mprotect, mremap, munmap, \n\
+                                     LRU handling. Need add pointer to\n\
+                                     track it"];
+    }
+
+    subgraph bc_set_cont_page_hint {
+        bgcolor="mintcream";
+        bc_set_cont_page_hint [label = "setting the cont page hint. Add\n\
+                                     a function like do_fault_around.\n\
+                                     invalid tlb and deal with the\n\
+                                     other pages in the next time."];
+    }
+
+    cont_page_hint -> a_proven_benchmark;
+    cont_page_hint -> b_prototype;
+    cont_page_hint -> c_full_function;
+
+    b_prototype -> ba_grouping_pages;
+    b_prototype -> bb_spliting_64k_pages;
+    b_prototype -> bc_set_cont_page_hint;
+}
+
