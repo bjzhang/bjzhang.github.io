@@ -11,11 +11,11 @@ digraph cont_page_hint{
     edge [fontsize = 12 ];
 
     cont_page_hint;
-    a_proven_benchmark;
+    a_proven_benchmark [ label = "proven benchmark"];
     b_prototype [label = "Ignore the following feature\n\
                         before the prototype works\n\
                         memcg, userfaultfd, numa, swap"];
-    c_full_function;
+    c_full_function [ label = "full function"];
 
     //a_proven_benchmark
     subgraph a_proven_benchmark {
@@ -31,19 +31,36 @@ digraph cont_page_hint{
     subgraph ba_grouping_pages {
 //        label = "";
         bgcolor="mintcream";
-        ba_grouping_pages [ label = "grouping pages", style="filled"];
-        pte_invalid_when_read [label = "pte invalid when read.\n\
-                                        (except s390)"];
+        ba_grouping_pages [ label = "grouping pages"];
+        do_not_handle_in_pte_level [ label = "Handle in higher level than\n\
+                                              pte level(Only handle pte\n\
+                                              in our design)", color = "gray", style="filled"]
 
-        ba_grouping_pages -> pte_is_invalid;
-        ba_grouping_pages -> pte_is_valid;
+        subgraph handle_pte_fault {
+//            label = "handle_pte_fault"
+            pte_invalid_when_read [ label = "pte invalid when read\n\
+                                             (except s390"];
+            do_fault [ label = "do_fault(Only work on\n\
+                                anonymous page in our\n\
+                                design", color="gray", style="filled"];
+            do_anonymous_page [label = "do_anonymous_page", style="filled"];
 
-        pte_is_invalid -> handle_pte_fault;
+            handle_pte_fault -> pte_inexist_in_fault_env;
+            handle_pte_fault -> pte_exist_in_fault_env;
 
-        handle_pte_fault->pte_invalid_when_read;
-        handle_pte_fault->pte_invalid_when_write;
+            pte_inexist_in_fault_env -> do_anonymous_page;
+            pte_inexist_in_fault_env -> do_fault;
+            pte_exist_in_fault_env;
+
+            do_anonymous_page -> pte_invalid_when_read;
+            do_anonymous_page -> pte_invalid_when_write;
+        }
+
+        ba_grouping_pages -> do_not_handle_in_pte_level;
+        ba_grouping_pages -> handle_pte_fault;
 
     }
+
     subgraph bb_spliting_64k_pages {
         bgcolor="mintcream";
         bb_spliting_64k_pages [label = "spliting 64k pages when needed: \n\
