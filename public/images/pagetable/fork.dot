@@ -1,0 +1,49 @@
+//dot -Tsvg fork.dot -o fork.svg
+digraph cont_page_hint{
+//    rankdir = LR;
+    rankdir = TB;
+    fontname = "Courier";
+    fontsize = 12;
+
+    node [fontsize = 12, shape = "record", color="skyblue", style="bold"];
+    edge [fontsize = 12 ];
+
+    SYS_fork;
+    _do_fork [ label = "_do_fork:\n\
+                        Ok, this is the main fork-routine.\n\
+                        It copies the process, and if\n\
+                        successful kick-starts it and waits\n\
+                        for it to finish using the VM if\n\
+                        required." ];
+    copy_process [ label = "copy_process()\n\
+                            This creates a new process as a copy of the old one,\n\
+                            but does not actually start it yet.\n\
+                            It copies the registers, and all the appropriate\n\
+                            parts of the process environment (as per the clone\n\
+                            flags). The actual kick-off is left to the caller."];
+    wake_up_new_task;
+
+    copy_mm;
+    dup_mm;
+
+    copy_mm_struct;
+    dup_mmap;
+
+    copy_page_range [ label = "copy_page_range()\n\
+                               copy all the page in mm_struct.mmap\n\
+                               (It is vm_area_struct). It will copy\n\
+                               pgd from src to dst." ]
+
+    SYS_fork -> _do_fork;
+
+    _do_fork -> copy_process;
+    _do_fork -> wake_up_new_task;
+
+    copy_process -> copy_mm;
+
+    copy_mm -> dup_mm [label = "if CLONE_VM is not set(not thread)"];
+
+    dup_mm -> copy_mm_struct;
+    dup_mm -> dup_mmap;
+}
+
