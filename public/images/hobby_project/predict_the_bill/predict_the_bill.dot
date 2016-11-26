@@ -1,0 +1,31 @@
+//dot -Tsvg fork.dot -o fork.svg
+digraph cont_page_hint{
+//    rankdir = LR;
+    rankdir = TB;
+    fontname = "Courier";
+    fontsize = 12;
+
+    node [fontsize = 12, shape = "record", color="skyblue", style="bold"];
+    edge [fontsize = 12 ];
+
+    predict_the_bill;
+    check_the_unsettled_bills_periodically [ label = "check_the_unsettled_bills_periodically.\n\
+                                                      It seems it is easy because there are\n\
+                                                      less data need to process."];
+    monitor_each_transaction [ label = "monitor_each_transaction:\n\
+                                        Need find out each transaction in sms
+                                        or email."]
+
+    predict_the_bill->check_the_unsettled_bills_periodically;
+    predict_the_bill->monitor_each_transaction;
+
+    check_the_unsettled_bills_periodically->check_the_unsentled_bill_from_sms;
+    check_the_unsettled_bills_periodically->check_the_unsentled_bill_from_email__for_cmd;
+//    monitor_each_transaction;
+
+    check_the_unsentled_bill_from_sms -> development_java_on_android__too_hard_for_me;
+    check_the_unsentled_bill_from_sms -> write_script_on_andriod__seems_deprecated;
+    check_the_unsentled_bill_from_sms -> base_on_adb_and_existing_sms_backup_app__find_a_solution_currently__It_could_be_reused_for_monitor_transactions;
+
+}
+
