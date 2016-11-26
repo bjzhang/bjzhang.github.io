@@ -19,13 +19,33 @@ digraph cont_page_hint{
     predict_the_bill->check_the_unsettled_bills_periodically;
     predict_the_bill->monitor_each_transaction;
 
+    development_java_on_android [ label = "Java: development in java is a direct\n\
+                                           idea, but it is hard for me. I do not\n\
+                                           want learn the development environment\n\
+                                           of java for this task. I find some\n\
+                                           demo of reading/sending sms. If I decided\n\
+                                           to use it. I should use the method which\n\
+                                           is recommended by google.\n\
+                                           It is my backup. It will take much time\n\
+                                           but it is useful for other works in\n\
+                                           future."];
+    write_script_on_andriod [ label = "SL4A: I use s4la two years. It just simple\n\
+                                       demo not real application. And it seems that\n\
+                                       sl4a is deprecated."];
+    base_on_adb_and_existing_sms_backup_app [ label = "Other options?\n\
+                                                       After I have already find a sms backup\n\
+                                                       software. It will backup sms to gmail.\n\
+                                                       And I found the method in stack exchange\n\
+                                                       which could send sms through adb. And It\n\
+                                                       could be used when I want to monitor each\n\
+                                                       transaction in the future."];
+
     check_the_unsettled_bills_periodically->check_the_unsentled_bill_from_sms;
     check_the_unsettled_bills_periodically->check_the_unsentled_bill_from_email__for_cmd;
 //    monitor_each_transaction;
 
-    check_the_unsentled_bill_from_sms -> development_java_on_android__too_hard_for_me;
-    check_the_unsentled_bill_from_sms -> write_script_on_andriod__seems_deprecated;
-    check_the_unsentled_bill_from_sms -> base_on_adb_and_existing_sms_backup_app__find_a_solution_currently__It_could_be_reused_for_monitor_transactions;
-
+    check_the_unsentled_bill_from_sms -> development_java_on_android;
+    check_the_unsentled_bill_from_sms -> write_script_on_andriod;
+    check_the_unsentled_bill_from_sms -> base_on_adb_and_existing_sms_backup_app;
 }
 
