@@ -37,24 +37,24 @@ NOTES
        These calls supersede readdir(2).
 ```
 
-find the definition glibc
-----------------------------
+Find the definition of syscall in  glibc
+----------------------------------------
 There are different ways to know where does glibc implement a syscall. E.g. we could grep the source code, find the syscall named source code or find the dependency file of glibc.
 
-The easiest way when you have the coresponding compile is reading the dependency file:
+The easiest way when you have the coresponding compiler is reading the dependency file:
 ```
 > find . -name sched_yield.o.d
 ./posix/sched_yield.o.d
 ```
 
-Usually, the second line of dependency mean the real definition. In sched_yield.o, we saw headers instead of c source code. It means that sched_yield is wrapped by the assembly language.
+Usually, the second line of dependency show the real definition. In sched_yield.o, we saw headers instead of c source code. It means that sched_yield is wrapped by the assembly language.
 ```
 > head -n 2 posix/sched_yield.o
 $(common-objpfx)posix/sched_yield.o: \
   ../include/stdc-predef.h ../include/libc-symbols.h \
 ```
 
-We could confirm it in sysd-syscalls in build directory. All the syscalls found in this file started with "ifeq (,$(filter syscall_name,$(unix-syscalls)))" is wrapped by assembly language with following macro definition:
+We could confirm it in sysd-syscalls in build directory. All the syscalls found in this file(exclude comment) is wrapped by assembly language and controlled by macros:
 ```
 #### CALL=sched_yield NUMBER=(124) ARGS=i: SOURCE=-
 ifeq (,$(filter sched_yield,$(unix-syscalls)))
@@ -72,13 +72,13 @@ $(foreach p,$(sysd-rules-targets),$(foreach o,$(object-suffixes),$(objpfx)$(pats
 endif
 ```
 
-The above macro show that the name, number of args and symbol of syscall. There is also another two useful macro:
-`#define SYSCALL_NOERRNO 1` means no error number will set after this syscall.
-`#define SYSCALL_CANCELLABLE 1` means it is cancellable where pthread_cancel might happen. Reference "Cancellation points" in `man 7 pthreads`.
+The above macro show that the name, number of args and symbol of sched_yield syscall. There are also another two useful macros:
+*   `#define SYSCALL_NOERRNO 1` means no error number will set after this syscall.
+*   `#define SYSCALL_CANCELLABLE 1` means it is cancellable where pthread_cancel might happen. Reference "Cancellation points" in `man 7 pthreads` for further information.
 
-find the definition in kernel
+Find the definition in kernel
 -----------------------------
-Most of the architecture supported by kernel make use of the `include/uapi/asm-generic/unistd.h` with their own option in unistd.h in arch/xxx. We could saw the file name of a syscall in this file.  "kernel/sched/core.c" for `sched_yield`.
+Most of the architecture make use of the `include/uapi/asm-generic/unistd.h` with their own options in unistd.h in arch/xxx. We could saw the file name of a syscall in this file. For example,  "kernel/sched/core.c" for `sched_yield`.
 ```
 > grep "\(\/\*.*\*\/\)\|\(sched_yield\)" include/uapi/asm-generic/unistd.h | grep sched_yield -B 1
 /* kernel/sched/core.c */
