@@ -5,10 +5,15 @@ categories: [Linux]
 tags: [kernel, glibc, syscall]
 ---
 
-Take sched_yield as example.
+This is a quick guide for finding out the definition of library function, syscall wrapper and definition. Wrote for my colleague who ask me the definition of sched_yield in glibc. I will also mention how to find out the definition of readdir(library function).
 
 Check manpage to know it is a syscall or library function
 ---------------------------------------------------------
+According to `man 1 man`, 2 is syscall, so `sched_yield` is only a syscall(There are lots of name share between library function and syscall).
+```
+    2   System calls (functions provided by the kernel)
+    3   Library calls (functions within program libraries)
+```
 
 ```
 > man sched_yield
@@ -19,13 +24,8 @@ Man: What manual page do you want?
 Man:
 ```
 
-According to `man 1 man`, 2 is syscall.
-```
-    2   System calls (functions provided by the kernel)
-    3   Library calls (functions within program libraries)
-```
+Manpage will also show the section number in the beginning of it. E.g. "GETDENTS(2)" means it is a syscall. We could see "Glibc does not provide a wrapper for these system calls" which is not shown in the manpage of sched_yield. It means that getdents is a syscall which is not wrapped by glibc. `sched_yield` is a syscall which is wrapped by glibc.
 
-Compare with `man getdents`, in the manpage of sched_yield, it does not mention that sched_yield is not wrapped by glibc.
 ```
 > man getdents
 GETDENTS(2)                                                                                Linux Programmer's Manual                                                                               GETDENTS(2)
@@ -39,22 +39,22 @@ NOTES
 
 Find the definition of syscall in  glibc
 ----------------------------------------
-There are different ways to know where does glibc implement a syscall. E.g. we could grep the source code, find the syscall named source code or find the dependency file of glibc.
+There are different ways to know where glibc implements a syscall. E.g. we could grep the source code, find the syscall named source code or find the dependency file in the build directory of glibc.
 
-The easiest way when you have the coresponding compiler is reading the dependency file:
+It is easy to know definition from the dependency file when there is the coresponding compiler:
 ```
 > find . -name sched_yield.o.d
 ./posix/sched_yield.o.d
 ```
 
-Usually, the second line of dependency show the real definition. In sched_yield.o, we saw headers instead of c source code. It means that sched_yield is wrapped by the assembly language.
+Usually, the second line of dependency show the definition. In sched_yield.o, we see headers instead of c source code. It means that sched_yield is wrapped by the assembly language.
 ```
 > head -n 2 posix/sched_yield.o
 $(common-objpfx)posix/sched_yield.o: \
   ../include/stdc-predef.h ../include/libc-symbols.h \
 ```
 
-We could confirm it in sysd-syscalls in build directory. All the syscalls found in this file(exclude comment) is wrapped by assembly language and controlled by macros:
+We could confirm it in sysd-syscalls in build directory. All the syscalls found in this file(exclude comments) is wrapped by assembly language and controlled by several macros:
 ```
 #### CALL=sched_yield NUMBER=(124) ARGS=i: SOURCE=-
 ifeq (,$(filter sched_yield,$(unix-syscalls)))
@@ -78,7 +78,7 @@ The above macro show that the name, number of args and symbol of sched_yield sys
 
 Find the definition in kernel
 -----------------------------
-Most of the architecture make use of the `include/uapi/asm-generic/unistd.h` with their own options in unistd.h in arch/xxx. We could saw the file name of a syscall in this file. For example,  "kernel/sched/core.c" for `sched_yield`.
+Most of the architecture make use of the `include/uapi/asm-generic/unistd.h` with their own options in unistd.h in arch/xxx. We could saw the file name of a syscall in this file. For example, the following result show that `sched_yield()` is defined in "kernel/sched/core.c".
 ```
 > grep "\(\/\*.*\*\/\)\|\(sched_yield\)" include/uapi/asm-generic/unistd.h | grep sched_yield -B 1
 /* kernel/sched/core.c */
@@ -86,11 +86,11 @@ Most of the architecture make use of the `include/uapi/asm-generic/unistd.h` wit
 __SYSCALL(__NR_sched_yield, sys_sched_yield)
 ```
 
-Search "SYS.*sched_yield" will find the exactly location of definition.
+Searching "SYS.*sched_yield" in "kernel/sched/core.c" will find the location of definition.
 
-find the definition of glibc(for library function)
+Find the definition of glibc(for library function)
 --------------------------------------------------
-As we mentioned by getdents is not wrapped by glibc. readdir is the recommandation of library for this functions. We could find the definition of `readdir()` with above method:
+As we mentioned, `getdents()` is not wrapped by glibc. `readdir()` is the recommandation library function to use it. We could find the definition of `readdir()` is "sysdeps/posix/readdir.c" with above method:
 ```
 > head -n 2 `find . -name readdir.o.d`
 $(common-objpfx)dirent/readdir.o: \
@@ -103,41 +103,43 @@ When we search in source code, we could know the name of function by searching a
 weak_alias (__readdir, readdir)
 ```
 
-And we could find that __readdir call getdents/getdents64 through __getdents.
+And we could find that __readdir call getdents/getdents64 through __getdents in above file.
 
 Q & A
 -----
-Q: Why we do not search the syscall named file in glibc source code directly?
-A: Reason one: if the syscall is wrapped by assembly. There is no real definition of this syscall. In fact, sysd-syscalls is generated by sysdeps/unix/make-syscalls.sh based on the priority defined by Implies. The Implies file should read from the abi root directory. E.g. "sysdeps/unix/sysv/linux/aarch64/lp64/Implies" for aarch64 LP64.
-   Reason two: There might be several files, for readdir:
-```
-> find . -name readdir.c
-./dirent/readdir.c
-./sysdeps/posix/readdir.c
-./sysdeps/mach/hurd/readdir.c
-./sysdeps/unix/sysv/linux/wordsize-64/readdir.c
-```
+Q:  Why we do not search the syscall named file in glibc source code directly?
 
-For backtrace:
-```
-> find . -name backtrace.c
-./debug/backtrace.c
-./sysdeps/microblaze/backtrace.c
-./sysdeps/tile/backtrace.c
-./sysdeps/sparc/backtrace.c
-./sysdeps/mips/backtrace.c
-./sysdeps/arm/backtrace.c
-./sysdeps/alpha/backtrace.c
-./sysdeps/ia64/backtrace.c
-./sysdeps/powerpc/powerpc64/backtrace.c
-./sysdeps/powerpc/powerpc32/backtrace.c
-./sysdeps/aarch64/backtrace.c
-./sysdeps/i386/backtrace.c
-./sysdeps/m68k/backtrace.c
-./sysdeps/s390/s390-64/backtrace.c
-./sysdeps/s390/s390-32/backtrace.c
-./sysdeps/x86_64/backtrace.c
-./sysdeps/sh/backtrace.c
-```
+A:
+*   Reason one: if the syscall is wrapped by assembly. There is no source code named by such syscall. In fact, sysd-syscalls is generated by sysdeps/unix/make-syscalls.sh based on the priority defined by Implies. The Implies file should read from the abi root directory. E.g. "sysdeps/unix/sysv/linux/aarch64/Implies" for aarch64 LP64.
+*   Reason two: There might be several files, we could find the correct one by the Implies file. Note that function in "xxx/syscall_name.c" is usually a stub function(E.g. "dirent/readdir.c").
+    *   For readdir:
+        ```
+        > find . -name readdir.c
+        ./dirent/readdir.c
+        ./sysdeps/posix/readdir.c
+        ./sysdeps/mach/hurd/readdir.c
+        ./sysdeps/unix/sysv/linux/wordsize-64/readdir.c
+        ```
+    *   For backtrace:
+        ```
+        > find . -name backtrace.c
+        ./debug/backtrace.c
+        ./sysdeps/microblaze/backtrace.c
+        ./sysdeps/tile/backtrace.c
+        ./sysdeps/sparc/backtrace.c
+        ./sysdeps/mips/backtrace.c
+        ./sysdeps/arm/backtrace.c
+        ./sysdeps/alpha/backtrace.c
+        ./sysdeps/ia64/backtrace.c
+        ./sysdeps/powerpc/powerpc64/backtrace.c
+        ./sysdeps/powerpc/powerpc32/backtrace.c
+        ./sysdeps/aarch64/backtrace.c
+        ./sysdeps/i386/backtrace.c
+        ./sysdeps/m68k/backtrace.c
+        ./sysdeps/s390/s390-64/backtrace.c
+        ./sysdeps/s390/s390-32/backtrace.c
+        ./sysdeps/x86_64/backtrace.c
+        ./sysdeps/sh/backtrace.c
+        ```
 
 
