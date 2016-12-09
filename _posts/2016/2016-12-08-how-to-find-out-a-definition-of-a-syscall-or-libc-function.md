@@ -42,7 +42,7 @@ Find the definition of syscall in  glibc
 ----------------------------------------
 There are different ways to know where glibc implements a syscall. E.g. we could grep the source code, find the syscall named source code or find the dependency file in the build directory of glibc.
 
-It is easy to know definition from the dependency file when there is the coresponding compiler:
+It is easy to know definition from the dependency file in build directory when there is the coresponding compiler:
 
 ```
 > find . -name sched_yield.o.d
@@ -111,7 +111,7 @@ When we search in source code, we could know the name of function by searching a
 weak_alias (__readdir, readdir)
 ```
 
-And we could find that __readdir call getdents/getdents64 through __getdents in above file.
+And we could find that `__readdir()` call `getdents()`/`getdents64()` through `__getdents()` in above file.
 
 Q & A
 -----
