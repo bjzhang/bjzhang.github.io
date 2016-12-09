@@ -83,7 +83,7 @@ The above macro show that the name, number of args and symbol of sched_yield sys
 
 Find the definition in kernel
 -----------------------------
-Most of the architecture make use of the `include/uapi/asm-generic/unistd.h` with their own options in unistd.h in "arch/<arch name>/include". We could saw the file name of a syscall in this file. For example, the following result show that `sched_yield()` is defined in "kernel/sched/core.c".
+Most of the architecture make use of the `include/uapi/asm-generic/unistd.h` with their own options in unistd.h of "arch/arch_name/include". We could saw the file name of a syscall in this file. For example, the following result show that `sched_yield()` is defined in "kernel/sched/core.c".
 
 ```
 > grep "\(\/\*.*\*\/\)\|\(sched_yield\)" include/uapi/asm-generic/unistd.h | grep sched_yield -B 1
@@ -94,7 +94,7 @@ __SYSCALL(__NR_sched_yield, sys_sched_yield)
 
 Searching "SYS.*sched_yield" in "kernel/sched/core.c" will find the location of definition.
 
-Find the definition of glibc(for library function)
+Find the definition of library function in glibc
 --------------------------------------------------
 As we mentioned, `getdents()` is not wrapped by glibc. `readdir()` is the recommandation library function to use it. We could find the definition of `readdir()` is "sysdeps/posix/readdir.c" with above method:
 
