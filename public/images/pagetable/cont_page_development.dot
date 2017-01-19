@@ -50,10 +50,18 @@ digraph cont_page_hint{
 
             pte_inexist_in_fault_env -> do_anonymous_page;
             pte_inexist_in_fault_env -> do_fault;
-            pte_exist_in_fault_env;
+
+            pte_exist_in_fault_env -> write_fault;
+            pte_exist_in_fault_env -> read_fault;
 
             do_anonymous_page -> pte_invalid_when_read;
             do_anonymous_page -> pte_invalid_when_write;
+
+            write_fault->if_try_to_write_shared_page;
+            if_try_to_write_shared_page->do_wp_page;
+            if_not_try_to_write_shared_page -> mk_dirty;
+
+            pte_invalid_when_read;
         }
 
         ba_grouping_pages -> do_not_handle_in_pte_level;
