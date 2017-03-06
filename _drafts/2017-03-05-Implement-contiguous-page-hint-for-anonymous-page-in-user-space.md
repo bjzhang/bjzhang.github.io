@@ -48,6 +48,12 @@ Contiguous page hint: configuration
 -----------------------------------
 TODO: this table is not clear. use the table from Ard? Reserve this table at the end of slide.
 
+Compare with 4k THP
+-------------------
+Could I say that if the dTLB load miss lead to lower L2 access and lower times of exception taken. the performance will improved.
+But how could I explain the downgrade of omentpp?
+xalancbmk is easy because d tlb miss is unchanged(really? it seems impossible).
+
 The relationship between performance and tlb miss
 -------------------------------------------------
 I forget the reason why I introduce this slide: Compare with 4k with THP and 4k with THP and hugetlb(64k)? TODO make sure.
@@ -89,4 +95,86 @@ Patches of cont page hint
     1.  in order to compare the tlb miss and L2 cache, I need to know the latency of tlb miss and L2 d$ load.
 3.  draw a picture of current design.
 
+
+The original data of perf_stat
+-------------------------------
+
+        Specint single core compare with 4k with transhuge:
+                           hugetlb_64k   hugetlb_2048k    Mark
+               401.bzip2:        2.34%           3.72%      +
+                 403.gcc:        0.39%           0.90%
+                 429.mcf:        0.55%           0.89%
+               445.gobmk:        0.88%           0.88%
+               456.hmmer:       10.34%           8.97%      ++
+               458.sjeng:       -1.87%           0.93%
+          462.libquantum:       10.49%           4.32%      ++
+             471.omnetpp:       -0.45%           2.84%
+               473.astar:        1.30%           2.70%
+           483.xalancbmk:       -1.67%           0.83%
+
+0x016 , L2D_CACHE, Attributable Level 2 data cache access
+The counter counts Attributable memory-read or Attributable memory-write operations, that the PE
+made, that access at least the Level 2 data or unified cache. Each access to a cache line is counted
+including refills of and write-backs from the Level 1 data, instruction, or unified caches. Each
+access to other Level 2 data or unified memory structures, such as refill buffers, write buffers, and
+write-back buffers, is also counted.
+The counter does not count:
+Operations made by other PEs that share this cache.
+Cache maintenance instructions.
+
+*   astar
+Diff: result/base
+               testcases            base          result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/         500,714         338,576    67.62%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/  48,243,680,996  47,648,606,289    98.77%     0.00%      0.00%
+        dTLB-load-misses   5,136,361,243   2,936,132,054    57.16%     0.00%      0.00%
+        iTLB-load-misses      29,057,053      24,065,221    82.82%     0.00%      0.00%
+
+*   bzip
+Diff: result/base
+               testcases             base          result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/          523,148         534,306   102.13%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/   66,436,631,118  66,651,395,233   100.32%     0.00%      0.00%
+        dTLB-load-misses   13,020,948,496   3,265,206,016    25.08%     0.00%      0.00%
+        iTLB-load-misses       31,563,977      29,026,012    91.96%     0.00%      0.00%
+
+*   hmmer
+Diff: result/base
+               testcases          base        result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/       351,910       333,901    94.88%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/ 53,013,240,266 36,355,002,181    68.58%     0.00%      0.00%
+        dTLB-load-misses   501,759,126   311,239,631    62.03%     0.00%      0.00%
+        iTLB-load-misses    29,022,779    28,277,805    97.43%     0.00%      0.00%
+
+*   libquantum
+Diff: result/base
+               testcases              base            result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/           478,949           448,466    93.64%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/   207,143,982,887   206,778,261,323    99.82%     0.00%      0.00%
+        dTLB-load-misses       684,648,521       407,350,122    59.50%     0.00%      0.00%
+        iTLB-load-misses        23,274,692        24,499,482   105.26%     0.00%      0.00%
+
+*   omnetpp
+Diff: result/base
+               testcases             base          result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/          424,349         398,358    93.88%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/   50,442,009,131  51,305,942,600   101.71%     0.00%      0.00%
+        dTLB-load-misses   11,415,593,231   9,565,650,618    83.79%     0.00%      0.00%
+        iTLB-load-misses      176,816,421     123,981,643    70.12%     0.00%      0.00%
+
+*   sjeng
+Diff: result/base
+               testcases            base          result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/         432,275         429,621    99.39%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/  21,331,053,942  25,505,365,609   119.57%     0.00%      0.00%
+        dTLB-load-misses   8,739,202,106   2,070,855,972    23.70%     0.00%      0.00%
+        iTLB-load-misses      38,233,018      25,198,254    65.91%     0.00%      0.00%
+
+*   xalancbmk
+Diff: result/base
+               testcases            base          result      diff   cv(base) cv(result) cv: Coefficient of Variation
+  armv8_pmuv3/exc_taken/         487,774         375,584    77.00%     0.00%      0.00%
+  armv8_pmuv3/l2d_cache/  66,795,709,011  68,731,343,842   102.90%     0.00%      0.00%
+        dTLB-load-misses   6,908,854,226   6,908,964,707   100.00%     0.00%      0.00%
+        iTLB-load-misses     597,267,468      51,142,127     8.56%     0.00%      0.00%
 
