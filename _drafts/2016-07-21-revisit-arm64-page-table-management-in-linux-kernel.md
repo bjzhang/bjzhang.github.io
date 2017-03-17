@@ -55,3 +55,62 @@ SYSCALL_DEFINE6(mmap_pgoff, unsigned long, addr, unsigned long, len,
 }
 ```
 hugetlbfs_file_operations
+
+attribute
+B2.2 Memory type overview
+ARMv8 provides the following mutually-exclusive memory types:
+Normal This is generally used for bulk memory operations, both read/write and read-only operations.
+Device The ARM architecture forbids speculative reads of any type of Device memory. This means Device
+memory types are suitable attributes for read-sensitive locations.
+Locations of the memory map that are assigned to peripherals are usually assigned the Device
+memory attribute.
+Device memory has additional attributes that have the following effects:
+• They prevent aggregation of reads and writes, maintaining the number and size of the
+specified memory accesses. See Gathering on page B2-100.
+• They preserve the access order and synchronization requirements, both for accesses to a
+single peripheral and where there is a synchronization requirement on the observability of
+one or more memory write and read accesses. See Reordering on page B2-101
+• They indicate whether a write can be acknowledged other than at the end point. See Early
+Write Acknowledgement on page B2-102.
+For more information on Normal memory and Device memory, see Memory types and attributes on page B2-93.
+Note
+Earlier versions of the ARM architecture defined a single Device memory type and a Strongly-ordered memory
+type. A Note in Device memory on page B2-98 describes how these memory types map onto the ARMv8 memory
+types.
+
+Device-nGnRnE Device non-Gathering, non-Reordering, No Early write acknowledgement.
+Equivalent to the Strongly-ordered memory type in earlier versions of the architecture.
+Device-nGnRE Device non-Gathering, non-Reordering, Early Write Acknowledgement.
+Equivalent to the Device memory type in earlier versions of the architecture.
+Device-nGRE Device non-Gathering, Reordering, Early Write Acknowledgement.
+ARMv8 adds this memory type to the translation table formats found in earlier versions of
+the architecture. The use of barriers is required to order accesses to Device-nGRE memory.
+Device-GRE Device Gathering, Reordering, Early Write Acknowledgement.
+ARMv8 adds this memory type to the translation table formats found in earlier versions of
+the architecture. Device-GRE memory has the fewest constraints. It behaves similar to
+Normal memory, with the restriction that speculative accesses to Device-GRE memory is
+forbidden
+
+Gathering
+In the Device memory attribute:
+G Indicates that the location has the Gathering attribute.
+nG Indicates that the location does not have the Gathering attribute, meaning it is non-Gathering.
+The Gathering attribute determines whether it is permissible for either:
+• Multiple memory accesses of the same type, read or write, to the same memory location to be merged into a
+single transaction.
+• Multiple memory accesses of the same type, read or write, to different memory locations to be merged into
+a single memory transaction on an interconnect
+
+
+Reordering
+In the Device memory attribute:
+R Indicates that the location has the Reordering attribute. Accesses to the location can be reordered
+within the same rules that apply to accesses to Normal Non-cacheable memory. All memory types
+with the Reordering attribute have the same ordering rules as accesses to Normal Non-cacheable
+memory, see Memory ordering on page B2-83.
+nR Indicates that the location does not have the Reordering attribute, meaning it is non-Reordering.
+Note
+Some interconnect fabrics, such as PCIe, perform very limited re-ordering, which is not important
+for the software usage. It is outside the scope of the ARM architecture to prohibit the use of a
+Non-reordering memory type with these interconnects.
+
