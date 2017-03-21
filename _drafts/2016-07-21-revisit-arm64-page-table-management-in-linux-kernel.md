@@ -114,3 +114,17 @@ Some interconnect fabrics, such as PCIe, perform very limited re-ordering, which
 for the software usage. It is outside the scope of the ARM architecture to prohibit the use of a
 Non-reordering memory type with these interconnects.
 
+
+It is a better way to control the acess
+---------------------------------------
+The restrictions apply only to subsequent levels of lookup at the same stage of translation, and:
+• UXNTable or XNTable restricts the XN control:
+— When the value of the XNTable bit is 1, the XN bit is treated as 1 in all subsequent levels of lookup,
+regardless of its actual value.
+— When the value of the UXNTable bit is 1, the UXN bit is treated as 1 in all subsequent levels of lookup,
+regardless of its actual value.
+— When the value of a UXNTable or XNTable bit is 0 the bit has no effect.
+• For the EL1&0 translation regime, PXNTable restricts the PXN control:
+— When PXNTable is set to 1, the PXN bit is treated as 1 in all subsequent levels of lookup, regardless
+of the actual value of the bit.
+— When PXNTable is set to 0 it has no effect.
