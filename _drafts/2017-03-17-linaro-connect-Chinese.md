@@ -20,9 +20,9 @@ Coresight
 talk with Mathieu: Mathieu is appreciated that huawei could provide the real use case for coresight. I think it could be a way to push the development of coresight features for huawei.
 
 Hi, Mathieu, Mike
-Here is the notes of coresight we discussed in bud17.
+Here is the notes of coresight we discussed in bud17. please correct me if I am wrong.
 
-1.  Mathieu said that cpu idle(power off) will lost the state of etm. For our senario, we could not avoid this, so we will re-setup etm when cpu is online.
+1.  Mathieu said that cpu idle(power off) will lost the state of etm. For our senario, we could not avoid this, so we re-setup etm when cpu is online.
 
 2.  cross trigger:
     1.  Mathieu said that qualcomm 8074 board support cti . Mathieu send me the driver. I will read it later.
@@ -56,33 +56,31 @@ Here is the notes of coresight we discussed in bud17.
     ```
     Mike/Mathieu said that it is the part of the alignment package which could not be avoided. Because decoder need the absolute address(the later package only contain the relative address). When Bamvor enable the cpu power up/off, there are lots of these type of packages which lead to more time to decode the package. It would be great to eliminate these set of package. Bamvor thought that ETM should output the package before it really output the first relative address. Mike feel it is hard to do in the hardware.
 
+7.  bamvor ask for how to use other resource? sequencer, event(other than viswinst), comparator, viewdata. Mathieu suggest ask arm support.
+
+8.  etr buffer will restart when it start.
 
 
-
-8. make use other resource? sequencer, event(other than viswinst), comparator. ask arm.
-9. make use of data trace, senario? ask arm.
 10. trsustzone? Ask Joakim Bech, Jens Wiklander about software part.
-11. TODO: ask Leo yan or Mathieu about if them use coresight in hikey successful.
-12. join other debug session.
+11. TODO: ask Leo yan or Mathieu about if them use coresight in hikey successful. they will focus on the hikey 960. 
+
 13. Linaro could provide 4 hours debug training. it is free for core and club member.
-etr buffer will restart when it start.
-etm trigger package v4  event.
-
-This driver is broken.  It works on Juno because (because the caches
-        are configured as write-through) but we've had problems on other
-platforms.  For now use the ETF for sink rather than the ETR
-
-这次主要是带着项目需求和Linaro的Mathieu Poirier, Mike Leach交流了coresight的用法，总体来说我们对coresight的思考还是比较多的，有比较明确的需求。通过Coresight或其它调测特性的需求交流，可以牵引Linaro改进并用到我们的产品中。
 
 
-- trustzone/TEE. development and secure issue, and the following topic:
-    - 0308 11:30 am - 11:55 pm BUD17-313 - BoF - Device Tree and Secure Firmware
-    - 0309 10:00 am - 10:25 am BUD17-400 - Secure Data Path with OPTEE
-    - 0309 12:00 pm - 12:25 pm BUD17-416 - Benchmark and profiling in OP-TEE
+这次主要是带着项目需求和Linaro的Mathieu Poirier, Mike Leach交流了coresight的用法，总体来说我们对coresight的思考还是比较多的，有比较明确的需求。通过Coresight或其它调测特性的需求交流，可以牵引Linaro改进并用到我们的产品中。具体交流内容如下：（直接贴英语）
+
+
+
+
 
 -  toolchain and filesystem support for armv8.x(from hanjun)
-- arm server(from hanjun)
-  Dong Wei. Jon Master.
+和arm toolchain组engineering manager Joey(剑桥，下面管四个组，共17人)交流工具链和文件系统v8.1,8.2支持问题：包括v8.1 lse (原子指令)和v8.2 16位浮点。
+
+Lse如果是库函数使用，考虑ifunc方式（见下）。应用可以不用或采用类似ifunc方式。
+
+cavium 在推ifunc方式，目的是支持lse (原子指令)和针对thunder x的memcpy优化，补丁szabolcs.nagy@arm.com review差不多了，需要人收，现在的glibc arm64 maintainer marcus不在toolchain组，去做iot了，joey在想办法能不能把maintainer换成szabolcs.nagy@arm.com。
+
+针对v8.2的16位浮点，joey认为在不支持16位浮点的平台会影响性能，所以原有应用不会用到。新应用直接调用16位浮点接口即可。
 
 - ILP32
     - Upstreaming plan
