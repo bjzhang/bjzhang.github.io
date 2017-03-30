@@ -128,3 +128,10 @@ regardless of its actual value.
 — When PXNTable is set to 1, the PXN bit is treated as 1 in all subsequent levels of lookup, regardless
 of the actual value of the bit.
 — When PXNTable is set to 0 it has no effect.
+
+
+tlb
+Any translation table entry that does not generate a Translation fault, an Address size fault, or an Access flag
+fault and is not from a translation regime for an Exception level that is lower than the current Exception level
+might be allocated to an enabled TLB at any time. The only translation table entries guaranteed not to be held
+in the TLB are those that generate a Translation fault, an Address size fault, or an Access flag fault.
