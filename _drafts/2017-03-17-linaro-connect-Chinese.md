@@ -22,7 +22,7 @@ talk with Mathieu: Mathieu is appreciated that huawei could provide the real use
 Hi, Mathieu, Mike
 Here is the notes of coresight we discussed in bud17. please correct me if I am wrong.
 
-1.  Mathieu said that cpu idle(power off) will lost the state of etm. For our senario, we could not avoid this, so we re-setup etm when cpu is online.
+1.  Mathieu said that cpu idle(power off) will lost the state of etm. For our senario, we could not avoid this, so we re-setup etm when cpu is online. This is 
 
 2.  cross trigger:
     1.  Mathieu said that qualcomm 8074 board support cti . Mathieu send me the driver. I will read it later.
@@ -37,12 +37,13 @@ Here is the notes of coresight we discussed in bud17. please correct me if I am 
 
 3.  timestamp:
     Bamvor ask how to design a proper timestamp. Mathieu suggest that timestamp should be async with cpu if timestamp in cpu domain or design a fast timestamp outside cpu subsystem.
+    Mathieu: "HiSilicon was seeing clock jitters when frequency scaling (CPUfreq) was used."
 
 4.  multiple etr support.
     There are 4 ets in D05. Bamvor hope linaro could find to support it. He suppose there is d05 in linaro.
 
 5.  About coresight intergrate with perf.
-    In bamvor''s understanding, perf per-thread buffer connect to etr which could not trace multiple thread in the same time. Is it correct? Mathieu mentioned Alex Shishkin from intel. But Bamvor forget what does Alex do.
+    In bamvor''s understanding, perf per-thread buffer connect to etr which could not trace multiple thread in the same time. Is it correct? Mathieu mentioned Alex Shishkin from intel. "Alex is working on a feature that allows tracing on a system wide basis".
 
 6.  About unneeded package in Bamvor''s trace:
     Bamvor found the following packages:
@@ -55,6 +56,10 @@ Here is the notes of coresight we discussed in bud17. please correct me if I am 
     94: [4904464] I_ADDR_L_64IS0 : Address, Long, 64 bit, IS0.; Addr=0xFFFFFFC0008DB9A0;
     ```
     Mike/Mathieu said that it is the part of the alignment package which could not be avoided. Because decoder need the absolute address(the later package only contain the relative address). When Bamvor enable the cpu power up/off, there are lots of these type of packages which lead to more time to decode the package. It would be great to eliminate these set of package. Bamvor thought that ETM should output the package before it really output the first relative address. Mike feel it is hard to do in the hardware.
+    Mike:
+    ```
+    These packets are architecturally defined in the ETMv4 specification and hardware. They cannot be filtered out. They are vital for the correct decode of trace.  It is not possible to determine when trace restarts without these packets.  If they were missing from the stream then decode errors would occur as we cannot tell if packets are dropped when the ETM is powered down.  Furthermore, for systems using timestamps, then the initial timestamp is emitted at this point as well. The ETM cannot delay in emitting these packets as is is designed to output trace as soon as possible to avoid any internal buffers becoming full and causing trace data to be dropped.
+    ```
 
 7.  bamvor ask for how to use other resource? sequencer, event(other than viswinst), comparator, viewdata. Mathieu suggest ask arm support.
 
