@@ -187,6 +187,25 @@ bootstrap could be builded in previous version.
 staging for testing.
 ring for gcc and glibc changes to make things works. do not break.
 rebuild=xxx other than local could also avoid the circle dependency.  TODO check and discuss with Shiyuan HU.
+我:
+https://en.opensuse.org/openSUSE:Build_Service_Concept_build_scheduling_strategies
+我:
+<repository name="standard" rebuild="transitive" block="all" linkedbuild="off">
+我:
+这行现在rebuild=local吧，改成direct，直接依赖的包手工触发下、觉得解决循环依赖后再改回local。
+我:
+如果偶一一次这样搞，这样就可以了。应该。
+方法2就是用分层解决。比较适合升级编译器和基础库的场景。
+:
+现在没有配置
+:
+默认的
+:
+我们现在在搞分层
+我:
+你试试direct。
+我:
+分层对于编译器和glibc貌似是正解。
 
 给leo yan发coresight 补丁。DONE. 后来Mathieu和suzhuangluan讨论了下，决定不再在hikey上做，后面在hikey960上做。
 整理connect出差目标: ILP32, cont page hint; coresight and trustzone.
