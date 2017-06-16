@@ -1,4 +1,11 @@
-成长吧，少年
+---
+layout: post
+title: 成长吧，少年
+categories: [Others]
+tags: [people, education]
+---
+
+<img alt="mouny_huang_by_echo.jpg" src="{{site.url}}/public/images/misc/mouny_huang_by_echo.jpg" width="25%" align="left" style="margin: 0px 15px">
 
 欢乐颂热播以后，很多人都用欢乐颂去说一些自己的观点。今天看到文章说樊胜美和安迪观念的区别，樊胜美是定型式思维(fixed mindset)，安迪是成长型的思维(growth mindset)。还读到一篇文章《一诺：所有的相遇，都是久别重逢》（公众号：奴隶社会），感觉别人的生活，工作都很有追求，很精彩。
 
