@@ -18,3 +18,5 @@ tags: [conference, Linux, linuxcon, containercon]
 *   来自我司操作系统实验室的马久跃介绍容器加速器方案： [Make Accelerator Pluggable for Container Engine [C] - Jiuyue Ma, Huawei](https://lc3china2017.sched.com/event/AVB7/make-accelerator-pluggable-for-container-engine-c-jiuyue-ma-huawei)
 
 *   最后加点私货，本人去年在Linuxcon柏林的topic是[Efficient Unit Test and Fuzz Tools for Kernel/Libc Porting - Bamvor Jian Zhang, Huawei/Linaro](https://linuxconcontainerconeurope2016.sched.com/event/7o8q/efficient-unit-test-and-fuzz-tools-for-kernellibc-porting-bamvor-jian-zhang-huaweilinaro)，提供了一个易用可靠的系统调用单元测试框架，这其实是和社区一起推arm64 ILP32的“副产品”。
+
+本文首发于本人公众号[敏达生活](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483669&idx=1&sn=252ecde48d0f2e58e26a2246bffbabdb&chksm=ec6cb739db1b3e2f8c2d5b8bc88f5b47376f7de4a09c1b43440c3c7434d31bf536d7e418c1ec#rd)，欢迎关注。题图是去年柏林Linuxcon的Tshirt。
