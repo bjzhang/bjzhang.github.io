@@ -1,0 +1,19 @@
+---
+layout: post
+title: LC3，我们来了！
+categories: [Linux]
+tags: [conference, Linux, linuxcon, containercon]
+---
+
+一年一轮的linuxcon，明天在北京国际会议中心召开。Linuxcon之前每年都在北美日本欧洲各办一次，这是第一次在北京召开，也是近年来少有的在中国举办的开源盛会。细心的人可能发现会议名称居然不一样。北京的会议名称是LC3(Linuxcon + ContainerCon + Cloudopen)，其余地区是“Open Source Summit”。后者是linux foundation去年年底新推的会议，在LC3基础上增加了Open Community Conference。LC3围绕linux生态展开。我所在的部门专注于Linux内核和容器技术，多年来有持续的技术投入，部门去年在北美，欧洲做了四次演讲。今年亦有四个topic，欢迎关注：
+
+*   容器资深maintainer黄强会介绍跨平台的容器管理工具containerd：[The New Container Engine from the New Containerd [E] - Qiang Huang, Huawei](https://lc3china2017.sched.com/event/AVBR/the-new-container-engine-from-the-new-containerd-e-qiang-huang-huawei)。
+
+*   架构师刘春艳会介绍华为和Intel合作的安全的容器方案:[Secure Containers With EPT Isolation [E] - Chunyan Liu, Huawei & Jixing Gu, Intel](https://lc3china2017.sched.com/event/AV0F/secure-containers-with-ept-isolation-e-chunyan-liu-huawei-jixing-gu-intel)。
+
+*   谢可杨和雷继棠会介绍OCI镜像技术：[Introduction to OCI Image Technologies Serving Container [C] - Keyang Xie & Jitang Lei, Huawei](https://lc3china2017.sched.com/event/AVBU/introduction-to-oci-image-technologies-serving-container-c-keyang-xie-jitang-lei-huawei)
+
+*   内核团队师李彬会介绍arm64上热补丁技术： [Obstacles & Solutions for Livepatch Support on Arm64 Architecture [C] - Bin Li, Huawei](https://lc3china2017.sched.com/event/AVBC/obstacles-solutions-for-livepatch-support-on-arm64-architecture-c-bin-li-huawei)
+
+*   来自我司操作系统实验室的马久跃介绍容器加速器方案： [Make Accelerator Pluggable for Container Engine [C] - Jiuyue Ma, Huawei](https://lc3china2017.sched.com/event/AVB7/make-accelerator-pluggable-for-container-engine-c-jiuyue-ma-huawei)
+
