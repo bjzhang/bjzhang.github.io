@@ -2,5 +2,5 @@ markdown: kramdown
 permalink: /:year/:month/:title/
 url: http://aarch64.me
 author: Bamvor
-pygments: true
+highlighter: rouge
 paginate: 24
