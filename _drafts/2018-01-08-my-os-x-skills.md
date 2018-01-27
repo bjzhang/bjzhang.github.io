@@ -42,3 +42,16 @@ tags: [os x, macbook]
     1. http://iterm2.com/
 8. Spotlight（聚焦）跳过一些文件：<http://osxdaily.com/2011/12/30/exclude-drives-or-folders-from-spotlight-index-mac-os-x/>
     <img alt="qemu" src="{{site.url}}/public/images/os_x_ios/os_x_Spotlight_skip_indexing.png" width="100%" align="center" style="margin: 0px 15px">
+9.  删除google chrome浏览器安装的应用。
+    1.  开始想直接禁用这个应用，在<chrome://extensions/>里面取消选中的“已启动”，这时在<chrome://apps/>应用已经变灰了。但是在在launchpad和spot（聚焦搜索）里面仍然能看到这个应用。
+	2.	参考[[求助] Chrome应用启动器怎么删除？](https://bbs.feng.com/read-htm-tid-7936779.html)，找到了chrome应用所在的路径"/Users/user_name/Applications/Chrome Apps.localized"。
+	3.	从字符串看不出是哪个应用。直接搜索应用的关键字，例如我要删除chrome浏览器安装的chrome RDP，我就搜索rdp，找到了对应的目录：
+		```
+		$ grep rdp * -Ri
+		Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Resources/zh-Hans-CN.lproj/InfoPlist.strings:     <string>Chrome RDP</string>
+		Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Resources/zh-Hans-CN.lproj/InfoPlist.strings:     <string>Chrome RDP</string>
+		Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Info.plist:       <string>Chrome RDP</string>
+		$ rm -rf  Default\ cbkkbcmdlboombapidmoeolnmdacpkch.app
+		```
+	4.	删除以后，在launchpad和spot（聚焦搜索）里面就找不到这个应用了。
+
