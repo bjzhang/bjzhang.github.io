@@ -28,6 +28,6 @@ Date:   Thu Apr 26 20:56:45 2001 +0000
 
             * sysdeps/unix/sysv/linux/ia64/syscalls.list: Add getunwind.
 ```
-Redhat Enterprise Linux 3开始支持LFS，参见[Large File Support (LFS) on RHEL 3]<https://people.redhat.com/berrange/notes/largefile.html>
+Redhat Enterprise Linux 3开始支持LFS，参见[Large File Support (LFS) on RHEL 3](https://people.redhat.com/berrange/notes/largefile.html)
 
 其它参考文档：[维基百科](https://en.wikipedia.org/wiki/Large_file_support)
