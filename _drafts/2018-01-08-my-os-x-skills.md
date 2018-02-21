@@ -6,14 +6,14 @@ tags: [os x, macbook]
 ---
 
 1. 快捷键：
-    1. 锁屏：Ctrl+Shift+Power。
-    2. 显示菜单栏：Ctrl + F2
-    3. 菜单栏搜索：显示菜单栏之后，Command +  ?
-    4.
-    插入日期和时间。一直希望有快捷键在印象笔记里面自动插入日期和时间。一直去找os x提供的功能。后来发现印象笔记自己有这个功能。Command+Shift+D插入日期，Command+Option+Shift+D插入时间。印象笔记会继承系统的日期和时间格斯，可以选择os x中提供的四种日期格式中的一种。os x日期和时间的格式通过系统偏好设置->日期与时间->语言与地区 可以选择12小时或24小时。->高级手动修改为自己需要的格式：例如2017-10-01。
-    5. 应用强制退出：Choose Force Quit from the Apple () menu, or press Command-Option-Esc.
-    6. 应用移动快捷键：spectacle。
-    7. 刷新web页面：Comand+r：http://www.mac-forums.com/switcher-hangout/22686-shortcut-refresh-webpage.html
+    1.  锁屏：Ctrl+Shift+Power。
+    2.  显示菜单栏：Ctrl + F2
+    3.  菜单栏搜索：显示菜单栏之后，Command +  ?
+    4.  插入日期和时间。一直希望有快捷键在印象笔记里面自动插入日期和时间。一直去找os x提供的功能。后来发现印象笔记自己有这个功能。Command+Shift+D插入日期，Command+Option+Shift+D插入时间。印象笔记会继承系统的日期和时间格斯，可以选择os x中提供的四种日期格式中的一种。os x日期和时间的格式通过系统偏好设置->日期与时间->语言与地区 可以选择12小时或24小时。->高级手动修改为自己需要的格式：例如2017-10-01。
+    5.  应用强制退出：Choose Force Quit from the Apple () menu, or press Command-Option-Esc.
+    6.  应用移动快捷键：安装spectacle应用。
+    7.  刷新web页面：Command+r：http://www.mac-forums.com/switcher-hangout/22686-shortcut-refresh-webpage.html
+    8.  插入按键。使用xmind时没有插入按键添加子主题很不舒服。搜了搜发现可用[Tab插入子主题](https://zhidao.baidu.com/question/244066164)
 2. 锁屏后立刻要求输入密码（默认5分钟后）：系统偏好，安全性与隐私。
 3. 命令行用得到代理信息：https://superuser.com/questions/48480/how-can-i-get-mac-os-xs-proxy-information-in-a-bash-script，下面这个没有测试：https://dmorgan.info/posts/mac-network-proxy-terminal/
 4. tmux和剪贴板
