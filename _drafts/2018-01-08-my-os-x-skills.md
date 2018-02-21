@@ -14,6 +14,9 @@ tags: [os x, macbook]
     6.  应用移动快捷键：安装spectacle应用。
     7.  刷新web页面：Command+r：http://www.mac-forums.com/switcher-hangout/22686-shortcut-refresh-webpage.html
     8.  插入按键。使用xmind时没有插入按键添加子主题很不舒服。搜了搜发现可用[Tab插入子主题](https://zhidao.baidu.com/question/244066164)
+    9.  显示隐藏文件
+        1.  从Sierra开始可以用"Command + Shift + ."在Finder中切换显示和隐藏文件: <https://www.zhihu.com/question/24635640>
+        2.  Sierra和之前版本都可以用的方法是[通过defaults命令修改Finder的默认值](https://www.jianshu.com/p/9db349fa43c5)
 2. 锁屏后立刻要求输入密码（默认5分钟后）：系统偏好，安全性与隐私。
 3. 命令行用得到代理信息：https://superuser.com/questions/48480/how-can-i-get-mac-os-xs-proxy-information-in-a-bash-script，下面这个没有测试：https://dmorgan.info/posts/mac-network-proxy-terminal/
 4. tmux和剪贴板
