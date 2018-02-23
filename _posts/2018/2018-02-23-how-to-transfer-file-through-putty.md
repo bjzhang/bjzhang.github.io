@@ -32,3 +32,4 @@ tags: [Linux, ssh]
 1. putty pscp  check md5 checksum on destination machine
 <img alt="putty_pscp__check_md5_checksum_on_destination_machine.png" src="{{site.url}}/public/images/misc/putty_pscp__check_md5_checksum_on_destination_machine.png" width="100%" align="center" style="margin: 0px 15px">
 
+The above pictures and title are inserted by <https://github.com/bjzhang/small_tools_collection/blob/master/python_misc/insert_pic_to_markdown.py>
