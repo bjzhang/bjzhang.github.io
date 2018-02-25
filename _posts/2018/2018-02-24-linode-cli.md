@@ -7,9 +7,9 @@ tags: [Linux, vm, ssh]
 
 准备工作
 --------
-[新的beta api安装和使用说明](https://github.com/linode/linode-cli)，与原来api类似，可以参考[原来的文档](https://www.linode.com/docs/platform/linode-cli/#using-the-cli)
+Linode最新的api是API V4，[新的beta api安装和使用说明](https://github.com/linode/linode-cli)与原来api类似，可以参考[原来的文档](https://www.linode.com/docs/platform/linode-cli/#using-the-cli)
 
-1.	linode测速, 不考虑新加坡和日本容易被墙都地址，[测试数据](https://www.linode.com/speedtest)：
+1.	linode测速, 不考虑新加坡和日本容易被墙都地址，使用[Linode官方测试数据](https://www.linode.com/speedtest)的测试结果：
     1.	US East newark ~10k
     1.	US South atlanta ~20k
     1.	US Central dallas ~10k
@@ -17,7 +17,7 @@ tags: [Linux, vm, ssh]
     1.	Frankfurt ~200k
     1.	London ~200k
 
-2.  得到Personal access token: <https://cloud.linode.com/profile/tokens>，是一个64位的16进制数字。
+2.  从下面链接得到Personal access token: <https://cloud.linode.com/profile/tokens>，是一个64位的16进制数字。
 <img alt="linode__persona_access_token.png" src="{{site.url}}/public/images/misc/linode__persona_access_token.png" width="100%" align="center" style="margin: 0px 15px">
 
 3.  选择自己所需要的默认[服务器配置](https://www.linode.com/pricing)，我一直用Linode 1GB(注意这个类型的名称是nanode不是standard 1)，一个月5$。
@@ -114,11 +114,11 @@ install and configure
 
 创建和管理虚拟机
 ----------------
-1.	在默认区域，使用默认配置，默认发行版建立虚拟机（见上节说明）(linode-cli后面跟type(linode, domain, volume,,,)和cmd，不加type默认是linode)：
+1.	在默认区域，使用默认配置，默认发行版建立虚拟机（见上节说明）(linode-cli后面跟type(linode, domain, volume等)和cmd，不加type默认是linode)：
 	```
 	$ linode-cli create -P <your_root_password> -l linode1
 	```
-2.	创建后可以`linode-cli linode list`看到刚创建的linode1虚拟机，逐步创建，status是running就可以正常使用了，根据网页上显示的时间，我这次创建用了30s；
+2.	创建后可以`linode-cli linode list`看到刚创建的linode1虚拟机逐步创建启动中，status是running就可以正常使用了，根据网页上显示的时间，我这次创建用了30s；
     ```
 	$ linode-cli list
 	Linode
@@ -175,4 +175,6 @@ ssh连接
     Have a lot of fun...
     linux:~ #
     ```
+
+本文原载于本人公众号“敏达生活”欢迎关注。
 
