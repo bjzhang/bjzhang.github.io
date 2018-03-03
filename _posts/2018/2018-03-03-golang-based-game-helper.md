@@ -12,40 +12,48 @@ tags: [Linux, golang, game]
 TODO调整图片。
 DQ6是最早在任天堂的SFC发售，NDS有复刻，后来在Android手机上复刻。这里的DQ6指Android原生的DQ6。希望从进入如下战斗画面开始，到最后战斗结束退出。全部启动完成。
 1. Dragon Quest VI  fighting main menu
-<img alt="Dragon_Quest_VI__fighting_main_menu.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_main_menu.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__fighting_main_menu__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_main_menu__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  fighting action menu
-<img alt="Dragon_Quest_VI__fighting_action_menu.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_action_menu.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__fighting_action_menu__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_action_menu__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  fighting attack menu
-<img alt="Dragon_Quest_VI__fighting_attack_menu.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_attack_menu.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__fighting_attack_menu__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_attack_menu__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting
-<img alt="Dragon_Quest_VI__end_fighting.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting exp
-<img alt="Dragon_Quest_VI__end_fighting_exp.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_exp.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting_exp__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_exp__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting learned
-<img alt="Dragon_Quest_VI__end_fighting_learned.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_learned.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting_learned__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_learned__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting  money
-<img alt="Dragon_Quest_VI__end_fighting__money.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting__money.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting__money__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting__money__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting grow up
-<img alt="Dragon_Quest_VI__end_fighting_grow_up.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_grow_up.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting_grow_up__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_grow_up__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting level up
-<img alt="Dragon_Quest_VI__end_fighting_level_up.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_level_up.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting_level_up__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_level_up__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 1. Dragon Quest VI  end fighting level up  learned
-<img alt="Dragon_Quest_VI__end_fighting_level_up__learned.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_level_up__learned.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__end_fighting_level_up__learned__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__end_fighting_level_up__learned__small.png" width="100%" align="center" style="margin: 0px 15px">
 
 尝试用简单的抓图和模拟点击解决
 ------------------------------
-直观的想法是通过android手机adb截屏，模拟点击。原来在中星微的时候曾经做过类似的事情。
+直观的想法是通过android手机adb截屏，模拟点击。原来做Android内核时曾经做过类似的事情。
+### 基本命令
+抓图并保存到指定目录：`adb shell screencap -p /storage/sdcard0/bamvor/dq6.png`
+模拟点击，当年做Android2.3到时候，我是直接通过input设备驱动的接口模拟触摸屏的点击。现在发现android提供了input命令，可以通过"input tap"实现单击，"input swipe"实现拖拽:
+```
+adb shell input tap x y
+adb shell input swipe x0 y0 x1 y1 interval_ms
+```
+
 ### 准备每个事件的脚本
-1.  散步碰敌人。
+1.  在大地图散步碰敌人。
     游戏的方向键位置是固定的，所以这个步骤比较简单
     1.  抓图
         ```
@@ -53,51 +61,42 @@ DQ6是最早在任天堂的SFC发售，NDS有复刻，后来在Android手机上�
         adb pull /storage/sdcard0/bamvor/dq6.png
         adb shell rm /storage/sdcard0/bamvor/dq6.png
         ```
-    2.  按住一个方向键使主角走一定的距离，保证主角的一定范围内移动即可。
+    2.  比较固定位置是否有主菜单，如果有说明在大地图，否则跳过这一步。
+        ~/works/source/bjzhang.github.io/public/images/games/Dragon_Quest_VI__golden_main_menu.png
+    3.  按住一个方向键使主角走一定的距离，保证主角的一定范围内移动即可。
         ```
         # 向西走1000ms
         adb shell input swipe 900 2020 900 2020 1000
         # 向东走1000ms
         adb shell input swipe 1300 2020 1300 2020 1000
         ```
-1.  战斗画面监测
+2.  战斗画面监测和攻击
     1. 从前面"Dragon Quest VI  fighting main menu"图片可以看到，“战斗”按钮后面有一部分背景，同时背景是变的，不能通过比较图片是否一致判断是否开始战斗。为了可以直接比较图片，需要去掉又背景的部分，如图：
        ~/works/source/bjzhang.github.io/public/images/games/Dragon_Quest_VI__golden_fighting.png
-       ```
-       adb shell input tap 130 1800
-       ```
-2.  攻击
-    1.  类似上面战斗画面监测，如果勇者不参数战斗，点击一次攻击即可。否则需要点击两次。为了简化固定点击两次。
+       发现进入战斗画面后，单击一次进入攻击菜单。
+       `adb shell input tap 130 1800`
+    2.  类似上面战斗画面监测，如果勇者不参数战斗，点击一次攻击即可。否则需要点击两次。为了简化固定点击两次。
 3.  战斗胜利并退出战斗。
-    1.  退出中文字比较多，同时如果会有不同的信息（人名，新技能等等），没法直接监测全部文字。当时想了个办法，监测最下面的小三角。但是有个特殊情况最后一个图片"Dragon Quest VI  end fighting  money"没有这个小三角。因为战斗直接结束，人物升级等多种战斗结束事件要点击的鼠标次数差别比较大。没法通过多点击几次退出。最后想了个办法，如果30次抓图没有发现事件变化。就额外单击一次屏幕中间，这样就能退出战斗了。
+    1.  战斗胜利画面需要单击多次并且文字比较多，同时如果会有不同的信息（人名，新技能等等），比较全部可能的文字比较繁琐。当时想了个办法，监测最下面的光标。但是有个特殊情况最后一个图片"Dragon Quest VI  end fighting  money"没有这个光标。因为战斗直接结束，人物升级等多种战斗结束事件要点击的鼠标次数差别比较大。没法通过多点击几次退出。最后想了个办法，如果30次抓图没有发现事件变化。就额外单击一次屏幕中间，这样就能退出战斗了。
 
 这时候代码是这样的；
 ```go
 //...
-func test_and_start_fighting() bool {
+func test_and_check_fighting_result() bool {
 	var result bool
 
 	src := gocv.IMRead("dq6.png", gocv.IMReadUnchanged)
-	rect := image.Rect(0, 1860, 1440, 2225)
+    rect := image.Rect(0, 2150, 1440, 2200)
 	dst := src.Region(rect)
-	golden := gocv.IMRead("golden_fighting.png", gocv.IMReadUnchanged)
+	golden := gocv.IMRead("golden_check_fighting_result.png", gocv.IMReadUnchanged)
 	dst_bytes := dst.ToBytes()
 	golden_bytes := golden.ToBytes()
 	ret := bytes.Compare(dst_bytes, golden_bytes)
 	if ret != 0 {
 		return false
 	}
-
-	fmt.Println("In fighting senario.")
-	result = click(130, 1800)
-	if !result {
-		return result
-	}
-	result = click(130, 1800)
-	if !result {
-		return result
-	}
-	result = click(130, 1800)
+	fmt.Println("In check fighting result senario.")
+	result = click(750, 1200)
 	if !result {
 		return result
 	}
@@ -147,7 +146,7 @@ func main() {
 ----------
 如果仅仅是为了能帮忙战斗，腾出手来去个洗手间。上面的代码基本够用了。但是有几个局限：
 1.  单张抓图速度慢，造成整个战斗时间比手工操作时间长。看起来Android手机的screen cap可以连续抓图。后续可以提高速度。
-2.  战斗结束时检查的小三角大约是50%概率的闪烁，再加上false_count等30次才会退出战斗，退出战斗时间比较长。
+2.  战斗结束时检查的光标（一个向下的小三角）大约是2Hz概率的闪烁，再加上false_count等30次才会退出战斗，退出战斗时间比较长。
 3.  退出战斗时不同的子事件有些信息是有用的。例如我希望攒钱的时候希望知道每次战斗挣了多少钱。我还希望知道人物学会了什么新技能，后续需要可以使用。
 
 问题2和3其实就是要能识别出屏幕的文字。
