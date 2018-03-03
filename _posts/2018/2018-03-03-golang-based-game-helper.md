@@ -10,8 +10,7 @@ tags: [Linux, golang, game]
 问题描述
 ----
 DQ6是最早在任天堂的SFC发售，NDS有复刻，后来在Android手机上复刻。这里的DQ6指Android原生的DQ6。希望从进入如下战斗画面开始，到最后战斗结束退出。全部启动完成。
-<img alt="Dragon_Quest_VI__fighting_process.gif" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_process.gif" width="100%" align="center" style="margin: 0px 15px">
-        <img alt="Dragon_Quest_VI__fighting_main_menu__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_main_menu__small.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="Dragon_Quest_VI__fighting_process.gif" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_process.gif" width="50%" align="center" style="margin: 0px 15px">
 
 尝试用简单的抓图和模拟点击解决
 ------------------------------
@@ -33,9 +32,9 @@ adb shell input swipe x0 y0 x1 y1 interval_ms
         adb pull /storage/sdcard0/bamvor/dq6.png
         adb shell rm /storage/sdcard0/bamvor/dq6.png
         ```
-        /Users/bamvor/works/source/bjzhang.github.io/public/images/games/Dragon_Quest_VI__map__small.png
+        <img alt="Dragon_Quest_VI__map__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__map__small.png" width="100%" align="center" style="margin: 0px 15px">
     2.  比较固定位置是否有主菜单，如果有说明在大地图，否则跳过这一步。
-        /Users/bamvor/works/source/bjzhang.github.io/public/images/games/Dragon_Quest_VI__golden_main_menu.png
+        <img alt="Dragon_Quest_VI__golden_main_menu.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__golden_main_menu.png" width="100%" align="center" style="margin: 0px 15px">
     3.  按住一个方向键使主角走一定的距离，保证主角的一定范围内移动即可。
         ```
         # 向西走1000ms
@@ -169,7 +168,7 @@ google看到两个文字定位的方法。
 <img alt="Dragon_Quest_VI__cropped__dialog.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__cropped__dialog.png" width="100%" align="center" style="margin: 0px 15px">
 再使用上面说的水平投影得到每行文字
 <img alt="Dragon_Quest_VI__cropped__dialog__projection.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__cropped__dialog__projection.png" width="100%" align="center" style="margin: 0px 15px">
-由于图片保留了部分边框，所以我设置了文字的最小高度等信息过滤不小的边框。实践表明带一点边框会影响识别效果，后文描述了如何去除边框。
+由于图片保留了部分边框，所以我设置了文字的最小高度等信息过滤的边框。实践表明带一点边框会影响识别效果，后文描述了如何去除边框。
 <img alt="Dragon_Quest_VI__cropped__dialog__projection__filtered.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__cropped__dialog__projection__filtered.png" width="100%" align="center" style="margin: 0px 15px">
 
 代码最后会输出每行文字的位置，并截图
@@ -194,12 +193,24 @@ Error in pixScanForForeground: invalid box
 !
 
 ```
+因为已经做了分行，可以用"--psm 7"强制按照一行识别：
+```
+$ tesseract /path/to/img stdout -l chi_sim -psm 12
+Warning. Invalid resolution 0 dpi. Using 70 instead.
+Too few characters. Skipping this page
+OSD: Weak margin (0.00) for 8 blob text block, but using orientation anyway: 0
+Error in boxClipToRectangle: box outside rectangle
+Error in pixScanForForeground: invalid box
+\ 学会了咒文美拉米 !
+
+```
 
 看到矩（Moments）这里被卡住了。没法理解为什么这样就能计算出每条边的中点。
 ```
 cX = int((M["m10"] / M["m00"]))
 cY = int((M["m01"] / M["m00"]))
 ```
+参考：<https://dsp.stackexchange.com/a/8521>, <http://zoi.utia.cas.cz/files/chapter_moments_color1.pdf>
 
 这样计算出中点，可以单击这个中点实现单击这个按钮。
 
@@ -208,6 +219,22 @@ cY = int((M["m01"] / M["m00"]))
 
 TODO: 最终代码运行gif。
 
+附录
+----
+1.	tesseract按照和使用
+	1.	安装 `brew install tesseract`
+	2.	安装中文模型。
+	3.	参数
+		1.	"-l"指定语言"chi_sim"表示简体中文。
+		2.	页面分析方式，我再DQ6里面觉得常用的有3，7，12
+			```
+			Page segmentation modes:
+			  3    Fully automatic page segmentation, but no OSD. (Default)
+			  7    Treat the image as a single text line.
+			 12    Sparse text with OSD.
+			```
+
 相关资源
+--------
 1.  代码：<https://github.com/bjzhang/small_tools_collection/tree/master/Dragon_Quest_VI>
 2.  动画生成脚本： <https://github.com/bjzhang/bjzhang.github.io/blob/master/public/images/games/convert.sh>
