@@ -195,7 +195,7 @@ Error in pixScanForForeground: invalid box
 ```
 因为已经做了分行，可以用"--psm 7"强制按照一行识别：
 ```
-$ tesseract /path/to/img stdout -l chi_sim -psm 12
+$ tesseract /path/to/img stdout -l chi_sim -psm 7
 Warning. Invalid resolution 0 dpi. Using 70 instead.
 Too few characters. Skipping this page
 OSD: Weak margin (0.00) for 8 blob text block, but using orientation anyway: 0
@@ -205,19 +205,22 @@ Error in pixScanForForeground: invalid box
 
 ```
 
-看到矩（Moments）这里被卡住了。没法理解为什么这样就能计算出每条边的中点。
-```
-cX = int((M["m10"] / M["m00"]))
-cY = int((M["m01"] / M["m00"]))
-```
-参考：<https://dsp.stackexchange.com/a/8521>, <http://zoi.utia.cas.cz/files/chapter_moments_color1.pdf>
+其实还没做完
+------------
+1.  确定按钮的中点
+    看到矩（Moments）这里被卡住了。没法理解为什么这样就能计算出每条边的中点。
+    ```
+    cX = int((M["m10"] / M["m00"]))
+    cY = int((M["m01"] / M["m00"]))
+    ```
+    参考：<https://dsp.stackexchange.com/a/8521>, <http://zoi.utia.cas.cz/files/chapter_moments_color1.pdf>
 
-这样计算出中点，可以单击这个中点实现单击这个按钮。
+    这样计算出中点，可以单击这个中点实现单击这个按钮。
 
-由于矩阵边的干扰，有时识别的结果很差，所以需要预先去掉矩阵的边。前面findContours得到轮廓后，可以把轮廓画成背景色。
-更好的办法是直接去掉很长的线。TODO
+2.  由于矩阵边的干扰，有时识别的结果很差，所以需要预先去掉矩阵的边。前面findContours得到轮廓后，可以把轮廓画成背景色。
+更好的办法是直接去掉很长的线。
 
-TODO: 最终代码运行gif。
+3.  有些情况下，战斗的彩色画面过亮，用灰度图像和投影得到了图片，没法得到文字区域。感觉还是先只提取字体的颜色或者直接通过算法识别可能为中文的区域比较好。
 
 附录
 ----
