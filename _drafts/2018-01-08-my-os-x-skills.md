@@ -58,4 +58,6 @@ tags: [os x, macbook]
 		$ rm -rf  Default\ cbkkbcmdlboombapidmoeolnmdacpkch.app
 		```
 	4.	删除以后，在launchpad和spot（聚焦搜索）里面就找不到这个应用了。
+10. alias
+    1.  ls打开颜色: "ls -G"
 
