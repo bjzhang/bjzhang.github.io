@@ -52,73 +52,68 @@ tags: [Linux, golang, game]
        发现进入战斗画面后，单击一次进入攻击菜单。
        `adb shell input tap 130 1800`
     2.  选择勇者的攻击菜单：类似上面战斗画面监测，如果勇者参加战斗，需要再点击两次。为了简化固定点击三次。
-        1. Dragon Quest VI  fighting action menu
-        <img alt="Dragon_Quest_VI__fighting_action_menu__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_action_menu__small.png" width="100%" align="center" style="margin: 0px 15px">
-        1. Dragon Quest VI  fighting attack menu
-        <img alt="Dragon_Quest_VI__fighting_attack_menu__small.png" src="{{site.url}}/public/images/games/Dragon_Quest_VI__fighting_attack_menu__small.png" width="100%" align="center" style="margin: 0px 15px">
-
 3.  战斗胜利并退出战斗。
     战斗胜利画面需要单击多次并且文字比较多，同时如果会有不同的信息（人名，新技能等等），比较全部可能的文字比较繁琐。当时想了个办法，监测最下面的光标。但是有个特殊情况最后一个图片（获取金钱）没有这个光标。因为战斗直接结束，人物升级等多种战斗结束事件要点击的鼠标次数差别比较大。没法通过多点击几次退出。最后想了个办法，如果30次抓图没有发现事件变化。就额外单击一次屏幕中间，这样就能退出战斗了。
 
 这时候代码是这样的；
 ```go
 //...
-func test_and_check_fighting_result() bool {
-	var result bool
 
-	src := gocv.IMRead("dq6.png", gocv.IMReadUnchanged)
+func test_and_check_fighting_result() bool {
+    var result bool
+
+    src := gocv.IMRead("dq6.png", gocv.IMReadUnchanged)
     rect := image.Rect(0, 2150, 1440, 2200)
-	dst := src.Region(rect)
-	golden := gocv.IMRead("golden_check_fighting_result.png", gocv.IMReadUnchanged)
-	dst_bytes := dst.ToBytes()
-	golden_bytes := golden.ToBytes()
-	ret := bytes.Compare(dst_bytes, golden_bytes)
-	if ret != 0 {
-		return false
-	}
-	fmt.Println("In check fighting result senario.")
-	result = click(750, 1200)
-	if !result {
-		return result
-	}
-	return true
+    dst := src.Region(rect)
+    golden := gocv.IMRead("golden_check_fighting_result.png", gocv.IMReadUnchanged)
+    dst_bytes := dst.ToBytes()
+    golden_bytes := golden.ToBytes()
+    ret := bytes.Compare(dst_bytes, golden_bytes)
+    if ret != 0 {
+        return false
+    }
+    fmt.Println("In check fighting result senario.")
+    result = click(750, 1200)
+    if !result {
+        return result
+    }
+    return true
 }
 
 //...
 
 func main() {
-
-	var result bool
-	var false_count int
+    var result bool
+    var false_count int
 
     for {
-		cmd := exec.Command("/usr/local/bin/adb", "shell", "screencap", "-p", "/storage/sdcard0/bamvor/dq6.png")
-		err := cmd.Run()
-		if err != nil {
-			fmt.Println("Command finished with error: %v", err)
-			return
-		}
-		cmd = exec.Command("adb", "pull", "/storage/sdcard0/bamvor/dq6.png")
-		err = cmd.Run()
-		if err != nil {
-			fmt.Println("Command finished with error: %v", err)
-			return
-		}
-		cmd = exec.Command("adb", "shell", "rm", "/storage/sdcard0/bamvor/dq6.png")
-		err = cmd.Run()
-		if err != nil {
-			fmt.Println("Command finished with error: %v", err)
-			return
-		}
-		result = test_and_start_fighting()
-		result = result || test_and_check_fighting_result()
-		result = result || test_and_walking()
-		if !result {
-			false_count += 1
-		}
-		if false_count % 30 == 0 {
-			idle_click()
-		}
+        cmd := exec.Command("/usr/local/bin/adb", "shell", "screencap", "-p", "/storage/sdcard0/bamvor/dq6.png")
+        err := cmd.Run()
+        if err != nil {
+            fmt.Println("Command finished with error: %v", err)
+            return
+        }
+        cmd = exec.Command("adb", "pull", "/storage/sdcard0/bamvor/dq6.png")
+        err = cmd.Run()
+        if err != nil {
+            fmt.Println("Command finished with error: %v", err)
+            return
+        }
+        cmd = exec.Command("adb", "shell", "rm", "/storage/sdcard0/bamvor/dq6.png")
+        err = cmd.Run()
+        if err != nil {
+            fmt.Println("Command finished with error: %v", err)
+            return
+        }
+        result = test_and_start_fighting()
+        result = result || test_and_check_fighting_result()
+        result = result || test_and_walking()
+        if !result {
+            false_count += 1
+        }
+        if false_count % 30 == 0 {
+            idle_click()
+        }
     }
 }
 ```
