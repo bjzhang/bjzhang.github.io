@@ -38,6 +38,7 @@ LevelDB把keyvalue放到一起导致比较大的读放大，原因有两个
             2.	大keyvalue flush memtabe是瓶颈。
     2.	random-load
         1.	随机load有compaction。LevelDB大于12的写放大(WicskeyDB在1-2之间)导致levelDB随机load性能很差。
+        2.  WiscKeyDB的写放大比LevelDB小，是因为WiscKeyDB把value放到value log，所以LSM tree比较小。
 2.	Query
     1.	Wickey比较好的原因
         1.	LSM比较小
