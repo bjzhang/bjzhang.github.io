@@ -55,6 +55,8 @@ mmtable
 db.mt
 `mt        *skl.Skiplist   // Our latest (actively written) in-memory table`
 
+key的最后8个字节是时间戳。
+
 SST
 ---
 levelController，levelHandler是做什么的？
@@ -70,16 +72,17 @@ log format
 
 table format
 ------------
-"Builder is used in building a table."
 key的结构？key和timestamp是怎么放的？ref CompareKeys
-
+level0的数据是按实际排序的。第一个table是最旧的，compaction会从第一个开始做。
+level>=1的数据是有序的。
 
 Implementation
 ==============
 
 transaction
 -----------
-"Badger achieves this by tracking the keys read and at Commit time, ensuring that these read keys weren't concurrently modified by another transaction."
+transaction包括NewTransaction, Set, Commit三个步骤。
+TODO "Badger achieves this by tracking the keys read and at Commit time, ensuring that these read keys weren't concurrently modified by another transaction."
 如果是update transaction会建立一个pendingWrites继续所有需要写入的keyvalue对。真正要写入的数据是writes slice。里面用了go-farm避免大小端问题。
 Commit如果有callback，如果冲突情况下，会立即返回；没有冲突情况下会返回并在后台运行写入。
 每个transaction最后是一个特殊的keyvalue: key是txnKey, commitTs, value是commitTs。暂时没有看生成key和value的具体函数。
@@ -97,12 +100,10 @@ TODO: 不明白doWrites为什么写这么复杂？
 2.  再写入LSM
     1.  写入LSM之前通过ensureRoomForWrite会检查能不能写入。TODO：如果禁止了flush memtable到ssTable。会不会导致数据写不下去？
     2.  写入LSM: writeToLSM
-        3.  writeToLSM最终调用skl的put写入。
+        1.  writeToLSM里面通过前面提到的db.opt.ValueThreshold判断是否写入value到lsm还是写入value log。meta的bitValuePointer表示value写入了value log。
+        2.  writeToLSM最终调用skl的put写入。
 
-writeToLSM里面通过前面提到的db.opt.ValueThreshold判断是否写入value到lsm还是写入value log。meta的bitValuePointer表示value写入了value log。
 b.Ptrs, P.Entry长度一致。TODO 这个做什么用？在request里面。稍后看.
-
-TODO writes, pendingWrites是怎么用的？
 
 Compaction
 ----------
@@ -180,7 +181,7 @@ IteratorOptions.PrefetchValues IteratorOptions.PrefetchSize可以设置prefetch 
 1.  structs.go
 1.  table: 重要。
 1.  test.sh
-1.  transaction.go
+1.  transaction.go: transaction相关函数。
 1.  transaction_test.go
 1.  util.go
 1.  value.go: type valueLog
@@ -200,7 +201,16 @@ compareAndAdd会保证没有在运行的overlap的compaction。
 2.  get: 返回指定key的value
     1.  get数量加1
     2.  从getMemTables返回的memtable查找指定timestamp的key，或者遍历其返回的所有memtable找到max version然后去SSTable找。
-    3.  TODO levelController get
+    3.  levelController.get
+        1.  去每个level查找
+            1.  levelHandler.get
+                1.  使用getTableForKey得到全部的table（对于level0）或包含key的table（对于level>=1），对于每个table
+                    1.  首先用bloom filter看是否key不在这个table里面。
+                    2.  `Iterator.Seek()`
+                        1.  不论搜索方向其实调用的都是`Iterator.seekFrom()`，如果是reverse方式，找到后会调用`Iterator.prev()`找到最小（timestamp？）的key。
+                    3.  返回的时候执行`getTableForKey`返回的释放table引用计数的函数。
+            1.  如果用于查找指定version，找到返回。
+            2.  否则找最大的version。
 3.  updateOffset找到Ptrs里面第一个不是空的valuePointer，并赋给db.vptrs
     为什么要这么做？这是在做什么？
 4.  ensureRoomForWrite()
@@ -227,12 +237,40 @@ compareAndAdd会保证没有在运行的overlap的compaction。
 
 文件level_handler.go
 --------------------
-overlappingTables返回的一个范围[key的最小值小于等于s.tables的key, key的最大值大于s.tables的key)。所以是正好包含重叠的最小范围么？
+1.  overlappingTables返回的一个范围[key的最小值小于等于s.tables的key, key的最大值大于s.tables的key)。所以是正好包含重叠的最小范围么？
+2.  `getTableForKey`会用一个`s.RLock()`得到一个只读的table。TODO 这个对我们按文件复制做snapshot有没有用？复制之后再用binlog同步下。
+    1.  如果是level0，需要返回所有table。由于table是最后的最新，所有返回一个逆序的table。
+    2.  如果不是level0，通过binary search返回实际有key的table。
+    3.  两种情况都会返回一个函数，由于释放table的引用计数。
+3.  `levelHandler.get()`
+
+文件transaction.go
+------------------
+1.  `type Txn struct`
+    1.  read, write保存的是这个transaction要读或写的key的fingerprint(由go farm生成)。新数据会append到后面，所以是有序的。
+    2.  pendingWrites: key和entry指针组成的map。因为用key做key，所以新的write会覆盖前面的write。
+1.  SetEntry
+    1.  所有set keyvalue的函数都会调用SetEntry。
+    2.  把entry的key通过go farm编码生成FingerPrint，保存到transaction的writes。
+    3.  把整个entry保存到pendingWrites。
+2.  Get
+    1.  如果存在update transaction，先看pendingWrites里面有没有。
+        1.  如果有
+            1.  首先看是否是要删除的或已经过期的。
+            1.  如果是有效的数据从这里返回即可不用读memtable或sstable了。
+    2.  否则调用db.go的get。该函数最回去level controller读取。
+3.  Delele
+    1.  代码和SetEntry差不多。区别是
+        1.  meta设置bitDelete，表示删除。
+        2.  不需要像SetEntry一样检查value的大小。
+    2.  TODO 是否可以去发补丁合并Delete和SetEntry？
+4.  TODO Commit和Discard涉及到的runCallbacks要看下。
+
 
 目录skl
 -------
 ### skl/skl.go
-Put逻辑没太理解。newnode里面和setvalue都调用了同样的encodeValue，不是重复了么？
+Put逻辑没太理解。newnode里面和setvalue都调用了同样的encodeValue，TODO 具体什么时候写入prev什么时候newnode有用，还需要看看。
 
 ### skl/arena.go
 1.  type Arena的buf保存key。
@@ -241,13 +279,34 @@ Put逻辑没太理解。newnode里面和setvalue都调用了同样的encodeValue
 
 目录table
 ---------
+### table/iterator.go
+1.  `type table struct`
+    1.  TODO blockIndex是做什么的？
+1.  Iterator.seekFrom()
+    1.  开始不理解这里为什么用">":
+		```go
+		idx := sort.Search(len(itr.t.blockIndex), func(idx int) bool {
+			ko := itr.t.blockIndex[idx]
+			return y.CompareKeys(ko.key, key) > 0
+		}
+		```
+        现在的理解是因为key是有序的，需要找到带时间戳的key的后一个key。这样key一定在小于等于这个区域里面。
+        感觉这是为了考虑用户没有传时间戳的情况，这种情况下只能找到key没法比较时间戳，所以就有多个key都是相等的。所以只能通过找大于。
+    2.  由于上面的分析，找到block index之后有两种情况
+        1.  如果已经是第一个block，从这个block找到key。
+        2.  如果不是第一个block，key有可能在前一个block也可能在返回的index的block。所以需要从前一个block开始查找。
+
+1.	Iterator.seekHelper: 读文件并table数据并调用blockIterator.Seek()做具体的查找。
+1.  blockIterator.Seek()
+    1.  根据key和时间戳查找。相等表示找到了和预期时间戳一样的key，大于表示找到了时间戳比预期新的key。
+
 ### table/table.go
 1.  OpenTable
     1.  根据不同的loadingmode(mmap或load to ram)加载文件。
     2.  返回的`*Table`包含两个iterator。简单看了table/iterator.go的代码：一个是从大到小，一个是从小到大的迭代器？
 
 ### table/builder.go
-1.  Builder
+1.  Builder: "Builder is used in building a table."
     1.  keyBuf保存key
     2.  buf保存header, diffKey, value.
 
@@ -258,4 +317,7 @@ key一样的时候比较timestamp。比较方法是bytes.Compare，该函数返�
 
 ### y/y.go
 KeyWithTs用的大端保存。TODO: 为什么是大端？原来冬卯好像说过。大端是先取到高位，这样好像判断大小有好处？
+
+### y/metrics.go
+TODO `NumLSMBloomHits *expvar.Map`是做什么的？
 
