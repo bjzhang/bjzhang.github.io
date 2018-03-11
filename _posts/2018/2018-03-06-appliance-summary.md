@@ -22,8 +22,9 @@ redhat kickstart可以参考[CHAPTER 31. KICKSTART INSTALLATIONS](https://access
 可以在哪些平台上build
 ---------------------
 可以看到terraform支持的平台是最多的，如果有在windows或os x上build image的需求，只有选择terraform。
+
 supported host | kiwi | virt-builder |  terraform
--------------------------------------------------
+---------------|------|--------------|-----------
 sle            | Yes  |    Yes       |     Yes
 opensuse       | Yes  |    Yes       |     Yes
 rhel           | No   |    Yes       |     Yes
@@ -41,8 +42,9 @@ windows        | No   |    No        |     Yes
 build的image可以用于哪些平台
 ----------------------------
 这个回合kiwi胜出，如果希望build的image在物理机和虚拟机都可以部署，可以选择kiwi。这尤其适合开发或简单测试在虚拟机中测试，产品测试和实际部署需要在物理机的情况。
+
 supported target | kiwi | virt-builder |  terraform
-----------------------------------------------------
+-----------------|------|--------------|------------
 Physical machine |  Yes |   No         |     No
 Virtual machine  |  Yes |   Yes        |     Yes
 Docker           |  Yes |   Yes        |     Yes
@@ -52,8 +54,9 @@ Docker           |  Yes |   Yes        |     Yes
 支持哪些hypervisor
 ------------------
 terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。由于支持virtualbox，所以如果希望在os x运行制作的镜像，只能选择terraform/vagrant这个组合。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>。
+
 supported hypervior | kiwi | virt-builder |  vagrant
-----------------------------------------------------
+--------------------|------|--------------|----------
 KVM                 |  Yes |   Yes        |     Yes
 Xen                 |  Yes |   Yes        |     Yes
 VirtualBox          |  Yes |   No         |     No
@@ -61,8 +64,9 @@ VirtualBox          |  Yes |   No         |     No
 支持哪些发行版
 --------------
 可以看出对于常用发行版kiwi支持的最全。
+
 supported Distribution | kiwi | virt-builder |  vagrant box
-----------------------------------------------------
+---------------|------|--------------|--------------
 sle            | Yes  |    No        |     Partial\*
 opensuse       | Yes  |    Partial\* |     Yes
 rhel           | Yes  |    Yes       |     Yes
