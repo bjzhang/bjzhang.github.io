@@ -124,6 +124,7 @@ db.PurgeXXX可以主动过删除旧版本。
 GC
 --
 discardRatio 默认值是0.5，这样写放大是2.
+RunValueLogGC是入口，实际干活的是`valueLog.doRunGC`：一路看下去，看起来是vlog.rewrite函数是写了新的。
 
 Crash Consistency
 -----------------
@@ -160,7 +161,7 @@ IteratorOptions.PrefetchValues IteratorOptions.PrefetchSize可以设置prefetch 
     1.  backup.go: 迭代keyvalue并通过protobuf写入文件。
     1.  restore.go: restore.
     1.  root.go: 最顶层的命令实现。
-1.  compaction.go: 定义了compactStatus，包含在levelControll中。看起来定义了compaction所需的基本函数。主compaction流程在level.go。
+1.  compaction.go: 定义了compactStatus，包含在levelControll中。看起来定义了compaction所需的基本函数（例如compareAndAdd, delete）。主compaction流程在level.go。
 1.  contrib: 看起来和主流程无关，先跳过。
 1.  db.go: api入口。
 1.  db_test.go
@@ -190,7 +191,8 @@ IteratorOptions.PrefetchValues IteratorOptions.PrefetchSize可以设置prefetch 
 
 文件compaction.go
 -----------------
-compareAndAdd会保证没有在运行的overlap的compaction。
+1.  compareAndAdd会保证没有和在运行的overlap的compaction。并把要做compaction的range加入到compactStatus里面。
+2.  delete: "Remove the ranges from compaction status."。目前不清楚这个和compaction后删除文件是什么关系。
 
 文件db.go
 ---------
@@ -228,12 +230,15 @@ compareAndAdd会保证没有在运行的overlap的compaction。
         5.  调用OpenTable把上面Builder数据写入table。
         6.  stall compaction把table加入。
         7.  删除immutable中的第一个。第一个就是我们刚刚flush到sstable的mmtable.
+6.  `RunValueLogGC`: 用户触发value log gc的入口。
 
 文件levels.go
 -------------
 1.  addLevel0Table
     1.  会拿s.cstatus.RLock()，这个RLock会阻塞Compaction。TODO我们snapshot的时候是否也可以用这个RLock？
     2.  unstall的代码我们也可以参考。TODO细看。
+2.  `revertToManifest`: 删除manifest里面没有的文件。
+    调用关系：DB.Open -> newLevelsController -> revertToManifest
 
 文件level_handler.go
 --------------------
@@ -265,7 +270,6 @@ compareAndAdd会保证没有在运行的overlap的compaction。
         2.  不需要像SetEntry一样检查value的大小。
     2.  TODO 是否可以去发补丁合并Delete和SetEntry？
 4.  TODO Commit和Discard涉及到的runCallbacks要看下。
-
 
 目录skl
 -------
