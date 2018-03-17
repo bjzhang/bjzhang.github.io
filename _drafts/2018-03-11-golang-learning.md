@@ -1,4 +1,20 @@
 
+iota
+----
+修改badgerIO代码涉及到golang的枚举类型。可以参考<https://github.com/golang/go/wiki/Iota>, effective go里面的下面描述没看懂"The use here of Sprintf to implement ByteSize's String method is safe (avoids recurring indefinitely) not because of a conversion but because it calls Sprintf with %f, which is not a string format: Sprintf will only call the String method when it wants a string, and %f wants a floating-point value."
+<https://github.com/dgraph-io/badger/commit/14fa9de680ed09b7ce63867edc7e01ee6737c2f1>
+
+从iota写一个就可以，后面可以省略。似乎还别的注意是想，再看下effictive go
+```
+const (
+	deleteItem = iota
+	setItem
+)
+
+```
+
+test
+----
 [How to Write Go Code](https://golang.org/doc/code.html)
 
 ```
