@@ -222,7 +222,8 @@ IteratorOptions.PrefetchValues IteratorOptions.PrefetchSize可以设置prefetch 
         2.  分配新的mutable memtable。新分配的memtable会插入到immutable memtable最后。这个和之前注释中说删除第一个immutable memtable是安全的对应。TODO 之前是哪里说的来的?
 5.  `flushMemtable`
     1.  在Open里面启动的goroutine。
-    2.  对于每一个flushChan
+    2.  flushChan由ensureRoomForWrite触发。
+    3.  对于每一个flushChan
         1.  mt.nil和mt.Empty() 的区别？mt.nil是空的。mt.Empty()是memtable的skiplist是空的。
         2.  如果memtable skiplist分空，把带时间戳的badger head作为key，当前offset作为value写入memtable.
         3.  先把ft.mt写入以sync模式打开的文件。这时这个文件还不是table。
