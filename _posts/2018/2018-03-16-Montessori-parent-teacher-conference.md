@@ -81,3 +81,5 @@ tags: [Life, Montessori, Children]
 
 大家在[TED视频how to raise successful kids without over parenting(如何培养出成功的孩子— 不要过度的呵护)](https://mp.weixin.qq.com/s/bMMIncwlw1tnMjRq4fo0dQ)中结束了本次家长会。
 
+本文首发本人[公众号敏达生活](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483711&idx=1&sn=3e20719546efd189d971f3d0550c3e08&chksm=ec6cb713db1b3e0592f911a7cc1e640bf87425679be4b623658e0f1329e7e51577b1964eed9f#rd)，欢迎关注。
+
