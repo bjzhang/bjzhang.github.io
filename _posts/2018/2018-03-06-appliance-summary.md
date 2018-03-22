@@ -13,7 +13,7 @@ tags: [Linux, kiwi]
 Linux发行版一键安装方式有很多种，可以分为预先安装和配置文件一键安装两种方式，如下图所示：
 <img alt="applicace_comparision.png" src="{{site.url}}/public/images/appliance/applicace_comparision.png" width="100%" align="center" style="margin: 0px 15px">
 
-预先安装的方式通常通过一个配置文件，配置bootloader，安装源（光盘，网络repo均可）和要安装哪些包，build image需要从安装源下载软件并安装到磁盘镜像中，使用时把磁盘镜像通过pxe，光盘启动，或直接写入硬盘的方式写入目标物理机，虚拟机或云中。这类工具通常支持多种发行版。相比之下，后一种方法和具体发行版是绑定的，通常的用法是如果有几台机器需要选择相同的安装选项，管理员先手工安装第一台机器，安装后目标机器会带有autoyst或kickstart的配置文件（默认在root目录下），管理员调整这个个配置文件后，使用这个配置文件安装其余几台机器。
+预先安装的方式通常通过一个配置文件，配置bootloader，安装源（光盘，网络repo均可）和要安装哪些包，build image需要从安装源下载软件并安装到磁盘镜像中，使用时把磁盘镜像通过pxe，光盘启动，或直接写入硬盘的方式写入目标物理机，虚拟机或云中。这类工具通常支持多种发行版。相比之下，后一种方法和具体发行版是绑定的，通常的用法是如果有几台机器需要选择相同的安装选项，管理员先手工安装第一台机器，安装后目标机器会带有autoyast或kickstart的配置文件（默认在root目录下: suse/opensuse "/root/\*.xml", redhat: "/root/anaconda-ks.cfg"），管理员调整这个个配置文件后，使用这个配置文件安装其余几台机器。
 suse的autoyast使用方法可以参考[SUSE Linux Enterprise Server 11 SP4 AutoYaST](https://www.suse.com/documentation/sles11/singlehtml/book_autoyast/book_autoyast.html)，[openSUSE Leap 42.3 AutoYaST](https://doc.opensuse.org/projects/autoyast/)。
 redhat kickstart可以参考[CHAPTER 31. KICKSTART INSTALLATIONS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/ch-kickstart2)
 
@@ -53,7 +53,7 @@ Docker           |  Yes |   Yes        |     Yes
 
 支持哪些hypervisor
 ------------------
-terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。由于支持virtualbox，所以如果希望在os x运行制作的镜像，只能选择terraform/vagrant这个组合。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>。
+terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。由于支持virtualbox，所以如果希望在os x运行制作的镜像，只能选择terraform/vagrant这个组合。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>，所以道理上讲kiwi的镜像也可以用在os x上，但是os x kvm毕竟不是默认可用的，暂时不考虑。
 
 supported hypervior | kiwi | virt-builder |  vagrant
 --------------------|------|--------------|----------
@@ -80,10 +80,9 @@ freebsd        | No   |    Yes       |     Yes
 scientificlinux| Should\*| Partial\* |     Yes
 
 注：
-1.  virt-builder支持的具体发行版版本可以通过`virt-builder --list`查看。
-2.  virt-builder不支持opensuse leap最新的42.3。virt-builder不支持scientificlinux 7。
-3.  terraform构建的镜像可以通过vagrant启动。vagrant box目前没有sle最新的12 sp4。
-4.  scientificlinux使用yum作为包管理器，kiwi支持yum这种包管理器，道理上可以支持scientificlinux
+1.  virt-builder支持的具体发行版版本可以通过`virt-builder --list`查看；virt-builder不支持opensuse leap最新的42.3。virt-builder不支持scientificlinux 7。
+2.  terraform构建的镜像可以通过vagrant启动。vagrant box目前没有sle最新的12 sp4。
+3.  scientificlinux使用yum作为包管理器，kiwi支持yum这种包管理器，道理上可以支持scientificlinux
 
 注：
 1.  sle: SUSE Liux Enterprise
@@ -91,6 +90,7 @@ scientificlinux| Should\*| Partial\* |     Yes
 
 实操：下载并使用kiwi的镜像
 --------------------------
+可以从[suse studio express](https://studioexpress.opensuse.org/)选择模版并下载。
 
 实操：下载并使用vagrant镜像
 --------------------------
