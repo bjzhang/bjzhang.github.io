@@ -43,19 +43,62 @@ server来说，操作系统怎么感知到这个拓扑结构并合理利用很�
 [ACPI6.2](http://uefi.org/sites/default/files/resources/ACPI_6_2.pdf)
 看能不能添加PPTT的描述。
 
-hikey970
---------
-让我们暂时回到CE板子。在AI火的一塌糊涂的今天，端侧（例如手机，各种消费电子产品）中如何使用AI呢？由于端侧性能有限，对于功耗敏感，需要一个折中的设计。作为华为旗舰芯片的麒麟970，这次在hikey970单板和大家见面。这颗芯片据称继承了NPU。
+96boards.ai
+-----------
+让我们暂时回到CE板子。在AI火的一塌糊涂的今天，端侧（例如手机，各种消费电子产品端侧，要权衡性能和功耗）中如何使用AI呢？本次connect宣布了96boards.ai，网站上有三个板子分别是Ultra96, Rock960和Hikey970（DragonBoard 820c也计划加入）：
 
-由于hikey是google aosp官方支持的，所以很多开发者使用hikey开发，例如[HKG18-119 – Overview of integrating OP-TEE into HiKey620 AOSP](http://connect.linaro.org/resource/hkg18/hkg18-119/)，以hikey为例，介绍如何在android中使用op tee，victor举例说明如何添加自己的CA和TA。
+Board    |  Ultra96 | Rock960    |  Hikey970    |   DragonBoard 820c
+---------|----------|------------|--------------|-------------------
+SIZE     |  CE      |  CE        |  CE extended |     CE extended
+SOC      |Xilinx Zynq UltraScale+ MPSoC| Rockchip RK3399 | Hisilicon Kirin970 | Qualcomm Snapdragon 820E
+CPU      |  CA9     | 2xCA72@1.8GHz + 4xCA53@1.4GHz|4xCA73@2.36GHz + 4xCA53@1.8GHz| 4xKryo CPU@2.35GHz
+Memory   |  2G      |  2G/4G     |     6G       |     3G
+GPU      |  None    |Mali T860MP4| Mali G72MP12 | Adreno 530
+AI       |  FPGA    | NPU        |    NPU       |        ?
 
-rockchip960 pro
+注：
+1.  CE Extended尺寸是100 x 85mm
+2.  [Ultra96](https://www.96boards.ai/documentation/ultra96/)
+3.  [rock960](https://www.96rocks.com/)
+4.  [Kirin 970 - HiSilicon](https://en.wikichip.org/wiki/hisilicon/kirin/970)
+5.  [DragonBoard 820c](https://www.96boards.org/product/dragonboard820c/)
+
+demo [Tiny YOLO](https://pjreddie.com/darknet/yolo/)
+</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_hkg18__Ultra96_AI__tiny_YOLO.png>
+
+</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/hisilicon_hikey970.jpg>
+
+上面的Hikey970是Hikey家族的第三代，前两代分别是Hikey和Hikey960。Hikey不仅是最早的[96board](https://www.96boards.org/)，更重要的是Hikey系列一直是google aosp(Android Open Source Project)官方开发平台，所以很多开发者使用Hikey开发，例如这次connect中，以Hikey为例，介绍如何在android中使用op tee，并举例说明如何添加自己的CA和TA：[HKG18-119 – Overview of integrating OP-TEE into HiKey620 AOSP](http://connect.linaro.org/resource/hkg18/hkg18-119/)。
+
+作为华为旗舰芯片，麒麟(Kirin)970不仅用在去年10月发货的Mate 10，去年11月发货的荣耀v10，也会用于下周（2018年3月27日）发布的p20。深度学习有两个阶段训练（training），推理（inference），hikey970的NPU用于推理阶段。Kirin970 NPU具体资料很少，HiAI也暂时需要申请才能查看，笔者搜集了Kirin970 NPU部分资料：
+名称        | 能力                    | 来源
+------------|-------------------------|-------
+晶体管数量  | 150万                   | 注1，不到kiri970全部晶体管的3%
+Performance | 1.92 TFLOPs (HP 16-bit) | 注1
+支持的框架  | TensorFlow, Caffe       | 注2
+功耗        | CPU的1/50               | 注3
+
+注：
+1.  [What is the Kirin 970’s NPU? – Gary explains](https://www.androidauthority.com/what-is-the-kirin-970s-npu-gary-explains-824423/)
+2.  [HiAI移动计算平台业务介绍](http://developer.huawei.com/consumer/cn/devservice/doc/31401)
+3.  [How Fast Is The Huawei Kirin 970 NPU?](https://www.techarp.com/articles/huawei-kirin-970-npu-speed/)
+    ```
+    The Kirin 970 NPU offers 25X the AI processing performance of the CPU, at half the size. More importantly, it only consumers 1/50 the power of the CPU. It allows the Kirin 970 to recognise about 2005 images per minute, or about 33 per second. That is more than twice as fast as the new Apple iPhone 8 Plus, and 21X faster than the Samsung Galaxy S8.
+    ```
+
+其它参考资料
+[NVIDIA趣味解读：深度学习训练和推理有何不同？](https://www.jiqizhixin.com/articles/2016-08-26-3)
+[开发者福利来袭！华为发布人工智能开发平台HiKey 970，助力端侧AI应用创新](https://mp.weixin.qq.com/s/8-o8h4Z1-mj5iE3aFUuyFg)
 
 arm64 workstation
 -----------------
 最早的EE板子是[Cello](http://www.96boards.org/product/cello/)和[Husky Board](http://www.96boards.org/product/huskyboard/)链接已失效。
-TODO 找照片。
+</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_bkk16__lemaker_cello__96boards_EE__AMD__smal.jpg>
 
+
+一年以前的布达佩斯connect，socionext第一次展示了24核以及1536核的集群：
+</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__small.jpg>
+</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__hadoop__smal.jpg>
 [Edge Server SynQuacer E-Series 24-Core Arm PC is Now Available for $1,250 with 4GB RAM, 1TB HDD, Geforce GT 710 Video Card](https://www.cnx-software.com/2018/03/21/edge-server-synquacer-e-series-24-core-arm-pc-is-now-available-for-1250-with-4gb-ram-1tb-hdd-geforce-gt-710-video-card/)
 
 其实不光是socionext，老牌网络芯片公司cavium，现在也全面转向arm架构，也有workstation和server产品，与这次Linaro connect同时在OCP发布了thunderXStation(thunderX2)
@@ -118,6 +161,7 @@ jlink我没看过。openocd其实只是个通道，下面是个usb转sw debug协
 2.  华为的keynote[HKG18-400K1 – Keynote: Kenneth Lee – “To define the rule — why you should go open source”](https://www.youtube.com/watch?v=HdcC6IzLUtc)
 3.  很多人尝试FPGA用于加速，这里是xilinx的分享： [HKG18-300K2 – Keynote: Tomas Evensen – All Programmable SoCs? – Platforms to enable the future of Embedded Machine Learning](https://www.youtube.com/watch?v=hhXGnCX06ao)
 4.  arm公司为了推动arm server所做的努力： [HKG18-317 – Arm Server Ready Program](http://connect.linaro.org/resource/hkg18/hkg18-317/)
+5.  George的keynote的最后还介绍了Linaro在automotive的计划，感兴趣的小伙伴可以从[George Grey: Opening Keynote - HKG18-100K1](https://www.youtube.com/watch?v=NXpC9Ln2-bA)的1小时13分26秒开始看。
 5.  TODO [HKG18-206 – CSI-based storage orchestration system on AArch64](http://connect.linaro.org/resource/hkg18/hkg18-206/)
 
 链接
