@@ -7,17 +7,48 @@ tags: [Linux, arm]
 
 上次参加linaro connect还是在布达佩斯，当时还分享了arm64上一个页表优化的工作，目前这个工作仍然由Linaro kernel working group的其它小伙伴继续在做（之前公众号链接见文末）。
 
-Linaro作为推进arm生态的组织，在从efi到kernel到cloud，在众多开源项目中都有不少贡献。从最新release的[4.15内核统计](https://lwn.net/Articles/742672/)看，不仅Linaro自己贡献了3.4%的补丁名列公司排名第五，Linaro的三个core member中有两个都进入了前15，arm和海思（华为芯片部门）分别贡献了2.2%和1.8%，三者加一起是7.4%，已经超过了红帽的6.7%贡献。
+Linaro作为推进arm生态的组织，在从efi到kernel到cloud，在众多开源项目中都有不少贡献。从最新release的[4.15内核统计](https://lwn.net/Articles/742672/)看，不仅Linaro自己贡献了3.4%的补丁名列公司排名第五，Linaro的三个core member中有两个都进入了前15，arm和海思（华为芯片部门）分别贡献了2.2%和1.8%，三者加一起是7.4%，已经超过了第三名红帽的6.7%贡献。
 
-arm64越来越丰富的硬件
----------------------
-从1983年第一个Acorn RISC Machine算起。作为产品的arm cpu已经有2018-1983=35年的历史了。直到前几年arm几乎都用于嵌入式领域。随着xxxx年linaro的成立，很多公司一起改进arm的生态。最近几年arm产品越来越多样。不仅仅是传统的嵌入式市场，在服务器和桌面电脑（为啥笔者不说是pc，下文分解）也有不少值得评估的产品。要想真正有产品，就需要有很方便可以用于开发的设备。
+arm64的生态越来越好
+-------------------
+从1983年第一个Acorn RISC Machine算起。作为产品的arm CPU/SOC已经有35年的历史了。直到前几年arm几乎都用于嵌入式领域。随着xxxx年linaro的成立，很多公司一起改进arm的生态。有些基础规范，软件，单独某个公司难以推动；同时为了便于开发，需要符合统一规范的硬件，经过几年的努力Linaro建立的96boards规范已经有四类，几十种开发版，可以用于开发和产品原型。得益于这些努力，最近几年arm产品越来越多样，不仅仅是传统的嵌入式市场，在服务器和桌面电脑（为啥笔者不说是pc，下文分解）也有不少值得评估的产品。
 
-这方面linaro定位在消费电子的96boards CE板子，很适合。信用卡的大小，有arm，arm64，但是统一接口和软件。用起来非常方便。CE板子小巧使用方便，由于毕竟是给移动端设计的，强调低功耗，性能和桌面电脑略有差距，所以linaro一直积极在做EE板子，这次linaro connect重磅介绍来自日本公司socionext。
+Linaro定位在消费电子的96boards CE板子，只有信用卡的大小，有arm，arm64多种SOC可供选择，由于统一接口和软件，日常开发，替换不同单板都很方便。CE板子小巧使用方便，由于毕竟是给移动端设计的，强调低功耗，性能和桌面电脑略有差距，所以Linaro一直积极在做EE板子，这次linaro connect重磅介绍来自日本公司socionext的arm workstation，很多新闻称其为PC。
+
+作为嵌入式产品和通用产品，会有一些差别。比如嵌入式产品，系统软件与硬件绑定，使用devicetree区分不同硬件就很方便。但是对于通用产品，用户会安装不同的操作系统，无法接受需要为不同芯片准备不同的Linux kernel。在x86领域，得益于ACPI，EFI，软硬件可以很好的解耦。Linaro的LEG(Linaro Enterprise Group)推动了ACPI for arm64的工作，这其中来自华为的技术专家郭寒军是规范和Kernel代码的最主要的推动者。有了EFI和ACPI，就可以像x86一样，通过光盘，网络等方式安装操作系统。
+与此同时Linaro推动建立Server Base System Architecture (SBSA) and Server Base Boot Requirements (SBBR)，大家按照共同的标准设计和制造arm服务器。
+
+这次更是有为微软Azure的分享：
+HKG18-300K1 – Keynote: Leendert van Doorn “Microsoft Azure: Operating at Hyper-Scale”
+[Microsoft Azure on Arm Servers Keynote at Linaro Connect 2018](https://www.youtube.com/watch?v=uF1B5FfFLSA)
+Leendert van Doorn（杜麟达）
+
+演讲的开始，Leendert首先介绍了微软之前5代数据中心的特点，可以看到PUE在逐步下降。
+自[维基百科](https://en.wikipedia.org/wiki/Power_usage_effectiveness)
+```
+Power usage effectiveness (PUE) is a ratio of how efficiently a computer data center uses energy; specifically, how much energy is used by the computing equipment (in contrast to cooling and other overhead).  PUE te amo is the ratio of total amount of energy used by a computer data center facility to the energy delivered to computing equipment.
+```
+
+微软有选择arm64 server最重要的原因貌似是多供应商，但是Leendert同时强调Intel还是Microsoft最大的合作伙伴，双方合作的很好。
+Leendert提到arm64 server有几个机会点，提高数据中心容量，高性能存储，数据库服务，PAAS服务。
+<linaro_hkg18__microsoft__arm64_opportunities__small.png>
+
+微软只使用高性能的arm cpu，不会使用cortex-A53。因为对单核性能要求高。
+
+Leendert最后总结道，对于Azure来说arm64 server的Windows 已经成熟了。虽然目软只是把arm server作为内部使用，也确实还有商业上其它因素的考量，但是微软也明确承认下一步就是把arm server放到Azure里面。
+
+演讲中，同时提到由于arm64 server普遍cpu核数比较多，对于动辄200多核的arm64
+server来说，操作系统怎么感知到这个拓扑结构并合理利用很重要。微软注意到社区正在合入ACPI PPTT补丁，这对于arm64和x86都很有帮助。
+[Support PPTT for ARM64 v7](https://lwn.net/Articles/748300/)
+[ACPI6.2](http://uefi.org/sites/default/files/resources/ACPI_6_2.pdf)
+看能不能添加PPTT的描述。
 
 hikey970
 --------
-AI.
+让我们暂时回到CE板子。在AI火的一塌糊涂的今天，端侧（例如手机，各种消费电子产品）中如何使用AI呢？由于端侧性能有限，对于功耗敏感，需要一个折中的设计。作为华为旗舰芯片的麒麟970，这次在hikey970单板和大家见面。这颗芯片据称继承了NPU。
+
+由于hikey是google aosp官方支持的，所以很多开发者使用hikey开发，例如[HKG18-119 – Overview of integrating OP-TEE into HiKey620 AOSP](http://connect.linaro.org/resource/hkg18/hkg18-119/)，以hikey为例，介绍如何在android中使用op tee，victor举例说明如何添加自己的CA和TA。
+
 rockchip960 pro
 
 arm64 workstation
@@ -60,7 +91,7 @@ price               | 580$ | 1250$ | 1349英镑 | 无
 1.  ThunderX2 CN99X有不同的配置，公开资料较少。这里列出的似乎是最低的配置。
 2.  ThunderX2支持OCP: PCIe: 1x OCP PCIe Gen 3.0 x16 slot per CPU
 3.  大家不约而同用了nv家的显卡。早期arm64 pcie设计和规范有一点点差异，当时对于接不同厂商的pcie有一点点困难。不知道目前情况如何。
-4.  SynQuacer™ 96Boards Box: 30 Watts at idle, and during the person detection demo at Linaro Connect with Gyrfalcon mPCIe it went up to 40 Watts.
+4.  SynQuacer™ 96Boards Box功耗，SOC功耗5W TDP；系统功耗：30 Watts at idle, and during the person detection demo at Linaro Connect with Gyrfalcon mPCIe it went up to 40 Watts.
 5.  SynQuacer™ 96Boards Box是符合Linaro 96boards EE规范的板子和上一个胎死腹中的EE板子相比改进了很多，总体性能提升（虽然单核性能差了），有了显卡。
 
 linaro的文档。
@@ -70,7 +101,6 @@ linaro的文档。
 
 arm64调测
 ---------
-
 ### openocd
 [HKG18-403 – Introducing OpenOCD: Status of OpenOCD on AArch64](http://connect.linaro.org/resource/hkg18/hkg18-403/)
 2010年的时候openocd用的是ahb-ap读取的系统信息，没有走apb-ap，所以有cache问题。
@@ -82,13 +112,13 @@ jlink我没看过。openocd其实只是个通道，下面是个usb转sw debug协
 
 配置文件："openocd-code/tcl/target/hi6220.cfg"
 
-
 其它有意思的东西
 ----------------
-几乎都是（除了五个二进制）go重写的类似busybox的文件系统。
-<https://github.com/u-root/u-root>
-<http://u-root.tk/>
-
+1.  几乎都是（除了五个二进制）go重写的类似busybox的文件系统。 <https://github.com/u-root/u-root> <http://u-root.tk/>
+2.  华为的keynote[HKG18-400K1 – Keynote: Kenneth Lee – “To define the rule — why you should go open source”](https://www.youtube.com/watch?v=HdcC6IzLUtc)
+3.  很多人尝试FPGA用于加速，这里是xilinx的分享： [HKG18-300K2 – Keynote: Tomas Evensen – All Programmable SoCs? – Platforms to enable the future of Embedded Machine Learning](https://www.youtube.com/watch?v=hhXGnCX06ao)
+4.  arm公司为了推动arm server所做的努力： [HKG18-317 – Arm Server Ready Program](http://connect.linaro.org/resource/hkg18/hkg18-317/)
+5.  TODO [HKG18-206 – CSI-based storage orchestration system on AArch64](http://connect.linaro.org/resource/hkg18/hkg18-206/)
 
 链接
 ----
