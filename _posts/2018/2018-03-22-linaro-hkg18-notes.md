@@ -7,7 +7,7 @@ tags: [Linux, arm]
 
 Linaro作为推进arm生态的组织，在从uefi到kernel到cloud，在众多开源项目中都有不少贡献。从最新release的linux [4.15内核统计](https://lwn.net/Articles/742672/)看，不仅Linaro自己贡献了3.4%的补丁名列公司排名第五，Linaro的三个core member中有两个都进入了前15，ARM和海思（华为芯片部门）分别贡献了2.2%和1.8%，三者加一起是7.4%，已经超过了第三名红帽的6.7%贡献。
 
-Linaro Connect是个沟通的平台，有公开演讲，各种闭门会议。每年在美国和美国以外的地区各办一次，我曾经参加过4次connect，结实了不少朋友。上次参加Linaro connect还是在布达佩斯(BUD17)，当时还分享了arm64上一个页表优化的工作[公众号链接](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483660&idx=1&sn=2f32af38d6af0f52c9a99b22de27f5cc&chksm=ec6cb720db1b3e369bdf1a67479e06096b47fe9990acc46b41f2da4c66c5be5c1fc35328ee4d#rd)，[博客链接](http://aarch64.me/2017/06/Implementing-Contiguous-page-hint-in-userspace/)，目前这个工作由Linaro kernel working group的AKASHI Takahiro继续在做。
+Linaro Connect是个沟通的平台，有公开演讲，各种闭门会议。每年在美国和美国以外的地区各办一次，我曾经参加过4次connect，结实了不少朋友。上次参加Linaro connect还是在布达佩斯(BUD17)，当时还分享了arm64上一个页表优化的工作（[公众号链接](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483660&idx=1&sn=2f32af38d6af0f52c9a99b22de27f5cc&chksm=ec6cb720db1b3e369bdf1a67479e06096b47fe9990acc46b41f2da4c66c5be5c1fc35328ee4d#rd)，[博客链接](http://aarch64.me/2017/06/Implementing-Contiguous-page-hint-in-userspace/)），目前这个工作由Linaro kernel working group的AKASHI Takahiro继续在做。
 
 arm的生态越来越好
 -----------------
