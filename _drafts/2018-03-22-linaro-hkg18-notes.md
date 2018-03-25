@@ -25,16 +25,16 @@ Linaro定位在消费电子的96boards CE板子，只有信用卡的大小，有
 ```
 (PUE) is a ratio of how efficiently a computer data center uses energy; specifically, how much energy is used by the computing equipment (in contrast to cooling and other overhead).  PUE te amo is the ratio of total amount of energy used by a computer data center facility to the energy delivered to computing equipment.
 ```
-</Users/bamvor/works/source/bjzhang.github.io/public/images/cloud/linaro_hkg18__microsoft__datacenter_evolution.png>
+<img alt="public/images/cloud/linaro_hkg18__microsoft__datacenter_evolution.png" src="{{site.url}}/public/images/cloud/linaro_hkg18__microsoft__datacenter_evolution.png" width="100%" align="center" style=margin: 0px 15px">
 
 微软有选择arm64 server最重要的原因貌似是多供应商，但是Leendert同时强调Intel还是Microsoft最大的合作伙伴，双方合作的很好:)
 Leendert提到arm64 server有几个机会点：提高数据中心容量，高性能存储，数据库服务，PAAS服务。
-<linaro_hkg18__microsoft__arm64_opportunities__small.png>
+<img alt="public/images/cloud/linaro_hkg18__microsoft__arm64_opportunities__small.png" src="{{site.url}}/public/images/cloud/linaro_hkg18__microsoft__arm64_opportunities__small.png" width="100%" align="center" style=margin: 0px 15px">
 
 目前市场上arm server大致有两个思路，一个是通过低功耗和高集成度，实现大规模并行计算，适合于hadoop等对于cpu要求不高但需要大容量存储的场景。另一个思路是提供可以与x86相比较的单核性能和更好的集成度，把原本运行在x86的软件，不做太大调整的拿到arm64上面运行。显然，微软Azure是在x86上很成熟的产品，且对单核性能要求高。所以微软只会使用高性能的arm cpu，不会使用cortex-A53。
 
 Leendert最后总结道，对于Azure来说arm64 server的Windows 已经成熟了。虽然目软只是把arm server作为内部使用，也确实还有商业上其它因素的考量，但是微软也明确下一步就是把arm server放到Azure里面。
-</Users/bamvor/works/source/bjzhang.github.io/public/images/cloud/linaro_hkg18__microsoft__arm64_server_summary__small.jpg>
+<img alt="public/images/cloud/linaro_hkg18__microsoft__arm64_server_summary__small.jpg" src="{{site.url}}/public/images/cloud/linaro_hkg18__microsoft__arm64_server_summary__small.jpg" width="100%" align="center" style=margin: 0px 15px">
 
 演讲中，还提到由于arm64 server普遍cpu核数比较多，对于动辄200多核的arm64 server来说，操作系统怎么感知到这个拓扑结构并合理利用很重要。微软注意到社区正在合入ACPI PPTT补丁，这对于arm64和x86都很有帮助，参考：[Support PPTT for ARM64 v7](https://lwn.net/Articles/748300/)和[ACPI 6.2规范](http://uefi.org/sites/default/files/resources/ACPI_6_2.pdf)
 
@@ -59,10 +59,10 @@ AI       |  FPGA      | NPU        |    NPU       |        ?
 5.  [DragonBoard 820c](https://www.96boards.org/product/dragonboard820c/)
 
 Linaro CEO George Grey在Keynote（链接见文末）现场演示了通过Ultra96的FPGA使用[Tiny YOLO](https://pjreddie.com/darknet/yolo/)识别人物。Tiny YOLO(You only look once)使用神经网络识别图中的物体，下图中被识别出的美女是Linaro负责大中华区的副总裁Jill Guo (郭晶) ：
-</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_hkg18__Ultra96_AI__tiny_YOLO.png>
+<img alt="public/images/arm64_ecosystem/linaro_connect_hkg18__Ultra96_AI__tiny_YOLO.png" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_hkg18__Ultra96_AI__tiny_YOLO.png" width="100%" align="center" style=margin: 0px 15px">
 
 上面的例子是在FPGA上运行的，另一个思路是使用专门的npu芯片，这次华为推出的第三代Hikey（Hikey970）的Kirin970芯片包含了NPU：
-</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/hisilicon_hikey970.jpg>
+<img alt="public/images/arm64_ecosystem/hisilicon_hikey970.jpg" src="{{site.url}}/public/images/arm64_ecosystem/hisilicon_hikey970.jpg" width="100%" align="center" style=margin: 0px 15px">
 
 作为华为旗舰芯片，麒麟(Kirin)970不仅用在去年10月发货的Mate 10，去年11月发货的荣耀v10，也会用于下周（2018年3月27日）发布的p20。深度学习有两个阶段：训练（training）和推理（inference），麒麟970的NPU用于推理阶段。Kirin970 NPU具体资料很少，HiAI也暂时需要申请才能查看，下面笔者搜集的部分资料：
 名称        |   值                    | 来源
@@ -89,12 +89,12 @@ Performance | 1.92 TFLOPs (HP 16-bit)；相当于25倍cpu的性能 | 注1，注3
 arm64 workstation
 -----------------
 Linaro 96boards致力于Enterprise领域的板子至少有两年的，开始的进展并不顺利，最早的EE板子是[Cello](http://www.96boards.org/product/cello/)和[Husky Board](http://www.96boards.org/product/huskyboard/)链接均已失效，下图是笔者在2016年曼谷connect拍摄的Cello样板：
-</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_bkk16__lemaker_cello__96boards_EE__AMD__smal.jpg>
+<img alt="public/images/arm64_ecosystem/linaro_connect_bkk16__lemaker_cello__96boards_EE__AMD__smal.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_bkk16__lemaker_cello__96boards_EE__AMD__smal.jpg" width="100%" align="center" style=margin: 0px 15px">
 
 一年以前的布达佩斯connect，socionext第一次展示了24核以及1536核的集群。下图笔者拿着的是24核Cortex-A53单板，下面那张纸是8个单板的互联板子，插满8个板子是192核的集群：
-</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__small.jpg>
+<img alt="public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__small.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__small.jpg" width="100%" align="center" style=margin: 0px 15px">
 每个192核的集群可以再次互联，最多可以组成8 x 192 = 1536核的集群，下图是演示运行hadoop（的监控）的截图：
-</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__hadoop__smal.jpg>
+<img alt="public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__hadoop__smal.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__hadoop__smal.jpg" width="100%" align="center" style=margin: 0px 15px">
 
 今年，Socionext正式介绍了arm64 workstation: [Edge Server SynQuacer E-Series 24-Core Arm PC is Now Available for $1,250 with 4GB RAM, 1TB HDD, Geforce GT 710 Video Card](https://www.cnx-software.com/2018/03/21/edge-server-synquacer-e-series-24-core-arm-pc-is-now-available-for-1250-with-4gb-ram-1tb-hdd-geforce-gt-710-video-card/)
 可以看到这个机器有几个特点，一个是内存，显卡，硬盘都可以插拔，从形态上更接近与x86的pc。虽然暂时只能运行Linux，对于最终用户并不方便，但是对于开发者来说，直接在arm64的机器上开发arm64的各种软件，比传统通过交叉编译方便很多。同时24核Cortex-A53可以提供比较好的性能。
