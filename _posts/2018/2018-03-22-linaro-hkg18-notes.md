@@ -11,6 +11,8 @@ Linaro Connect是个沟通的平台，每年在美国和美国以外的地区各
 1.  arm64 server和端侧AI；
 2.  arm64 workstation和低成本调试工具；
 
+Linaro全部精彩内容可以从[官方公众号](http://weixin.bes.ren/index.php?g=Wap&m=Index&a=content&token=mygoqu1459476246&classid=28&id=708&from=groupmessage)（貌似必须在手机微信客户端才能访问），全部日程在这里：<http://connect.linaro.org/hkg18/resources/>。也可以在youtube和slideside搜索Linaro on air得到历届Connect视频和slide。
+
 arm的生态越来越好
 -----------------
 从1983年第一款Acorn RISC Machine产品算起。作为产品的arm CPU/SOC已经有35年的历史了。直到前几年arm几乎都用于嵌入式领域。随着[2010年linaro](https://www.linaro.org/about/)的成立，很多公司一起改进arm的生态。有些基础规范，软件，单独某个公司难以推动；为了便于协同开发，社区也需要符合统一规范的硬件。经过几年的努力，Linaro建立的96boards规范已经有三大类(CE消费电子，EE企业级，IE物联网)，几十种开发版，可以用于开发和产品原型。得益于这些努力，最近几年arm产品越来越多样，不仅仅是传统的嵌入式市场，在服务器和桌面电脑（为啥笔者不说是pc，下文分解）也有不少值得评估的产品。
@@ -139,6 +141,14 @@ price               | 580$ | 1250$ | 1349英镑 | 无
 5.  ThunderX2 CN99X有不同的配置，公开资料较少。这里列出的似乎是最低的配置。
 6.  ThunderX2支持OCP: PCIe: 1x OCP PCIe Gen 3.0 x16 slot per CPU
 7.  大家不约而同用了nv家的显卡。早期arm64 pcie设计和规范有一点点差异，当时对于接不同厂商的pcie有一点点困难。不知道目前情况如何。
+
+
+截止笔者发稿前，发现还有个EE板值得关注。rock960的哥哥rock960 EE，1GB-4GB从99到149$，内存不能插拔，显卡是内置的。但也有pcie X16(实际是x4的能力做成了X16的接口，这样接硬件方便)。可以接pcie转m.2。由于只能共享32m内存，所以接显卡意义不大。加上多个sata。做iot网关，家庭nas都挺好的。
+</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/rock960_CE_and_EE.png>
+Tom Cubie之前做了cubieboard, cubietruck等多个allwinner（全志）芯片的开发板。那时候社区中合入社区比较好的就是全志了（虽然不是全志自己推的）
+
+4lanes扩展为16lanes。由于只能支持最大32M共享内存，所以接GPU一样不大。99$ 1GB memory, 149$ 4GB memory.
+[$99 Rock960 Enterprise Edition “Ficus”, Rock960 Pro with RK3399Pro with NPU for AI](http://armdevices.net/2018/03/22/99-rock960-enterprise-edition-ficus-rock960-pro-with-rk3399pro-with-npu-for-ai/)
 
 arm64上低成本的调试手段
 -----------------------
