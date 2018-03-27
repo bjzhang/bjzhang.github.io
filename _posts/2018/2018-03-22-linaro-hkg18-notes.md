@@ -143,12 +143,28 @@ price               | 580$ | 1250$ | 1349英镑 | 无
 7.  大家不约而同用了nv家的显卡。早期arm64 pcie设计和规范有一点点差异，当时对于接不同厂商的pcie有一点点困难。不知道目前情况如何。
 
 
-截止笔者发稿前，发现还有个EE板值得关注。rock960的哥哥rock960 EE，1GB-4GB从99到149$，内存不能插拔，显卡是内置的。但也有pcie X16(实际是x4的能力做成了X16的接口，这样接硬件方便)。可以接pcie转m.2。由于只能共享32m内存，所以接显卡意义不大。加上多个sata。做iot网关，家庭nas都挺好的。
-</Users/bamvor/works/source/bjzhang.github.io/public/images/arm64_ecosystem/rock960_CE_and_EE.png>
-Tom Cubie之前做了cubieboard, cubietruck等多个allwinner（全志）芯片的开发板。那时候社区中合入社区比较好的就是全志了（虽然不是全志自己推的）
+回到刚才说的EE板子，其实还有个EE板值得关注。rock960的哥哥rock960 EE（下图上面是rock960 EE，下面是rock960。插的卡是pcie转m.2）：
+<img alt="public/images/arm64_ecosystem/rock960_CE_and_EE.png" src="{{site.url}}/public/images/arm64_ecosystem/rock960_CE_and_EE.png" width="100%" align="center" style="margin: 0px 15px">
+接口如下：
+CPU    | 2xCA72, 4xARM Cortex-A53                 |  A72属于arm高性能cpu，但是SOC是低功耗芯片。
+-------|------------------------------------------|----------------------------------------------------------
+GPU    | Mali-T860MP4 with 2.4 TOPS capable NPU   |  Mali T系列属于Mali性能较好的GPU系列
+Memory | up to 4GB RAM                            |  可惜内存不能插拔。主要原因可能是原本SOC定义也不是Enterprise
+Display| HDMI 2.0/eDP up to 4K @ 60 Hz            |  4k显示
+Camera | Dual MIPI CSI camera interfaces          |  双摄像头可以做3D用。
+PCIe   | PCIe 2.1 x16 slot                        |  实际是x4的能力做成了X16的接口，主要为了接硬件方便
+Storage| Dual SATA 3.0 port with RAID 0/1 support |  使用mirror可以满足基本的数据安全
+Network| Gigabit Ethernet, 802.11ac WiFi          |  网络理论参数不错
+USB    | 3x USB 3.0, 5x USB 2.0
 
-4lanes扩展为16lanes。由于只能支持最大32M共享内存，所以接GPU一样不大。99$ 1GB memory, 149$ 4GB memory.
-[$99 Rock960 Enterprise Edition “Ficus”, Rock960 Pro with RK3399Pro with NPU for AI](http://armdevices.net/2018/03/22/99-rock960-enterprise-edition-ficus-rock960-pro-with-rk3399pro-with-npu-for-ai/)
+可以看到这个板子的优点是接口丰富，价格可爱（1GB-4GB从99$到149$），做IOT网关，家庭nas都挺好的。短板是
+1.  CPU性能稍差：RK3399 SOC最初定位是移动场景，使用了低功耗工艺制造，单核性能会比上面的workstation中OverDrive 1000, ThunderX ARM Desktop和thunderXStation(thunderX2)的差一些。
+2.  内存不能插拔
+3.  显卡是内置的。由于只能共享32m内存，所以外接显卡意义不大。
+
+这个板子是Tom Cubieo同学做的。该同学之前做了cubieboard, cubietruck等多个allwinner（全志）芯片的开发板。那时候合入社区比较好的就是全志了（虽然不是全志自己推的）。得益于全志自己设计的类似device tree的配置方式，我当初买了一个全志的平板，刷入sd卡，体会配置文件后直接可以启动ubuntu。当时cubie系列开发板社区很受原因，笔者当初在[虚拟化平台xen上支持Cortex-A7](https://wiki.xen.org/wiki/Xen_ARM_with_Virtualization_Extensions/Allwinner)，就是基于他们赠送的Cubietruck做的。那时候arm cpu只有Cortex-A15和Cortex-A7支持虚拟化，CA15的板子太贵。Cubietruck是难得学习虚拟化的平台。
+
+RK960 EE详细介绍参加下面的Youtube视频：[$99 Rock960 Enterprise Edition “Ficus”, Rock960 Pro with RK3399Pro with NPU for AI](http://armdevices.net/2018/03/22/99-rock960-enterprise-edition-ficus-rock960-pro-with-rk3399pro-with-npu-for-ai/)，RK3399的资料在这里：<http://www.t-firefly.com/doc/product/info/id/102.html>
 
 arm64上低成本的调试手段
 -----------------------
