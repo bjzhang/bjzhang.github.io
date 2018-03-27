@@ -17,7 +17,7 @@ arm的生态越来越好
 -----------------
 从1983年第一款Acorn RISC Machine产品算起。作为产品的arm CPU/SOC已经有35年的历史了。直到前几年arm几乎都用于嵌入式领域。随着[2010年linaro](https://www.linaro.org/about/)的成立，很多公司一起改进arm的生态。有些基础规范，软件，单独某个公司难以推动；为了便于协同开发，社区也需要符合统一规范的硬件。经过几年的努力，Linaro建立的96boards规范已经有三大类(CE消费电子，EE企业级，IE物联网)，几十种开发版，可以用于开发和产品原型。得益于这些努力，最近几年arm产品越来越多样，不仅仅是传统的嵌入式市场，在服务器和桌面电脑（为啥笔者不说是pc，下文分解）也有不少值得评估的产品。
 
-Linaro定位在消费电子的96boards CE板子，只有信用卡的大小，有arm，arm64多种SOC可供选择，由于统一接口和软件，日常开发，评估不同单板都很方便。CE板子小巧使用方便，由于毕竟是给移动端设计的，强调低功耗，性能和桌面电脑略有差距，所以Linaro一直积极在做EE板子，这次linaro connect重磅介绍来自日本公司socionext的arm64 workstation，很多新闻称其为PC，详见下文"arm64 workstation"。
+Linaro定位在消费电子的96boards CE板子，只有信用卡的大小，有arm，arm64多种SOC可供选择，由于统一接口和软件，日常开发，评估不同单板都很方便。CE板子小巧使用方便，由于毕竟是给移动端设计的，强调低功耗，性能和桌面电脑略有差距，所以Linaro一直积极在做EE板子，这次linaro connect重磅介绍来自日本公司Socionext的arm64 workstation，很多新闻称其为PC，详见下文"arm64 workstation"。
 
 作为嵌入式产品和通用产品，会有一些差别。比如嵌入式产品，系统软件与硬件绑定，使用devicetree区分不同硬件就很方便。但是对于通用产品，用户会安装不同的操作系统，无法接受需要为不同芯片准备不同的镜像（例如不同的Linux kernel）。在x86领域，得益于EFI和ACPI等规范，软硬件可以很好的解耦。Linaro的LEG(Linaro Enterprise Group)一直在推动arm64 server的各种标准，例如uefi, ACPI for ARM64, Server Base System Architecture (SBSA)和Server Base Boot Requirements (SBBR)。 其中来自华为的技术专家郭寒军是ACPI for arm64规范和Kernel代码的最主要贡献者。有了EFI和ACPI，就可以像x86一样，通过光盘，网络等方式安装操作系统。
 
@@ -90,19 +90,19 @@ Performance | 1.92 TFLOPs (HP 16-bit)；相当于25倍cpu的性能 | 注1，注3
 
 ARM64 workstation
 -----------------
-Linaro 96boards致力于Enterprise领域的板子至少有两年了，开始的进展并不顺利，最早的EE板子是[Cello](http://www.96boards.org/product/cello/)和[Husky Board](http://www.96boards.org/product/huskyboard/)链接均已失效，下图是笔者在2016年曼谷connect拍摄的Cello样板：
+Linaro 96boards致力于Enterprise领域的板子至少有两年了，开始的进展并不顺利，最早的EE板子是[Cello](http://www.96boards.org/product/cello/)和[Husky Board](http://www.96boards.org/product/huskyboard/)（链接均已失效），下图是笔者在2016年曼谷connect拍摄的Cello样板：
 <img alt="public/images/arm64_ecosystem/linaro_connect_bkk16__lemaker_cello__96boards_EE__AMD__small.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_bkk16__lemaker_cello__96boards_EE__AMD__small.jpg" width="100%" align="center" style="margin: 0px 15px">
 
-一年以前的布达佩斯connect，socionext第一次展示了24核以及1536核的集群。下图手持的是24核Cortex-A53单板，下面那张纸是8个单板的互联板子，插满8个板子是192核的集群：
+一年前布达佩斯connect，Socionext第一次展示了24核以及1536核的集群。下图手持的是24核Cortex-A53单板，下面那张纸是8个单板互联板的照片，插满8个板子是192核的集群：
 <img alt="public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__small.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__small.jpg" width="100%" align="center" style="margin: 0px 15px">
 每个192核的集群可以再次互联，最多可以组成8 x 192 = 1536核的集群，下图是演示运行集群监控软件[ZABBIX](https://www.zabbix.com/)的截图：
 <img alt="public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__hadoop__small.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_bud17__socionext_SC2A11_stacks__hadoop__small.jpg" width="100%" align="center" style="margin: 0px 15px">
 
 今年，Socionext正式介绍了arm64 workstation: [Edge Server SynQuacer E-Series 24-Core Arm PC is Now Available for $1,250 with 4GB RAM, 1TB HDD, Geforce GT 710 Video Card](https://www.cnx-software.com/2018/03/21/edge-server-synquacer-e-series-24-core-arm-pc-is-now-available-for-1250-with-4gb-ram-1tb-hdd-geforce-gt-710-video-card/)
-从上面的新闻可以看出该workstation有几个特点，一个是内存，显卡，硬盘都可以插拔，客户可以更容易的配置，从形态上更接近与x86的pc。二是很适合开发：虽然暂时只能运行Linux，对于最终用户并不方便，但是对于开发者来说，直接在arm64的机器上开发arm64的各种软件，比传统通过交叉编译方便很多。第三，24核Cortex-A53整体可以提供比较好的性能。
+从上面的新闻可以看出该workstation有几个特点，一个是内存，显卡，硬盘都可以插拔，可以按需配置，从形态上更接近与x86的pc。二是很适合开发：虽然暂时只能运行Linux，对于最终用户并不方便，但是对于开发者来说，直接在arm64的机器上开发arm64的各种软件，比传统通过交叉编译方便很多。第三，24核Cortex-A53整体可以提供比较好的性能。
 <img alt="public/images/arm64_ecosystem/linaro_connect_hkg18__socionext_workstation.jpg" src="{{site.url}}/public/images/arm64_ecosystem/linaro_connect_hkg18__socionext_workstation.jpg" width="100%" align="center" style="margin: 0px 15px">
 
-其实不光是socionext，老牌网络芯片公司Cavium，现在也全面转向arm架构，也有workstation和server产品，与这次Linaro connect同时在OCP峰会发布了thunderXStation(thunderX2)：
+其实不光是Socionext，老牌网络芯片公司Cavium，现在也全面转向arm架构，也有workstation和server产品，与这次Linaro connect同时在OCP([Open Compute Project](http://www.opencompute.org/ocp-u.s.-summit-2018/))峰会发布了thunderXStation(thunderX2)：
 <img alt="public/images/arm64_ecosystem/thunderXstation.jpg" src="{{site.url}}/public/images/arm64_ecosystem/thunderXstation.jpg" width="100%" align="center" style="margin: 0px 15px">
 
 1.  thunderX workstation：[Avantek 32 core Cavium ThunderX ARM Desktop](https://www.avantek.co.uk/store/avantek-32-core-cavium-thunderx-arm-desktop.html)
@@ -130,8 +130,9 @@ USB                 | 2x USB 3.0| 4x USB 3.0 | ? | ?
 BMC                 |  None | None | None | ASPEED AST2500 with IPMI management
 os                  | opensuse|debian, ubuntu, fedora | ? | centos7.4, ubuntu, opensuse
 support device tree | | Yes | ? | ?
-support acpi        | | Yes | ? | ?
+support acpi        | | Yes | Yes | Yes
 price               | 580$ | 1250$ | 1349英镑 | 无
+
 
 注
 1.  [OverDrive 1000](https://softiron.com/development-tools/overdrive-1000/)
@@ -145,11 +146,13 @@ price               | 580$ | 1250$ | 1349英镑 | 无
 
 回到刚才说的EE板子，其实还有个EE板值得关注。rock960的哥哥rock960 EE（下图上面是rock960 EE，下面是rock960。插的卡是pcie转m.2）：
 <img alt="public/images/arm64_ecosystem/rock960_CE_and_EE.png" src="{{site.url}}/public/images/arm64_ecosystem/rock960_CE_and_EE.png" width="100%" align="center" style="margin: 0px 15px">
+
 接口如下：
+
 CPU    | 2xCA72, 4xARM Cortex-A53                 |  A72属于arm高性能cpu，但是SOC是低功耗芯片。
 -------|------------------------------------------|----------------------------------------------------------
 GPU    | Mali-T860MP4 with 2.4 TOPS capable NPU   |  Mali T系列属于Mali性能较好的GPU系列
-Memory | up to 4GB RAM                            |  可惜内存不能插拔。主要原因可能是原本SOC定义也不是Enterprise
+Memory | up to 4GB RAM                            |  可惜内存不能插拔。主要原因可能是原本SOC定位也不是Enterprise
 Display| HDMI 2.0/eDP up to 4K @ 60 Hz            |  4k显示
 Camera | Dual MIPI CSI camera interfaces          |  双摄像头可以做3D用。
 PCIe   | PCIe 2.1 x16 slot                        |  实际是x4的能力做成了X16的接口，主要为了接硬件方便
@@ -160,26 +163,31 @@ USB    | 3x USB 3.0, 5x USB 2.0
 可以看到这个板子的优点是接口丰富，价格可爱（1GB-4GB从99$到149$），做IOT网关，家庭nas都挺好的。短板是
 1.  CPU性能稍差：RK3399 SOC最初定位是移动场景，使用了低功耗工艺制造，单核性能会比上面的workstation中OverDrive 1000, ThunderX ARM Desktop和thunderXStation(thunderX2)的差一些。
 2.  内存不能插拔
-3.  显卡是内置的。由于只能共享32m内存，所以外接显卡意义不大。
+3.  显卡是内置的。由于RK3399设计限制PCIe接口最大只能共享32m内存，所以外接显卡意义不大。
 
-这个板子是Tom Cubieo同学做的。该同学之前做了cubieboard, cubietruck等多个allwinner（全志）芯片的开发板。那时候合入社区比较好的就是全志了（虽然不是全志自己推的）。得益于全志自己设计的类似device tree的配置方式，我当初买了一个全志的平板，刷入sd卡，体会配置文件后直接可以启动ubuntu。当时cubie系列开发板社区很受原因，笔者当初在[虚拟化平台xen上支持Cortex-A7](https://wiki.xen.org/wiki/Xen_ARM_with_Virtualization_Extensions/Allwinner)，就是基于他们赠送的Cubietruck做的。那时候arm cpu只有Cortex-A15和Cortex-A7支持虚拟化，CA15的板子太贵。Cubietruck是难得学习虚拟化的平台。
+这个板子是Tom Cubieo同学做的。该同学之前做了cubieboard, cubietruck等多个allwinner（全志）芯片的开发板。那时候合入社区比较好的就是全志了（虽然不是全志自己推的）。得益于全志自己设计的类似device tree的配置方式，我当初买了一个全志的平板，刷入sd卡，替换配置文件后直接可以启动ubuntu界面。当时cubie系列开发板社区很受原因，笔者当初在[虚拟化平台xen上支持Cortex-A7](https://wiki.xen.org/wiki/Xen_ARM_with_Virtualization_Extensions/Allwinner)，就是基于他们赠送的Cubietruck做的。那时候arm cpu只有Cortex-A15和Cortex-A7支持虚拟化，CA15的板子太贵。Cubietruck是难得学习虚拟化的平台。
 
-RK960 EE详细介绍参加下面的Youtube视频：[$99 Rock960 Enterprise Edition “Ficus”, Rock960 Pro with RK3399Pro with NPU for AI](http://armdevices.net/2018/03/22/99-rock960-enterprise-edition-ficus-rock960-pro-with-rk3399pro-with-npu-for-ai/)，RK3399的资料在这里：<http://www.t-firefly.com/doc/product/info/id/102.html>
+RK960 EE详细介绍参考下面的Youtube视频：[$99 Rock960 Enterprise Edition “Ficus”, Rock960 Pro with RK3399Pro with NPU for AI](http://armdevices.net/2018/03/22/99-rock960-enterprise-edition-ficus-rock960-pro-with-rk3399pro-with-npu-for-ai/)，RK3399的资料在这里：<http://www.t-firefly.com/doc/product/info/id/102.html>
 
 arm64上低成本的调试手段
 -----------------------
-对于bootloader，kernel等底层开发者，有时候还是需要硬件调试器，专业调试器一直都比较贵。于是社区一直在推动低成本的调试器，openocd就是其中之一。openocd的特点是可以通过usb转jtag芯片，直接通过pc控制调试信号，这样openocd其实只是个通道，所以理论上，openocd可以支持所有jtag协议的硬件。所以当年从arm7到arm11使用openocd都很方便。到了armv7 Cortex-A时代，arm引入了新的调试框架Coresight，虽然外部提供jtag和sw(serial wired)两种接口，但是arm官方调试器使用的却是sw。所以openocd对于armv7, armv8的支持一直比太好。在包括Linaro在内的社区的共同努力下，目前openocd对于armv7, armv8支持的已经比较好了，我与下文的作者Omair Javaid专门确认了下，他虽然使用gdb连接openocd有些corner case有问题，但是对于通常的使用来说足够了("work just fine")：
-[HKG18-403 – Introducing OpenOCD: Status of OpenOCD on AArch64](http://connect.linaro.org/resource/hkg18/hkg18-403/)
+对于bootloader，kernel等底层开发者，有时候还是需要硬件调试器，专业调试器一直都比较贵。于是社区一直在推动低成本的调试器，OpenOCD就是其中之一。OpenOCD的特点是可以通过usb转jtag芯片(FT2232)直接从pc控制具体调试信号，这样OpenOCD其实只是个通道，所以理论上，OpenOCD可以支持所有jtag协议的硬件。
 
-2010年，笔者在中星微使用openocd时，当时openocd用的是ahb-ap读取的系统信息，没有走apb-ap没法直接看到cpu角度的数据，所以有cache一致性问题。现在这些问题已经解决了。openocd的使用可以参考<https://www.96boards.org/documentation/consumer/hikey/guides/jtag/>，文中涉及的代码已经合入主线了，可以去[官网](https://sourceforge.net/p/openocd/code/ci/master/tree/)并编译：
+<img alt="public/images/arm64_ecosystem/OpenOCD_Architecture.png" src="{{site.url}}/public/images/arm64_ecosystem/OpenOCD_Architecture.png" width="100%" align="center" style="margin: 0px 15px">
+
+当年从arm7到arm11使用OpenOCD都很方便。到了armv7 Cortex-A时代，arm引入了新的调试框架Coresight，虽然外部提供jtag和sw(serial wired)两种接口，但是arm官方调试器使用的却是sw。之前OpenOCD对于armv7, armv8的支持一直不太好。在包括Linaro在内的社区的共同努力下，目前OpenOCD对于armv7, armv8支持的已经比较好了，我与下文的作者Omair Javaid专门确认了下，虽然使用gdb连接OpenOCD有些corner case，但是对于通常的使用来说足够了("work just fine")：
+[HKG18-403 – Introducing OpenOCD: Status of OpenOCD on AArch64](http://connect.linaro.org/resource/hkg18/hkg18-403/)，slide在这里：<http://aarch64.me/public/documents/cpu/arm/HKG18_403__OpenOCD_support_for_AArch64_targets.pdf>
+
+2010年，笔者在中星微使用OpenOCD时，当时OpenOCD用的是ahb-ap读取的系统信息，没有走apb-ap没法直接看到cpu角度的数据，所以有cache一致性问题。现在这些问题已经解决了。OpenOCD的使用可以参考<https://www.96boards.org/documentation/consumer/hikey/guides/jtag/>，文中涉及的代码已经合入主线了，可以去[官网](https://sourceforge.net/p/openocd/code/ci/master/tree/)下载：
+
 `git clone https://git.code.sf.net/p/openocd/code openocd-code`
 
-下载后可以参考hikey的配置文件"openocd-code/tcl/target/hi6220.cfg"，根据自己的soc的配置调整。
+下载后可以参考hikey的配置文件"openocd-code/tcl/target/hi6220.cfg"，根据自己的soc的配置调整。有任何问题欢迎直接反馈给Linaro，笔者可以帮忙联系Omair或Linaro中国区的兄弟。
 
 其它有意思的东西
 ----------------
-1.  几乎都是（除了五个二进制）go重写的类似busybox的文件系统。 <https://github.com/u-root/u-root> <http://u-root.tk/>
-2.  华为的keynote[HKG18-400K1 – Keynote: Kenneth Lee – “To define the rule — why you should go open source”](https://www.youtube.com/watch?v=HdcC6IzLUtc)
+1.  几乎都是（除了五个二进制）go重写的类似busybox的文件系统：<https://github.com/u-root/u-root> <http://u-root.tk/>
+2.  华为的keynote：[HKG18-400K1 – Keynote: Kenneth Lee – “To define the rule — why you should go open source”](https://www.youtube.com/watch?v=HdcC6IzLUtc)
 3.  很多人尝试FPGA用于加速，这里是xilinx的分享： [HKG18-300K2 – Keynote: Tomas Evensen – All Programmable SoCs? – Platforms to enable the future of Embedded Machine Learning](https://www.youtube.com/watch?v=hhXGnCX06ao)
 4.  arm公司为了推动arm server所做的努力： [HKG18-317 – Arm Server Ready Program](http://connect.linaro.org/resource/hkg18/hkg18-317/)
 5.  George的keynote的最后还介绍了Linaro在automotive的计划，感兴趣的小伙伴可以从[George Grey: Opening Keynote - HKG18-100K1](https://www.youtube.com/watch?v=NXpC9Ln2-bA)的1小时13分26秒开始看。
