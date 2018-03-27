@@ -202,4 +202,5 @@ arm64上低成本的调试手段
     1.  [敏达生活公众号](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483651&idx=1&sn=9eb471492caaac8ea3147c55f5a742b1&chksm=ec6cb72fdb1b3e390e7f9d8df138181bd90ec7e1577b887cc9051efa85a5d0a1ade5e0c077e2#rd)
     2.  [博客](http://aarch64.me/2016/11/suse-release-12-sp2-including-aarch64-support/)
 
-本文首发本人[公众号敏达生活](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483722&idx=1&sn=6f4ab00336e1beb589388be5fdc8e34c&chksm=ec6cb766db1b3e70995205ec548ed120b7c4fc3d21e513ae744641966341886a77aa7482a6fd#rd)，欢迎关注。
+本文首发本人公众号敏达生活，[上篇](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483722&idx=1&sn=6f4ab00336e1beb589388be5fdc8e34c&chksm=ec6cb766db1b3e70995205ec548ed120b7c4fc3d21e513ae744641966341886a77aa7482a6fd#rd)，[下篇](https://mp.weixin.qq.com/s/omUv7HkGxSatKh6jJyZKVg)欢迎关注。
+
