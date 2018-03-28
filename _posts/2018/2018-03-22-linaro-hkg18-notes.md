@@ -5,6 +5,8 @@ categories: [Linux]
 tags: [Linux, arm]
 ---
 
+按：公众号发出后，有小伙伴询问购买链接，我统一放在文末了。
+
 Linaro作为推进arm生态的组织，在从uefi到kernel到cloud，在众多开源项目中都有不少贡献。从最新release的linux [4.15内核统计](https://lwn.net/Articles/742672/)看，不仅Linaro自己贡献了3.4%的补丁名列公司排名第五，Linaro的三个core member中有两个都进入了前15，ARM和海思（华为芯片部门）分别贡献了2.2%和1.8%，三者加一起是7.4%，已经超过了第三名红帽的6.7%贡献。
 
 Linaro Connect是个沟通的平台，每年在美国和美国以外的地区各办一次，包括公开演讲和各种闭门会议。任何人都可以提交演讲，也可以利用connect的机会组织讨论。我曾经参加过4次connect，面对面讨论对自己和工作都帮助不小。上次参加Linaro connect还是在2017年的布达佩斯(BUD17)，当时还分享了arm64上一个页表优化的工作（[公众号链接](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483660&idx=1&sn=2f32af38d6af0f52c9a99b22de27f5cc&chksm=ec6cb720db1b3e369bdf1a67479e06096b47fe9990acc46b41f2da4c66c5be5c1fc35328ee4d#rd)，[博客链接](http://aarch64.me/2017/06/Implementing-Contiguous-page-hint-in-userspace/)）。目前这个工作由Linaro kernel working group的AKASHI Takahiro继续在做。上周在香港举办了今年第一场Connect，实话讲离真正被x86开发者接受还有距离，只是觉得这些年看着arm生态越来越完善， 一直坚信arm能做更多的事情，不禁和想和大家分享下，文章分为两部分：
@@ -201,6 +203,14 @@ arm64上低成本的调试手段
 2.  ARM服务器第一个商业版本! Suse服务器版本官方支持包括树莓派3在内多个SOC
     1.  [敏达生活公众号](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483651&idx=1&sn=9eb471492caaac8ea3147c55f5a742b1&chksm=ec6cb72fdb1b3e390e7f9d8df138181bd90ec7e1577b887cc9051efa85a5d0a1ade5e0c077e2#rd)
     2.  [博客](http://aarch64.me/2016/11/suse-release-12-sp2-including-aarch64-support/)
+
+购买链接
+--------
+1.  Socionext arm64 workstation(SynQuacer™ 96Boards Box), 1260$: <http://www.chip1stop.com/web/USA/en/dispDetail.do?partId=SOCI-0000001&cid=SOCIEB>
+2.  Avantek 32 core Cavium ThunderX ARM Desktop, 1,349£: <https://www.avantek.co.uk/store/avantek-32-core-cavium-thunderx-arm-desktop.html>
+3.  Overdrive1000, 599$: <http://shop.softiron.com/product/overdrive-1000/>。这个单板推出的比较早，和上面两个相比性能略差。本人手里有一块，感兴趣的兄弟可以拿去玩儿玩儿。
+4.  Rock960和Rock960 EE暂时只能预定，EE板子暂时没有确切日期：<https://www.96rocks.com/>
+5.  所有96boards都可以在<https://www.96boards.org/>找到零售商的链接。
 
 本文首发本人公众号敏达生活，[上篇](https://mp.weixin.qq.com/s/TrHpq7VXtrsL7D1wT0xcYg)，[下篇](https://mp.weixin.qq.com/s/omUv7HkGxSatKh6jJyZKVg)欢迎关注。
 
