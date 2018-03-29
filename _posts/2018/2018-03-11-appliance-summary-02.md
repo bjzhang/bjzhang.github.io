@@ -7,6 +7,7 @@ tags: [Linux, kiwi]
 
 复习一下上次的内容： 预先安装需要制作一个磁盘镜像，一键部署时选择指定的磁盘直接写入并设置bootloader之后即可使用。有suse的kiwi，redhat的virt-builder和terraform. 其中只有kiwi支持从物理机，虚拟机到云化场景的镜像构建和部署。terraform支持跨操作系统的虚拟机，但是不支持物理机，尤其适合个人用户。 网上中文材料基本说的都是kiwi不是最新的kiwi-ng，而且缺乏定制化细节。
 
+
 kiwi超快上手
 --------------
 wget Vagrantfile
@@ -52,6 +53,9 @@ sudo kiwi-ng --debug --color-output --type oem system build --target-dir $HOME/w
 vagrant@os74:~/works/source/kiwi-descriptions> sudo rm -rf ~/works/software/kiwi/build/image-root
 ```
 
+kiwi-ng与kiwi
+------------
+<https://suse.github.io/kiwi/overview/legacy_kiwi.html>
 
 kiwi定制化
 ----------

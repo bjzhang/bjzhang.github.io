@@ -53,7 +53,7 @@ Docker           |  Yes |   Yes        |     Yes
 
 支持哪些hypervisor
 ------------------
-Terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。kiwi和vagrant同时支持Virtualbox，相比之下vagrant略微方便一点，本文最后有kiwi和vagrant的使用过程，供参考。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>，所以道理上讲kiwi的镜像也可以用在os x上，但是os x kvm毕竟不是默认可用的，暂时不考虑。
+Terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。kiwi和vagrant同时支持Virtualbox，相比之下vagrant有镜像启动时的配置文件可以在启动虚拟机时在做一些定义，略微方便一点，本文最后有kiwi和vagrant的使用过程，供参考。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>，所以道理上讲kiwi的镜像也可以用在os x上，但是os x kvm毕竟不是默认可用的，暂时不考虑。
 
 Supported hypervior | kiwi | virt-builder |  vagrant
 --------------------|------|--------------|----------
@@ -80,9 +80,10 @@ freebsd        | No   |    Yes       |     Yes
 scientificlinux| Should\*| Partial\* |     Yes
 
 注：
-1.  virt-builder支持的具体发行版版本可以通过`virt-builder --list`查看；virt-builder不支持opensuse leap最新的42.3。virt-builder不支持scientificlinux 7。
-2.  terraform构建的镜像可以通过vagrant启动。vagrant box目前没有sle最新的12 sp4。
-3.  scientificlinux使用yum作为包管理器，kiwi支持yum这种包管理器，道理上可以支持scientificlinux
+1.  KIWI支持的发行版，详见: <https://suse.github.io/kiwi/building.html#supported-distributions>
+2.  virt-builder支持的具体发行版版本可以通过`virt-builder --list`查看；virt-builder不支持opensuse leap最新的42.3。virt-builder不支持scientificlinux 7。
+3.  terraform构建的镜像可以通过vagrant启动。vagrant box目前没有sle最新的12 sp4。
+4.  scientificlinux使用yum作为包管理器，kiwi支持yum这种包管理器，道理上可以支持scientificlinux
 
 注：
 1.  sle: SUSE Liux Enterprise
@@ -91,6 +92,7 @@ scientificlinux| Should\*| Partial\* |     Yes
 实操：下载并使用kiwi的镜像
 --------------------------
 可以从[suse studio express](https://studioexpress.opensuse.org/)选择模版并下载。
+kiwi会构建出vmdk的格式。
 
 实操：下载并使用vagrant镜像
 --------------------------
