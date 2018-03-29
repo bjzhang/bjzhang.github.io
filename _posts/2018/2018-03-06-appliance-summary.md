@@ -43,7 +43,7 @@ build的image可以用于哪些平台
 ----------------------------
 这个回合kiwi胜出，如果希望build的image在物理机和虚拟机都可以部署，可以选择kiwi。这尤其适合开发或简单测试在虚拟机中测试，产品测试和实际部署需要在物理机的情况。
 
-supported target | kiwi | virt-builder |  terraform
+Supported target | kiwi | virt-builder |  terraform
 -----------------|------|--------------|------------
 Physical machine |  Yes |   No         |     No
 Virtual machine  |  Yes |   Yes        |     Yes
@@ -53,19 +53,19 @@ Docker           |  Yes |   Yes        |     Yes
 
 支持哪些hypervisor
 ------------------
-terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。由于支持virtualbox，所以如果希望在os x运行制作的镜像，只能选择terraform/vagrant这个组合。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>，所以道理上讲kiwi的镜像也可以用在os x上，但是os x kvm毕竟不是默认可用的，暂时不考虑。
+Terraform构建的镜像可以通过vagrant这个命令行工具下载和管理虚拟机。kiwi和vagrant同时支持Virtualbox，相比之下vagrant略微方便一点，本文最后有kiwi和vagrant的使用过程，供参考。多说一句其实os x现在可以支持kvm了<https://github.com/kholia/OSX-KVM>，所以道理上讲kiwi的镜像也可以用在os x上，但是os x kvm毕竟不是默认可用的，暂时不考虑。
 
-supported hypervior | kiwi | virt-builder |  vagrant
+Supported hypervior | kiwi | virt-builder |  vagrant
 --------------------|------|--------------|----------
 KVM                 |  Yes |   Yes        |     Yes
 Xen                 |  Yes |   Yes        |     Yes
-VirtualBox          |  Yes |   No         |     No
+VirtualBox          |  Yes |   No         |     Yes
 
 支持哪些发行版
 --------------
 可以看出对于常用发行版kiwi支持的最全。
 
-supported Distribution | kiwi | virt-builder |  vagrant box
+Supported Distribution | kiwi | virt-builder |  vagrant box
 ---------------|------|--------------|--------------
 sle            | Yes  |    No        |     Partial\*
 opensuse       | Yes  |    Partial\* |     Yes
