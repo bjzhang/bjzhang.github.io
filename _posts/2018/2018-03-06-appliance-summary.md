@@ -92,12 +92,12 @@ scientificlinux| Should\*| Partial\* |     Yes
 KIWI镜像快速使用：openSUSE 42.3 VirtualBox
 ------------------------------------------
 ### **build(构建)镜像**
-可以从[suse studio express](https://studioexpress.opensuse.org/)找到目前支持的[模板](https://build.opensuse.org/image_templates)选择并下载。从下面两张图可以看到目前支持最新的openSUSE 42.3和最新企业版SLES12 SP3，构建出的镜像可以使用在AWS, Openstack，Docker，KVM，XEN和VirtualBox等。
+可以从[suse studio express](https://studioexpress.opensuse.org/)找到目前支持的[模板](https://build.opensuse.org/image_templates)选择并下载。从下面两张图可以看到目前支持最新的openSUSE 42.3和最新企业版SLES12 SP3，构建出的镜像可以使用在AWS, Openstack，Docker，KVM，XEN和VirtualBox等环境。
 <img alt="public/images/cloud/applicance_kiwi__obs__choose_base_template_01.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__choose_base_template_01.png" width="100%" align="center" style="margin: 0px 15px">
 <img alt="public/images/cloud/applicance_kiwi__obs__choose_base_template_02.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__choose_base_template_02.png" width="100%" align="center" style="margin: 0px 15px">
-例如上面第二张图，选择了openSUSE42.3 virtualbox镜像，镜像名称是"openSUSE-Leap-42.3-JeOS-for-VirtualBox"。单击"Create appliance"按钮会，会自动建立出名为: https://build.opensuse.org/project/show/home:USERNAME:branches:openSUSE:Templates:Images:42.3 的分支，如下图：
+例如上图，选择了openSUSE42.3 virtualbox镜像，镜像名称是"openSUSE-Leap-42.3-JeOS-for-VirtualBox"。单击"Create appliance"按钮会，会自动建立出名为: https://build.opensuse.org/project/show/home:USERNAME:branches:openSUSE:Templates:Images:42.3 的分支，如下图：
 <img alt="public/images/cloud/applicance_kiwi__obs__template_created.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__template_created.png" width="100%" align="center" style="margin: 0px 15px">
-上图中的branch（分支）"openSUSE-Leap-42.3-JeOS-for-VirtualBox"对应我们刚才自定义的镜像名称。如果我们定义了openSUSE 42.3的多个镜像，每个镜像对应以镜像名称命名的分支，所以镜像名称不能重名。仍然以我们刚刚建立的镜像为例，点击分支名称，可以进入分支详情界面：
+上图中的Packages(不论rpm包还是操作系统打包的镜像，对于openSUSE build service来说都是包(package))"openSUSE-Leap-42.3-JeOS-for-VirtualBox"对应我们刚才自定义的镜像名称。如果我们定义了openSUSE 42.3的多个镜像，每个镜像对应以镜像名称命名的分支，所以镜像名称不能重名。仍然以我们刚刚建立的镜像为例，点击分支名称，可以进入分支详情界面：
 <img alt="public/images/cloud/applicance_kiwi__obs__template_created__branch.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__template_created__branch.png" width="100%" align="center" style="margin: 0px 15px">
 上图中，左侧是源代码（对于kiwi就是kiwi的配置文件和自定义脚本）。镜像的定制通过这些文件完成，篇幅所限不在赘述。在下一篇文章中，会介绍如何添加软件源，添加自己的软件包，修改系统配置文件等技巧。右侧是镜像构建状态页面。由于我们选择的不是容器镜像，所以"container"的状态是"excluded"表示不会构建。当"images"显示如上图的"succeeded"时（根据服务器负载和镜像复杂程度可能需要10分钟或更长时间）说明镜像构建完成，即可下载。点击"images"文字，会进入下图的下载链接：
 <img alt="public/images/cloud/applicance_kiwi__obs__template_download_site.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__template_download_site.png" width="100%" align="center" style="margin: 0px 15px">
@@ -127,6 +127,6 @@ KIWI镜像快速使用：openSUSE 42.3 VirtualBox
 
 链接
 ---
-[1] SUSE studio express: https://studioexpress.opensuse.org/
-[2] KIWI template: https://build.opensuse.org/image_templates
+1.  SUSE studio express: https://studioexpress.opensuse.org/
+2.  KIWI template: https://build.opensuse.org/image_templates
 

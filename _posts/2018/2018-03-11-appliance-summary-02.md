@@ -10,6 +10,7 @@ tags: [Linux, kiwi]
 
 kiwi超快上手
 --------------
+上次使用openSUSE的build service构建镜像。如果仅仅为了构建镜像，不需要部署buildservice。kiwi-ng有单独的命令行🔧。下文说明如何用kiwi命令行工具构建镜像。
 wget Vagrantfile
 mkdir vagrant_kiwi
 cd vagrant_kiwi
