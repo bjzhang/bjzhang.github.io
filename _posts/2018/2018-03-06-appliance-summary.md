@@ -89,11 +89,44 @@ scientificlinux| Should\*| Partial\* |     Yes
 1.  sle: SUSE Liux Enterprise
 2.  rhel: Redhat Enterprise Linux
 
-实操：下载并使用kiwi的镜像
---------------------------
-可以从[suse studio express](https://studioexpress.opensuse.org/)选择模版并下载。
-kiwi会构建出vmdk的格式。
+KIWI镜像快速使用：openSUSE 42.3 VirtualBox
+------------------------------------------
+### **build(构建)镜像**
+可以从[suse studio express](https://studioexpress.opensuse.org/)找到目前支持的[模板](https://build.opensuse.org/image_templates)选择并下载。从下面两张图可以看到目前支持最新的openSUSE 42.3和最新企业版SLES12 SP3，构建出的镜像可以使用在AWS, Openstack，Docker，KVM，XEN和VirtualBox等。
+<img alt="public/images/cloud/applicance_kiwi__obs__choose_base_template_01.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__choose_base_template_01.png" width="100%" align="center" style="margin: 0px 15px">
+<img alt="public/images/cloud/applicance_kiwi__obs__choose_base_template_02.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__choose_base_template_02.png" width="100%" align="center" style="margin: 0px 15px">
+例如上面第二张图，选择了openSUSE42.3 virtualbox镜像，镜像名称是"openSUSE-Leap-42.3-JeOS-for-VirtualBox"。单击"Create appliance"按钮会，会自动建立出名为: https://build.opensuse.org/project/show/home:USERNAME:branches:openSUSE:Templates:Images:42.3 的分支，如下图：
+<img alt="public/images/cloud/applicance_kiwi__obs__template_created.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__template_created.png" width="100%" align="center" style="margin: 0px 15px">
+上图中的branch（分支）"openSUSE-Leap-42.3-JeOS-for-VirtualBox"对应我们刚才自定义的镜像名称。如果我们定义了openSUSE 42.3的多个镜像，每个镜像对应以镜像名称命名的分支，所以镜像名称不能重名。仍然以我们刚刚建立的镜像为例，点击分支名称，可以进入分支详情界面：
+<img alt="public/images/cloud/applicance_kiwi__obs__template_created__branch.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__template_created__branch.png" width="100%" align="center" style="margin: 0px 15px">
+上图中，左侧是源代码（对于kiwi就是kiwi的配置文件和自定义脚本）。镜像的定制通过这些文件完成，篇幅所限不在赘述。在下一篇文章中，会介绍如何添加软件源，添加自己的软件包，修改系统配置文件等技巧。右侧是镜像构建状态页面。由于我们选择的不是容器镜像，所以"container"的状态是"excluded"表示不会构建。当"images"显示如上图的"succeeded"时（根据服务器负载和镜像复杂程度可能需要10分钟或更长时间）说明镜像构建完成，即可下载。点击"images"文字，会进入下图的下载链接：
+<img alt="public/images/cloud/applicance_kiwi__obs__template_download_site.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__obs__template_download_site.png" width="100%" align="center" style="margin: 0px 15px">
+下载图中""openSUSE-Leap-42.3-JeOS-for-VirtualBox.x86_64-1.1.1-Build1.1.vmdk""（virtualbox的磁盘镜像），并使用"openSUSE-Leap-42.3-JeOS-for-VirtualBox.x86_64-1.1.1-Build1.1.vmdk.sha256"校验。
+
+### 启动VirtualBox虚拟机
+这里以Macbook的VirtualBox为例，Windows和Linux操作类似。
+
+1.  单击下图中蓝色的新建按钮
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__create.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__create.png" width="100%" align="center" style="margin: 0px 15px">
+2.  选择我们刚刚在build service上构建出的镜像
+    1.  选择"使用已有的虚拟硬盘文件"，并单击右下角的文件夹图标：
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__import_existed_disk.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__import_existed_disk.png" width="100%" align="center" style="margin: 0px 15px">
+    2.  选择我们刚刚下载的文件。
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__select_disk.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__select_disk.png" width="100%" align="center" style="margin: 0px 15px">
+    3.  设置虚拟机名称，发行版为openSUSE 64bit，内存大小。创建即可。
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__set_name_and_so_on__click_create.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__set_name_and_so_on__click_create.png" width="100%" align="center" style="margin: 0px 15px">
+    4.  创建后可以根据需要调整设置（例如使用网桥，调整cpu，内存大小等等），此处不在赘述。
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__after_created.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__after_created.png" width="100%" align="center" style="margin: 0px 15px">
+    5.  系统第一次启动会有一些检查和磁盘空间调整，速度稍慢一些，第二次启动会很快。Firstboot（首次启动配置）会提示选择语言，键盘布局等，选择默认即可。
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__booting_grub.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__booting_grub.png" width="100%" align="center" style="margin: 0px 15px">
+    6.  选择完成即可使用刚刚设置的root密码登陆。
+<img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__firstboot.gif" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__firstboot.gif" width="100%" align="center" style="margin: 0px 15px">
 
 实操：下载并使用vagrant镜像
 --------------------------
+
+链接
+---
+[1] SUSE studio express: https://studioexpress.opensuse.org/
+[2] KIWI template: https://build.opensuse.org/image_templates
 
