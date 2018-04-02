@@ -1,23 +1,32 @@
 ---
 layout: post
-title: 漫谈操作系统镜像打包方式之一————综述
+title: 比较操作系统镜像制作方式
 categories: [Software]
 tags: [Linux, kiwi]
 ---
 
-实际工作或学习中中可能涉及到在特定环境部署物理机或虚拟机，希望系统一键部署后直接可用。一般有两类思路，一个是做一个定制的镜像，不干预直接安装，系统启动后直接可以使用。第二个是启动或安装一个默认系统，使用自动化部署工具配置环境。更复杂的情况是两者结合一起用。自动化部署工具很多，例如Ansible, Chef, Fabric，Puppe, SaltStack。。。有些很轻，适合部署几台机器；有些需要在目标机器安装daemon，即使网络暂时中断也不影响部署。当然也有人[比较这两个思路的优劣](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c)，暂时不展开了。这里计划专门分享下我自己用过的几个镜像打包工具，并做出比较，方便小伙伴们选择。计划分三部分写：
-第一部分总体介绍各种镜像打包工具。
-第二部分介绍suse的kiwi，功能强大，极为推荐。
-第三部分介绍其它镜像打包方式。
+打包或制作镜像是个很广的话题，为了能够高效的快速的把业务系统运行起来，从部署整个操作系统的ghost镜像，到轻量级的虚拟化（容器）再到更轻的unikernel等应用打包方式有很多选择。最近重度使用了操作系统的一些镜像制作方式，可以在物理机，虚拟机和容器（系统容器）中使用。
+我的使用场景是希望在特定环境部署物理机或虚拟机，系统在一键部署后直接可用。自己觉得可以分为三个思路
+1.  定制镜像，部署时直接写入内容，系统启动后直接可以使用；
+2.  通过配置文件，把原本需要手工干预的操作系统安装过程自动完成；
+3.  基于一个已部署的默认系统，使用自动化部署工具配置环境。
 
-Linux发行版一键安装方式有很多种，可以分为预先安装和配置文件一键安装两种方式，如下图所示：
+方法1（下文称为定制镜像）和2（下文称为自动安装）可以和方法3联合使用。设想一下，如果多个业务系统需要统一的定制的操作系统，但是这个操作系统不同于默认安装，有些配置需要修改，有些软件需要安装。我们可以通过前两个方法安装后，使用方法3部署特定的业务系统。当然也有人[比较这两个思路的优劣](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c)[1]，文中提到了[Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)[2]，分析思路值得看看，作者推荐的terraform是方法1和3的结合，这是本文重点比较的方法之一。
+
+方法3的自动化部署工具很多，例如Ansible, Chef, Fabric，Puppe, SaltStack。。。有些很轻，适合部署几台机器；有些需要在目标机器安装daemon，即使网络暂时中断也不影响部署。这也是比较广的话题，笔者最近在学习Fabric和Ansible，将来有机会会分享这方面的话题。本系列文中聚焦在定制镜像，计划专门分享下我自己用过的几个镜像打包工具，并做出比较，方便小伙伴们选择。系列分三部分：
+*   介绍和比较各种镜像打包工具，并举例说明如何使用制作的镜像（本文）；
+*   介绍SUSE的KIWI，功能强大，极为推荐；
+*   介绍其它镜像打包方式：包括terraform和vagrant，virt-builder等。
+
+具体说来，定制镜像和自动安装在各发行版的部署方式里面都有介绍，关系如下图：
 <img alt="applicace_comparision.png" src="{{site.url}}/public/images/appliance/applicace_comparision.png" width="100%" align="center" style="margin: 0px 15px">
 
-预先安装的方式通常通过一个配置文件，配置bootloader，安装源（光盘，网络repo均可）和要安装哪些包，build image需要从安装源下载软件并安装到磁盘镜像中，使用时把磁盘镜像通过pxe，光盘启动，或直接写入硬盘的方式写入目标物理机，虚拟机或云中。这类工具通常支持多种发行版。相比之下，后一种方法和具体发行版是绑定的，通常的用法是如果有几台机器需要选择相同的安装选项，管理员先手工安装第一台机器，安装后目标机器会带有autoyast或kickstart的配置文件（默认在root目录下: suse/opensuse "/root/\*.xml", redhat: "/root/anaconda-ks.cfg"），管理员调整这个个配置文件后，使用这个配置文件安装其余几台机器。
-suse的autoyast使用方法可以参考[SUSE Linux Enterprise Server 11 SP4 AutoYaST](https://www.suse.com/documentation/sles11/singlehtml/book_autoyast/book_autoyast.html)，[openSUSE Leap 42.3 AutoYaST](https://doc.opensuse.org/projects/autoyast/)。
-redhat kickstart可以参考[CHAPTER 31. KICKSTART INSTALLATIONS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/ch-kickstart2)
+定制镜像常通过一个配置文件，配置bootloader，安装源（光盘，网络repo均可）和要安装哪些包，制作镜像时需要从安装源下载软件并安装到磁盘镜像中，使用时通过系统支持的引导方式（pxe，光盘启动）启动后部署或直接写入硬盘的方式写入目标机器（物理机，虚拟机或容器）。可以看出这个过程只有制作镜像时的软件包下载和安装是软件包管理方式相关，并不绑体发行版，所以这类工具通常很容易支持多种发行版。相比之下，自动安装需要干预安装过程，每个发行版有自己的安装生序，上面列出的autoyast和kiwistart都只支持特定的发行版。自动安装通常的场景是有几台机器需要选择相同的安装选项，软件包，配置文件，或安装后简单的自定义设置。管理员先手工安装第一台机器，安装后目标机器会带有autoyast或kickstart的配置文件（默认在root目录下: suse/opensuse "/root/\*.xml", redhat: "/root/anaconda-ks.cfg"），管理员调整这个配置文件后，使用这个配置文件安装其余几台机器。SUSE的autoyast使用方法可以参考[SUSE Linux Enterprise Server 11 SP4 AutoYaST](https://www.suse.com/documentation/sles11/singlehtml/book_autoyast/book_autoyast.html)，[openSUSE Leap 42.3 AutoYaST](https://doc.opensuse.org/projects/autoyast/)。Redhat kickstart可以参考[CHAPTER 31. KICKSTART INSTALLATIONS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/ch-kickstart2)
 
-下面从几个方面比较kiwi，virt-builder和terraform
+综述结束，下面具体比较三种定制镜像的方法：KIWI，virt-builder和terraform。对于这三种方法来说，一句话选型建议是：
+*   如果需要支持物理机部署，只能选择kiwi；
+*   如果部署镜像时需要额外定制，只能选择terraform。
+*   如果单纯在虚拟化环境使用，希望一个stardalone快速构建虚拟机镜像的方式，可以选择virt-builder。
 
 可以在哪些平台上build
 ---------------------
@@ -127,6 +136,8 @@ KIWI镜像快速使用：openSUSE 42.3 VirtualBox
 
 链接
 ---
-1.  SUSE studio express: https://studioexpress.opensuse.org/
-2.  KIWI template: https://build.opensuse.org/image_templates
+1.  Why we use Terraform and not Chef, Puppet, Ansible, SaltStack, or CloudFormation: https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c
+2.  Infrastructure as Code: https://en.wikipedia.org/wiki/Infrastructure_as_Code
+3.  SUSE studio express: https://studioexpress.opensuse.org/
+4.  KIWI template: https://build.opensuse.org/image_templates
 
