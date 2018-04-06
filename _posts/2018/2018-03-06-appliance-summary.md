@@ -46,7 +46,7 @@ windows        | No   |    No        |     Yes
 注：
 1.  sle: SUSE Liux Enterprise
 2.  rhel: Redhat Enterprise Linux
-3.  Terraform针对每个操作系统发布二进制包，与发行版无关。Terraform还支持FreeBSD, OpenBSD和Solaris。
+3.  Terraform针对Linux系统发布静态二进制包，与发行版无关，道理上讲对内核版本（主要是系统调用）有依赖，不过从terraform功能上看，只会用比较常见的系统调用，估计目前发行版提供的内核都可以。Terraform还支持FreeBSD, OpenBSD和Solaris。
 
 Build的image可以用于哪些平台
 ----------------------------
@@ -70,7 +70,7 @@ KVM                 |  Yes |   Yes        |     Yes
 Xen                 |  Yes |   Yes        |     Yes
 VirtualBox          |  Yes |   No         |     Yes
 
-支持哪些发行版
+build出的镜像可以用于哪些发行版
 --------------
 可以看出对于常用发行版kiwi支持的最全。
 
@@ -125,6 +125,17 @@ KIWI镜像快速使用：openSUSE 42.3 VirtualBox
     5.  系统第一次启动会有一些检查和磁盘空间调整，速度稍慢一些，第二次启动会很快。Firstboot（首次启动配置）会提示选择语言，键盘布局等，选择默认即可。选择完成即可使用刚刚设置的root密码登陆。
 <img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__booting_grub.png" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__booting_grub.png" width="100%" align="center" style="margin: 0px 15px">
 <img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__firstboot.gif" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__firstboot.gif" width="100%" align="center" style="margin: 0px 15px">
+    6.  这个镜像打开了firstboot。可以删除如下内容关闭。TODO构建镜像失败，本地搭建环境构建。可以在下面[链接](https://build.opensuse.org/package/rdiff/home:bjzhang:branches:openSUSE:Templates:Images:42.3/openSUSE-Leap-42.3-JeOS-for-VirtualBox?linkrev=base&rev=2)[5]查看如何关闭firstboot，修改"openSUSE-Leap-42.3-JeOS-for-VirtualBox.kiwi"：
+	```
+	@@ -74,7 +74,6 @@
+			 <package name="fipscheck"/>
+			 <package name="grub2-branding-openSUSE" bootinclude="true"/>
+			 <package name="iputils"/>
+	-        <package name="jeos-firstboot"/>
+			 <package name="vim"/>
+			 <package name="gettext-runtime"/>
+			 <package name="shim" arch="x86_64"/>
+	```
 
 链接
 ---
@@ -132,4 +143,5 @@ KIWI镜像快速使用：openSUSE 42.3 VirtualBox
 2.  Infrastructure as Code: https://en.wikipedia.org/wiki/Infrastructure_as_Code
 3.  SUSE studio express: https://studioexpress.opensuse.org/
 4.  KIWI template: https://build.opensuse.org/image_templates
+5.	关闭firstboot: https://build.opensuse.org/package/rdiff/home:bjzhang:branches:openSUSE:Templates:Images:42.3/openSUSE-Leap-42.3-JeOS-for-VirtualBox?linkrev=base&rev=2
 
