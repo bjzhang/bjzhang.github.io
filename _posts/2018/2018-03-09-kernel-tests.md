@@ -1,11 +1,17 @@
+---
+layout: post
+title: 内核测试小整理
+categories: [Linux]
+tags: [Linux, kernel, test]
+---
 
-内核测试一个很大的话题，各个发行版，芯片公司，做产品的公司都会有自己的测试用例集合和测试方法。这里并不打算列出所有情况。只是一个内核开发的角度，大致描述下思路。
+内核测试一个很大的话题，各个发行版，芯片公司，做产品的公司都会有自己的测试用例集合和测试方法。这里从一个内核开发的角度，大致描述下笔者的思路。
 
 从测试角度，基本考虑三方面的测试，一个是快速的regression测试，用于测试每个提交有无问题；一个是比较完整的测试用于测试每日构建；第三个是长稳测试用于测试长期稳定性。
 
 快速的regression测试
 --------------------
-这个测试一直是缺失的，社区从2012年才开始做。目前已经比较稳定了。社区推荐所有开发者提交补丁之前都运行这个测试。测试用例在"linux/tools/testing/selftests/"，使用文档在"linux/Documentation/dev-tools/kselftest.rst"。笔者原来做linaro assign负责修复过支持arm体系结构的一些问题，有问题欢迎一起讨论。
+这个测试一直是缺失的，社区从2012年才开始做。目前已经比较稳定了。社区推荐所有开发者提交补丁之前都运行这个测试。测试用例在"linux/tools/testing/selftests/"，使用文档在"linux/Documentation/dev-tools/kselftest.rst"。笔者原来做linaro assignee负责修复过支持arm体系结构的一些问题，有问题欢迎一起讨论。
 
 适合每日运行的用例
 ------------------
@@ -20,5 +26,5 @@ trinity有个问题是发现的问题并不会提供复现方法，所以比较�
 
 哪里去找测试用例？
 ------------------
-Intel国内的同学一直在维护一个测试项目[LKP](https://01.org/zh/lkp?langredirect=1)，里面有[常见的测试用例和使用方法](https://github.com/intel/lkp-tests/tree/master/tests)。另一个可以参考的地方是buildroot里面收集的测试用例。
+Intel国内的同学一直在维护一个测试项目[LKP](https://01.org/zh/lkp?langredirect=1)，里面有[常见的测试用例和使用方法](https://github.com/intel/lkp-tests/tree/master/tests)。另一个可以参考的地方是buildroot里面收集的测试用例：[menu "Debugging, profiling and benchmark"](https://git.busybox.net/buildroot/tree/package/Config.in#n81)
 
