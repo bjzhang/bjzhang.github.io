@@ -28,3 +28,5 @@ trinity有个问题是发现的问题并不会提供复现方法，所以比较�
 ------------------
 Intel国内的同学一直在维护一个测试项目[LKP](https://01.org/zh/lkp?langredirect=1)，里面有[常见的测试用例和使用方法](https://github.com/intel/lkp-tests/tree/master/tests)。另一个可以参考的地方是buildroot里面收集的测试用例：[menu "Debugging, profiling and benchmark"](https://git.busybox.net/buildroot/tree/package/Config.in#n81)
 
+本文首发本人公众号[《敏达生活》](https://mp.weixin.qq.com/s/7GeaQCgQS9rFV43ewl-K0g)，欢迎关注，拍砖，勾搭。
+
