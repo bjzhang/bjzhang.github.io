@@ -135,3 +135,5 @@ MIPS是世界上第一个RISC处理器。消费市场上大家知道的CPU，除
     1.  瓦瑟纳尔协议 <https://zh.wikipedia.org/wiki/%E7%93%A6%E8%81%96%E7%B4%8D%E5%8D%94%E5%AE%9A>
     2.  哪些设备技术对中国禁运? <https://www.zhihu.com/question/53217224/answer/151017560>
 
+感谢两位猎头MM及4位架构师帅哥的宝贵建议。本文首发本人公众号[《敏达生活》](https://mp.weixin.qq.com/s/HcLDWQIArUjkCGGc8eOYEg)，欢迎关注。
+
