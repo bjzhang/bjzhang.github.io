@@ -47,7 +47,7 @@ tags: [Linux, kiwi]
 
 镜像制作和部署工具详细比较
 ----------------------
-### 可以在哪些平台上build
+### **可以在哪些平台上build**
 Terraform支持的平台是最多的，如果有在Windows或macOS上build image的需求，只有选择terraform。
 
 supported host | kiwi | virt-builder |  terraform
@@ -66,7 +66,7 @@ Windows        | No   |    No        |     Yes
 2.  RHEL: Redhat Enterprise Linux
 3.  Terraform针对Linux系统发布静态二进制包，与发行版无关，道理上讲对内核版本（主要是系统调用）有依赖，不过从terraform功能上看，只会用比较常见的系统调用，估计目前发行版提供的内核都可以。Terraform还支持FreeBSD, OpenBSD和Solaris。
 
-### Build的image可以用于哪些平台
+### **Build的image可以用于哪些平台**
 这个回合kiwi胜出，如果希望image在物理机和虚拟机都可以部署，只能选择kiwi。本文最后有KIWI的使用方法简介，供参考。这尤其适合笔者开发或简单测试在虚拟机中测试，产品测试和实际部署需要在物理机的情况。
 
 Supported target | kiwi | virt-builder |  terraform
@@ -77,7 +77,7 @@ Docker           |  Yes |   Yes        |     Yes
 
 注：Terraform文档中提到可以支持部署到物理机，但是根据[github上的官方回复](https://github.com/hashicorp/terraform/issues/50)，目前并不支持。笔者也没看到支持的计划。
 
-### 支持哪些hypervisor
+### **支持哪些hypervisor**
 KIWI和Terraform同时支持Virtualbox，相比之下Terraform构建的镜像可以通过vagrant这个命令行工具下载，配置和管理虚拟机：
 
 Supported hypervior | kiwi | virt-builder |  vagrant
@@ -86,7 +86,7 @@ KVM                 |  Yes |   Yes        |     Yes
 Xen                 |  Yes |   Yes        |     Yes
 VirtualBox          |  Yes |   No         |     Yes
 
-### build出的镜像可以用于哪些发行版
+### **build出的镜像可以用于哪些发行版**
 可以看出对于常用发行版kiwi支持的最全。
 
 Supported Distribution | kiwi | virt-builder |  vagrant box
