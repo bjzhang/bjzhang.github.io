@@ -5,17 +5,25 @@ categories: [Software]
 tags: [Linux, kiwi]
 ---
 
-打包或制作镜像是个很广的话题，为了能够高效的快速的把业务系统运行起来，从部署整个操作系统的ghost镜像，到轻量级的虚拟化（容器）再到更轻的unikernel等应用打包方式有很多选择。最近重度使用了可以在物理机，虚拟机和容器（系统容器）中使用的操作系统镜像制作方式。笔者的需求是在特定环境部署物理机或虚拟机，系统在一键部署后直接可用。想达到这个目的，经过调研看到三个思路：
+手工安装Linux很繁琐，生产环境通常会自动完成这一步骤。笔者前段时间正好有在封闭场景自动化部署的需求，调研发现有多种自动化方式可供选择，但很少有文章把Linux自动安装的方式都说全，给出选型建议。使用KIWI实际制作镜像并部署时，发现KIWI英文文档和论文比较丰富，中文资料却很简单。故写文章分享调研过程和实际踩坑体会，计划专门分享下我自己用过的几个镜像打包工具，并做出比较。方便小伙伴们选择。系列分三部分：
+*   介绍和比较各种镜像打包工具，并举例说明如何构建和使用镜像（本文）；
+*   介绍SUSE的KIWI，功能强大，极为推荐；
+*   介绍其它镜像打包方式：包括terraform和vagrant，virt-builder等。
+
+一键部署有哪些方法
+------------------
+暂时回到一个更原始的问题，和操作系统定制镜像类似的还有什么方法？
+
+“不要只想着造一个更快的马车”。
+
+笔者的需求是在特定环境部署物理机或虚拟机，系统在一键部署后直接可用。想达到这个目的，经过调研看到三个思路：
 1.  定制镜像，部署时直接把镜像写到硬盘，系统启动后直接可以使用；
 2.  通过配置文件，把原本需要手工干预的操作系统安装过程自动完成；
 3.  基于一个已部署的默认系统，使用自动化部署工具配置环境。
 
 方法1（下文称为定制镜像）和2（下文称为自动安装）可以和方法3联合使用。设想一下，如果多个业务系统需要统一的定制的操作系统，但是这个操作系统不同于默认安装，有些配置需要修改，有些软件需要安装。我们可以通过前两个方法安装后，使用方法3部署特定的业务系统。当然也有人[比较这两个思路的优劣](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c)[1]，文中提到了[Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)[2]，分析思路值得看看，作者推荐的terraform是方法1和3的结合，这是本文重点比较的方法之一。
 
-方法3的自动化部署工具很多，例如Ansible, Chef, Fabric，Puppe, SaltStack。。。有些很轻，适合部署几台机器；有些需要在目标机器安装daemon，即使网络暂时中断也不影响部署。这也是比较广的话题，笔者最近在学习Fabric和Ansible，将来有机会会分享这方面的话题。本系列文章聚焦在定制镜像，计划专门分享下我自己用过的几个镜像打包工具，并做出比较，方便小伙伴们选择。系列分三部分：
-*   介绍和比较各种镜像打包工具，并举例说明如何使用镜像（本文）；
-*   介绍SUSE的KIWI，功能强大，极为推荐；
-*   介绍其它镜像打包方式：包括terraform和vagrant，virt-builder等。
+方法3的自动化部署工具很多，例如Ansible, Chef, Fabric，Puppe, SaltStack。。。有些很轻，适合部署几台机器；有些需要在目标机器安装daemon，即使网络暂时中断也不影响部署。这也是比较广的话题，笔者最近在学习Fabric和Ansible，将来有机会会分享这方面的话题。
 
 具体说来，定制镜像和自动安装在各发行版的部署方式里面都有介绍，关系如下图：
 <img alt="applicace_comparision.png" src="{{site.url}}/public/images/appliance/applicace_comparision.png" width="100%" align="center" style="margin: 0px 15px">
@@ -30,13 +38,16 @@ tags: [Linux, kiwi]
 
 制作好的镜像可以快速的部署到目标环境中。
 
-不同工具有不同的优势，下面具体比较三种定制镜像工具：KIWI，virt-builder和terraform。一句话选型建议：
+镜像制作和部署工具选型建议
+--------------------------
+本文具体比较三种定制镜像工具：KIWI，virt-builder和terraform，一句话选型建议：
 *   如果需要支持物理机部署，只能选择KIWI；
 *   如果部署镜像时需要额外定制，只能选择terraform。
 *   如果单纯在虚拟化环境使用，希望一个stardalone的环境快速构建虚拟机镜像的方式，可以选择virt-builder。
 
-可以在哪些平台上build
----------------------
+镜像制作和部署工具详细比较
+----------------------
+### 可以在哪些平台上build
 Terraform支持的平台是最多的，如果有在Windows或macOS上build image的需求，只有选择terraform。
 
 supported host | kiwi | virt-builder |  terraform
@@ -55,8 +66,7 @@ Windows        | No   |    No        |     Yes
 2.  RHEL: Redhat Enterprise Linux
 3.  Terraform针对Linux系统发布静态二进制包，与发行版无关，道理上讲对内核版本（主要是系统调用）有依赖，不过从terraform功能上看，只会用比较常见的系统调用，估计目前发行版提供的内核都可以。Terraform还支持FreeBSD, OpenBSD和Solaris。
 
-Build的image可以用于哪些平台
-----------------------------
+### Build的image可以用于哪些平台
 这个回合kiwi胜出，如果希望image在物理机和虚拟机都可以部署，只能选择kiwi。本文最后有KIWI的使用方法简介，供参考。这尤其适合笔者开发或简单测试在虚拟机中测试，产品测试和实际部署需要在物理机的情况。
 
 Supported target | kiwi | virt-builder |  terraform
@@ -67,8 +77,7 @@ Docker           |  Yes |   Yes        |     Yes
 
 注：Terraform文档中提到可以支持部署到物理机，但是根据[github上的官方回复](https://github.com/hashicorp/terraform/issues/50)，目前并不支持。笔者也没看到支持的计划。
 
-支持哪些hypervisor
-------------------
+### 支持哪些hypervisor
 KIWI和Terraform同时支持Virtualbox，相比之下Terraform构建的镜像可以通过vagrant这个命令行工具下载，配置和管理虚拟机：
 
 Supported hypervior | kiwi | virt-builder |  vagrant
@@ -77,8 +86,7 @@ KVM                 |  Yes |   Yes        |     Yes
 Xen                 |  Yes |   Yes        |     Yes
 VirtualBox          |  Yes |   No         |     Yes
 
-build出的镜像可以用于哪些发行版
---------------
+### build出的镜像可以用于哪些发行版
 可以看出对于常用发行版kiwi支持的最全。
 
 Supported Distribution | kiwi | virt-builder |  vagrant box
