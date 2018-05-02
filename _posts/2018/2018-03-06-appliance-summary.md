@@ -5,10 +5,10 @@ categories: [Software]
 tags: [Linux, kiwi]
 ---
 
-手工安装Linux很繁琐，生产环境通常会自动完成这一步骤。笔者前段时间正好有在封闭场景自动化部署的需求，调研发现有多种自动化方式可供选择，但很少有文章把Linux自动安装的方式都说全，给出选型建议。使用KIWI实际制作镜像并部署时，发现KIWI英文文档和论文比较丰富，中文资料却很简单。故写文章分享调研过程和实际踩坑体会，计划专门分享下我自己用过的几个镜像打包工具，并做出比较。方便小伙伴们选择。系列分三部分：
-*   介绍和比较各种镜像打包工具，并举例说明如何构建和使用镜像（本文）；
+生产环境中通常用自动部署的方式代替手工安装Linux的过程。笔者前段时间正好有在封闭场景自动化部署的需求，调研发现有多种方式可供选择，但很少有文章把自动部署的方式都说全，并给出选型建议。选型后，实际使用中，发现这次工具英文文档和论文比较丰富，中文资料却很简单。故写文章分享调研过程和实际踩坑体会，计划专门分享下我自己用过的几个镜像打包工具，并做出比较。方便小伙伴们选择。系列分为：
+*   介绍自动部署的三种方式，具体介绍和比较其中的镜像打包工具（本文）；
 *   介绍SUSE的KIWI，功能强大，极为推荐；
-*   介绍其它镜像打包方式：包括terraform和vagrant，virt-builder等。
+*   介绍其它镜像打包方式：terraform和vagrant，virt-builder。
 
 一键部署有哪些方法
 ------------------
@@ -23,7 +23,7 @@ tags: [Linux, kiwi]
 
 方法1（下文称为定制镜像）和2（下文称为自动安装）可以和方法3联合使用。设想一下，如果多个业务系统需要统一的定制的操作系统，但是这个操作系统不同于默认安装，有些配置需要修改，有些软件需要安装。我们可以通过前两个方法安装后，使用方法3部署特定的业务系统。当然也有人[比较这两个思路的优劣](https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c)[1]，文中提到了[Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_Code)[2]，分析思路值得看看，作者推荐的terraform是方法1和3的结合，这是本文重点比较的方法之一。
 
-方法3的自动化部署工具很多，例如Ansible, Chef, Fabric，Puppe, SaltStack。。。有些很轻，适合部署几台机器；有些需要在目标机器安装daemon，即使网络暂时中断也不影响部署。这也是比较广的话题，笔者最近在学习Fabric和Ansible，将来有机会会分享这方面的话题。
+方法3的自动化部署工具很多，例如Ansible, Chef, Fabric，Puppet, SaltStack。。。有些很轻，适合部署几台机器；有些需要在目标机器安装daemon，即使网络暂时中断也不影响部署。这也是比较广的话题，笔者最近在学习Fabric和Ansible，将来有机会会分享这方面的话题。
 
 具体说来，定制镜像和自动安装在各发行版的部署方式里面都有介绍，关系如下图：
 <img alt="applicace_comparision.png" src="{{site.url}}/public/images/appliance/applicace_comparision.png" width="100%" align="center" style="margin: 0px 15px">
