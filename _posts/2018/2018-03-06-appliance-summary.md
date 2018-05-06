@@ -150,4 +150,5 @@ KIWI镜像快速使用：openSUSE 42.3 VirtualBox
 5.  kiwi文档
     1.  <https://suse.github.io/kiwi/overview.html>
     2.  <https://doc.opensuse.org/projects/kiwi/doc/>
+6.  kiwi上传镜像到google: <https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images>
 
