@@ -42,9 +42,13 @@ tags: [Linux, kiwi]
 2.  开源的自动化部署工具探索: <https://my.oschina.net/u/1540325/blog/639884>
 3.  自动化部署工具——Ansible探索: <http://blog.51cto.com/zyxjohn/1886251>
 
-注：
+后记
+----
 1.  上面opensuse安装视频并不是“活人”手工装的，是opensuse的openQA测试框架在自动化测试安装，其中使用opencv做图片识别判断场景。
 2.  相关的工具还有Canonical的MAAS(Metal as a Service, https://maas.io/, 用于物理机管理), Juju(https://jujucharms.com/docs/2.3/about-juju)则适合在云中使用。笔者没有实际使用过，用过的小伙伴可以给些反馈，帮我完善下文档。
+3.  有小伙伴提到ipmi和kpartx，这两个都具体都可能被自动化部署工具调用：
+    1.  impi是服务器（物理机）管理口，用于服务器远程管理，例如电源管理，设备状态查询，查看串口日志等等。在做物理机自动化部署时可以用ipmi做此类远程管理。
+    2.  kpartx磁盘分区到device mapper设备节点(/dev/mapper/xxx)的映射管理工具。制作磁盘镜像的时候可以用kpartx把镜像文件的分区映射/dev/mapper/xxx，做格式化硬盘，mount后安装软件包等工作。
 
 本文首发本人公众号[《敏达生活》](https://mp.weixin.qq.com/s/9SjTy3Zl4Md4-kxBuoU5lw)，欢迎勾搭，拍砖，转发。
 
