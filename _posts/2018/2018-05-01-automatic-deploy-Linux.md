@@ -46,3 +46,5 @@ tags: [Linux, kiwi]
 1.  上面opensuse安装视频并不是“活人”手工装的，是opensuse的openQA测试框架在自动化测试安装，其中使用opencv做图片识别判断场景。
 2.  相关的工具还有Canonical的MAAS(Metal as a Service, https://maas.io/, 用于物理机管理), Juju(https://jujucharms.com/docs/2.3/about-juju)则适合在云中使用。笔者没有实际使用过，用过的小伙伴可以给些反馈，帮我完善下文档。
 
+本文首发本人公众号[《敏达生活》](https://mp.weixin.qq.com/s/9SjTy3Zl4Md4-kxBuoU5lw)，欢迎勾搭，拍砖，转发。
+
