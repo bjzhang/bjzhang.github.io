@@ -2,7 +2,7 @@
 layout: post
 title: ARM服务器第一个商业版本! Suse服务器版本官方支持包括树莓派3在内多个SOC
 categories: [Linux]
-tags: [SUSE/openSUSE, arm64, aarch64, respberry pi]
+tags: [SUSE/openSUSE, arm64, respberry pi]
 ---
 
 <img alt="giga_thunderx" src="{{site.url}}/public/images/arm64_ecosystem/giga_thunderx.jpg" width="50%" align="left" style="margin: 0px 15px">上个月月底Suse宣布年底提供sles12 sp2(Suse Linux Enterprise Server 12, Service Pack 2) arm64版本, arm服务器的生态又完善了一步，希望redhat的arm64版本也能尽快发布(目前是beta)。
