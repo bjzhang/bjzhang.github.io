@@ -2,7 +2,7 @@
 layout: post
 title: How to use shadowsocks in PC and chromebook
 categories: [Software]
-tags: [vpn, shadowsocks, PC, opensuse, chromebook]
+tags: [vpn, shadowsocks, PC, SUSE/openSUSE, chromebook]
 ---
 
 I am looking for a good vpn in recent two years. Try [YunTi](https://www.ytpub.com/) and other vpn through the pp2p and l2tp protocol. But it is not very stable in my home and too slow. Shadowsocks is better. Its bandwidth is bigger than 1Mbyte/s in my home. It is enough to watch youtube. But the issue is that I could only use internet brower or the application which support socks5 in my laptop. And I could not use it in my chromebook. In this blog, I use privoxy to forward the socks5 to http port in pc and compile the arm specific shadowsocks software in my chromebook

@@ -2,7 +2,7 @@
 layout: post
 title: How to run opensuse for aarch64 on qemu(使用qemu运行opensuse aarch64)
 categories: [Virtualization]
-tags: [qemu, opensuse, arm64, aarch64]
+tags: [qemu, SUSE/openSUSE, arm64, aarch64]
 ---
 
 Install the lastest qemu-system-aarch64.

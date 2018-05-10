@@ -2,7 +2,7 @@
 layout: post
 title: 通过shadowsocks科学上网
 categories: [Software]
-tags: [vpn, shadowsocks, PC, opensuse, ubuntu]
+tags: [vpn, shadowsocks, PC, SUSE/openSUSE, ubuntu]
 ---
 
 <img alt="Great wall in Spring" src="{{site.url}}/public/images/misc/great_wall_201705.jpg" width="25%" align="left" style="margin: 0px 15px">
