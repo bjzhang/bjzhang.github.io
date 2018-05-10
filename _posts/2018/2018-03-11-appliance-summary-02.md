@@ -1,20 +1,15 @@
 ---
 layout: post
-title: 漫谈操作系统镜像打包方式之二————来自suse的猕猴桃(kiwi)
+title: 来自suse的猕猴桃(KIWI)（Linux自动化部署工具之三）
 categories: [Software]
-tags: [Linux, kiwi]
+tags: [Linux, appliance, SUSE, KIWI]
 ---
 
 复习一下上次的内容： 预先安装需要制作一个磁盘镜像，一键部署时选择指定的磁盘直接写入并设置bootloader之后即可使用。有suse的kiwi，redhat的virt-builder和terraform. 其中只有kiwi支持从物理机，虚拟机到云化场景的镜像构建和部署。terraform支持跨操作系统的虚拟机，但是不支持物理机，尤其适合个人用户。 网上中文材料基本说的都是kiwi不是最新的kiwi-ng，而且缺乏定制化细节。
 
-
 kiwi超快上手
 --------------
 上次使用openSUSE的build service构建镜像。如果仅仅为了构建镜像，不需要部署buildservice。kiwi-ng有单独的命令行🔧。下文说明如何用kiwi命令行工具构建镜像。
-wget Vagrantfile
-mkdir vagrant_kiwi
-cd vagrant_kiwi
-vagrant up
 
 public/sources/vagrant_kiwi/build_kiwi.sh
 准备kiwi环境并构建镜像。
@@ -181,109 +176,4 @@ kiwi官方文档
 [google group](https://groups.google.com/forum/#!forum/kiwi-images)
 YaST 映像创建程序是 KIWI 映像工具的图形界面
 <https://www.suse.com/zh-cn/documentation/sles-12/book_sle_deployment/data/cha_imgcreator.html>
-
-vagrant跨平台部署
------------------
-buildroot/docs/manual/getting.txt
-buildroot/support/misc/Vagrantfile
-
-
-vagrant up
-```
-192:vagrant_kiwi bamvor$ vagrant up
-Bringing machine 'opensuse42.3' up with 'virtualbox' provider...
-==> opensuse42.3: Importing base box 'opensuse/openSUSE-42.3-x86_64'...
-==> opensuse42.3: Matching MAC address for NAT networking...
-==> opensuse42.3: Checking if box 'opensuse/openSUSE-42.3-x86_64' is up to date...
-==> opensuse42.3: Setting the name of the VM: vagrant_kiwi_opensuse423_1520604280467_51794
-==> opensuse42.3: Clearing any previously set network interfaces...
-==> opensuse42.3: Available bridged network interfaces:
-1) en0: Wi-Fi (AirPort)
-2) p2p0
-3) awdl0
-4) en2: 雷雳 1
-5) en1: 雷雳 2
-6) bridge0
-==> opensuse42.3: When choosing an interface, it is usually the one that is
-==> opensuse42.3: being used to connect to the internet.
-    opensuse42.3: Which interface should the network bridge to? 0
-    opensuse42.3: Which interface should the network bridge to? 1
-==> opensuse42.3: Preparing network interfaces based on configuration...
-    opensuse42.3: Adapter 1: nat
-    opensuse42.3: Adapter 2: bridged
-==> opensuse42.3: Forwarding ports...
-    opensuse42.3: 22 (guest) => 2222 (host) (adapter 1)
-==> opensuse42.3: Booting VM...
-==> opensuse42.3: Waiting for machine to boot. This may take a few minutes...
-    opensuse42.3: SSH address: 127.0.0.1:2222
-    opensuse42.3: SSH username: vagrant
-    opensuse42.3: SSH auth method: private key
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3: Warning: Remote connection disconnect. Retrying...
-    opensuse42.3: Warning: Connection reset. Retrying...
-    opensuse42.3:
-    opensuse42.3: Vagrant insecure key detected. Vagrant will automatically replace
-    opensuse42.3: this with a newly generated keypair for better security.
-    opensuse42.3:
-    opensuse42.3: Inserting generated public key within guest...
-    opensuse42.3: Removing insecure key from the guest if it's present...
-    opensuse42.3: Key inserted! Disconnecting and reconnecting using new SSH key...
-==> opensuse42.3: Machine booted and ready!
-==> opensuse42.3: Checking for guest additions in VM...
-    opensuse42.3: The guest additions on this VM do not match the installed version of
-    opensuse42.3: VirtualBox! In most cases this is fine, but in rare cases it can
-    opensuse42.3: prevent things such as shared folders from working properly. If you see
-    opensuse42.3: shared folder errors, please make sure the guest additions within the
-    opensuse42.3: virtual machine match the version of VirtualBox you have installed on
-    opensuse42.3: your host and reload your VM.
-    opensuse42.3:
-    opensuse42.3: Guest Additions Version: 5.1.30
-    opensuse42.3: VirtualBox Version: 5.2
-==> opensuse42.3: Setting hostname...
-==> opensuse42.3: Configuring and enabling network interfaces...
-==> opensuse42.3: Mounting shared folders...
-    opensuse42.3: /vagrant => /Users/bamvor/works/source/bjzhang.github.io/public/sources/vagrant_kiwi
-```
-```
-192:vagrant_kiwi bamvor$ vagrant ssh
-Last failed login: Tue Nov 28 18:08:50 CET 2017 from 10.0.2.2 on ssh:notty
-There were 7 failed login attempts since the last successful login.
-Have a lot of fun...
-vagrant@os74:~>
-```
-```
-192:appliance_helper bamvor$ vagrant global-status --prune
-id       name         provider   state   directory
-------------------------------------------------------------------------------------------------------------------
-b41836b  opensuse42.3 virtualbox running /Users/bamvor/works/source/bjzhang.github.io/public/sources/vagrant_kiwi
-
-The above shows information about all known Vagrant environments
-on this machine. This data is cached and may not be completely
-up-to-date. To interact with any of the machines, you can go to
-that directory and run Vagrant, or you can use the ID directly
-with Vagrant commands from any directory. For example:
-"vagrant destroy 1a2b3c4d"
-192:appliance_helper bamvor$ vagrant ssh b41836b
-Last login: Fri Mar  9 15:06:34 2018 from 10.0.2.2
-Have a lot of fun...
-vagrant@os74:~>
-```
 
