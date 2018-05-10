@@ -127,3 +127,14 @@ kiwi本身是个单机工具。考虑到搭建kiwi构建环境对于初学者有
     -   <https://suse.github.io/kiwi/overview.html>
     -   <https://doc.opensuse.org/projects/kiwi/doc/>
 
+你可能感兴趣的文章
+------------------
+这是本月的第二篇文章。半瓦平时有随手记笔记的习惯，公众号原创文章只分享自己有体会的信息，希望能促进价值信息流动。任何建议欢迎给我留言或添加我的微信（公众号回复“微信”，可以看到半瓦的微信）：
+*   [春风吹又生----梳理中国CPU](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483744&idx=1&sn=c1e047036062dd97aae70cd8d6682f41&chksm=ec6cb74cdb1b3e5a9a21be4b24519a125e071461c02fb4e962c839e2647824ffd313d542b9ae&scene=21#wechat_redirect)
+*   [Linux自动化部署工具综述](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483755&idx=1&sn=ce1aaa72e0cc2d1933c9ed8002ab96da&chksm=ec6cb747db1b3e51ee9b56f9c8e3fa10f879d97e5a0b17da0dbbb51b48b8fead0adaff64d9a4&scene=21#wechat_redirect)
+*   [ARM生态系统的盛会Linaro connect（之一）：arm64 server和端侧AI](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483722&idx=1&sn=6f4ab00336e1beb589388be5fdc8e34c&chksm=ec6cb766db1b3e70995205ec548ed120b7c4fc3d21e513ae744641966341886a77aa7482a6fd&scene=21#wechat_redirect)
+*   [ARM生态系统的盛会Linaro connect（之二）：arm64 workstation和低成本调试工具](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483723&idx=1&sn=87296941e308d5d5e427b632483fd45f&chksm=ec6cb767db1b3e711bee73b95078dc1114721cab6112cc0626d6298103e40e3497702164bf2b&scene=21#wechat_redirect)
+*   [内核测试小整理](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483731&idx=1&sn=e2bb2be181cf85d219fcedb58d4dafe4&chksm=ec6cb77fdb1b3e696586dc6f9f7d5ff11cc35f989f9630c127800db2eb2ee03e4f29bdc82e2f&scene=21#wechat_redirect)
+
+本文首发本人公众号[《敏达生活》](https://mp.weixin.qq.com/s/HceY0Jp9iB-PVafJMnMjsQ)，欢迎拍砖，勾搭，关注:)
+
