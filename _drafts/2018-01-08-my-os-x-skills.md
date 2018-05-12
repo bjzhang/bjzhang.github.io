@@ -21,6 +21,10 @@ tags: [os x, macbook]
 			defaults write com.apple.finder AppleShowAllFiles -bool true;
 			KillAll Finder
 			```
+	10.	终端快捷键
+		1.	Command + n/p, 上下翻命令行。
+		2.	Command + Up/Down Arrow, 按行滚动终端。
+		3.	Fn + Command + Up/Down Arrow, 按行滚动终端。
 2. 锁屏后立刻要求输入密码（默认5分钟后）：系统偏好，安全性与隐私。
 3. 命令行用得到代理信息：https://superuser.com/questions/48480/how-can-i-get-mac-os-xs-proxy-information-in-a-bash-script，下面这个没有测试：https://dmorgan.info/posts/mac-network-proxy-terminal/
 4. tmux和剪贴板
