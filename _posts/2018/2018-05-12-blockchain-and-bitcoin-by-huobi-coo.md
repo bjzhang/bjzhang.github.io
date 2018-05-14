@@ -1,7 +1,7 @@
 
 演讲者：火币COO
 
-## 区块链可以传递价值
+## 区块链可以同时传递价值和信息
 
 ## 地球在“我”怀抱里，上帝视角。TODO 不懂
 
@@ -15,7 +15,16 @@ US与美国大选。
 ## 区块链技术
 ### 共识机制
 ### 底层操作系统进化
-cosmos: <https://cosmos.network/intro>
+
+演讲者认为：
+
+第一代以比特币为代表，提供了分布式账本；
+
+第二代以以太坊为代表，提供了智能合约；
+
+第三代的特点是跨链与哈希图，这部分还在发展，可以参考[cosmos](https://cosmos.network/intro)
+
+![IMG_20180512_143646](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024507.jpg)
 
 ## 如何做区块链+
 ### 技术
@@ -43,3 +52,32 @@ cosmos: <https://cosmos.network/intro>
 ### 传统行业
 可以从用不用区块链有什么区别开始分析。
 
+## 全部slide
+
+![IMG_20180512_141446](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024509.jpg)
+
+![IMG_20180512_142210](http://opuclx9sq.bkt.clouddn.com/2018-05-14-24507.jpg)
+
+![IMG_20180512_143120](http://opuclx9sq.bkt.clouddn.com/2018-05-14-24516.jpg)
+
+![IMG_20180512_143220](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024514.jpg)
+
+![IMG_20180512_143437](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024506.jpg)
+
+
+
+![IMG_20180512_144050](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024505.jpg)
+
+![IMG_20180512_144418](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024515.jpg)
+
+![IMG_20180512_144653](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024516.jpg)
+
+![IMG_20180512_144736](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024510.jpg)
+
+![IMG_20180512_144949](http://opuclx9sq.bkt.clouddn.com/2018-05-14-24513.jpg)
+
+![IMG_20180512_145122](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024508.jpg)
+
+![IMG_20180512_145200](http://opuclx9sq.bkt.clouddn.com/2018-05-14-024511.jpg)
+
+![IMG_20180512_150632](http://opuclx9sq.bkt.clouddn.com/2018-05-14-24510.jpg)
