@@ -5,29 +5,42 @@ categories: [Software]
 tags: [Linux, appliance, SUSE/openSUSE, KIWI]
 ---
 
-复习一下[上次的选型建议](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483757&idx=1&sn=aa7376cf5f752b4d66a93a8d2fc99c20&chksm=ec6cb741db1b3e57f1100a6670ea3ad4b7557aa5572745a52e128b03aed1893dab980485ac56#rd)：
+[上回书说到Linux镜像构建和部署工具的选型建议](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483757&idx=1&sn=aa7376cf5f752b4d66a93a8d2fc99c20&chksm=ec6cb741db1b3e57f1100a6670ea3ad4b7557aa5572745a52e128b03aed1893dab980485ac56#rd)：
 
 - 如果需要支持物理机部署，建议选择KIWI；
-- 如果部署镜像时需要更灵活通用的虚拟机配置和管理，建议选择Terraform+Vagrant。
+- 如果部署镜像时需要更灵活通用的虚拟机配置和管理，建议选择Hashicorp家族（Terraform, Packer, Vagrant）。
 - 如果单纯在虚拟化环境使用，可以选择virt-builder。
 
-笔者在suse第一次用kiwi是给opensuse for arm做映像，觉得还是比较灵活易用的。后来去了华为，在arm64 uefi和acpi完善前，os的测试也用kiwi制作镜像。在海航工作期间，也有封闭场景使用过kiwi。KIWI自身有详细的手册和google groups讨论组（链接见参考资料），但是中文资料比较少，网上中文材料基本说的都是kiwi不是最新的kiwi-ng，而且缺乏定制化细节。本文从搭建KIWI环境开始一步一步介绍KIWI使用技巧。
+这次我们细说KIWI。半瓦的文字希望大家能读到不同的内容，不希望只是翻译或者简单重复已有资料。笔者先会说下为什么对KIWI情有独钟；再分享下自己学习KIWI的思路；最后切入KIWI使用细节。对前言不感兴趣的小伙伴可以直接拉到第一个标题👇
 
-kiwi超快上手
+笔者在suse第一次用kiwi是给opensuse for arm做映像，觉得还是比较灵活易用的。后来去了华为，在arm64 uefi和acpi完善前，os的测试也用kiwi制作镜像。在海航工作期间，也有封闭场景使用过kiwi。这些跳坑经历促成了现在《Linux自动化部署工具》系列文章（[之一](https://mp.weixin.qq.com/s/9SjTy3Zl4Md4-kxBuoU5lw)，[之二](https://mp.weixin.qq.com/s/HceY0Jp9iB-PVafJMnMjsQ)）。
+
+为什么要写KIWI呢？其实KIWI自身有详细的手册和google groups讨论组（见参考资料[1], [2]），但是中文资料比较少，网上中文材料基本说的都是kiwi不是最新的kiwi-ng，而且缺乏具体技巧。另一方面，对于没有操作系统定制经验的人，直接看手册和讨论组可能不得要领，甚至问题不知道怎么问。笔者试图按照自己跳坑经历和大家分享KIWI的使用：
+
+* 上次已经分享了如何使用openSUSE build service构建和使用KIWI镜像。大家能看出来KIWI上手很容易。
+* 本文的目标是回到初心：如何构建出自己所需的定制镜像。具体内容包括：如何自己搭建KIWI构建镜像的环境，如何通过修改KIWI配置文件和脚本定制镜像。这个过程忽略了物理机部署可能遇到的bios/uefi的问题，也没有解释KIWI如何调试。原因是物理机部署通常比较顺利；对于简单的镜像定制来说，并不需要更多的调试技巧。
+* 如果按照本文的操作，自己觉得可以做出所需的镜像，但是逐渐觉得费时费力，那么就该看下一篇文章了。下一篇文章会介绍定制好的镜像如何部署到物理机。KIWI如何调试。如何提高构建的速度/效率。
+
+本地构建KIWI镜像
 --------------
-上次使用openSUSE的build service构建镜像。如果仅仅为了构建镜像，不需要部署buildservice。kiwi-ng有单独的命令行🔧。下文说明如何用kiwi命令行工具构建镜像。
+上次使用openSUSE的build service构建镜像。如果仅仅为了构建镜像，不需要build service。kiwi-ng的命令行🔧是一个单机工具。下文说明如何用kiwi命令行工具构建镜像（下文无特殊说明时，kiwi代表kiwi-ng）。
 
-上次文章的末尾在opensuse build service上使用KIWI创建了一个openSUSE镜像，基于这个镜像执行下面的脚本即可构建镜像：
+KIWI构建需要安装kiwi命令和kiwi所需的配置文件，具体过程见参考资料[1]。这里分享笔者自己的脚本。该脚本可以通过ssh连接到openSUSE机器并构建KIWI镜像。可以对照官方文档看本脚本。脚本地址：<https://github.com/bjzhang/small_tools_collection/blob/master/appliance_helper/build_kiwi_image_remote.sh>
 
-<https://github.com/bjzhang/small_tools_collection/blob/master/appliance_helper/build_kiwi_image_remote.sh>
+执行下面的脚本即可构建镜像：
 
-`build_kiwi_image_remote.sh kiwi_machine --appliance centos/x86_64/centos-07.0-JeOS`
+```
+build_kiwi_image_remote.sh kiwi_machine --appliance centos/x86_64/centos-07.0-JeOS
+```
 
-其中`remote_machine`是opensuse的机器，可以是上次构建的，也可以是自己安装的。这个命令可以构建centos 7.0的最小系统。`build_kiwi_image_remote.sh`通过ssh登陆到`kiwi_machine`，并执行`build_kiwi_image.sh`。`build_kiwi_image.sh`会更新kiwi并构建指定的镜像。直接执行构建任务的是`kiwi-ng`命令，下文直接使用`kiwi-ng`命令讲解。感兴趣的小伙伴可以看下`build_kiwi_image.sh`都做了哪些事情。
+`build_kiwi_image_remote.sh`通过ssh登陆到`kiwi_machine`，并执行`build_kiwi_image.sh`。其中`kiwi_machine`是opensuse的机器（物理机，虚拟机`build_kiwi_image_remote.sh`不支持容器）。"--appliance"表示具体使用的配置文件，上述参数可以构建centos 7.0的最小系统。`build_kiwi_image.sh`做的工作包括：
 
-### 如何用命令行构建镜像
+1. 安装/更新kiwi命令；
+2. 下载KIWI官方配置文件；
+3. 构建前置条件检查；
+4. 构建指定的镜像。
 
-前面的`build_kiwi_image.sh`已经在`kiwi_machine`的`$HOME/works/source/virtualization/kiwi-descriptions`，clone了kiwi-description。kiwi description是KIWI构建操作系统的配置文件，包含不同发行版（suse（包含SUSE和openSUSE），redhat，centos，debian）的模版，基于模版修改即可。实际的配置文件一般在第三层，例如"suse/x86_64/suse-leap-42.3-JeOS"表示suse发行版的x86_64架构的leap-42.3这个版本的最小系统（JeOS）。leap-42.3即openSUSE Leap42.3，是opensuse的最新版本。使用kiwi-ng命令指定目录即可构建对应的发行版，例如下面命令分别构建了opensuse42.3和centos7的镜像（由于墙的影响，发行版的测速不准确。故实际使用默认的配置文件时下载包的速度会比较慢，后文会给出国内源的例子）：
+上述直接执行构建任务的是`kiwi-ng`命令，下文直接使用`kiwi-ng`命令讲解。kiwi description是KIWI构建操作系统的配置文件，包含不同发行版（suse（包含SUSE和openSUSE），redhat，centos，debian）的模版，基于模版修改即可。实际的配置文件一般在第三层，例如"suse/x86_64/suse-leap-42.3-JeOS"表示suse发行版的x86_64架构的leap-42.3这个版本的最小系统（JeOS）。leap-42.3即openSUSE Leap42.3，是opensuse的最新版本。使用kiwi-ng命令指定目录即可构建对应的发行版，例如下面命令分别构建了opensuse42.3和centos7的镜像（由于墙的影响，发行版的测速不准确。故实际使用默认的配置文件时下载包的速度会比较慢，后文会给出国内源的例子）：
 
 ```
 APPLIANCE=suse/x86_64/suse-leap-42.3-JeOS/
@@ -39,7 +52,7 @@ APPLIANCE=centos/x86_64/centos-07.0-JeOS/
 sudo kiwi-ng --debug --color-output --type oem system build --target-dir $HOME/works/software/kiwi --description $APPLIANCE
 ```
 
-构建成功之后镜像目录：
+构建成功后会输出镜像文件：
 
 ```
 [ INFO    ]: 04:07:37 | Result files:
@@ -50,7 +63,7 @@ sudo kiwi-ng --debug --color-output --type oem system build --target-dir $HOME/w
 [ INFO    ]: 04:07:37 | Cleaning up BootImageDracut instance
 ```
 
-构建之后要删除构建目录，否则会提示：
+其中*.raw是硬盘文件，可以直接dd到硬盘；install.iso是镜像安装光盘，把这张按照光盘像平时安装Linux一样插入光驱，选择Install再选择硬盘即可完成安装。此外构建之后要删除`—target-dir`，否则会提示：
 
 ```
 [ INFO    ]: 03:53:22 | Setup root directory: /home/vagrant/works/software/kiwi/build/image-root
@@ -59,15 +72,13 @@ sudo kiwi-ng --debug --color-output --type oem system build --target-dir $HOME/w
 vagrant@os74:~/works/source/kiwi-descriptions> sudo rm -rf ~/works/software/kiwi/build/image-root
 ```
 
-### 初试KIWI配置文件
+### 初识KIWI配置文件
 
-上面提到的每个目录下都可以看到类似这样的文件：
+基于上面的本地构建结果，我们可以通过修改KIWI的配置文件定制自己所需要的镜像。先来看看KIWI的配置文件包括哪些：
 
 ![kiwi-description-files](http://opuclx9sq.bkt.clouddn.com/2018-05-13-122330.png)
 
-每个文件的作用如下：
-
-* `Dicefile`: 如果host是opensuse，可以很容易的用Dicefile通过docker或vagrant构建kiwi镜像。由于我使用的macbook，就不给大家演示了。感兴趣的小伙伴可以参考：<https://suse.github.io/kiwi/building/build_containerized.html>
+* `Dicefile`: 如果host是openSUSE，可以很容易的用Dicefile通过docker或vagrant构建kiwi镜像。由于笔者用的macbook，就不给大家演示了。感兴趣的小伙伴可以参考：<https://suse.github.io/kiwi/building/build_containerized.html>
 
 * `config.sh`：kiwi定制脚本，在软件包安装后，可以通过config.sh对文件系统进行修改，config.sh后，会生成镜像。回忆下本系列第一篇文章[Linux自动化部署工具综述](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483755&idx=1&sn=ce1aaa72e0cc2d1933c9ed8002ab96da&scene=21#wechat_redirect)提到的镜像构建的过程，config.sh是在步骤1结束前运行的：
 
@@ -85,36 +96,10 @@ vagrant@os74:~/works/source/kiwi-descriptions> sudo rm -rf ~/works/software/kiwi
   * 软件源配置：可以配置优先级（`priority="1"`）和是否在镜像中包括（`imageinclude="true"`）
   * 软件包配置：软件包配置包括通用的软件包配置和与上述镜像类型特定的软件包配置。需要注意的是软件包的名称在不同发行版可能有差异。跨发行版复制config.xml时，这部分可能需要修改。
 
-kiwi定制化
+例说KIWI定制镜像
 ----------
 
-kiwi的方便之处是可以很容易的定义自己的镜像。这里举几个栗子🌰，大家可以参考kiwi_customization分支的例子。
-
-#### config.sh修改实例
-
-下面的config.sh片段是笔者使用kiwi准备TiDB部署环境的例子：
-
-* 修改了tidb这个用户的limits，例如最大打开文件数量时10万个；
-* 把TiDB二进制复制到指定目录；
-* 创建并修改TiDB所需目录的权限。
-
-```
-echo "configure tidb"
-deploy_user=tidb
-echo "Configuration system and user limitation"
-LIMITS_CONF="/etc/security/limits.conf"
-echo "$deploy_user        soft        nofile        1000000" >> $LIMITS_CONF
-echo "$deploy_user        hard        nofile        1000000" >> $LIMITS_CONF
-echo "$deploy_user        soft        core          unlimited" >> $LIMITS_CONF
-echo "$deploy_user        soft        stack         10240" >> $LIMITS_CONF
-mv /binaries/tidb-v1.0.6-linux-amd64/bin/ /home/tidb/deploy
-mkdir -p /home/tidb/deploy/log
-chown tidb:tidb /home/tidb/deploy/log -R
-mkdir -p /home/tidb/deploy/status
-chown tidb:tidb /home/tidb/deploy/status -R
-```
-
-注：TiDB时新一代（NewSQL）与MYSQL兼容的分布式数据库，主要贡献公司是国内的创业公司Pincap（<https://www.pingcap.com/>），开发和使用社区都很活跃，github已经超过1万3千星。
+前面提到，KIWI定制镜像的核心配置文件是config.xml，官方文档在：<https://suse.github.io/kiwi/development/schema.html>。请大家看了下面的子标题，先去看官方文档，再回来看本文。希望本文看完了，schema也看熟练了。
 
 #### 修改或增加软件源
 
@@ -206,7 +191,7 @@ index d1491f8..8df4692 100644
 ```
 ### 增加二进制包
 
-比如我一个第三方下载的软件，没有安装源，只有二进制，例如我要使用分布式数据库TiDB，可以这样修改
+比如我一个第三方下载的软件，没有安装源，只有二进制，可以这样修改
 
 ```
 <archive name="binaries.tar.gz"/>
@@ -223,9 +208,33 @@ net.ipv4.tcp_syncookies = 0
 fs.file-max = 1000000
 ```
 
-例如`fs.file-max`表示系统允许最大打开的文件数量是10万。前面我们修改config.sh时，修改的是名为tidb的用户的最大上限是10万。
+例如`fs.file-max`表示系统允许最大打开的文件数量是10万。下面我们修改config.sh时，修改的是名为tidb的用户的最大上限是10万。
 
+#### 其它镜像定制要求
 
+下面的config.sh片段是笔者使用kiwi准备TiDB部署环境的例子：
+
+- 修改了tidb这个用户的limits，例如最大打开文件数量时10万个；
+- 把TiDB二进制复制到指定目录；
+- 创建并修改TiDB所需目录的权限。
+
+```
+echo "configure tidb"
+deploy_user=tidb
+echo "Configuration system and user limitation"
+LIMITS_CONF="/etc/security/limits.conf"
+echo "$deploy_user        soft        nofile        1000000" >> $LIMITS_CONF
+echo "$deploy_user        hard        nofile        1000000" >> $LIMITS_CONF
+echo "$deploy_user        soft        core          unlimited" >> $LIMITS_CONF
+echo "$deploy_user        soft        stack         10240" >> $LIMITS_CONF
+mv /binaries/tidb-v1.0.6-linux-amd64/bin/ /home/tidb/deploy
+mkdir -p /home/tidb/deploy/log
+chown tidb:tidb /home/tidb/deploy/log -R
+mkdir -p /home/tidb/deploy/status
+chown tidb:tidb /home/tidb/deploy/status -R
+```
+
+注：TiDB时新一代（NewSQL）与MYSQL兼容的分布式数据库，主要贡献公司是国内的创业公司Pincap（<https://www.pingcap.com/>），开发和使用社区都很活跃，github已经超过1万3千星。
 
 KIWI参考资料
 ------------
@@ -233,4 +242,17 @@ KIWI参考资料
 2. [google group](https://groups.google.com/forum/#!forum/kiwi-images): <https://groups.google.com/forum/#!forum/kiwi-images>
 3. [YaST 映像创建程序是 KIWI 映像工具的图形界面](https://www.suse.com/zh-cn/documentation/sles-12/book_sle_deployment/data/cha_imgcreator.html): <https://www.suse.com/zh-cn/documentation/sles-12/book_sle_deployment/data/cha_imgcreator.html>
 4. [kiwi-ng与legacy kiwi比较](https://suse.github.io/kiwi/overview/legacy_kiwi.html): <https://suse.github.io/kiwi/overview/legacy_kiwi.html>
+
+## 你可能感兴趣的文章
+
+这是本月的第三篇文章。半瓦平时有随手记笔记的习惯，公众号原创文章只分享自己有体会的信息，希望能促进价值信息流动。任何建议欢迎给我留言或添加我的微信（公众号回复“微信”，可以看到半瓦的微信）：
+
+- [春风吹又生—-梳理中国CPU](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483744&idx=1&sn=c1e047036062dd97aae70cd8d6682f41&chksm=ec6cb74cdb1b3e5a9a21be4b24519a125e071461c02fb4e962c839e2647824ffd313d542b9ae&scene=21#wechat_redirect)
+- [Linux自动化部署工具综述（Linux自动化部署工具系列之一）](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483755&idx=1&sn=ce1aaa72e0cc2d1933c9ed8002ab96da&chksm=ec6cb747db1b3e51ee9b56f9c8e3fa10f879d97e5a0b17da0dbbb51b48b8fead0adaff64d9a4&scene=21#wechat_redirect)
+- [比较操作系统镜像制作方式（Linux自动化部署工具系列之二）](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483757&idx=1&sn=aa7376cf5f752b4d66a93a8d2fc99c20&scene=21#wechat_redirect)
+- [ARM生态系统的盛会Linaro connect（之一）：arm64 server和端侧AI](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483722&idx=1&sn=6f4ab00336e1beb589388be5fdc8e34c&chksm=ec6cb766db1b3e70995205ec548ed120b7c4fc3d21e513ae744641966341886a77aa7482a6fd&scene=21#wechat_redirect)
+- [ARM生态系统的盛会Linaro connect（之二）：arm64 workstation和低成本调试工具](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483723&idx=1&sn=87296941e308d5d5e427b632483fd45f&chksm=ec6cb767db1b3e711bee73b95078dc1114721cab6112cc0626d6298103e40e3497702164bf2b&scene=21#wechat_redirect)
+- [内核测试小整理](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483731&idx=1&sn=e2bb2be181cf85d219fcedb58d4dafe4&chksm=ec6cb77fdb1b3e696586dc6f9f7d5ff11cc35f989f9630c127800db2eb2ee03e4f29bdc82e2f&scene=21#wechat_redirect)
+
+本文首发本文公众号[《敏达生活》](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483760&idx=1&sn=0785ed74878b5ef27943bda7fc6f2c9f&chksm=ec6cb75cdb1b3e4a10a929940ad79c9dee77917730e3d80ef2fd0de48d8e336c397c081037a1#rd)，欢迎关注，拍砖，转发。
 
