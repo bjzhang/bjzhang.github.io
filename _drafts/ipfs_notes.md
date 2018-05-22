@@ -172,3 +172,14 @@ TODO: <https://medium.com/@istanbul_techie/a-look-at-conflict-free-replicated-da
 web3.0
 
 ![ipfs_talk_in_Ethereum_meetup__web30](http://opuclx9sq.bkt.clouddn.com/2018-05-14-085809.png)
+
+
+
+[Filecoin | White Paper Breakdown and Token Sale Analysis](https://www.youtube.com/watch?v=e02czCnCuCM)
+
+Shortage of BT
+
+* Slow to connect. Could download to file but too slow to host a website.
+* No incentive to a node
+* Content addresstion. No permanent links.
+
