@@ -1,0 +1,8 @@
+digraph G {
+devm_hwmon_device_register_with_info
+hwmon_thermal_get_temp->scmi_hwmon_read
+scmi_hwmon_read->scmi_sensor_reading_get
+scmi_sensor_reading_get->scmi_one_xfer_init
+scmi_sensor_reading_get->scmi_do_xfer
+scmi_sensor_reading_get->scmi_one_xfer_put
+}
