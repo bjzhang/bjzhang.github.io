@@ -29,6 +29,10 @@ architecture
 ------------
 arm SCMI, 参见<https://github.com/bjzhang/bjzhang.github.io/blob/master/_drafts/2018-04-19-kernel-4.17.md>
 
+<https://www.linuxplumbersconf.org/2017/ocw/system/presentations/4759/original/fast_dvfs_scmi.pdf>
+
+<https://www.slideshare.net/linaroorg/las16200-scmi-system-management-and-control-interface>
+
 memory
 ------
 ### from a simple flag
