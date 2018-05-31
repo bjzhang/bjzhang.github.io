@@ -17,19 +17,23 @@ tags: [os x, macbook]
     9.  显示隐藏文件
         1.  从Sierra开始可以用"Command + Shift + ."在Finder中切换显示和隐藏文件: <https://www.zhihu.com/question/24635640>
         2.  Sierra和之前版本都可以用的方法是[通过defaults命令修改Finder的默认值](https://www.jianshu.com/p/9db349fa43c5), [Mac系统如何显示隐藏文件？](https://www.zhihu.com/question/24635640)，第二个链接的方法如下，自己测试通过：
-			```
-			defaults write com.apple.finder AppleShowAllFiles -bool true;
-			KillAll Finder
-			```
-	10.	终端快捷键
-		1.	Command + n/p, 上下翻命令行。
-		2.	Command + Up/Down Arrow, 按行滚动终端。
-		3.	Fn + Command + Up/Down Arrow, 按行滚动终端。
+    		```
+    		defaults write com.apple.finder AppleShowAllFiles -bool true;
+    		KillAll Finder
+    		```
+    		.	终端快捷键
+    		.	Command + n/p, 上下翻命令行。
+    		.	Command + Up/Down Arrow, 按行滚动终端。
+    		.	Fn + Command + Up/Down Arrow, 按行滚动终端。
+
 2. 锁屏后立刻要求输入密码（默认5分钟后）：系统偏好，安全性与隐私。
+
 3. 命令行用得到代理信息：https://superuser.com/questions/48480/how-can-i-get-mac-os-xs-proxy-information-in-a-bash-script，下面这个没有测试：https://dmorgan.info/posts/mac-network-proxy-terminal/
+
 4. tmux和剪贴板
     1. [优雅地使用命令行：Tmux 终端复用](http://harttle.com/2015/11/06/tmux-startup.html)
     2. https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
+
 5. 代理
     1. google drive需要用http代理，shadowsocks NG默认只在系统配置了socks5代理。需要手动添加http/https代理。
         1. [ ] 似乎使用pac文件时更好的做法
@@ -46,26 +50,32 @@ tags: [os x, macbook]
                     1. BamvordeMacBook-Pro:~ bamvor$ /usr/local/Cellar/privoxy/3.0.26/sbin/privoxy --no-daemon /usr/local/Cellar/privoxy/3.0.26/.bottle/etc/privoxy/config
                     2. 2017-11-15 15:05:01.894 7fffa806d Info: Privoxy version 3.0.26
                     3. 2017-11-15 15:05:01.895 7fffa806d Info: Program name: /usr/local/Cellar/privoxy/3.0.26/sbin/privoxy
+
 6. 日历提醒
     1. 修改google calendar默认按照事件发生时提醒。
         1. https://productforums.google.com/forum/#!msg/calendar/8SOz33YZ3sc/Bq0JsDgtf2MJ
         2. “Go to "settings" on the left under "my calendars" in the main view. Click on the "notifications" link. Select your preference in the drop down menus in “Event Reminders”.“
+
 7. 同时向多个terminal发送同样命令。
     1. http://iterm2.com/
+
 8. Spotlight（聚焦）跳过一些文件：<http://osxdaily.com/2011/12/30/exclude-drives-or-folders-from-spotlight-index-mac-os-x/>
     <img alt="qemu" src="{{site.url}}/public/images/os_x_ios/os_x_Spotlight_skip_indexing.png" width="100%" align="center" style="margin: 0px 15px">
-9.  删除google chrome浏览器安装的应用。
-    1.  开始想直接禁用这个应用，在<chrome://extensions/>里面取消选中的“已启动”，这时在<chrome://apps/>应用已经变灰了。但是在在launchpad和spot（聚焦搜索）里面仍然能看到这个应用。
-	2.	参考[[求助] Chrome应用启动器怎么删除？](https://bbs.feng.com/read-htm-tid-7936779.html)，找到了chrome应用所在的路径"/Users/user_name/Applications/Chrome Apps.localized"。
-	3.	从字符串看不出是哪个应用。直接搜索应用的关键字，例如我要删除chrome浏览器安装的chrome RDP，我就搜索rdp，找到了对应的目录：
-		```
-		$ grep rdp * -Ri
-		Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Resources/zh-Hans-CN.lproj/InfoPlist.strings:     <string>Chrome RDP</string>
-		Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Resources/zh-Hans-CN.lproj/InfoPlist.strings:     <string>Chrome RDP</string>
-		Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Info.plist:       <string>Chrome RDP</string>
-		$ rm -rf  Default\ cbkkbcmdlboombapidmoeolnmdacpkch.app
-		```
-	4.	删除以后，在launchpad和spot（聚焦搜索）里面就找不到这个应用了。
-10. alias
-    1.  ls打开颜色: "ls -G"
 
+9. 删除google chrome浏览器安装的应用。
+    1.  开始想直接禁用这个应用，在<chrome://extensions/>里面取消选中的“已启动”，这时在<chrome://apps/>应用已经变灰了。但是在在launchpad和spot（聚焦搜索）里面仍然能看到这个应用。
+    	.	参考[[求助] Chrome应用启动器怎么删除？](https://bbs.feng.com/read-htm-tid-7936779.html)，找到了chrome应用所在的路径"/Users/user_name/Applications/Chrome Apps.localized"。
+    	.	从字符串看不出是哪个应用。直接搜索应用的关键字，例如我要删除chrome浏览器安装的chrome RDP，我就搜索rdp，找到了对应的目录：
+    	```
+    	$ grep rdp * -Ri
+    	Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Resources/zh-Hans-CN.lproj/InfoPlist.strings:     <string>Chrome RDP</string>
+    	Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Resources/zh-Hans-CN.lproj/InfoPlist.strings:     <string>Chrome RDP</string>
+    	Default cbkkbcmdlboombapidmoeolnmdacpkch.app/Contents/Info.plist:       <string>Chrome RDP</string>
+    	$ rm -rf  Default\ cbkkbcmdlboombapidmoeolnmdacpkch.app
+    	```
+    	.	删除以后，在launchpad和spot（聚焦搜索）里面就找不到这个应用了。
+
+10. alias
+   1.  ls打开颜色: "ls -G"
+
+11. 连接电视时遇到内容显示不全。[关于 Mac、Apple TV 或其他显示器上的过扫描和欠扫描](https://support.apple.com/zh-cn/HT202763)。过扫描就是屏幕超过了电视的可视区域，欠扫面就是电视又黑边。调整方法是在偏好设置->显示器中欠扫描出拖动滑块调整。
