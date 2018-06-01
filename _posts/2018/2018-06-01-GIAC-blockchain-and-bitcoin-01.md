@@ -5,7 +5,7 @@ categories: [Software]
 tags: [Blockchain]
 ---
 
-> GIAC 是中国互联网技术领域一年一度的行业盛事，组委会从互联网架构最热门系统架构设计、工程效率、机器学习、未来的编程语言、分布式架构等领域甄选前沿的有典型代表的技术创新及研发实践的架构案例，分享他们在本年度最值得的总结、盘点的实践启示，打造一个分享及讨论平台，改变未来一年的互联网构建方式。  
+> GIAC（全球互联网架构大会）是中国互联网技术领域一年一度的行业盛事，组委会从互联网架构最热门系统架构设计、工程效率、机器学习、未来的编程语言、分布式架构等领域甄选前沿的有典型代表的技术创新及研发实践的架构案例，分享他们在本年度最值得的总结、盘点的实践启示，打造一个分享及讨论平台，改变未来一年的互联网构建方式。  
 
 今天（2018年6月1日）全天的前沿技术分会场都围绕区块链及数字货币展开。如果用两个关键字概括今天的内容，就是扩容和落地。本文是上午的内容概要。
 
@@ -68,3 +68,7 @@ Zilliqa同样托管在github上：[Zilliqa/Zilliqa: Zilliqa is the world’s fir
 * Bytom: Official Go implementation of the Bytom protocol: <https://github.com/Bytom/bytom>
 * 公信宝：gxchain/gxb-core: GXChain code: <https://github.com/gxchain/gxb-core>
 * Zilliqa: Zilliqa is the world’s first high-throughput public blockchain platform - designed to scale to thousands ​of transactions per second.: <https://github.com/Zilliqa/Zilliqa>
+
+
+
+本文首发本人公众号[敏达生活](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483785&idx=1&sn=da6619c6bed8b01ad9ee10fc15b994c7&chksm=ec6cb7a5db1b3eb310ac65b36507a45ca853149548a936461425e3da6a6e2616a64bb89bb70a#rd)，欢迎关注，勾搭，拍砖。
