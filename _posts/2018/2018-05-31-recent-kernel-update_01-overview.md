@@ -39,3 +39,4 @@ tags: [Linux]
 
 后续文章中笔者将从体系结构和内存两个子系统，分享一下从Linux merge window到具体代码，追踪内核特性开发的过程。
 
+本文首发本人公众号[敏达生活](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483776&idx=1&sn=cfcd68120e95b3189b80e99f766bb6a4&chksm=ec6cb7acdb1b3eba24e78e672fce1ec48fc74fb138cdc4ccd5f8b85359ba61e7083e4581877b#rd)，欢迎关注，勾搭，转发。
