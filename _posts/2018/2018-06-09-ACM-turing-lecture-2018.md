@@ -11,7 +11,7 @@ Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction
 具体获奖细节请参考：[2017图灵奖揭晓：两位大神携手获奖，Google成最大“赢家”](https://zhuanlan.zhihu.com/p/34804910?utm_source=wechat_session&utm_medium=social&wechatShare=1&from=timeline&isappinstalled=0)。感谢郭雄飞同学帮忙把视频放到了墙内：[《图灵奖演讲2018》](https://v.qq.com/x/page/j06797ka9ul.html)。以下是本人笔记正文。
 
 ## CPU指令集的发展
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135711.png)
+![IMG_0056](http://opuclx9sq.bkt.clouddn.com/2018-06-09-141218.png)
 演讲第一部分首先回顾了中央处理器（CPU）的指令集（ISA）的发展。[指令集(ISA)](https://en.wikipedia.org/wiki/Instruction_set_architecture)是计算机的抽象，大致有三种：
 * CISC(Complex Instruction Set Computer，复杂指令集)；
 * RISC(Reduced Instruction Set Computer，精简指令集)；
@@ -50,18 +50,17 @@ Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction
 ![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135737.png)
 上面对特定领域优化的例子，引出DSA（领域特定架构）：
 * 这是一种针对特定领域优化的架构，但不是针对某个应用优化的（后者是专用集成电路（Application Specific Integrated Circuit: ASIC）要解决的问题）。
-	* 半瓦注：例如国内比特大陆的比特币矿机就是对比特币挖矿这个特定应用优化的ASIC。
+  * 半瓦注：例如国内比特大陆的比特币矿机就是对比特币挖矿这个特定应用优化的ASIC。
 * 设计这种处理器需要比通用处理器更多的领域相关知识
 * 例子：
-	* 用于机器学习的神经网络处理器；
-		* 半瓦注：笔者在[2018 GIAC速递之一：区块链](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483785&idx=1&sn=da6619c6bed8b01ad9ee10fc15b994c7&chksm=ec6cb7a5db1b3eb310ac65b36507a45ca853149548a936461425e3da6a6e2616a64bb89bb70a#rd)介绍了一些用AI芯片挖矿的区块链项目，这与使用专门的比特币矿机芯片相比。是从特定应用到特定领域应用的变化。
-	* 用于图形和虚拟现实的GPU（俗称显卡）；
-	* 可编程的网络设备。
+  * 用于机器学习的神经网络处理器；
+  * 用于图形和虚拟现实的GPU（俗称显卡）；
+  * 可编程的网络设备。
 
 ![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135740.png)
-机器学习论文增长的数量和摩尔定律的速度是一样的。
+机器学习论文增长的速度和摩尔定律的速度是一样的。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135740.png)
+![IMG_0073](http://opuclx9sq.bkt.clouddn.com/2018-06-09-144515.png)
 作者认为的方向就是垂直整合。
 
 ![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135747.png)
@@ -83,7 +82,7 @@ RISC-V考虑到DSA需求，预留了大量的op code。
 * 由拥有一百名以上成员的基金会推动，保证可以长期演进。更多公司去做同一个架构的处理器，意味着更激烈的竞争。商业公司可以去卖一个指令集更好的实现。
 
 ### 敏捷芯片开发
-![](2018-06-09-ACM-turing-lecture-2018/IMG_0083.PNG)
+
 [chisel](https://chisel.eecs.berkeley.edu/)是一个模块化的硬件设计语言，助力硬件的敏捷开发。上图是不同RISC-V处理器的代码复用情况。
 
 # 你可能感兴趣的文章
