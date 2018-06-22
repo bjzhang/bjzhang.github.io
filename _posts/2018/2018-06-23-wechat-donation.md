@@ -39,3 +39,6 @@ tags: [Tech]
 - 育儿：
   - [我的一次蒙特梭利幼儿园家长会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483711&idx=1&sn=3e20719546efd189d971f3d0550c3e08&chksm=ec6cb713db1b3e0592f911a7cc1e640bf87425679be4b623658e0f1329e7e51577b1964eed9f#rd)
   - [因为相信而看见 \| 孩子小学一年级体会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483815&idx=1&sn=e97e0feb9b9d75e3d710dc2cbd1f9340&chksm=ec6cb78bdb1b3e9d86e2354bd56035619de3adf8fe6f96a858dd58a3098181503c007676faa9#rd)
+
+
+本文首发本人公众号[《敏达生活》](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483823&idx=1&sn=280d46b75dea95ffeb85e856a8e949e0&chksm=ec6cb783db1b3e95d4f03af15e8f9c268bdcfa9eb3f88cc6826ebf32bc9d9c7c9bab725dd894#rd)，欢迎拍砖，勾搭。
