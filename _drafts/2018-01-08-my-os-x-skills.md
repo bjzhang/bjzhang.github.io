@@ -76,6 +76,14 @@ tags: [os x, macbook]
     	.	删除以后，在launchpad和spot（聚焦搜索）里面就找不到这个应用了。
 
 10. alias
-   1.  ls打开颜色: "ls -G"
+  1.  ls打开颜色: "ls -G"
 
 11. 连接电视时遇到内容显示不全。[关于 Mac、Apple TV 或其他显示器上的过扫描和欠扫描](https://support.apple.com/zh-cn/HT202763)。过扫描就是屏幕超过了电视的可视区域，欠扫面就是电视又黑边。调整方法是在偏好设置->显示器中欠扫描出拖动滑块调整。
+
+12. 显示器色温调节：[f.lux](https://justgetflux.com/news/pages/macquickstart/)
+
+13. airplay on macbook
+
+     1. [airserver](https://www.airserver.com/)：仅仅支持苹果系统。
+     2. [reflector 3](http://www.airsquirrels.com/reflector/)：支持苹果和google系统（android，chrome等）。
+
