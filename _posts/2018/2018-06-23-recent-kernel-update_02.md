@@ -1,7 +1,7 @@
 # recent-kernel-update
 #博客
 
-接着分享本人上个月在农大的slides（完整slide见参考资料4），这次以体系结构，内存为例分享如何了解社区最新动向。
+接着分享本人上个月在农大的slides（完整slide见参考资料4），上次方法综述见[与社区共舞：如何追踪Linux内核社区最新动向（之一）](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483776&idx=1&sn=cfcd68120e95b3189b80e99f766bb6a4&chksm=ec6cb7acdb1b3eba24e78e672fce1ec48fc74fb138cdc4ccd5f8b85359ba61e7083e4581877b#rd)这次以体系结构，内存为例分享如何了解社区最新动向。
 
 ## Meltdown and Spectre
 体系结构幽灵/熔断漏洞一共有五个变种（1，2，3，3a，4），这些漏洞的特点是在ISA下面做了侧信道攻击。通常从软件角度看，计算机其实就是ISA。安全也是基于ISA的防御。但是这五个漏洞说明，由于处理器性能的优化，是有可能通过微架构的弱点，完成攻击的，漏洞具体情况可以参考如下材料：
