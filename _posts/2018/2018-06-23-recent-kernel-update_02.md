@@ -62,6 +62,8 @@ The mmap() system call supports a new MAP_FIXED_NOREPLACE option. Like MAP_FIXED
 The way that system calls are invoked on the x86-64 architecture has been reworked to make it more uniform and flexible. The new scheme has also been designed to prevent unused (but caller-controlled) data from getting onto the call stack — where it could perhaps be used in a speculative-execution attack.
 ```
 
+具体修改很简单：
+
 ![map_fixed_noreplace](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142257.jpg)
 
 ## 参考链接
