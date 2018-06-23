@@ -41,9 +41,11 @@ tags: [Linux]
 
 让我们来详细看下x86和arm64补丁都做了什么：
 * x86
+
   ![spectre_v1_x86](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142500.jpg)
 
 * arm64
+
   ![spectre_v1_arm64_01](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142344.jpg)![spectre_v1_arm64_02](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142355.jpg)
 
 
