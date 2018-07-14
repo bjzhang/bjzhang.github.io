@@ -63,9 +63,7 @@ tags: [Linux]
 
 看4.16分支里面和Spectre相关的merge commits: `git log --grep [Ss]pectre --merges v4.16`：
 
-![image-20180630221015079](http://opuclx9sq.bkt.clouddn.com/2018-06-30-141015.png)
-
-可以确定这个Merge合入了上述修改，小伙伴可以试着从这个Merge入手找到上面的commits。
+![git_log_spectre_merge_commit](http://opuclx9sq.bkt.clouddn.com/2018-07-14-053858.png)可以看到这个Merge合入了上述修改，小伙伴可以试着从这个Merge入手找到上面的commits。
 
 PS: 这次Meltdown and Spectre对业界有很大震动，最近的google I/O和2018年图灵奖演讲都提到了这个漏洞。图灵奖演讲具体内容可以参考笔者的笔记：[2018图灵奖Lecture：计算机体系结构的又一个黄金时代：特定领域的软硬件协同设计，增强安全，开源指令集和芯片的敏捷开发](https://mp.weixin.qq.com/s/D52QGaBlE6sRglP1Rt9KcA)。
 
