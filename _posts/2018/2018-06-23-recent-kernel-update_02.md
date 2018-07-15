@@ -17,13 +17,11 @@ tags: [Linux]
 ### 内核开发流程
 
 内核的开发流程分成merge window和 release candidate(rc)。
-* merge windows固定是两个。一周一个。大特性通常会先进入linux-next分支，然后通过merge window合入主线。
+* merge windows固定是两个，一周一个。大特性通常会先进入linux-next分支，然后通过merge window合入主线。
 * rc一般是7-8个，同样是一周一个。主要是bugfix和小特性的合入。
 
 所以通常来说一个内核版本的开发周期是10周左右。可以在kernel.org看到最新的版本。例如下图是2018年6月23日的截图，可以看到当前最新版本是4.18 rc1。4.18的两个merge window已经结束。如果想了解4.18内核重大更新，可以参考LWN的merge window文章（参考链接1，参考链接3）。
 ![kernel.org](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142052.png)
-
-
 
 ### 从LWN Merge window找到具体代码修改
 
@@ -54,8 +52,6 @@ tags: [Linux]
 * arm64
 
   ![spectre_v1_arm64_01](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142344.jpg)![spectre_v1_arm64_02](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142355.jpg)
-
-
 
 ### Merge commits了解一下
 
