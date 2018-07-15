@@ -67,8 +67,8 @@ tags: [Linux]
 
 PS: 这次Meltdown and Spectre对业界有很大震动，最近的google I/O和2018年图灵奖演讲都提到了这个漏洞。图灵奖演讲具体内容可以参考笔者的笔记：[2018图灵奖Lecture：计算机体系结构的又一个黄金时代：特定领域的软硬件协同设计，增强安全，开源指令集和芯片的敏捷开发](https://mp.weixin.qq.com/s/D52QGaBlE6sRglP1Rt9KcA)。
 
-## memory子系统引入了新的flag: MAP_FIXED_NOREPLACE
-4.17内核引入了一个新的flag：MAP_FIXED_NOREPLACE。原先内核有个类似的flag“MAP_FIXED”，这个flag的作用是在用户指定虚拟地址做映射，如果此处已有映射，会先删除之前的映射。原本MAP_FIXED的目的是给用户空间提供一个可控的虚拟地址映射方式。对于一个规划好的系统，可以保证没有冲突。可是问题在于，系统升级后，系统默认映射的地址可能有变化，导滞和MAP_FIXED映射的地方有冲突，于是提供系统的映射被干掉了，笔者原来在华为支撑产品线内核升级时，就遇到了类似的情况，现象很莫名其妙。MAP_FIXED_NOREPLACEv保证不会替换该虚拟地址的已有映射。这次系统的提交信息如下，笔者不列出具体来源了，请小伙伴自己寻找：
+## memory子系统引入了新的flag
+4.17内核引入了一个新的flag：MAP_FIXED_NOREPLACE。原先内核有个类似的flag“MAP_FIXED”，这个flag的作用是按用户要求在用户指定虚拟地址做映射，如果此处已有映射，会先删除之前的映射。原本MAP_FIXED的目的是给用户空间提供一个可控的虚拟地址映射方式。对于一个规划好的系统，可以保证没有冲突。可是问题在于，系统升级时系统原有映射的地址可能有变化，导致和MAP_FIXED映射的地方有冲突，于是原本系统的映射被干掉了，笔者原来在华为支撑产品线内核升级时，就遇到了类似的情况，现象很莫名其妙。MAP_FIXED_NOREPLACE保证不会替换该虚拟地址的已有映射。这次系统的提交信息如下，笔者不列出具体来源了，请小伙伴自己寻找：
 
 ```
 The mmap() system call supports a new MAP_FIXED_NOREPLACE option. Like MAP_FIXED, it tries to place the new memory region at a user-supplied address.  Unlike MAP_FIXED, though, it will not replace an existing mapping at that address; instead, it will fail with EEXIST if such a mapping exists. This is the change that was discussed last year as MAP_FIXED_SAFE; it seems that the battle over the proper name for the feature has finally been resolved.
@@ -90,9 +90,10 @@ The way that system calls are invoked on the x86-64 architecture has been rework
 3. Linux 4.17 merge window
 	1. Part1: <https://lwn.net/Articles/750928/>
 	2. Part2: <https://lwn.net/Articles/751482/>
-4. 笔者的完整slide：<aarch64.me/public/documents/bamvor_slides/Recent_Linux_kernel.pdf>
-
-
+4.  Linux 4.18 merge window:
+    1. Part1: <https://lwn.net/Articles/756898/>
+    2. Part2: <https://lwn.net/Articles/757187/>
+5. 笔者的完整slide：<aarch64.me/public/documents/bamvor_slides/Recent_Linux_kernel.pdf>
 
 # 你可能感兴趣的文章
 
@@ -103,7 +104,7 @@ The way that system calls are invoked on the x86-64 architecture has been rework
   - [2018图灵奖Lecture：计算机体系结构的又一个黄金时代：特定领域的软硬件协同设计，增强安全，开源指令集和芯片的敏捷开发](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483810&idx=1&sn=7da1d609b0d8d3c91a5fee82d2b5551a&chksm=ec6cb78edb1b3e98d5f201457d69c08565e28757be2ff36a97b40e5d1e24d5eeea006812b54a&scene=21#wechat_redirect)
   - [春风吹又生—-梳理中国CPU](http://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483744&idx=1&sn=c1e047036062dd97aae70cd8d6682f41&chksm=ec6cb74cdb1b3e5a9a21be4b24519a125e071461c02fb4e962c839e2647824ffd313d542b9ae&scene=21#wechat_redirect)
   - [我的一次蒙特梭利幼儿园家长会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483711&idx=1&sn=3e20719546efd189d971f3d0550c3e08&chksm=ec6cb713db1b3e0592f911a7cc1e640bf87425679be4b623658e0f1329e7e51577b1964eed9f&scene=21#wechat_redirect)
-  - [因为相信而看见 | 孩子小学一年级体会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483815&idx=1&sn=e97e0feb9b9d75e3d710dc2cbd1f9340&chksm=ec6cb78bdb1b3e9d86e2354bd56035619de3adf8fe6f96a858dd58a3098181503c007676faa9&scene=21#wechat_redirect)
+  - [因为相信而看见 \| 孩子小学一年级体会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483815&idx=1&sn=e97e0feb9b9d75e3d710dc2cbd1f9340&chksm=ec6cb78bdb1b3e9d86e2354bd56035619de3adf8fe6f96a858dd58a3098181503c007676faa9&scene=21#wechat_redirect)
 
 - 转载：
 
