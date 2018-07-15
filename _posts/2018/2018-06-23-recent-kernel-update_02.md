@@ -79,11 +79,11 @@ The way that system calls are invoked on the x86-64 architecture has been rework
 ![map_fixed_noreplace](http://opuclx9sq.bkt.clouddn.com/2018-06-23-142257.jpg)
 
 ## 参考链接
-1. Linux 4.16 merge window
+1. Linux 4.16 merge window:
 	1. part1: <https://lwn.net/Articles/746129/>
 	2. part2: <https://lwn.net/Articles/746791/>
 2. Linux 4.16 Changes：<https://www.phoronix.com/scan.php?page=article&item=linux-416-changes&num=1>
-3. Linux 4.17 merge window
+3. Linux 4.17 merge window:
 	1. Part1: <https://lwn.net/Articles/750928/>
 	2. Part2: <https://lwn.net/Articles/751482/>
 4.  Linux 4.18 merge window:
