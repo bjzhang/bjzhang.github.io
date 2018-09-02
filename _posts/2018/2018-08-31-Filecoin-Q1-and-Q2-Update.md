@@ -1,4 +1,9 @@
-# 是戏法是真货？深度解读Filecoin Q1&Q2 Update
+---
+layout: post
+title: 是戏法是真货？深度解读Filecoin Q1&Q2 Update
+categories: [Software]
+tags: [Blockchain]
+---
 
 北京时间周二午夜，协议实验室公布了[Filecoin 2018年第一季度和第二季度的进展（参考链接1）](https://filecoin.io/blog/update-2018-q1-q2/ "filecoin 2018 Q1&Q2 Update")，内容包括开发进展，研究进展，路线图，媒体报道和演讲，filecoin与协议实验室两个两个项目IPFS和libp2p的关系等内容。Update描述的Filecoin开发进展比之前详细的多，再结合Q2 Roadmap（参考链接2），心里觉得踏实很多，感觉Filecoin项目还是挺靠谱的。
 
