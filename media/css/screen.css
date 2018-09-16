@@ -250,3 +250,6 @@ footer a:hover {
     text-decoration: none;
 }
 
+img + em {
+    display: block; text-align: center;
+}
