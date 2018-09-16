@@ -5,9 +5,7 @@ categories: [Software]
 tags: [Blockchain]
 ---
 
-
-今天在北京中关村IC咖啡，董天一老师为大家讲解了Filecoin，IPFS和Libp2p三个项目，笔者之前对ipfs和libp2p有些了解，仅仅记录了之前不知道的信息。供大家参考。
-![从左至右分别是徐潇，戴嘉乐和董天一](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-040244.jpg)
+今天（2018年9月15日）在北京中关村IC咖啡，董天一老师为大家讲解了Filecoin，IPFS和Libp2p三个项目，笔者之前对ipfs和libp2p有些了解，仅仅记录了之前不知道的信息。供大家参考。![从左至右分别是徐潇，戴嘉乐和董天一](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-060659.jpg)
 *从左至右分别是徐潇，戴嘉乐和董天一*
 
 ## 热场
@@ -25,25 +23,24 @@ tags: [Blockchain]
 不管filecoin还是ipfs都是基于libp2p协议。内网需要NAT做穿透。最新的协议是Interactive Connectivity Establishment (ICE) （[rfc8445（参考链接1）](https://tools.ietf.org/html/rfc8445)）。董天一在寻求ICE go语言版本的合作。目前他不清楚社区是否能在上线前完成。戴嘉乐成立的公司有技术专家在和社区和一起做这个事情。
 
 ## IPFS
-![IPFS全球节点分布。可以看到欧洲和美国最多](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-040251.jpg)
+![IPFS全球节点分布。可以看到欧洲和美国最多](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-061149.jpg)
 *IPFS全球节点分布。可以看到欧洲和美国最多*
 
-![awesome.ipfs.io](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-040255.png)
+![awesome.ipfs.io](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-060629.png)
 *awesome.ipfs.io*
 
-笔者所在公司计划从中选择一些有趣的项目介绍，例如
-
+笔者所在公司星际比特计划从中选择一些有趣的项目介绍，已经完成的文章：
 * [ IPFS软件生态系列之淘宝篇 ](https://mp.weixin.qq.com/s/ntEwUxS_hyonQRN83gHXmg)
 * [ IPFS软件生态系列之视频篇 ](https://mp.weixin.qq.com/s/xmdoB5sZ0JeZcrHIrXJ9XA)
 
-### DHT
-董天一说能做到毫秒级查找。
 ### ipfs子网
 董天一认为ipfs未来会成为互联网的子网。重点讲了浏览器对于ipfs的支持。
 
 ## filecoin
 ### 爱西欧
-![file代币经济体系](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-040259.jpg "file代币经济体系")
+![Filecoin代币经济体系](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-060534.jpg)
+*Filecoin代币经济体系*
+
 也提到了后续会成立filecoin基金会。
 
 * 首先解释了为什么filecoin付费是合理的，世界上没有免费的午餐。
