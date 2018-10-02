@@ -41,9 +41,8 @@ tags: [Blockchain]
 ![Filecoin代币经济体系](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-060534.jpg)
 *Filecoin代币经济体系*
 
-也提到了后续会成立filecoin基金会。
-
 * 首先解释了为什么filecoin付费是合理的，世界上没有免费的午餐。
+* 提到了后续会成立filecoin基金会。
 * filecoin在2017年解决了没有度量网络带宽的问题：retrieval market（流量市场）。
 * 通过时空证明分发新币。只和存储矿工有关系。
 * 使用micro payment减少双花的概率。Filecoin是谁（矿工）提供数据给谁钱。
