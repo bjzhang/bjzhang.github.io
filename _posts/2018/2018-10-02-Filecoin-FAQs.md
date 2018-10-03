@@ -78,3 +78,7 @@ Seal操作的目的是：
 * [是戏法是真货？深度解读Filecoin Q1&Q2 Update](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483884&idx=1&sn=beb97d485de90dedbbf742903c53d36a&scene=21#wechat_redirect)
 * [“黎曼猜想”推翻区块链加密算法？（](https://mp.weixin.qq.com/s?__biz=MzU4NDQ5NzE3NQ==&mid=2247484130&idx=1&sn=8d1ce1399e8f5c015fd48e5cf58ee5cb&scene=21#wechat_redirect)原创：IPFS星际比特）
 * [《理解孩子的画》——与孩子一起成长](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483918&idx=1&sn=fa9b33bb5b34604895dd24f6a8ea3183&chksm=ec6cb422db1b3d343413dc73c4a6ba1bdd6aa7ef6910c1f1c80a94ae4daa51c9ed9cedbc6697&token=1343963564&lang=zh_CN#rd)
+
+
+
+本文首发笔者公众号[敏达生活](https://mp.weixin.qq.com/s/9Dbq6H9amoHR15RicO1MFA)，欢迎大家勾搭，拍砖。
