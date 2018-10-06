@@ -37,6 +37,8 @@ tags: [os x, macbook]
 
     10. 隐藏照片：[在 iPhone、iPad、iPod touch 或 Mac 上隐藏照片](https://support.apple.com/zh-cn/ht205891)
 
+    11. 截屏。除了原来的Shift+Command+4和Shift+Control+Command+4分别用于截图和截图（只保存在剪贴板）。mojave(10.14)增加了Shift+Command+5：可以选择指定区域的截图还是录屏。
+
 2. 锁屏后立刻要求输入密码（默认5分钟后）：系统偏好，安全性与隐私。
 
 3. 命令行用得到代理信息：https://superuser.com/questions/48480/how-can-i-get-mac-os-xs-proxy-information-in-a-bash-script，下面这个没有测试：https://dmorgan.info/posts/mac-network-proxy-terminal/
@@ -68,6 +70,7 @@ tags: [os x, macbook]
         2. “Go to "settings" on the left under "my calendars" in the main view. Click on the "notifications" link. Select your preference in the drop down menus in “Event Reminders”.“
 
 7. 同时向多个terminal发送同样命令。
+
     1. http://iterm2.com/
 
 8. Spotlight（聚焦）跳过一些文件：<http://osxdaily.com/2011/12/30/exclude-drives-or-folders-from-spotlight-index-mac-os-x/>
@@ -87,6 +90,7 @@ tags: [os x, macbook]
     	.	删除以后，在launchpad和spot（聚焦搜索）里面就找不到这个应用了。
 
 10. alias
+
   1.  ls打开颜色: "ls -G"
 
 11. 连接电视时遇到内容显示不全。[关于 Mac、Apple TV 或其他显示器上的过扫描和欠扫描](https://support.apple.com/zh-cn/HT202763)。过扫描就是屏幕超过了电视的可视区域，欠扫面就是电视又黑边。调整方法是在偏好设置->显示器中欠扫描出拖动滑块调整。
