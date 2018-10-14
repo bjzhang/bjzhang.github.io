@@ -4,3 +4,4 @@ url: http://aarch64.me
 author: Bamvor
 highlighter: rouge
 paginate: 24
+theme: jekyll-theme-architect
