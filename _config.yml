@@ -3,3 +3,5 @@ permalink: /:year/:month/:title/
 url: http://aarch64.me
 author: Bamvor
 paginate: 24
+title: Bamvor' Homepage
+description: IPFS信仰者，坚信点对点通信的未来
