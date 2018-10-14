@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Filecoin官方FAQ缩编和解读
 categories: [Software]
 tags: [Blockchain]
 ---
+
+#Filecoin官方FAQ缩编和解读
 
 10月2日协议实验室官方发布了FAQ。这是今年继多篇存储证明（Proof of Replication）论文（参考公司星际比特的发问：[深度剖析复制证明论文](https://mp.weixin.qq.com/s/c6yyt9_-btRl8muxlZW0qw)），Q1，Q2 Update（参见笔者文章：[是戏法是真货？深度解读Filecoin Q1&Q2 Update](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483884&idx=1&sn=beb97d485de90dedbbf742903c53d36a&scene=21#wechat_redirect)）之后第三篇长文，笔者读后觉得信息量很大。下文节选了笔者感兴趣的新增内容并标出了重点，与诸君分享。原文地址：[https://filecoin.io/faqs](https://filecoin.io/faqs)，全文翻译见公司公众号IPFS星际比特文章：[IPFS/Filecoin发布官方FAQs](https://mp.weixin.qq.com/s/dHBaV82o0ZPKf1nIsbPw7Q)。
 
