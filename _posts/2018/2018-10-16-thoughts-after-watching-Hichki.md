@@ -22,4 +22,5 @@ Aatish最终选择信任奈娜，放下自己之前信任别人而被抛弃所�
 * [因为相信而看见 \| 孩子小学一年级体会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483815&idx=1&sn=e97e0feb9b9d75e3d710dc2cbd1f9340&chksm=ec6cb78bdb1b3e9d86e2354bd56035619de3adf8fe6f96a858dd58a3098181503c007676faa9#rd)
 * [我的一次蒙特梭利幼儿园家长会](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483711&idx=1&sn=3e20719546efd189d971f3d0550c3e08&chksm=ec6cb713db1b3e0592f911a7cc1e640bf87425679be4b623658e0f1329e7e51577b1964eed9f&token=609645329&lang=zh_CN#rd)
 
+本文首发笔者公众号[《敏达生活》](https://mp.weixin.qq.com/s/I1nROoYOVikPzmI3XLBS3Q)，欢迎勾搭，拍砖。
 
