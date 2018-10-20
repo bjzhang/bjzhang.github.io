@@ -49,7 +49,7 @@ Linux内核开发工程师／专家
 6.做事严谨认真，对结果负责；
 7.应届生基础好的也非常欢迎；
 
-有意可私信笔者。
+有意可私信笔者或直接发邮件和何大侠：heguanjun@meituan.com
 
 ## 半瓦的公众号文章
 * [与社区共舞：如何追踪Linux内核社区最新动向（之一）](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483776&idx=1&sn=cfcd68120e95b3189b80e99f766bb6a4&chksm=ec6cb7acdb1b3eba24e78e672fce1ec48fc74fb138cdc4ccd5f8b85359ba61e7083e4581877b#rd)
