@@ -51,10 +51,6 @@ Linux内核开发工程师／专家
 
 有意可私信笔者。
 
-## 部门负责人何大侠的技术分享
-* xxxx
-* yyyy
-
 ## 半瓦的公众号文章
 * [与社区共舞：如何追踪Linux内核社区最新动向（之一）](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483776&idx=1&sn=cfcd68120e95b3189b80e99f766bb6a4&chksm=ec6cb7acdb1b3eba24e78e672fce1ec48fc74fb138cdc4ccd5f8b85359ba61e7083e4581877b#rd)
 * [与社区共舞（之二）：例说如何了解Linux内核社区最新动向](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483834&idx=1&sn=c6c0ab3c10876a7a9c0952c3be32798f&chksm=ec6cb796db1b3e80b3c107e128b03f0c698acbe5279dc561fc4ac419301fe8808c05915ce108#rd)
