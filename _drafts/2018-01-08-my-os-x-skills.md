@@ -39,6 +39,12 @@ tags: [os x, macbook]
 
     11. 截屏。除了原来的Shift+Command+4和Shift+Control+Command+4分别用于截图和截图（只保存在剪贴板）。mojave(10.14)增加了Shift+Command+5：可以选择指定区域的截图还是录屏。
 
+    12. Iterm2下使用bash的Alt+d，Alt+f等功能。如下图，把Left Option映射为+Esc"即可。
+
+         https://stackoverflow.com/questions/18923765/bash-keyboard-shortcuts-in-iterm-like-altd-and-altf
+
+         ![image-20181024171728058](/Users/bamvor/Library/Application Support/typora-user-images/image-20181024171728058.png)
+
 2. 锁屏后立刻要求输入密码（默认5分钟后）：系统偏好，安全性与隐私。
 
 3. 命令行用得到代理信息：https://superuser.com/questions/48480/how-can-i-get-mac-os-xs-proxy-information-in-a-bash-script，下面这个没有测试：https://dmorgan.info/posts/mac-network-proxy-terminal/
