@@ -39,7 +39,7 @@ Filecoin的白皮书659k，ipfs默认的chunk大小是256k，所以有三个chun
 	- unixfs v2的规范操作（正在进行）
 	- 完成js-ipld接口的重构。
 - 社区在讨论2019年的计划： [ipld/roadmap#2 ](#)(https://github.com/ipld/roadmap/issues/2)[Stebalien](#)(https://github.com/Stebalien) 和 [mikeal](#)(https://github.com/mikeal)  在IPLD能否直接提供加密数据存储能力有些争议。
-- 
+
 # IPFS学习资料
 - This single-page web app can edit itself [medium.com/textileio/this-single-page-web-app-can-edit-itself-62734dac2700](#)：从如何使用js IPFS api建立IPFS节点开始，使用IPNS查询内容更新并显示在网页上。
 - Tutorial: Host your own IPFS node and help the next generation of web 描述了如何搭建ipfs public gateway.
