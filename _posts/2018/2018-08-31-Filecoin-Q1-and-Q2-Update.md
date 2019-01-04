@@ -4,15 +4,20 @@
 
 ## 从Filecoin开发进展开Filecoin架构
 ![图1: Filecoin Development Update]({{site.url}}/public/images/2018-08-31-Filecoin-Q1-and-Q2-Update/Image.jpeg "Filecoin Development Update https://filecoin.io/blog/update-2018-q1-q2/")
+
 上面是Filecoin的开发进展，这是Filecoin项目第一次涉及到和协议实验室的IPFS和libp2p两个项目的关系。原本这篇文章之前，我心里面Filecoin和二者的关系是这样的。
 ![图2: 我原本想象的Filecoin与IPFS和libp2p]({{site.url}}/public/images/2018-08-31-Filecoin-Q1-and-Q2-Update/DraggedImage.png)
+
 看完这次资料之后，脑补了下面这张图：
 ![图3: 脑补Filecoin与IPFS，Libp2p关系]({{site.url}}/public/images/2018-08-31-Filecoin-Q1-and-Q2-Update/DraggedImage-1.png "脑补Filecoin与IPFS，Libp2p关系")
+
 上图中数字代表开发进展中的数字编号。上图中IPLD是IPFS中的重要组件（见下图），它用于IPFS数据表示和管理，IPFS中默认使用balanced merkledag存储数据。
 ![图4: IPFS Stack]({{site.url}}/public/images/2018-08-31-Filecoin-Q1-and-Q2-Update/17D1E28E-E8D1-49AF-8DB1-53875469EA76.jpeg)
+
 下图是协议实验室js-ipfs团队提供的IPFS核心架构图，可以看到DAG向上通过unixfs提供和\*nixz一致的文件和目录管理，对下连接Bitswap（即上图的exchange，节点间数据交换）和blocks service（IPFS节点负责本地存储的接口）。笔者后续可以会写IPFS数据之旅系列文章，心急的小伙伴可以参考
 这篇文章：[Understanding the IPFS White Paper part 2 (参考链接3）](https://hackernoon.com/understanding-the-ipfs-white-paper-part-2-df40511addbd)
 ![图5: ipfs core architecture https://github.com/ipfs/js-ipfs#ipfs-core-architecture]({{site.url}}/public/images/2018-08-31-Filecoin-Q1-and-Q2-Update/ipfs-core.png "ipfs core architecture")
+
 上图没有表示的内容有：
 
 * 第四条“miners can assemble blocks”结合Roadmap的“Miners can assemble transactions into a block (block creation)”，可以知道Filecoin目前已经可以从transactions建立区块（Block）。
