@@ -1,9 +1,4 @@
----
-layout: post
-title: "how to print optimized out value in gdb: take arm64 assembly as example"
-categories: [Linux]
-tags: [debug, gdb]
----
+# "how to print optimized out value in gdb: take arm64 assembly as example"
 
 This [article](http://ask.xmodulo.com/print-optimized-out-value-gdb.html) said that user could define variable as volatile or compile with "-O0" in order to debug such variable in gdb. The thing is some time we could not do it, such as we want to debug Linux kernel. Recently, I found that the refcount in gpiochip is incorrect. I hope I could debug it through the gdb in host.
 

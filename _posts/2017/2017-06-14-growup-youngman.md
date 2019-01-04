@@ -1,9 +1,4 @@
----
-layout: post
-title: 成长吧，少年
-categories: [Others]
-tags: [people, education]
----
+# 成长吧，少年
 
 <img alt="mouny_huang_by_echo.jpg" src="{{site.url}}/public/images/misc/mouny_huang_by_echo.jpg" width="50%" align="left" style="margin: 0px 15px">
 

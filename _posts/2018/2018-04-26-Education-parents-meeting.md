@@ -1,9 +1,4 @@
----
-layout: post
-title: 懂孩子比爱孩子重要
-categories: [Education]
-tags: [Education]
----
+# 懂孩子比爱孩子重要
 
 学校介绍
 --------

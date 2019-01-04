@@ -1,9 +1,4 @@
----
-layout: post
-title: "writev behavior change a little bit to obey the posix standard"
-categories: [Linux]
-tags: [kernel, glibc, syscall, writev]
----
+# "writev behavior change a little bit to obey the posix standard"
 
 # What is writev
 ```

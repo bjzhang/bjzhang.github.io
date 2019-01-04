@@ -1,9 +1,4 @@
----
-layout: post
-title: 使用golang编写简单的游戏助手
-categories: [Software]
-tags: [Linux, golang, game]
----
+# 使用golang编写简单的游戏助手
 
 最近工作关系需要学习golang，除了工作时间学习之后，觉得自己还需要其它练习。正好最近在玩儿勇者斗恶龙6（Dragon Quest VI，以下简称[DQ6](https://zh.wikipedia.org/wiki/%E5%8B%87%E8%80%85%E6%96%97%E6%81%B6%E9%BE%99VI_%E5%B9%BB%E4%B9%8B%E5%A4%A7%E5%9C%B0)）。第一次玩DQ6还是在中星微，当时发现“我”只是主角在现实世界的一个梦，并可以在现实世界和梦的世界中穿行的时候，相当震撼。后来，盗梦空间上映之后，我又学会了做“梦中梦”。哦，扯远了。。。
 

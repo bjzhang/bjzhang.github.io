@@ -1,9 +1,4 @@
----
-layout: post
-title: 使用连续页面hint改善用户空间匿名页的性能
-categories: [Linux]
-tags: [Linux, arm, pagetable]
----
+# 使用连续页面hint改善用户空间匿名页的性能
 
 按：笔者在今年在布达佩斯举办的linaro connect上发表演讲。演讲题目是"Implementing contiguous page hint for anonymous pages in user space"。本文根据当时演讲内容整理。
 

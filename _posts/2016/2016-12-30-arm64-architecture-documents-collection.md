@@ -1,9 +1,4 @@
----
-layout: post
-title: ARM64(armv8a) architecture documents collection
-categories: [Linux]
-tags: [arm, arm64, Linux]
----
+# ARM64(armv8a) architecture documents collection
 
 1.  arm架构手册，建议看下目录标题，有问题过来查。
     [DDI0487A_j_armv8_arm.pdf]({{site.url}}/public/documents/cpu/arm/DDI0487A_j_armv8_arm.pdf)

@@ -1,9 +1,4 @@
----
-layout: post
-title: 使用linode命令行工具创建和管理虚拟机(Linode cli getting started)
-categories: [Software]
-tags: [Linux, vm, ssh]
----
+# 使用linode命令行工具创建和管理虚拟机(Linode cli getting started)
 
 准备工作
 --------

@@ -1,9 +1,4 @@
----
-layout: post
-title: A universe timer for time management
-categories: [Software]
-tags: [GTD, timer, toggl, trello]
----
+# A universe timer for time management
 
 I am looking for a good GTD tools recently. I tried difference tools, such as Aijintian, todoist and so on. But no one looks perfect for me until I found toggl. Toggl is a timer which support Android, browser and many platform. The cool thing is toggl could act as an plugin in all the website in chrome.
 

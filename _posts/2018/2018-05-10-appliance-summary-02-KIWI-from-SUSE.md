@@ -1,9 +1,4 @@
----
-layout: post
-title: 比较操作系统镜像制作方式（Linux自动化部署工具系列之二）
-categories: [Software]
-tags: [Linux, kiwi]
----
+# 比较操作系统镜像制作方式（Linux自动化部署工具系列之二）
 
 这是《Linux自动化部署工具》系列的第二篇。上一篇《Linux自动化部署工具综述》介绍了三类自动化部署工具：
 </Users/bamvor/works/source/bjzhang.github.io/public/images/appliance/applicace_comparision_cover.png>
@@ -117,7 +112,6 @@ kiwi本身是个单机工具。考虑到搭建kiwi构建环境对于初学者有
 <img alt="public/images/cloud/applicance_kiwi__virtualbox_installation__firstboot.gif" src="{{site.url}}/public/images/cloud/applicance_kiwi__virtualbox_installation__firstboot.gif" width="100%" align="center" style="margin: 0px 15px">
 
 链接
----
 *   openstack tools for image creation: <https://docs.openstack.org/image-guide/create-images-automatically.html>
 *   Terraform对于不支持物理机部署的回复：<https://github.com/hashicorp/terraform/issues/50>
 *   SUSE studio express: <https://studioexpress.opensuse.org/>

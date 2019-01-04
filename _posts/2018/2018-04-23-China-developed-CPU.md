@@ -1,9 +1,4 @@
----
-layout: post
-title: 春风吹又生----梳理中国CPU
-categories: [Tech]
-tags: [Tech, CPU]
----
+# 春风吹又生----梳理中国CPU
 
 （为了照顾微信公众号无法跳转非微信链接的限制，所有链接都统一放到最后）
 

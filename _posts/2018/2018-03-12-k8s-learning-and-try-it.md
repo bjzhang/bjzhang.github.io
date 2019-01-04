@@ -1,9 +1,4 @@
----
-layout: post
-title: k8s学习笔记
-categories: [Software]
-tags: [container, k8s]
----
+# k8s学习笔记
 
 k8s基础知识
 -----------

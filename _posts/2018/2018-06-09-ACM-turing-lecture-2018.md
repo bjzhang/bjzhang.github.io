@@ -1,9 +1,4 @@
----
-layout: post
-title: 2018图灵奖Lecture：计算机体系结构的又一个黄金时代：特定领域的软硬件协同设计，增强安全，开源指令集和芯片的敏捷开发
-categories: [Architecture]
-tags: [Tech, CPU]
----
+# 2018图灵奖Lecture：计算机体系结构的又一个黄金时代：特定领域的软硬件协同设计，增强安全，开源指令集和芯片的敏捷开发
 
 按：上周日（6月3日），在加利福尼亚2017年图灵奖获（2018年3月21日公布）得者Hennessy and Patterson做了[图灵奖lecture](http://iscaconf.org/isca2018/turing_lecture.html) ：A New Golden Age for Computer Architecture:
 Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction Sets, and Agile Chip Development。两个人因为在处理器架构的贡献，获得2017年图灵奖[Pioneers of Modern Computer Architecture Receive ACM A.M. Turing Award](https://www.acm.org/media-center/2018/march/turing-award-2017)：“Hennessy和Patterson对于微处理器的基础贡献引领了移动和物联网的发展”：

@@ -1,9 +1,4 @@
----
-layout: post
-title: How to find out a definition of a syscall or libc function
-categories: [Linux]
-tags: [kernel, glibc, syscall]
----
+# How to find out a definition of a syscall or libc function
 
 This is a quick guide for finding out the definition of library function, syscall wrapper and definition. Wrote for my colleague who ask me the definition of sched_yield in glibc. I will also mention how to find out the definition of readdir(library function).
 

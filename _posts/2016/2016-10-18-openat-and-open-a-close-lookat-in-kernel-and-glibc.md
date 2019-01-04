@@ -1,9 +1,4 @@
----
-layout: post
-title: "openat and open: a close look at from kernel and glibc"
-categories: [Linux]
-tags: [kernel, glibc, syscall, open]
----
+# "openat and open: a close look at from kernel and glibc"
 
 # article in LWN
 [Unreviewed code in 3.11](https://lwn.net/Articles/562294/)

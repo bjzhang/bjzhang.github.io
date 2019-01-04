@@ -1,9 +1,4 @@
----
-layout: post
-title: "Hackweek: Hikey with sensor kit"
-categories: [Linux]
-tags: [hikey, sensor, SUSE/openSUSE, hackweek]
----
+# "Hackweek: Hikey with sensor kit"
 
 什么是hackweek？
 ----------------

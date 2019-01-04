@@ -1,9 +1,4 @@
----
-layout: post
-title: 通过shadowsocks科学上网
-categories: [Software]
-tags: [vpn, shadowsocks, PC, SUSE/openSUSE, ubuntu]
----
+# 通过shadowsocks科学上网
 
 <img alt="Great wall in Spring" src="{{site.url}}/public/images/misc/great_wall_201705.jpg" width="25%" align="left" style="margin: 0px 15px">
 自己的工作需要使用谷歌邮箱等服务，加上照片通过谷歌照片备份，日常便捷的科学工具就很重要。之前也用过云梯(https://www.ytpub.com/)等基于pp2p和l2tp翻墙工具。基本使用还可以，只是经常会断开，尤其是移动网络连接失败率高，另外基于这些协议的vpn容易带宽不够，youtube高清视频基本没法正常观看。

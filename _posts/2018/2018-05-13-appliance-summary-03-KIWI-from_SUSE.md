@@ -1,9 +1,4 @@
----
-layout: post
-title: 来自suse的猕猴桃(KIWI)（Linux自动化部署工具之三）
-categories: [Software]
-tags: [Linux, appliance, SUSE/openSUSE, KIWI]
----
+# 来自suse的猕猴桃(KIWI)（Linux自动化部署工具之三）
 
 [上回书说到Linux镜像构建和部署工具的选型建议](https://mp.weixin.qq.com/s?__biz=MzI5MzcwODYxMQ==&mid=2247483757&idx=1&sn=aa7376cf5f752b4d66a93a8d2fc99c20&chksm=ec6cb741db1b3e57f1100a6670ea3ad4b7557aa5572745a52e128b03aed1893dab980485ac56#rd)：
 

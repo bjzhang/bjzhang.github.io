@@ -1,9 +1,4 @@
----
-layout: post
-title: 使用putty pscp传送文件
-categories: [Software]
-tags: [Linux, ssh]
----
+# 使用putty pscp传送文件
 
 1. putty download  search and click download link
 <img alt="putty_download__search_and_click_download_link.png" src="{{site.url}}/public/images/misc/putty_download__search_and_click_download_link.png" width="100%" align="center" style="margin: 0px 15px">

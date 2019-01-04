@@ -1,9 +1,4 @@
----
-layout: post
-title: Large File Support in Linux
-categories: [Linux]
-tags: [Linux, syscall, glibc]
----
+# Large File Support in Linux
 
 问题描述
 ========

@@ -1,9 +1,4 @@
----
-layout: post
-title: 接受自我(Accept myself)
-categories: [Others]
-tags: [people, grow up]
----
+# 接受自我(Accept myself)
 
 <img alt="bicycle_bamvor_9_years_old" src="{{site.url}}/public/images/misc/bicycle_bamvor_9_years_old.jpg" width="100%" align="center" style="margin: 0px 15px">
 

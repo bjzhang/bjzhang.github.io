@@ -1,9 +1,4 @@
----
-layout: post
-title: IPFS+Filecoin北京meetup by 董天一（2018年9月15日）
-categories: [Software]
-tags: [Blockchain]
----
+# IPFS+Filecoin北京meetup by 董天一（2018年9月15日）
 
 今天（2018年9月15日）在北京中关村IC咖啡，董天一老师为大家讲解了Filecoin，IPFS和Libp2p三个项目，笔者之前对ipfs和libp2p有些了解，仅仅记录了之前不知道的信息。供大家参考。![从左至右分别是徐潇，戴嘉乐和董天一](http://opuclx9sq.bkt.clouddn.com/macbook/2018-09-16-060659.jpg)
 *从左至右分别是徐潇，戴嘉乐和董天一*

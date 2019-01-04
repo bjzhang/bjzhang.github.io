@@ -1,9 +1,4 @@
----
-layout: post
-title: 成长，教育和素质教育
-categories: [Others]
-tags: [people, education]
----
+# 成长，教育和素质教育
 
 <img alt="echo_drawing_Jack_Boat_and_Wind" src="{{site.url}}/public/images/misc/echo_drawing_Jack_Boat_and_Wind.png" width="25%" align="left" style="margin: 0px 15px">
 

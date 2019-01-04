@@ -1,9 +1,4 @@
----
-layout: post
-title: LC3，我们来了！
-categories: [Linux]
-tags: [conference, Linux, linuxcon, containercon]
----
+# LC3，我们来了！
 
 一年一轮的linuxcon，明天在北京国际会议中心召开。Linuxcon之前每年都在北美日本欧洲各办一次，这是第一次在北京召开，也是近年来少有的在中国举办的开源盛会。细心的人可能发现会议名称居然不一样。北京的会议名称是LC3(Linuxcon + ContainerCon + Cloudopen)，其余地区是“Open Source Summit”。后者是linux foundation去年年底新推的会议，在LC3基础上增加了Open Community Conference。LC3围绕linux生态展开。我所在的部门专注于Linux内核和容器技术，多年来有持续的技术投入，部门去年在北美，欧洲做了四次演讲。今年亦有四个topic，欢迎关注：
 

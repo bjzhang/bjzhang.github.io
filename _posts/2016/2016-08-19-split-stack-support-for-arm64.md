@@ -1,9 +1,4 @@
----
-layout: post
-title: Split stack support for arm64
-categories: [Linux]
-tags: [arm64, split-stack, gcc]
----
+# Split stack support for arm64
 
 Today I found that arm64 will support split stack. I feel that it is a cool enhancement after read the comment from Adhemerval and document from Ian.
 

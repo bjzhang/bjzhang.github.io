@@ -1,9 +1,4 @@
----
-layout: post
-title: Free phone and baseband property
-categories: [Linux]
-tags: [Linux, arm, mobile]
----
+# Free phone and baseband property
 
 
 自由软件基金会日前发布了2017年[高优先级自由软件项目](https://www.fsf.org/campaigns/priority-projects/), 其中包括了[自由的手机操作系统（bootloader, baseband可能是property）](

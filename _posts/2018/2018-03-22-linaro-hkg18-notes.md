@@ -1,9 +1,4 @@
----
-layout: post
-title: ARM生态系统的盛会：端侧AI和ARM64 PC
-categories: [Linux]
-tags: [Linux, arm]
----
+# ARM生态系统的盛会：端侧AI和ARM64 PC
 
 按：公众号发出后，有小伙伴询问购买链接，我统一放在文末了。
 

@@ -1,9 +1,4 @@
----
-layout: post
-title: 本人演讲slides
-categories: [Software]
-tags: [Linux]
----
+# 本人演讲slides
 
 
 

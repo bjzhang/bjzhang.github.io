@@ -1,9 +1,4 @@
----
-layout: post
-title: 在Windows和Linux下设置go-shadowsocks2
-categories: [Software]
-tags: []
----
+# 在Windows和Linux下设置go-shadowsocks2
 
 public/images/shadowsocks/set_proxy__chrome__01__setting.jpg
 public/images/shadowsocks/set_proxy__chrome__02__advanced.jpg
