@@ -1,4 +1,4 @@
-theme: jekyll-theme-architect
+theme: jekyll-theme-cayman
 permalink: /:year/:month/:title/
 url: http://aarch64.me
 author: Bamvor
