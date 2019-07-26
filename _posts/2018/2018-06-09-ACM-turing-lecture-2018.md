@@ -1,6 +1,6 @@
 # 2018图灵奖Lecture：计算机体系结构的又一个黄金时代：特定领域的软硬件协同设计，增强安全，开源指令集和芯片的敏捷开发
 
-按：上周日（6月3日），在加利福尼亚2017年图灵奖获（2018年3月21日公布）得者Hennessy and Patterson做了[图灵奖lecture](http://iscaconf.org/isca2018/turing_lecture.html) ：A New Golden Age for Computer Architecture:
+按：2018年6月3日周日，在加利福尼亚2017年图灵奖获（2018年3月21日公布）得者Hennessy and Patterson做了[图灵奖lecture](http://iscaconf.org/isca2018/turing_lecture.html) ：A New Golden Age for Computer Architecture:
 Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction Sets, and Agile Chip Development。两个人因为在处理器架构的贡献，获得2017年图灵奖[Pioneers of Modern Computer Architecture Receive ACM A.M. Turing Award](https://www.acm.org/media-center/2018/march/turing-award-2017)：“Hennessy和Patterson对于微处理器的基础贡献引领了移动和物联网的发展”：
 > Hennessy and Patterson’s Foundational Contributions to Today’s Microprocessors Helped Usher in Mobile and IoT Revolutions  
 具体获奖细节请参考：[2017图灵奖揭晓：两位大神携手获奖，Google成最大“赢家”](https://zhuanlan.zhihu.com/p/34804910?utm_source=wechat_session&utm_medium=social&wechatShare=1&from=timeline&isappinstalled=0)。感谢郭雄飞同学帮忙把视频放到了墙内：[《图灵奖演讲2018》](https://v.qq.com/x/page/j06797ka9ul.html)。以下是本人笔记正文。
@@ -56,7 +56,7 @@ Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction
 机器学习论文增长的速度和摩尔定律的速度是一样的。
 
 ![IMG_0073]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0073.PNG)
-作者认为的方向就是垂直整合。
+作者认为的方向就是从应用到领域特定语言到计算机体系结构再到芯片实现的垂直整合。
 
 ![IMG_0075]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0075.PNG)
 RISC-V考虑到DSA需求，预留了大量的op code。
@@ -77,7 +77,7 @@ RISC-V考虑到DSA需求，预留了大量的op code。
 * 由拥有一百名以上成员的基金会推动，保证可以长期演进。更多公司去做同一个架构的处理器，意味着更激烈的竞争。商业公司可以去卖一个指令集更好的实现。
 
 ### 敏捷芯片开发
-
+![IMG_0083]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0083.PNG)
 [chisel](https://chisel.eecs.berkeley.edu/)是一个模块化的硬件设计语言，助力硬件的敏捷开发。上图是不同RISC-V处理器的代码复用情况。
 
 # 你可能感兴趣的文章
@@ -105,4 +105,6 @@ RISC-V考虑到DSA需求，预留了大量的op code。
 * 岁月如梭：两位图灵奖获得者1980年第一次见面到今年已经相识38年。
 ![IMG_0087]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0087.PNG)
 ![FullSizeRender.jpg]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/FullSizeRender.jpg)
+
+本人首发本人公众号[inrealworld](https://mp.weixin.qq.com/s/D52QGaBlE6sRglP1Rt9KcA)。知识星球realworld是操作系统个人和技术成长的星球，欢迎感兴趣的小伙伴加入。
 
