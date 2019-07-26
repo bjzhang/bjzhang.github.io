@@ -6,7 +6,7 @@ Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction
 具体获奖细节请参考：[2017图灵奖揭晓：两位大神携手获奖，Google成最大“赢家”](https://zhuanlan.zhihu.com/p/34804910?utm_source=wechat_session&utm_medium=social&wechatShare=1&from=timeline&isappinstalled=0)。感谢郭雄飞同学帮忙把视频放到了墙内：[《图灵奖演讲2018》](https://v.qq.com/x/page/j06797ka9ul.html)。以下是本人笔记正文。
 
 ## CPU指令集的发展
-![IMG_0056](http://opuclx9sq.bkt.clouddn.com/2018-06-09-141218.png)
+![IMG_0056]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0056.PNG)
 演讲第一部分首先回顾了中央处理器（CPU）的指令集（ISA）的发展。[指令集(ISA)](https://en.wikipedia.org/wiki/Instruction_set_architecture)是计算机的抽象，大致有三种：
 * CISC(Complex Instruction Set Computer，复杂指令集)；
 * RISC(Reduced Instruction Set Computer，精简指令集)；
@@ -15,34 +15,34 @@ Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction
 早期Intel X86是CISC架构，但是从[奔腾Pro](https://stackoverflow.com/questions/5806589/why-does-intel-hide-internal-risc-core-in-their-processors)开始，内部采用RISC核心。自从Intel安腾使用的VLIM失败后，最近15年内都没有新的通用处理器再使用VLIM。市场上99%以上处理器都是RISC（数据来源，演讲24分10秒）。
 
 ## 目前处理器面临的挑战
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135713.png)
+![IMG_0057]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0057.PNG)
 [Dennard scaling](https://en.m.wikipedia.org/wiki/Dennard_scaling)描述了当晶体管尺寸越来越小的时候，电源密度是不变的，也就是同样尺寸芯片下面可以有更高的性能。由于半导体工艺的限制，随着晶体管尺寸的缩小，电源功耗并不会降低。Dennard scaling已经失效了。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135726.png)
+![IMG_0058]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0058.PNG)
 同样的，摩尔定律也由于工艺的限制失效了。处理器性能的年增长已经由最高的52%降到2015年以后的3%。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135724.png)
+![IMG_0096]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0096.PNG)
 如果飞机像软件一样，经常出功能异常(malfunction)的话，除了在加利福尼亚的人，没有人能参加今天的会议。
 
 历史上人们想了很多手段去改善系统的安全。最开始我们认为这个应该可以从软件层面完全解决，但是遗憾的是软件层面没有办法解决全部问题（例如今年发现的五个幽灵/熔断漏洞：1，2，3，3a和4）。所以安全需要硬件的参与！
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135811.jpg)
+![IMG_0062]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0062.JPG)
 以40年以前开始发展的x86架构为例，当前的安全状况：
 * 底层的固件是封闭的。没有百分之百保证安全的办法。
 * 不公开的指令集。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135732.png)
+![IMG_0066]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0066.PNG)
 第二部分的结论。
 
 ## 如何解决上述问题？
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135734.png)
+![IMG_0067]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0067.PNG)
 解决问题的思路有三个，软件，硬件，或软件硬件协同。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135823.png)
+![IMG_0063]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0063.PNG)
 从上面例子可以看到，与通用的脚本语言python，相比更多的软硬件结合的优化可以做到6万倍的性能提升。
 
 ### 特定领域架构与特定领域语言
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135737.png)
+![IMG_0065]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0065.PNG)
 上面对特定领域优化的例子，引出DSA（领域特定架构）：
 * 这是一种针对特定领域优化的架构，但不是针对某个应用优化的（后者是专用集成电路（Application Specific Integrated Circuit: ASIC）要解决的问题）。
   * 半瓦注：例如国内比特大陆的比特币矿机就是对比特币挖矿这个特定应用优化的ASIC。
@@ -52,24 +52,24 @@ Domain-Specific Hardware/Software Co-Design, Enhanced Security, Open Instruction
   * 用于图形和虚拟现实的GPU（俗称显卡）；
   * 可编程的网络设备。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135740.png)
+![IMG_0070]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0070.PNG)
 机器学习论文增长的速度和摩尔定律的速度是一样的。
 
-![IMG_0073](http://opuclx9sq.bkt.clouddn.com/2018-06-09-144515.png)
+![IMG_0073]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0073.PNG)
 作者认为的方向就是垂直整合。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135747.png)
+![IMG_0075]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0075.PNG)
 RISC-V考虑到DSA需求，预留了大量的op code。
 
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135749.png)
+![IMG_0078]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0078.PNG)
 另一个例子是英伟达的深度学习加速器。
 
 ### 增强安全
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135758.png)
+![IMG_0080]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0080.PNG)
 安全要求是无后门，可以从控制整个硬件。RISC-V很可能是第一个进行软硬件协同设计的架构。
 
 ### 自由和开放的架构以及开源实现
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135752.png)
+![IMG_0082]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0082.PNG)
 * RISC-V像Linux是开源的，更多组织和更多个人可以同时参与到RISC-V的研发；
 * RISC-V指令集是组件化和可扩展的；
 * 整个软件从下到上都是完全开源的（可以修改的）；
@@ -101,9 +101,8 @@ RISC-V考虑到DSA需求，预留了大量的op code。
 
 ## 其它
 * 工艺进步和电源密度的交叉点出现在2008年。
-![](2018-06-09-ACM-turing-lecture-2018/IMG_0095.PNG)
+![IMG_0082]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0082.PNG)
 * 岁月如梭：两位图灵奖获得者1980年第一次见面到今年已经相识38年。
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135847.png)
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135845.png)
-![](http://opuclx9sq.bkt.clouddn.com/2018-06-09-135843.jpg)
+![IMG_0087]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/IMG_0087.PNG)
+![FullSizeRender.jpg]({{site.url}}/public/images/2018-06-09-ACM-turing-lecture-2018/FullSizeRender.jpg)
 
